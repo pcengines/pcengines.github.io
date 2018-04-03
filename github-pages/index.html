@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>PC Engines - github pages</title>
+</head>
+    <body>
+<!-- header -->
+        <header id="top">
+            <div class="pcengines-header">
+                <h1>PC ENGINES</h1>
+                <h4>&trade;</h4>
+            </div>
+        </header>
+
+<!-- NAV -->
+<nav>
+        <div class="nav">   
+            <div class="link"><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">pfSense</a></div>
+            <div class="link"><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md">Pxelinux</a></div>
+        </div>
+</nav>
+
+<!-- intro -->
+        <div class="container">
+           <h2>Release notes</h2>
+            <p>Release notes describing changes, fixes and known issues in PC Engines apux releases:</p>
+            
+<!-- table of contents -->
+            <div class="table-of-content">
+                <div class="main-list">
+                    <h3>Mainline releases</h3>
+                    <ul>
+                        <li><a href="#mr-7">v4.6.7</a></li>
+                        <li><a href="#mr-6">v4.6.6</a></li>
+                        <li><a href="#mr-5">v4.6.5</a></li>
+                        <li><a href="#mr-4">v4.6.4</a></li>
+                        <li><a href="#mr-3">v4.6.3</a></li>
+                        <li><a href="#mr-2">v4.6.2</a></li>
+                        <li><a href="#mr-1">v4.6.1</a></li>
+                    </ul>
+                </div>
+
+                <div class="main-list">
+                    <h3>Legacy releases</h3>
+                    <ul>
+                        <li><a href="#lr-7">v4.0.15</a></li>
+                        <li><a href="#lr-6">v4.0.14</a></li>
+                        <li><a href="#lr-5">v4.0.13</a></li>
+                        <li><a href="#lr-4">v4.0.12</a></li>
+                        <li><a href="#lr-3">v4.0.11</a></li>
+                        <li><a href="#lr-2">v4.0.10</a></li>
+                        <li><a href="#lr-1">v4.0.9</a></li>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<!-- os-status.md -->
+        <div class="container">
+            <h2>OS status</h2>
+            <p>Some operating system have problems running with different storage medias. These table shows currently tested systems on BIOS v4.6.x with corresponding medias:</p>
+
+            <table>
+                <tr>
+                    <th>OS</th>
+                    <th>SD card</th>
+                    <th>SATA disk</th>
+                    <th>mSATA disk</th>
+                    <th>USB stick</th>
+                </tr>
+                <tr>
+                    <td>Voyage</td>
+                    <td><sup>(3)</sup></td>
+                    <td>OK</td>
+                    <td>OK</td>
+                    <td><sup>(2)</sup></td>
+                </tr>
+                <tr>
+                    <td>Debian</td>
+                    <td>OK</td>
+                    <td>OK</td>
+                    <td>OK</td>
+                    <td><sup>(2)</sup></td>
+                </tr>
+                <tr>
+                    <td>pfSense</td>
+                    <td>OK</td>
+                    <td><sup>(1)</sup></td>
+                    <td>not tested</td>
+                    <td><sup>(2)</sup></td>
+                </tr>
+            </table>
+
+            <p><sup>(1)</sup> - issues with installation and system functionality (installation break, unwanted reboots), can be fixed by adding a hint <code>hint.ahci.0.msi="0"</code>, for more information see this <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/debug/usb-tests.md">document</a></p>
+            <p><sup>(2)</sup> - all apu boards have problems with USB 3.x stick detection in BIOS, system is working properly, but after reboot/warmboot/coldboot USB stick may not appear in BIOS boot menu (depends on the stick, well working sticks are mentioned in this <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/debug/usb-tests.md">document</a>)</p>
+            <p><sup>(3)</sup> - Voyage Linux is bootable on SD card and works well in read-only mode, remounting as read-write and writing changes to SD sometimes results in kernel panic which often leads to non-operable system</p>
+
+            <h5><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/os-status.md" target="_blank">Read more...</a></h5>
+        </div>
+
+<!-- mainline releases v4.6.7 -->
+        <div class="container" id="mr-7">
+            <div class="smaller-margin">
+                <h2 class="text-middle">Mainline releases</h2>
+                <h4>v4.6.7</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2018-03-01</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>SD card low performance</li>
+                    <li>SMBIOS wrong entries</li>
+                    <li>xHCi is enabled (timeouts has been adjusted in SeaBIOS, as a result USB 3.x sticks detection rate increased)</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>pfSense installation may fail on hard disks - <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">workaround</a></li>
+                    <li>some PCIe cards are not detected on certain OSes</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/VLbTs6yHKkv1rmX/download">apu2 v4.6.7</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/T5ZJePvgmEtHxFY/download">apu3 v4.6.7</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/CTzs68GXxBcxhny/download">apu4 v4.6.7</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/8YjFMi1CcnjliHi/download">apu5 v4.6.7</a></li>
+            </ul>
+
+
+<!-- mainline releases v4.6.6 -->
+            <div class="break"></div>
+            <div class="smaller-margin" id="mr-6">
+                <h4>v4.6.6</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2018-01-31</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>SeaBIOS 1.11.0.3 - enabled UDMA for faster boot, fixed serial console disable bug</li>
+                    <li>screen is refreshed properly in Memtest86+</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>pfSense installation may fail on hard disks</a></li>
+                    <li>pfSense can not be installed from USB due to xHCi disabled</li>
+                    <li>USB 3.x sticks are handled like USB 2.0 sticks, but are detected</li>
+                    <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
+                    <li>SD card performance is lower than in legacy releases</li>
+                    <li>some PCIe cards are not detected on certain OSes</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/5jGaJvPwNLQCMl9/download">apu2 v4.6.6</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/jwIgOZRNAkuIxde/download">apu3 v4.6.6</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/HADHYzg7DiR2f2i/download">apu4 v4.6.6</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/kTZtt1TtRzhEvCX/download">apu5 v4.6.6</a></li>
+            </ul>
+
+<!-- mainline releases v4.6.5 -->
+            <div class="break"></div>
+            <div class="smaller-margin" id="mr-5">
+                <h4>v4.6.5</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2017-12-29</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>SeaBIOS 1.11.0.2 - fixes bug with serial console output shift</li>
+                    <li>disabled xHCI, force EHCI controller on front ports</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>pfSense installation may fail on hard disks</a></li>
+                    <li>pfSense can not be installed from USB due to xHCi disabled</li>
+                    <li>USB 3.x sticks are handled like USB 2.0 sticks, but are detected</li>
+                    <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
+                    <li>refreshing screen dos not work properly in Memtest86+</li>
+                    <li>serial console disable option does not affect SeaBIOS</li>
+                    <li>SD card performance is lower than in legacy releases</li>
+                    <li>some PCIe cards are not detected on certain OSes</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/CQRW1HIPRZRiwPW/download">apu2 v4.6.5</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/nvoC3qjchgI3mFG/download">apu3 v4.6.5</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/9pRt5JrWTHxB6Fo/download">apu4 v4.6.5</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/j5oznHOARUmMZTF/download">apu5 v4.6.5</a></li>
+            </ul>
+
+<!-- mainline releases v4.6.4 -->
+            <div class="break"></div>
+            <div class="smaller-margin" id="mr-4">
+                <h4>v4.6.4</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2017-11-30</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>apu4 support</li>
+                    <li>updated SeaBIOS 1.11.0.1 (removed sgabios)</li>
+                    <li>Memtest86+ is built from coreboot Memtest86+ repository</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>pfSense installation may fail on hard disks - <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">workaround</a></li>
+                    <li>USB 3.x sticks happen to not appear in boot menu</li>
+                    <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
+                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                    <li>refreshing screen dos not work properly in Memtest86+</li>
+                    <li>serial console disable option does not affect SeaBIOS</li>
+                    <li>SeaBIOS serial console output is sometimes wrongly shifted</li>
+                    <li>SD card performance is lower than in legacy releases</li>
+                    <li>some PCIe cards are not detected on certain OSes</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/JNr4h8BWmDjte3Q/download">apu2 v4.6.4</a></li>
+                <li><a href="SeaBIOS serial console output is sometimes wrongly shifted">apu3 v4.6.4</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/4IZdYSKO8vSEd7z/download">apu4 v4.6.4</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/VWrCm3PGUgBH0Fz/download">apu5 v4.6.4</a></li>
+            </ul>
+
+<!-- mainline releases v4.6.3 -->
+            <div class="break"></div>
+            <div class="smaller-margin" id="mr-3">
+                <h4>v4.6.3</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2017-10-30</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>UARTc/c and mPCIe2 CLK enable/disable runtime configuration works now</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>pfSense installation may fail on hard disks - <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">workaround</a></li>
+                    <li>USB 3.x sticks happen to not appear in boot menu</li>
+                    <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
+                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                    <li>SD card performance is lower than in legacy releases</li>
+                    <li>some PCIe cards are not detected on certain OSes</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/40yS2BDPtQoBvSF/download">apu2 v4.6.3</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/msLUBzcY9fwOps1/download">apu3 v4.6.3</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/VTu9A9IceR0DILG/download">apu5 v4.6.3</a></li>
+            </ul>
+
+<!-- mainline releases v4.6.2 -->
+            <div class="break"></div>
+            <div class="smaller-margin" id="mr-2">
+                <h4>v4.6.2</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2017-09-29</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>date format in sign-of-life string</li>
+                    <li>Memtest86+ does nto hang now</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>pfSense installation may fail on hard disks - <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">workaround</a></li>
+                    <li>USB 3.x sticks happen to not appear in boot menu</li>
+                    <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
+                    <li>UARTc/c and mPCIe2 CLK enable/disable runtime configuration do not work</li>
+                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                    <li>SD card performance is lower than in legacy releases</li>
+                    <li>some PCIe cards are not detected on certain OSes</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/MrZQu3PhkEn8iIp/download">apu2 v4.6.2</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/kI9vkRIt6v4ubAY/download">apu3 v4.6.2</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/YmAX1ddpT2hG4IJ/download">apu5 v4.6.2</a></li>
+            </ul>
+
+<!-- mainline releases v4.6.1 -->
+            <div class="break"></div>
+            <div class="smaller-margin" id="mr-1">
+                <h4>v4.6.1</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2017-08-30</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>apu5 support</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>pfSense installation may fail on hard disks - <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">workaround</a></li>
+                    <li>USB 3.x sticks happen to not appear in boot menu</li>
+                    <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
+                    <li>Memtest86+ hangs</li>
+                    <li>UARTc/c and mPCIe2 CLK enable/disable runtime configuration do not work</li>
+                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                    <li>SD card performance is lower than in legacy releases</li>
+                    <li>some PCIe cards are not detected on certain OSes</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/PECvT1IsD3Gm06h/download">apu2 v4.6.1</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/vcZUg9ZvjvDbTV8/download">apu3 v4.6.1</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/naKuOSYKxVisWvX/download">apu5 v4.6.1</a></li>
+            </ul>
+        </div>
+
+                                    <!-- LEGACY RELEASES -->
+
+<!-- legacy releases v4.0.15 -->
+        <div class="container" id="lr-7">
+            <div class="smaller-margin">
+                <h2 class="text-middle">Legacy releases</h2>
+                <h4>v4.0.15</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2018-03-01</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>fixed Kconfig defautl options for SeaBISO repo, console loglevel</li>
+                    <li>SMBIOS wrong entries</li>
+                    <li>restoring default features in srotbootorder available now</li>
+                    <li>iPXE is built from official iPXE repository, no need to build it externally</li>
+                    <li>updated SeaBIOS to 1.11.0.3 (xHCI timeouts adjusted - USB 3.x sticks detection rate increased)</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>USB 3.x sticks happen to not appear in boot menu</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/13od9cvY0LEmREv/download">apu2 v4.0.15</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/J3Z5nAbXFP6y2Wz/download">apu3 v4.0.15</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/ircYOIP1FsLwtsv/download">apu5 v4.0.15</a></li>
+            </ul>
+
+<!-- legacy releases v4.0.14 -->
+            <div class="break"></div>
+            <div class="smaller-margin" id="lr-6">
+                <h4>v4.0.14</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2017-12-22</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>updated SeaBIOS to 1.11.0.2 (removed sgabios)</li>
+                    <li>iPXE is built from official iPXE repository</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>USB 3.x sticks happen to not appear in boot menu</li>
+                    <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
+                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/JoVlRzyyEFvlVmt/download">apu2 v4.0.14</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/ZmL59E2KuyNIWwv/download">apu3 v4.0.14</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/b06diBcMzdL2cbW/download">apu5 v4.0.14</a></li>
+            </ul>
+
+<!-- legacy releases v4.0.13 -->
+            <div class="break"></div>
+            <div class="smaller-margin" id="lr-5">
+                <h4>v4.0.13</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2017-09-29</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>fixed date format in sign-of-life string</li>
+                    <li>removed duplicated sign-of-life</li>
+                    <li>sign-of-life do appears right after power on now</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>USB 3.x sticks happen to not appear in boot menu</li>
+                    <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/k3a298ibFUWCeyv/download">apu2 v4.0.13</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/T17wH9nkHcZC1RJ/download">apu3 v4.0.13</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/vBDGSiXmiuzSs1M/download">apu5 v4.0.13</a></li>
+            </ul>
+
+<!-- legacy releases v4.0.12 -->
+            <div class="break"></div>
+            <div class="smaller-margin" id="lr-4">
+                <h4>v4.0.12</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2017-08-30</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>apu5 support</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>USB 3.x sticks happen to not appear in boot menu</li>
+                    <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
+                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/Arw7rNlAwb4efAx/download">apu2 v4.0.12</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/9JyLVWinsJzaK70/download">apu3 v4.0.12</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/ZQDnNA0gFgbCVEt/download">apu5 v4.0.12</a></li>
+            </ul>
+
+<!-- legacy releases v4.0.11 -->
+            <div class="break"></div>
+            <div class="smaller-margin" id="lr-3">
+                <h4>v4.0.11</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2017-07-21</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>force mPCIe2 CLK option in sortbootorder</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>USB 3.x sticks happen to not appear in boot menu</li>
+                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/o5T8B7pZPQ8kEbp/download">apu2 v4.0.11</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/7eIzXvaj8XV1gJB/download">apu3 v4.0.11</a></li>
+            </ul>
+
+<!-- legacy releases v4.0.10 -->
+            <div class="break"></div>
+            <div class="smaller-margin" id="lr-2">
+                <h4>v4.0.10</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2017-06-30</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>sortbootorder is now available in Kconfig</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>USB 3.x sticks happen to not appear in boot menu</li>
+                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/H6kT2tTIgijOJUT/download">apu2 v4.0.10</a></li>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/nloJkadxf4VCbDc/download">apu3 v4.0.10</a></li>
+            </ul>
+
+<!-- legacy releases v4.0.9 -->
+            <div class="break"></div>
+            <div class="smaller-margin" id="lr-1">
+                <h4>v4.0.9</h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2017-05-30</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>minor fixes to sortbootorder used letters</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>USB 3.x sticks happen to not appear in boot menu</li>
+                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                </ol>
+            </ul>
+
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="https://cloud.3mdeb.com/index.php/s/dlts5hf4Kr1IAk1/download">apu2 v4.0.9</a></li>
+            </ul>
+        </div>
+
+
+
+
+
+<!-- footer -->
+        <footer>
+            <div class="footer-text">
+                <a target="_blank" href="https://pcengines.ch/">
+                    https://pcengines.ch/
+                </a>
+            </div>
+        </footer>
+
+        <a href="#top"><button class="up">UP!</button></a>
+    </body>
+</html>

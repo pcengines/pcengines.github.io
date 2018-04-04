@@ -4,7 +4,7 @@ html,body {
     margin: 0 auto;
     font-weight: 300;
     max-width: 900px;
-    max-height: 100%; 
+    max-height: 100%;
 }
 
 h1 {
@@ -25,7 +25,6 @@ a:hover {
 
 nav {
     display: flex;
-    width: 100%;
     max-height: 60px;
     max-width: 900px;
     margin: 20px auto;
@@ -77,7 +76,6 @@ header {
     display: -webkit-flex;
     flex-direction: column;
     max-width: 780px;
-    width: 100%;
     height: 100%;
     background-color: #f6f6f6;
 
@@ -94,7 +92,7 @@ header {
 }
 
 .main-list {
-    max-width: 100%;
+    max-width: 100%; 
 }
 
 footer {
@@ -135,6 +133,17 @@ ul,ol {
         margin-right: 8px;
         background-color: #CC0000; }
 
+.source-code-links-binaries {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.source-code-column {
+    max-width: 50%;
+    display: block;
+    flex: 1;
+}
+
 .up {
     position: fixed;
     width: 50px;
@@ -166,9 +175,15 @@ ul,ol {
 .smaller-margin p {
     margin-top: 10px;
     margin-bottom: 10px; }
+    .smaller-margin > h4 > a {
+        color: #CC0000;
+        text-decoration: none; }
+    .smaller-margin > h4 > a:hover {
+        color: #00CC00;
+        text-decoration: none; }
 
 table {
-  max-width: 88%;
+  max-width: 100%;
   margin: 24px auto;
   font-size: 13px;
   border-bottom: 1px solid #CC0000;
@@ -200,4 +215,28 @@ sup {color: #585858;}
 
 sup {
     font-size: 9px;
+}
+
+
+
+
+
+@media (max-width: 462px) {
+    th, td {
+        padding: 8px 2px;
+    }
+
+.source-code-links-binaries {
+    max-width: 100%;
+    display: block;
+}
+.source-code-column {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+
+
 }

@@ -18,7 +18,7 @@
 
 <!-- NAV -->
 <nav>
-        <div class="nav">
+        <div class="nav">   
             <div class="link"><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">pfSense</a></div>
             <div class="link"><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md">Pxelinux</a></div>
         </div>
@@ -28,7 +28,7 @@
         <div class="container">
            <h2>Release notes</h2>
             <p>Release notes describing changes, fixes and known issues in PC Engines apux releases:</p>
-
+            
 <!-- table of contents -->
             <div class="table-of-content">
                 <div class="main-list">
@@ -55,7 +55,7 @@
                         <li><a href="#lr-4">v4.0.12</a></li>
                         <li><a href="#lr-3">v4.0.11</a></li>
                         <li><a href="#lr-2">v4.0.10</a></li>
-                        <li><a href="#lr-1">v4.0.9</a></li>
+                        <li><a href="#lr-1">v4.0.9</a></li>                        
                     </ul>
                 </div>
             </div>
@@ -91,22 +91,27 @@
                 <tr>
                     <td>pfSense</td>
                     <td>OK</td>
-                    <td><sup>OK(1)</sup></td>
+                    <td><sup>(1)</sup></td>
                     <td>not tested</td>
                     <td><sup>(2)</sup></td>
                 </tr>
             </table>
 
-            <p><sup>(1)</sup> - works well with BIOS v4.6.8 or later in mainline and all legacy releases</p>
+            <p><sup>(1)</sup> - issues with installation and system functionality (installation break, unwanted reboots), can be fixed by adding a hint <code>hint.ahci.0.msi="0"</code>, for more information see this <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/debug/usb-tests.md">document</a></p>
             <p><sup>(2)</sup> - all apu boards have problems with USB 3.x stick detection in BIOS, system is working properly, but after reboot/warmboot/coldboot USB stick may not appear in BIOS boot menu (depends on the stick, well working sticks are mentioned in this <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/debug/usb-tests.md">document</a>)</p>
             <p><sup>(3)</sup> - Voyage Linux is bootable on SD card and works well in read-only mode, remounting as read-write and writing changes to SD sometimes results in kernel panic which often leads to non-operable system</p>
 
             <h5><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/os-status.md" target="_blank">Read more...</a></h5>
         </div>
 
+
+        <div class="container">
 <!-- mainline releases v4.6.8 -->
-        <div class="container" id="mr-8">
-            <div class="smaller-margin">
+<!-- 
+    <div class="break"></div> 
+    insert this code when a new update comes out to separate a new version from the current.
+-->
+            <div class="smaller-margin" id="mr-8">
                 <h2 class="text-middle">Mainline releases</h2>
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.7...v4.6.8">v4.6.8</a></h4>
             </div>
@@ -149,16 +154,15 @@
                         <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
                     </ul>
                 </div>
-                </div>
-
-
-<!-- mainline releases v4.6.7 -->
-        <div class="break"></div>
-        <div class="container" id="mr-7">
-            <div class="smaller-margin">
-                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.6...v4.6.7">v4.6.7</a></h4>
             </div>
 
+<!-- mainline releases v4.6.7 -->
+            <div class="break"></div>
+            <div class="smaller-margin" id="mr-7">
+                <h2 class="text-middle">Mainline releases</h2>
+                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.6...v4.6.7">v4.6.7</a></h4>
+            </div>
+            
             <div class="dimmed-text"><p>Release date: 2018-03-01</p></div>
 
             <ul>
@@ -195,7 +199,7 @@
                         <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
                     </ul>
                 </div>
-                </div>
+            </div>
 
 
 <!-- mainline releases v4.6.6 -->
@@ -203,7 +207,7 @@
             <div class="smaller-margin" id="mr-6">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.5...v4.6.6">v4.6.6</a></h4>
             </div>
-
+            
             <div class="dimmed-text"><p>Release date: 2018-01-31</p></div>
 
             <ul>
@@ -250,7 +254,7 @@
             <div class="smaller-margin" id="mr-5">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.4...v4.6.5">v4.6.5</a></h4>
             </div>
-
+            
             <div class="dimmed-text"><p>Release date: 2017-12-29</p></div>
 
             <ul>
@@ -299,7 +303,7 @@
             <div class="smaller-margin" id="mr-4">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.3...v4.6.4">v4.6.4</a></h4>
             </div>
-
+            
             <div class="dimmed-text"><p>Release date: 2017-11-30</p></div>
 
             <ul>
@@ -350,7 +354,7 @@
             <div class="smaller-margin" id="mr-3">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.2...v4.6.3">v4.6.3</a></h4>
             </div>
-
+            
             <div class="dimmed-text"><p>Release date: 2017-10-30</p></div>
 
             <ul>
@@ -395,7 +399,7 @@
             <div class="smaller-margin" id="mr-2">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.1...v4.6.2">v4.6.2</a></h4>
             </div>
-
+            
             <div class="dimmed-text"><p>Release date: 2017-09-29</p></div>
 
             <ul>
@@ -442,7 +446,7 @@
             <div class="smaller-margin" id="mr-1">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.0...v4.6.1">v4.6.1</a></h4>
             </div>
-
+            
             <div class="dimmed-text"><p>Release date: 2017-08-30</p></div>
 
             <ul>
@@ -487,56 +491,60 @@
 
                                     <!-- LEGACY RELEASES -->
 
+        <div class="container">
 <!-- legacy releases v4.0.16 -->
-    <div class="container" id="lr-8">
-        <div class="smaller-margin">
-            <h2 class="text-middle">Legacy releases</h2>
-            <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.15...v4.0.16">v4.0.16</a></h4>
-        </div>
-
-        <div class="dimmed-text"><p>Release date: 2018-04-06</p></div>
-
-        <ul>
-            <li>Fixed/added:</li>
-            <ol>
-                <li>S1 button feature (serial console enable)</li>
-                <li>apu4 support</li>
-            </ol>
-            <li>Known issues:</li>
-            <ol>
-                <li>certain USB 3.x sticks happen to not appear in boot menu</li>
-            </ol>
-        </ul>
-
-        <div class="source-code-links-binaries">
-            <div class="source-code-column">
-                <div class="smaller-margin"><p>Binaries:</p></div>
-                <ul>
-                    <li><a href="https://cloud.3mdeb.com/index.php/s/UgjMcsbo8CzB6uy/download">apu2 v4.0.16</a></li>
-                    <li><a href="https://cloud.3mdeb.com/index.php/s/QIXjGGoGfP7oe4A/download">apu3 v4.0.16</a></li>
-                    <li><a href="https://cloud.3mdeb.com/index.php/s/LbgBDWuugzsmDWT/download">apu4 v4.0.16</a></li>
-                    <li><a href="https://cloud.3mdeb.com/index.php/s/IJwwKE1zQCe8dYq/download">apu5 v4.0.16</a></li>
-                </ul>
+<!-- 
+    <div class="break"></div> 
+    insert this code when a new update comes out to separate a new version from the current.
+-->
+            <div class="smaller-margin" id="lr-8">
+                <h2 class="text-middle">Legacy releases</h2>
+                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.15...v4.0.16">v4.0.16</a></h4>
             </div>
-            <div class="source-code-column">
-                <div class="smaller-margin"><p>Source code:</p></div>
-                <ul>
-                    <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.15...v4.0.16">coreboot v4.0.16</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.11.0.3...rel-1.11.0.4">SeaBIOS rel-1.11.0.4</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/blob/master/CHANGELOG.md#v465---2017-12-29">sortbootorder v4.6.5</a></li>
-                    <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+ v4.0.1</a></li>
-                </ul>
+
+            <div class="dimmed-text"><p>Release date: 2018-04-06</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>S1 button feature (serial console enable)</li>
+                    <li>apu4 support</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+                </ol>
+            </ul>
+
+            <div class="source-code-links-binaries">
+                <div class="source-code-column">
+                    <div class="smaller-margin"><p>Binaries:</p></div>
+                    <ul>
+                        <li><a href="https://cloud.3mdeb.com/index.php/s/UgjMcsbo8CzB6uy/download">apu2 v4.0.16</a></li>
+                        <li><a href="https://cloud.3mdeb.com/index.php/s/QIXjGGoGfP7oe4A/download">apu3 v4.0.16</a></li>
+                        <li><a href="https://cloud.3mdeb.com/index.php/s/LbgBDWuugzsmDWT/download">apu4 v4.0.16</a></li>
+                        <li><a href="https://cloud.3mdeb.com/index.php/s/IJwwKE1zQCe8dYq/download">apu5 v4.0.16</a></li>
+                    </ul>
+                </div>
+                <div class="source-code-column">
+                    <div class="smaller-margin"><p>Source code:</p></div>
+                    <ul>
+                        <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.15...v4.0.16">coreboot v4.0.16</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.11.0.3...rel-1.11.0.4">SeaBIOS rel-1.11.0.4</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/blob/master/CHANGELOG.md#v465---2017-12-29">sortbootorder v4.6.5</a></li>
+                        <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+ v4.0.1</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
 <!-- legacy releases v4.0.15 -->
-        <div class="break"></div>
-        <div class="container" id="lr-7">
-            <div class="smaller-margin">
+            <div class="break"></div>
+            <div class="smaller-margin" id="lr-7">
+                <h2 class="text-middle">Legacy releases</h2>
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.14...v4.0.15">v4.0.15</a></h4>
             </div>
-
+            
             <div class="dimmed-text"><p>Release date: 2018-03-01</p></div>
 
             <ul>
@@ -580,7 +588,7 @@
             <div class="smaller-margin" id="lr-6">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.13...v4.0.14">v4.0.14</a></h4>
             </div>
-
+            
             <div class="dimmed-text"><p>Release date: 2017-12-22</p></div>
 
             <ul>
@@ -623,7 +631,7 @@
             <div class="smaller-margin" id="lr-5">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.12...v4.0.13">v4.0.13</a></h4>
             </div>
-
+            
             <div class="dimmed-text"><p>Release date: 2017-09-29</p></div>
 
             <ul>
@@ -666,7 +674,7 @@
             <div class="smaller-margin" id="lr-4">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.11...v4.0.12">v4.0.12</a></h4>
             </div>
-
+            
             <div class="dimmed-text"><p>Release date: 2017-08-30</p></div>
 
             <ul>
@@ -708,7 +716,7 @@
             <div class="smaller-margin" id="lr-3">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.10...v4.0.11">v4.0.11</a></h4>
             </div>
-
+            
             <div class="dimmed-text"><p>Release date: 2017-07-21</p></div>
 
             <ul>
@@ -748,7 +756,7 @@
             <div class="smaller-margin" id="lr-2">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.9...v4.0.10">v4.0.10</a></h4>
             </div>
-
+            
             <div class="dimmed-text"><p>Release date: 2017-06-30</p></div>
 
             <ul>
@@ -788,7 +796,7 @@
             <div class="smaller-margin" id="lr-1">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.8...v4.0.9">v4.0.9</a></h4>
             </div>
-
+            
             <div class="dimmed-text"><p>Release date: 2017-05-30</p></div>
 
             <ul>

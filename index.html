@@ -78,7 +78,7 @@
                 </tr>
                 <tr>
                     <td>Voyage</td>
-                    <td><sup>(3)</sup></td>
+                    <td><sup>(1)</sup></td>
                     <td>OK</td>
                     <td>OK</td>
                     <td><sup>(2)</sup></td>
@@ -93,15 +93,15 @@
                 <tr>
                     <td>pfSense</td>
                     <td>OK</td>
-                    <td><sup>OK(1)</sup></td>
+                    <td><sup>OK(*)</sup></td>
                     <td>not tested</td>
                     <td><sup>(2)</sup></td>
                 </tr>
             </table>
 
-            <p><sup>(1)</sup> - works well with BIOS v4.6.8 or later in mainline and all legacy releases</p>
+            <p><sup>*</sup> - works well with BIOS v4.6.8 or later in mainline and all legacy releases; for v4.6.7 and older mainline versions issues with installation and system functionality (installation break, unwanted reboots), can be fixed by adding a hint hint.ahci.0.msi="0", for more information see this <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">document</a></p>
             <p><sup>(2)</sup> - all apu boards have problems with USB 3.x stick detection in BIOS, system is working properly, but after reboot/warmboot/coldboot USB stick may not appear in BIOS boot menu (depends on the stick, well working sticks are mentioned in this <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/debug/usb-tests.md">document</a>)</p>
-            <p><sup>(3)</sup> - Voyage Linux is bootable on SD card and works well in read-only mode, remounting as read-write and writing changes to SD sometimes results in kernel panic which often leads to non-operable system</p>
+            <p><sup>(1)</sup> - Voyage Linux is bootable on SD card and works well in read-only mode, remounting as read-write and writing changes to SD sometimes results in kernel panic which often leads to non-operable system</p>
 
             <h5><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/os-status.md" target="_blank">Read more...</a></h5>
         </div>

@@ -175,6 +175,10 @@ ol li::before {
     justify-content: space-between;
 }
 
+ul li:last-child {
+    padding-bottom: 10px;
+}
+
 .source-code-column {
     max-width: 50%;
     display: block;

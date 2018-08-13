@@ -58,6 +58,8 @@ nav {
     padding: 6px 16px;
     font-weight: 400;
     border-right: 1px dotted #CC0000;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .link:hover {

@@ -14,22 +14,31 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Engines - github pages</title>
+    <title>PC Engines - github pages - releases</title>
 </head>
     <body>
 <!-- header -->
-        <header id="top">
-            <div class="pcengines-header">
-                <h1>PC ENGINES</h1>
-                <h4>&trade;</h4>
-            </div>
-        </header>
+        <a href="index.html">
+            <header id="top">
+                <div class="pcengines-header">
+                    <h1>PC ENGINES</h1>
+                    <h4>&trade;</h4>
+                </div>
+            </header>
+        </a>
 
 <!-- NAV -->
 <nav>
         <div class="nav">   
             <div class="link"><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">pfSense</a></div>
             <div class="link"><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md">Pxelinux</a></div>
+            <div class="dropdown link">
+                <span>Archive</span>
+                <div class="dropdown-content">
+                    <a href="#">2018</a>
+                    <a href="2017.html">2017</a>
+                </div>
+            </div>
         </div>
 </nav>
 
@@ -65,12 +74,7 @@
                         <li><a href="#lr-9">v4.0.17</a></li>
                         <li><a href="#lr-8">v4.0.16</a></li>
                         <li><a href="#lr-7">v4.0.15</a></li>
-                        <li><a href="#lr-6">v4.0.14</a></li>
-                        <li><a href="#lr-5">v4.0.13</a></li>
-                        <li><a href="#lr-4">v4.0.12</a></li>
-                        <li><a href="#lr-3">v4.0.11</a></li>
-                        <li><a href="#lr-2">v4.0.10</a></li>
-                        <li><a href="#lr-1">v4.0.9</a></li>                        
+                        <li><a href="#lr-6">v4.0.14</a></li>                 
                     </ul>
                 </div>
             </div>
@@ -641,55 +645,10 @@
                 </div>
             </div>
 
-<!-- mainline releases v4.6.1 -->
-            <div class="break"></div>
-            <div class="smaller-margin" id="mr-1">
-                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.0...v4.6.1">v4.6.1</a></h4>
-            </div>
-            
-            <div class="dimmed-text"><p>Release date: 2017-08-30</p></div>
 
-            <ul>
-                <li>Fixed/added:</li>
-                <ol>
-                    <li>apu5 support</li>
-                </ol>
-                <li>Known issues:</li>
-                <ol>
-                    <li>pfSense installation may fail on hard disks - <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">workaround</a></li>
-                    <li>USB 3.x sticks happen to not appear in boot menu</li>
-                    <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
-                    <li>Memtest86+ hangs</li>
-                    <li>UARTc/c and mPCIe2 CLK enable/disable runtime configuration do not work</li>
-                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
-                    <li>SD card performance is lower than in legacy releases</li>
-                    <li>some PCIe cards are not detected on certain OSes</li>
-                </ol>
-            </ul>
-
-            <div class="source-code-links-binaries">
-                <div class="source-code-column">
-                    <div class="smaller-margin"><p>Binaries:</p></div>
-                    <ul>
-                        <li><a href="http://pcengines.ch/file/apu2_v4.6.1.rom.tar.gz">apu2 v4.6.1</a></li>
-                        <li><a href="http://pcengines.ch/file/apu3_v4.6.1.rom.tar.gz">apu3 v4.6.1</a></li>
-                        <li><a href="http://pcengines.ch/file/apu5_v4.6.1.rom.tar.gz">apu5 v4.6.1</a></li>
-                    </ul>
-                </div>
-                <div class="source-code-column">
-                    <div class="smaller-margin"><p>Source code:</p></div>
-                    <ul>
-                        <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.0...v4.6.1">coreboot v4.6.1</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.10.0.1...rel-1.10.2.1">SeaBIOS rel-1.10.2.1</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.5.6...v4.5.7">sortbootorder v4.5.7</a></li>
-                        <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+ v4.0.1</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
-                                    <!-- LEGACY RELEASES -->
+<!-- ====== LEGACY RELEASES ====== -->
 
         <div class="container">
 
@@ -916,209 +875,6 @@
                 </div>
             </div>
 
-<!-- legacy releases v4.0.13 -->
-            <div class="break"></div>
-            <div class="smaller-margin" id="lr-5">
-                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.12...v4.0.13">v4.0.13</a></h4>
-            </div>
-            
-            <div class="dimmed-text"><p>Release date: 2017-09-29</p></div>
-
-            <ul>
-                <li>Fixed/added:</li>
-                <ol>
-                    <li>fixed date format in sign-of-life string</li>
-                    <li>removed duplicated sign-of-life</li>
-                    <li>sign-of-life do appears right after power on now</li>
-                </ol>
-                <li>Known issues:</li>
-                <ol>
-                    <li>USB 3.x sticks happen to not appear in boot menu</li>
-                    <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
-                </ol>
-            </ul>
-
-            <div class="source-code-links-binaries">
-                <div class="source-code-column">
-                    <div class="smaller-margin"><p>Binaries:</p></div>
-                    <ul>
-                        <li><a href="http://pcengines.ch/file/apu2_v4.0.13.rom.tar.gz">apu2 v4.0.13</a></li>
-                        <li><a href="http://pcengines.ch/file/apu3_v4.0.13.rom.tar.gz">apu3 v4.0.13</a></li>
-                        <li><a href="http://pcengines.ch/file/apu5_v4.0.13.rom.tar.gz">apu5 v4.0.13</a></li>
-                    </ul>
-                </div>
-                <div class="source-code-column">
-                    <div class="smaller-margin"><p>Source code:</p></div>
-                    <ul>
-                        <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.12...v4.0.13">coreboot v4.0.13</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.10.0.1...rel-1.10.2.1">SeaBIOS rel-1.10.2.1</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.5.6...v4.5.7">sortbootorder v4.5.7</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/ipxe">ipxe v1.0.0</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+ v4.0.1</a></li>
-                    </ul>
-                </div>
-            </div>
-
-<!-- legacy releases v4.0.12 -->
-            <div class="break"></div>
-            <div class="smaller-margin" id="lr-4">
-                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.11...v4.0.12">v4.0.12</a></h4>
-            </div>
-            
-            <div class="dimmed-text"><p>Release date: 2017-08-30</p></div>
-
-            <ul>
-                <li>Fixed/added:</li>
-                <ol>
-                    <li>apu5 support</li>
-                </ol>
-                <li>Known issues:</li>
-                <ol>
-                    <li>USB 3.x sticks happen to not appear in boot menu</li>
-                    <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
-                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
-                </ol>
-            </ul>
-
-            <div class="source-code-links-binaries">
-                <div class="source-code-column">
-                    <div class="smaller-margin"><p>Binaries:</p></div>
-                    <ul>
-                        <li><a href="http://pcengines.ch/file/apu2_v4.0.12.rom.tar.gz">apu2 v4.0.12</a></li>
-                        <li><a href="http://pcengines.ch/file/apu3_v4.0.12.rom.tar.gz">apu3 v4.0.12</a></li>
-                        <li><a href="http://pcengines.ch/file/apu5_v4.0.12.rom.tar.gz">apu5 v4.0.12</a></li>
-                    </ul>
-                </div>
-                <div class="source-code-column">
-                    <div class="smaller-margin"><p>Source code:</p></div>
-                    <ul>
-                        <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.11...v4.0.12">coreboot v4.0.12</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.10.0.1...rel-1.10.2.1">SeaBIOS rel-1.10.2.1</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.5.6...v4.5.7">sortbootorder v4.5.7</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/ipxe">ipxe v1.0.0</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+ v4.0.1</a></li>
-                    </ul>
-                </div>
-            </div>
-
-<!-- legacy releases v4.0.11 -->
-            <div class="break"></div>
-            <div class="smaller-margin" id="lr-3">
-                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.10...v4.0.11">v4.0.11</a></h4>
-            </div>
-            
-            <div class="dimmed-text"><p>Release date: 2017-07-21</p></div>
-
-            <ul>
-                <li>Fixed/added:</li>
-                <ol>
-                    <li>force mPCIe2 CLK option in sortbootorder</li>
-                </ol>
-                <li>Known issues:</li>
-                <ol>
-                    <li>USB 3.x sticks happen to not appear in boot menu</li>
-                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
-                </ol>
-            </ul>
-
-            <div class="source-code-links-binaries">
-                <div class="source-code-column">
-                    <div class="smaller-margin"><p>Binaries:</p></div>
-                    <ul>
-                        <li><a href="http://pcengines.ch/file/apu2_v4.0.11.rom.tar.gz">apu2 v4.0.11</a></li>
-                        <li><a href="http://pcengines.ch/file/apu3_v4.0.11.rom.tar.gz">apu3 v4.0.11</a></li>
-                    </ul>
-                </div>
-                <div class="source-code-column">
-                    <div class="smaller-margin"><p>Source code:</p></div>
-                    <ul>
-                        <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.10...v4.0.11">coreboot v4.0.11</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.10.0.1...rel-1.10.2.1">SeaBIOS rel-1.10.2.1</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.5.6...v4.5.7">sortbootorder v4.5.7</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/ipxe">ipxe v1.0.0</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+ v4.0.1</a></li>
-                    </ul>
-                </div>
-            </div>
-
-<!-- legacy releases v4.0.10 -->
-            <div class="break"></div>
-            <div class="smaller-margin" id="lr-2">
-                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.9...v4.0.10">v4.0.10</a></h4>
-            </div>
-            
-            <div class="dimmed-text"><p>Release date: 2017-06-30</p></div>
-
-            <ul>
-                <li>Fixed/added:</li>
-                <ol>
-                    <li>sortbootorder is now available in Kconfig</li>
-                </ol>
-                <li>Known issues:</li>
-                <ol>
-                    <li>USB 3.x sticks happen to not appear in boot menu</li>
-                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
-                </ol>
-            </ul>
-
-            <div class="source-code-links-binaries">
-                <div class="source-code-column">
-                    <div class="smaller-margin"><p>Binaries:</p></div>
-                    <ul>
-                        <li><a href="http://pcengines.ch/file/apu2_v4.0.10.rom.tar.gz">apu2 v4.0.10</a></li>
-                        <li><a href="http://pcengines.ch/file/apu3_v4.0.10.rom.tar.gz">apu3 v4.0.10</a></li>
-                    </ul>
-                </div>
-                <div class="source-code-column">
-                    <div class="smaller-margin"><p>Source code:</p></div>
-                    <ul>
-                        <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.9...v4.0.10">coreboot v4.0.10</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.10.0.1...rel-1.10.2.1">SeaBIOS rel-1.10.2.1</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.5.5...v4.5.6">sortbootorder v4.5.6</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/ipxe">ipxe v1.0.0</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+ v4.0.1</a></li>
-                    </ul>
-                </div>
-            </div>
-
-<!-- legacy releases v4.0.9 -->
-            <div class="break"></div>
-            <div class="smaller-margin" id="lr-1">
-                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.8...v4.0.9">v4.0.9</a></h4>
-            </div>
-            
-            <div class="dimmed-text"><p>Release date: 2017-05-30</p></div>
-
-            <ul>
-                <li>Fixed/added:</li>
-                <ol>
-                    <li>minor fixes to sortbootorder used letters</li>
-                </ol>
-                <li>Known issues:</li>
-                <ol>
-                    <li>USB 3.x sticks happen to not appear in boot menu</li>
-                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
-                </ol>
-            </ul>
-
-            <div class="source-code-links-binaries">
-                <div class="source-code-column">
-                    <div class="smaller-margin"><p>Binaries:</p></div>
-                    <ul>
-                        <li><a href="http://pcengines.ch/file/apu2_v4.0.9.rom.tar.gz">apu2 v4.0.9</a></li>
-                    </ul>
-                </div>
-                <div class="source-code-column">
-                    <div class="smaller-margin"><p>Source code:</p></div>
-                    <ul>
-                        <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.8...v4.0.9">coreboot v4.0.9</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.10.0.1...rel-1.10.2.1">SeaBIOS rel-1.10.2.1</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.0.5.1...v4.0.6">sortbootorder v4.0.6</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/ipxe">ipxe v1.0.0</a></li>
-                        <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+ v4.0.1</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
 

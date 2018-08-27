@@ -27,13 +27,16 @@ p {
     font-size: 14px;
 }
 
+.link span,
+.link span:active,
+.link span:visited,
 a,
 a:active,
 a:visited {
     text-decoration: none;
     color: #484848;
 }
-
+.link span:hover,
 a:hover {
     color: #CC0000;
     text-decoration: none;
@@ -280,4 +283,37 @@ sup {
         max-width: 100%;
         display: block;
     }
+}
+
+
+
+
+
+/* =========== DROPDOWN MENU =========== */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+    .dropdown a {
+        display: block;
+        text-align: center;
+        align-content: center;
+        padding: 0.5rem;
+        border-bottom: 1px solid #C00; }
+        .dropdown a:last-child {border-bottom: none;}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

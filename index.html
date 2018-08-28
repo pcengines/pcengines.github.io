@@ -1174,7 +1174,7 @@
 
 
 <!-- footer -->
-        <footer>
+        <footer id="responsive-footer">
             <div class="footer-text">
                 <a target="_blank" href="https://pcengines.ch/">
                     https://pcengines.ch/
@@ -1182,8 +1182,28 @@
             </div>
         </footer>
 
-        <a href="#top"><button class="up">UP!</button></a>
+        <a href="#top"><button class="up" id="up-button">UP!</button></a>
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ad75dbb362a9183"></script>
+
+<script>
+  window.onload = function() {
+      if ( typeof(window.google_jobrunner) === "undefined" ) {
+                function myFunction(x) {
+                    if (x.matches) { // If media query matches
+                        document.getElementById('responsive-footer').style.bottom = "48px";
+                        document.getElementById('up-button').style.bottom = "3.5rem";
+                    }
+                }
+
+                var x = window.matchMedia("(max-width: 980px)")
+                myFunction(x) // Call listener function at run time
+                x.addListener(myFunction) // Attach listener function on state changes
+      } else {
+        console.log("Thank you for not using AdBlock!");
+      }
+  };
+</script>
+
     </body>
 </html>

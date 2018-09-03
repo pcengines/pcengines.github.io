@@ -32,6 +32,7 @@
         <div class="nav">   
             <div class="link"><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">pfSense</a></div>
             <div class="link"><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md">Pxelinux</a></div>
+            <div class="link"><a target="_blank" href="https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0">Regression Test Results</a></div>
             <div class="dropdown link">
                 <span>Archive</span>
                 <div class="dropdown-content">
@@ -52,6 +53,7 @@
                 <div class="main-list">
                     <h3>Mainline releases</h3>
                     <ul>
+                        <li><a href="#mr-13">v4.8.0.3</a></li>
                         <li><a href="#mr-12">v4.8.0.2</a></li>
                         <li><a href="#mr-11">v4.8.0.1</a></li>
                         <li><a href="#mr-10">v4.6.10</a></li>
@@ -63,7 +65,6 @@
                         <li><a href="#mr-4">v4.6.4</a></li>
                         <li><a href="#mr-3">v4.6.3</a></li>
                         <li><a href="#mr-2">v4.6.2</a></li>
-                        <li><a href="#mr-1">v4.6.1</a></li>
                     </ul>
                 </div>
 
@@ -126,13 +127,62 @@
 
         <div class="container">
             <!-- mainline releases v4.8.0.2 -->
-<!-- 
-    <div class="break"></div> 
-    insert this code when a new update comes out to separate a new version from the current.
--->
+ 
+<!--<div class="break"></div>insert this code when a new update comes out to separate a new version from the current.-->
+
+<div class="smaller-margin" id="mr-13">
+            <h2 class="text-middle">Mainline releases</h2>
+            <!-- h2 tag needs to be moved to the newest version -->
+            <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.8.0.2...v4.8.0.3">v4.8.0.3</a></h4>
+        </div>
+
+        <div class="dimmed-text"><p>Release date: 2018-08-07</p></div>
+
+        <ul>
+            <li>Fixed/added:</li>
+            <ol>
+                <li>synced and rebased with coreboot official repo commit c8e974f</li>
+                <li>change of date format in sign of life string now applies only to PC Engines</li>
+                <li>use CONFIG_LOCALVERSION as a coreboot version string</li>
+                <li>double sign-of-life during power on</li>
+                <li>enabled IOMMU</li>
+            </ol>
+            <li>Known issues:</li>
+            <ol>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes</a></li>
+                <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
+                <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/64">platforms happen to hang after reboot</a></li>
+            </ol>
+        </ul>
+
+        <div class="source-code-links-binaries">
+            <div class="source-code-column">
+                <div class="smaller-margin"><p>Binaries:</p></div>
+                <ul>
+                    <li><a href="http://pcengines.ch/file/apu1_v4.8.0.3.rom.tar.gz">apu1 v4.8.0.3</a></li>
+                    <li><a href="http://pcengines.ch/file/apu2_v4.8.0.3.rom.tar.gz">apu2 v4.8.0.3</a></li>
+                    <li><a href="http://pcengines.ch/file/apu3_v4.8.0.3.rom.tar.gz">apu3 v4.8.0.3</a></li>
+                    <li><a href="http://pcengines.ch/file/apu4_v4.8.0.3.rom.tar.gz">apu4 v4.8.0.3</a></li>
+                    <li><a href="http://pcengines.ch/file/apu5_v4.8.0.3.rom.tar.gz">apu5 v4.8.0.3</a></li>
+                </ul>
+            </div>
+            <div class="source-code-column">
+                <div class="smaller-margin"><p>Source code:</p></div>
+                <ul>
+                    <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.8.0.2...v4.8.0.3">coreboot v4.8.0.3</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.11.0.4...rel-1.11.0.5">SeaBIOS rel-1.11.0.5</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.8...v4.6.9">sortbootorder v4.6.9</a></li>
+                    <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                    <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="break"></div>
 
         <div class="smaller-margin" id="mr-12">
-            <h2 class="text-middle">Mainline releases</h2>
             <!-- h2 tag needs to be moved to the newest version -->
             <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.8.0.1...v4.8.0.2">v4.8.0.2</a></h4>
         </div>
@@ -879,16 +929,37 @@
 
 
 <!-- footer -->
-        <footer>
+        <footer id="responsive-footer">
             <div class="footer-text">
-                <a target="_blank" href="https://pcengines.ch/">
+                <a target="_blank" href="https://pcengines.ch/" style="color:#C00;">
                     https://pcengines.ch/
                 </a>
+                <p>Firmware Maintenance Services proudly provided by <a href="https://3mdeb.com/">3mdeb</a></p>
             </div>
         </footer>
 
-        <a href="#top"><button class="up">UP!</button></a>
+        <a href="#top"><button class="up" id="up-button">UP!</button></a>
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ad75dbb362a9183"></script>
+
+<script>
+  window.onload = function() {
+      if ( typeof(window.google_jobrunner) === "undefined" ) {
+                function myFunction(x) {
+                    if (x.matches) { // If media query matches
+                        document.getElementById('responsive-footer').style.bottom = "48px";
+                        document.getElementById('up-button').style.bottom = "6.7rem";
+                    }
+                }
+
+                var x = window.matchMedia("(max-width: 980px)")
+                myFunction(x) // Call listener function at run time
+                x.addListener(myFunction) // Attach listener function on state changes
+      } else {
+        console.log("Thank you for not using AdBlock!");
+      }
+  };
+</script>
+
     </body>
 </html>

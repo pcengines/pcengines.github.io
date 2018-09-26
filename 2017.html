@@ -53,6 +53,7 @@
                 <div class="main-list">
                     <h3>Mainline releases</h3>
                     <ul>
+                        <li><a href="#mr-2">v4.6.2</a></li>
                         <li><a href="#mr-1">v4.6.1</a></li>
                     </ul>
                 </div>
@@ -74,9 +75,58 @@
 <!-- ====== RELEASES ====== -->
 
         <div class="container">
+
+<!-- mainline releases v4.6.2 -->
+            <div class="smaller-margin" id="mr-2">
+                <h2 class="text-middle">Mainline releases</h2>
+                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.1...v4.6.2">v4.6.2</a></h4>
+            </div>
+            
+            <div class="dimmed-text"><p>Release date: 2017-09-29</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>date format in sign-of-life string</li>
+                    <li>Memtest86+ does nto hang now</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>pfSense installation may fail on hard disks - <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">workaround</a></li>
+                    <li>USB 3.x sticks happen to not appear in boot menu</li>
+                    <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
+                    <li>UARTc/c and mPCIe2 CLK enable/disable runtime configuration do not work</li>
+                    <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                    <li>SD card performance is lower than in legacy releases</li>
+                    <li>some PCIe cards are not detected on certain OSes</li>
+                </ol>
+            </ul>
+
+            <div class="source-code-links-binaries">
+                <div class="source-code-column">
+                    <div class="smaller-margin"><p>Binaries:</p></div>
+                    <ul>
+                        <li><a href="http://pcengines.ch/file/apu2_v4.6.2.rom.tar.gz">apu2 v4.6.2</a></li>
+                        <li><a href="http://pcengines.ch/file/apu3_v4.6.2.rom.tar.gz">apu3 v4.6.2</a></li>
+                        <li><a href="http://pcengines.ch/file/apu5_v4.6.2.rom.tar.gz">apu5 v4.6.2</a></li>
+                    </ul>
+                </div>
+                <div class="source-code-column">
+                    <div class="smaller-margin"><p>Source code:</p></div>
+                    <ul>
+                        <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.1...v4.6.2">coreboot v4.6.2</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.10.0.1...rel-1.10.2.1">SeaBIOS rel-1.10.2.1</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.5.6...v4.5.7">sortbootorder v4.5.7</a></li>
+                        <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+ v4.0.1</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="break"></div>
+
             <!-- mainline releases v4.6.1 -->
             <div class="smaller-margin" id="mr-1">
-                <h2 class="text-middle">Mainline releases</h2>
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.6.0...v4.6.1">v4.6.1</a></h4>
             </div>
             

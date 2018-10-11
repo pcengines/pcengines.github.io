@@ -44,6 +44,7 @@
                 <div class="main-list">
                     <h3>Mainline releases</h3>
                     <ul>
+                        <li><a href="#mr-15">v4.8.0.5</a></li>
                         <li><a href="#mr-14">v4.8.0.4</a></li>
                         <li><a href="#mr-13">v4.8.0.3</a></li>
                         <li><a href="#mr-12">v4.8.0.2</a></li>
@@ -125,6 +126,65 @@
 
 
         <div class="container">
+
+        <!-- mainline releases v4.8.0.5 -->
+ 
+<!--<div class="break"></div>insert this code when a new update comes out to separate a new version from the current.-->
+
+<div class="smaller-margin" id="mr-14">
+        <h2 class="text-middle">Mainline releases</h2>
+        <!-- h2 tag needs to be moved to the newest version -->
+        <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.8.0.4...v4.8.0.5">v4.8.0.5</a></h4>
+    </div>
+
+    <div class="dimmed-text"><p>Release date: 2018-10-06</p></div>
+
+    <ul>
+        <li>Fixed/added:</li>
+        <ol>
+            <li>Updated sortbootorder to v4.6.11</li>
+            <li>Removed custom libpayload modifications</li>
+            <li>Synced and rebased with coreboot official repo commit b7b085d</li>
+            <li>ECC exclusion range, ECC now works properly</li> 
+            <li>Fixed apu1 bootorder PCI paths and letter assignments</li>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/117">firmware release date in DMI tables has been corrected to conform SMBIOS specification</a></li>
+        </ol>
+        <li>Known issues:</li>
+        <ol>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes</a></li>
+            <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
+            <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/64">platforms happen to hang after reboot</a></li>
+        </ol>
+    </ul>
+
+    <div class="source-code-links-binaries">
+        <div class="source-code-column">
+            <div class="smaller-margin"><p>Binaries:</p></div>
+            <ul>
+                <li><a href="http://pcengines.ch/file/apu1_v4.8.0.5.rom.tar.gz">apu1 v4.8.0.5</a></li>
+                <li><a href="http://pcengines.ch/file/apu2_v4.8.0.5.rom.tar.gz">apu2 v4.8.0.5</a></li>
+                <li><a href="http://pcengines.ch/file/apu3_v4.8.0.5.rom.tar.gz">apu3 v4.8.0.5</a></li>
+                <li><a href="http://pcengines.ch/file/apu4_v4.8.0.5.rom.tar.gz">apu4 v4.8.0.5</a></li>
+                <li><a href="http://pcengines.ch/file/apu5_v4.8.0.5.rom.tar.gz">apu5 v4.8.0.5</a></li>
+            </ul>
+        </div>
+        <div class="source-code-column">
+            <div class="smaller-margin"><p>Source code:</p></div>
+            <ul>
+                <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.8.0.4...v4.8.0.5">coreboot v4.8.0.5</a></li>
+                <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.11.0.4...rel-1.11.0.5">SeaBIOS rel-1.11.0.5</a></li>
+                <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.9...v4.6.11">sortbootorder v4.6.11</a></li>
+                <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="break"></div>
+
+
             <!-- mainline releases v4.8.0.4 -->
  
 <!--<div class="break"></div>insert this code when a new update comes out to separate a new version from the current.-->

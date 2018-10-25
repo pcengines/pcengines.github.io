@@ -1071,6 +1071,7 @@
                 <li>Known issues:</li>
                 <ol>
                     <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+                    <li>Serial console can not be enabled yet on apu3 using S1 button</a></li>
                 </ol>
             </ul>
 
@@ -1101,21 +1102,22 @@
             <div class="smaller-margin" id="lr-7">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.14...v4.0.15">v4.0.15</a></h4>
             </div>
-            
+
             <div class="dimmed-text"><p>Release date: 2018-03-01</p></div>
 
             <ul>
                 <li>Fixed/added:</li>
                 <ol>
-                    <li>fixed Kconfig defautl options for SeaBISO repo, console loglevel</li>
+                    <li>fixed Kconfig default options for SeaBIOS repo, console loglevel</li>
                     <li>SMBIOS wrong entries</li>
-                    <li>restoring default features in srotbootorder available now</li>
+                    <li>restoring default features in sortbootorder available now</li>
                     <li>iPXE is built from official iPXE repository, no need to build it externally</li>
                     <li>updated SeaBIOS to 1.11.0.3 (xHCI timeouts adjusted - USB 3.x sticks detection rate increased)</li>
                 </ol>
                 <li>Known issues:</li>
                 <ol>
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
+                    <li>Serial console can not be enabled using S1 button</a></li>
                 </ol>
             </ul>
 
@@ -1159,6 +1161,7 @@
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
                     <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/111">Serial console can be disabled only in coreboot and can not be enabled using S1 button</a></li>
                 </ol>
             </ul>
 

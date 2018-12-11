@@ -981,9 +981,57 @@
     insert this code when a new update comes out to separate a new version from the current.
 -->
 
-<div class="smaller-margin" id="lr-13">
+<div class="smaller-margin" id="lr-14">
     <h2 class="text-middle">Legacy releases</h2>
     <!-- h2 tag needs to be moved to the newest version -->
+    <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.21...v4.0.22">v4.0.22</a></h4>
+</div>
+
+<div class="dimmed-text"><p>Release date: 2018-12-10</p></div>
+
+<ul>
+    <li>Fixed/added:</li>
+    <ol>
+        <li><a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/microcode_patching.md">coreboot: added experimental option for adding microcode update</a></li>
+        <li><a href=" https://github.com/pcengines/apu2-documentation/blob/master/docs/serial_console.md#com2-runtime-configuration">coreboot: added COM2 redirection runtime configuration</a></li>
+        <li>coreboot: fixed generating serial number from MAC address of first NIC</li>
+        <li>sortbootorder: fixed BIOS WP feature for different Winbond chips</li>
+        <li>sortbootorder: BIOS WP is now set after saving bootorder changes</li>
+        <li>sortbootorder: set SRP bit on Macronix SPI (apu1) when enabling BIOS WP</li>
+    </ol>
+    <li>Do known issues dla v4.0.22 i v4.0.21:</li>
+    <ol>
+        <li>Sometimes pfSense hangs during boot on boards with legacy firmware when no USB stick present. Plugging USB stick workarounds the issue. Problem is during investigation.</li>
+    </ol>
+</ul>
+
+<div class="source-code-links-binaries">
+    <div class="source-code-column">
+        <div class="smaller-margin"><p>Binaries:</p></div>
+        <ul>
+            <li><a href="http://pcengines.ch/file/apu2_v4.0.22.rom.tar.gz">apu2 v4.0.22</a></li>
+            <li><a href="http://pcengines.ch/file/apu3_v4.0.22.rom.tar.gz">apu3 v4.0.22</a></li>
+            <li><a href="http://pcengines.ch/file/apu4_v4.0.22.rom.tar.gz">apu4 v4.0.22</a></li>
+            <li><a href="http://pcengines.ch/file/apu5_v4.0.22.rom.tar.gz">apu5 v4.0.22</a></li>
+        </ul>
+    </div>
+    <div class="source-code-column">
+        <div class="smaller-margin"><p>Source code:</p></div>
+        <ul>
+            <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.21...v4.0.22">coreboot v4.0.22</a></li>
+            <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.11.0.6...rel-1.11.0.7">SeaBIOS rel-1.11.0.7</a></li>
+            <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.11...v4.6.12">sortbootorder v4.6.12</a></li>
+            <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+            <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+ v4.0.1</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="break"></div>
+
+
+<div class="smaller-margin" id="lr-13">
     <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.20...v4.0.21">v4.0.21</a></h4>
 </div>
 
@@ -1029,8 +1077,6 @@
 
 
 <div class="smaller-margin" id="lr-12">
-    <h2 class="text-middle">Legacy releases</h2>
-    <!-- h2 tag needs to be moved to the newest version -->
     <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.19...v4.0.20">v4.0.20</a></h4>
 </div>
 
@@ -1075,7 +1121,6 @@
 <!-- legacy releases v4.0.19 -->
 
         <div class="smaller-margin" id="lr-11">
-            <!-- h2 tag needs to be moved to the newest version -->
             <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.18...v4.0.19">v4.0.19</a></h4>
         </div>
 

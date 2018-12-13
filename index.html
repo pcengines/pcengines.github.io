@@ -158,6 +158,15 @@
                     <li>sortbootorder: BIOS WP is now set after saving bootorder changes</li>
                     <li>sortbootorder: set SRP bit on Macronix SPI (apu1) when enabling BIOS WP</li>
                 </ol>
+		<li>Known issues:</li>
+		<ol>
+		    <li><a href="https://github.com/pcengines/coreboot/issues/196">CPU frequency is stuck at low frequencies and does not react to stressin"</a></li>
+		    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes</a></li>
+		    <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
+		    <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
+		    <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
+		    <li><a href="https://github.com/pcengines/apu2-documentation/issues/64">platforms happen to hang after reboot</a></li>
+		</ol>
             </ul>
 
             <div class="source-code-links-binaries">
@@ -995,8 +1004,9 @@
         <li>sortbootorder: BIOS WP is now set after saving bootorder changes</li>
         <li>sortbootorder: set SRP bit on Macronix SPI (apu1) when enabling BIOS WP</li>
     </ol>
-    <li>Do known issues dla v4.0.22 i v4.0.21:</li>
+    <li>Known issues:</li>
     <ol>
+	<li>certain USB 3.x sticks happen to not appear in boot menu</li>
         <li>Sometimes pfSense hangs during boot on boards with legacy firmware when no USB stick present. Plugging USB stick workarounds the issue. Problem is during investigation.</li>
     </ol>
 </ul>
@@ -1043,6 +1053,7 @@
     <li>Known issues:</li>
     <ol>
         <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+	<li>Sometimes pfSense hangs during boot on boards with legacy firmware when no USB stick present. Plugging USB stick workarounds the issue. Problem is during investigation.</li>
     </ol>
 </ul>
 

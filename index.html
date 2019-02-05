@@ -45,6 +45,7 @@
                 <div class="main-list">
                     <h3>Mainline releases</h3>
                     <ul>
+                        <li><a href="#mr-18">v4.9.0.1</a></li>
                         <li><a href="#mr-17">v4.8.0.7</a></li>
                         <li><a href="#mr-16">v4.8.0.6</a></li>
                         <li><a href="#mr-15">v4.8.0.5</a></li>
@@ -68,6 +69,7 @@
                 <div class="main-list">
                     <h3>Legacy releases</h3>
                     <ul>
+                        <li><a href="#lr-15">v4.0.23</a></li>
                         <li><a href="#lr-14">v4.0.22</a></li>
                         <li><a href="#lr-13">v4.0.21</a></li>
                         <li><a href="#lr-12">v4.0.20</a></li>
@@ -133,14 +135,68 @@
 
         <div class="container">
 
+            <!-- mainline releases v4.9.0.1 -->
+
+            <!--<div class="break"></div>insert this code when a new update comes out to separate a new version from the current.-->
+
+            <div class="smaller-margin" id="mr-18">
+                <h2 class="text-middle">Mainline releases</h2>
+                <!-- h2 tag needs to be moved to the newest version -->
+                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.8.0.7...v4.9.0.1">v4.9.0.1</a></h4>
+            </div>
+
+            <div class="dimmed-text"><p>Release date: 2019-01-04</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>rebased with official coreboot repository commit cd26f08</li>
+                    <li>updated SeaBIOS to rel-1.12.0.1</li>
+                    <li>prepared apu1 platform for TPM usage</li>
+                    <li>enabled TPM2.0 module on apu1, apu2 and apu5 in default configuration</li>
+                    <li>disabled waiting for SVI2 command completion causing reboot hangs</li>
+                    <li>introduced reproducible builds by passing build ID to iPXE</li>
+                    <li>AGESA AmdInitLate error caused by AGESA bugs</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes</a></li>
+                    <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
+                    <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
+                </ol>
+            </ul>
+
+            <div class="source-code-links-binaries">
+                <div class="source-code-column">
+                    <div class="smaller-margin"><p>Binaries:</p></div>
+                    <ul>
+                        <li><a href="http://pcengines.ch/file/apu1_v4.9.0.1.rom.tar.gz">apu1 v4.9.0.1</a></li>
+                        <li><a href="http://pcengines.ch/file/apu2_v4.9.0.1.rom.tar.gz">apu2 v4.9.0.1</a></li>
+                        <li><a href="http://pcengines.ch/file/apu3_v4.9.0.1.rom.tar.gz">apu3 v4.9.0.1</a></li>
+                        <li><a href="http://pcengines.ch/file/apu4_v4.9.0.1.rom.tar.gz">apu4 v4.9.0.1</a></li>
+                        <li><a href="http://pcengines.ch/file/apu5_v4.9.0.1.rom.tar.gz">apu5 v4.9.0.1</a></li>
+                    </ul>
+                </div>
+                <div class="source-code-column">
+                    <div class="smaller-margin"><p>Source code:</p></div>
+                    <ul>
+                        <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.8.0.7...v4.9.0.1">coreboot v4.9.0.1</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.11.0.7...rel-1.12.0.1">SeaBIOS rel-1.12.0.1</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.11...v4.6.12">sortbootorder v4.6.12</a></li>
+                        <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                        <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="break"></div>
 
             <!-- mainline releases v4.8.0.7 -->
 
             <!--<div class="break"></div>insert this code when a new update comes out to separate a new version from the current.-->
 
             <div class="smaller-margin" id="mr-17">
-                <h2 class="text-middle">Mainline releases</h2>
-                <!-- h2 tag needs to be moved to the newest version -->
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.8.0.6...v4.8.0.7">v4.8.0.7</a></h4>
             </div>
 
@@ -979,16 +1035,65 @@
 
         <div class="container">
 
+            <!-- legacy releases v4.0.23 -->
+            <!--
+                <div class="break"></div>
+                insert this code when a new update comes out to separate a new version from the current.
+            -->
 
-<!-- legacy releases v4.0.20 -->
+            <div class="smaller-margin" id="lr-15">
+                <h2 class="text-middle">Legacy releases</h2>
+                <!-- h2 tag needs to be moved to the newest version -->
+                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.22...v4.0.23">v4.0.23</a></h4>
+            </div>
+
+            <div class="dimmed-text"><p>Release date: 2019-01-04</p></div>
+
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>enabled ECC</li>
+                    <li>disabled EHCI0 controller on apu2 which caused problems with pfSense booting</li>
+                    <li>updated SeaBIOS to rel-1.12.0.1</li>
+                    <li>introduced reproducible builds by providing build ID to iPXE</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+                </ol>
+            </ul>
+
+            <div class="source-code-links-binaries">
+                <div class="source-code-column">
+                    <div class="smaller-margin"><p>Binaries:</p></div>
+                    <ul>
+                        <li><a href="http://pcengines.ch/file/apu2_v4.0.23.rom.tar.gz">apu2 v4.0.23</a></li>
+                        <li><a href="http://pcengines.ch/file/apu3_v4.0.23.rom.tar.gz">apu3 v4.0.23</a></li>
+                        <li><a href="http://pcengines.ch/file/apu4_v4.0.23.rom.tar.gz">apu4 v4.0.23</a></li>
+                        <li><a href="http://pcengines.ch/file/apu5_v4.0.23.rom.tar.gz">apu5 v4.0.23</a></li>
+                    </ul>
+                </div>
+                <div class="source-code-column">
+                    <div class="smaller-margin"><p>Source code:</p></div>
+                    <ul>
+                        <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.22...v4.0.23">coreboot v4.0.23</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.11.0.7...rel-1.12.0.1">SeaBIOS rel-1.12.0.1</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.11...v4.6.12">sortbootorder v4.6.12</a></li>
+                        <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+ v4.0.1</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="break"></div>
+<!-- legacy releases v4.0.22 -->
 <!--
     <div class="break"></div>
     insert this code when a new update comes out to separate a new version from the current.
 -->
 
 <div class="smaller-margin" id="lr-14">
-    <h2 class="text-middle">Legacy releases</h2>
-    <!-- h2 tag needs to be moved to the newest version -->
     <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.21...v4.0.22">v4.0.22</a></h4>
 </div>
 

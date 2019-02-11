@@ -35,9 +35,9 @@ Legacy:
 
 ## Statistics
 
-![Files Changed](TBD)
+![Files Changed](https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/3a8427b8-98dc-4316-883c-a28728f34d7c.png)
 
-![Addition and Deletion](TBD)
+![Addition and Deletion](https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/7d99ca25-985b-4839-a72e-76d7e3aaa4fc.png)
 
 Difference has grown a little, since some patches have not yet been merged and
 sent (e.g. AGESA headers).
@@ -52,12 +52,13 @@ Patches merged:
 
 ## Testing
 
-* [PC Engines hardware configuration matrix](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=486e98e016&e=16ffa34a09) - hardware configurations available for testing in 3mdeb laboratory.
+* [PC Engines hardware configuration matrix](https://3mdeb.com/wp-content/uploads/2019/02/3mdeb-lab-hw-matrix.png) - hardware configurations available for testing in 3mdeb laboratory.
+
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
-![Legacy test results](TBD)
+![Legacy test results](https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/b41875ae-8b34-4e7f-ae29-5cf090cf2cbf.png)
 
-![Mainline test results](TBD)
+![Mainline test results](https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/fb10bb89-9625-4465-ae1d-206c86e367d3.png)
 
 * Mainline:
   * PASSED: 306 (+12)

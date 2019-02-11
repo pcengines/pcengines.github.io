@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PC Engines</title>
+    <description>&lt;h1&gt;PC ENGINES™&lt;/h1&gt;&lt;h3&gt;Blog&lt;/h3&gt;</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 07 Feb 2019 10:56:36 +0100</pubDate>
+    <lastBuildDate>Thu, 07 Feb 2019 10:56:36 +0100</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>trial</title>
+        <description>&lt;h1 id=&quot;pc-engines-apu-coreboot-open-source-firmware-v4901&quot;&gt;PC Engines apu coreboot Open Source Firmware v4.9.0.1&lt;/h1&gt;
+
+&lt;h2 id=&quot;key-changes&quot;&gt;Key changes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Resolved issues with &lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=279a83d9fd&amp;amp;e=16ffa34a09&quot;&gt;rebooting on mainline firmware&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Enabled TPM&lt;/strong&gt; by default in apu1, apu2, and apu5.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;SeaBIOS&lt;/strong&gt; has been rebased on stable &lt;strong&gt;1.12.0&lt;/strong&gt; release which brings correct detection of TPM2.0 modules.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fixed&lt;/strong&gt; the problem with &lt;strong&gt;hanging pfSense&lt;/strong&gt; on &lt;strong&gt;legacy&lt;/strong&gt; firmware. EHCI0 seems to cause problems on apu2, where it is not populated. Option to enable EHCI0 on apu2 has been blocked to avoid problems in the future.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fixed&lt;/strong&gt; the bug which caused AGESA to return &lt;strong&gt;error on late init&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Introduced reproducible builds for whole binary. iPXE is no longer built with random build ID.&lt;/li&gt;
+  &lt;li&gt;coreboot 4.9 has been released before Christmas, thus &lt;strong&gt;we moved to v4.9.0.x&lt;/strong&gt; naming.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;statistics&quot;&gt;Statistics&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2019-01-20-chart-1.png&quot; alt=&quot;Files Changed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2019-01-20-chart-2.png&quot; alt=&quot;Addition and Deletion&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Difference has grown a little, since some patches have not yet been merged (e.g. apu1 LPC TPM enabling)&lt;/p&gt;
+
+&lt;h2 id=&quot;coreboot-community&quot;&gt;coreboot community&lt;/h2&gt;
+
+&lt;p&gt;Patches merged:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=ab6b3c088b&amp;amp;e=16ffa34a09&quot;&gt;Fix reboot hang&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=847f88ee93&amp;amp;e=16ffa34a09&quot;&gt;Fix AGESA bug in late init&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Patches sent for review:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=2e8eae089e&amp;amp;e=16ffa34a09&quot;&gt;Enable LPC TPM on apu1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=486e98e016&amp;amp;e=16ffa34a09&quot;&gt;PC Engines hardware configuration matrix&lt;/a&gt; - hardware configurations available for testing in 3mdeb laboratory.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=96d9b426c0&amp;amp;e=16ffa34a09&quot;&gt;PC Engines release validation results&lt;/a&gt; - please note there are separate sheets for each board-release.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2019-01-20-chart-3.png&quot; alt=&quot;Legacy test results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2019-01-20-chart-4.png&quot; alt=&quot;Mainline test results&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mainline
+    &lt;ul&gt;
+      &lt;li&gt;PASSED: 298 (-1)&lt;/li&gt;
+      &lt;li&gt;FAILED: 14 (+3)&lt;/li&gt;
+      &lt;li&gt;PASSED [%]: 95,51% (-0,94%)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Legacy
+    &lt;ul&gt;
+      &lt;li&gt;PASSED: 280 (-3)&lt;/li&gt;
+      &lt;li&gt;FAILED: 19 (0)&lt;/li&gt;
+      &lt;li&gt;PASSED [%]: 93,65% (-0,06%)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 05 Feb 2019 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/firmware/2019/02/05/Trial-of-second-post.html</link>
+        <guid isPermaLink="true">http://localhost:4000/firmware/2019/02/05/Trial-of-second-post.html</guid>
+        
+        
+        <category>Firmware</category>
+        
+      </item>
+    
+      <item>
+        <title>PC Engines apu coreboot Open Source Firmware v4.9.0.1</title>
+        <description>&lt;h1 id=&quot;pc-engines-apu-coreboot-open-source-firmware-v4901&quot;&gt;PC Engines apu coreboot Open Source Firmware v4.9.0.1&lt;/h1&gt;
+
+&lt;h2 id=&quot;key-changes&quot;&gt;Key changes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Resolved issues with &lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=279a83d9fd&amp;amp;e=16ffa34a09&quot;&gt;rebooting on mainline firmware&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Enabled TPM&lt;/strong&gt; by default in apu1, apu2, and apu5.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;SeaBIOS&lt;/strong&gt; has been rebased on stable &lt;strong&gt;1.12.0&lt;/strong&gt; release which brings correct detection of TPM2.0 modules.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fixed&lt;/strong&gt; the problem with &lt;strong&gt;hanging pfSense&lt;/strong&gt; on &lt;strong&gt;legacy&lt;/strong&gt; firmware. EHCI0 seems to cause problems on apu2, where it is not populated. Option to enable EHCI0 on apu2 has been blocked to avoid problems in the future.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fixed&lt;/strong&gt; the bug which caused AGESA to return &lt;strong&gt;error on late init&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Introduced reproducible builds for whole binary. iPXE is no longer built with random build ID.&lt;/li&gt;
+  &lt;li&gt;coreboot 4.9 has been released before Christmas, thus &lt;strong&gt;we moved to v4.9.0.x&lt;/strong&gt; naming.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;statistics&quot;&gt;Statistics&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2019-01-20-chart-1.png&quot; alt=&quot;Files Changed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2019-01-20-chart-2.png&quot; alt=&quot;Addition and Deletion&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Difference has grown a little, since some patches have not yet been merged (e.g. apu1 LPC TPM enabling)&lt;/p&gt;
+
+&lt;h2 id=&quot;coreboot-community&quot;&gt;coreboot community&lt;/h2&gt;
+
+&lt;p&gt;Patches merged:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=ab6b3c088b&amp;amp;e=16ffa34a09&quot;&gt;Fix reboot hang&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=847f88ee93&amp;amp;e=16ffa34a09&quot;&gt;Fix AGESA bug in late init&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Patches sent for review:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=2e8eae089e&amp;amp;e=16ffa34a09&quot;&gt;Enable LPC TPM on apu1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=486e98e016&amp;amp;e=16ffa34a09&quot;&gt;PC Engines hardware configuration matrix&lt;/a&gt; - hardware configurations available for testing in 3mdeb laboratory.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=96d9b426c0&amp;amp;e=16ffa34a09&quot;&gt;PC Engines release validation results&lt;/a&gt; - please note there are separate sheets for each board-release.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2019-01-20-chart-3.png&quot; alt=&quot;Legacy test results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2019-01-20-chart-4.png&quot; alt=&quot;Mainline test results&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mainline
+    &lt;ul&gt;
+      &lt;li&gt;PASSED: 298 (-1)&lt;/li&gt;
+      &lt;li&gt;FAILED: 14 (+3)&lt;/li&gt;
+      &lt;li&gt;PASSED [%]: 95,51% (-0,94%)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Legacy
+    &lt;ul&gt;
+      &lt;li&gt;PASSED: 280 (-3)&lt;/li&gt;
+      &lt;li&gt;FAILED: 19 (0)&lt;/li&gt;
+      &lt;li&gt;PASSED [%]: 93,65% (-0,06%)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 20 Jan 2019 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/firmware/2019/01/20/PC-Engines-Firmware-v4-0-0-1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/firmware/2019/01/20/PC-Engines-Firmware-v4-0-0-1.html</guid>
+        
+        
+        <category>Firmware</category>
+        
+      </item>
+    
+  </channel>
+</rss>

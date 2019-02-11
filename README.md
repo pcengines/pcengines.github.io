@@ -1,17 +1,6 @@
-If there's any issue you are facing in setting up DevJournal theme, I'm there for you. Just create an issue in this repository (http://github.com/hemangsk/DevJournal), (https://help.github.com/articles/creating-an-issue/) and I'll get back to you asap. :smile: :+1:<br>
+# This repository contains pcengines.github.io page files.
 
-![alt-tag](https://farm8.staticflickr.com/7062/26385542743_1c7e6b8d9e_o.png) 
-
-![alt-tag](https://farm8.staticflickr.com/7320/26385629583_eac6861c48_o.png)
-
-
-![alt-tag](https://farm8.staticflickr.com/7300/26895705412_d6365b9a14_o.png)
-
-
-
-![alt-tag](https://farm8.staticflickr.com/7370/26956762406_cbfa7a2139_o.png)
-
-#### To create a new post :sunglasses:
+#### To create a new post
 
 - Create a .markdown file inside _posts folder.
 - Name the file according to the standard jekyll format.
@@ -38,11 +27,7 @@ If there's any issue you are facing in setting up DevJournal theme, I'm there fo
     ```  
 
 
-![alt-tag](https://farm8.staticflickr.com/7660/26895189602_170af0a783_o.png)
-![alt-tag](https://farm8.staticflickr.com/7594/26385450183_37116c6d32_o.png)
-
-
-#### Create new pages, such a breeze! :smile:
+#### Create new pages, such a breeze!
 - Create a .md file in the root directory.
 - Name the file with the desired page link name.
 ```
@@ -68,22 +53,3 @@ If there's any issue you are facing in setting up DevJournal theme, I'm there fo
         tagline : "Humanity is overrated."
         ---
 ```      
-
-![alt-tag](https://farm8.staticflickr.com/7124/26895188812_65218d8652_o.png)
-
-
-That's all folks.
-
->Super Flexible, Minimal, Text Based jekyll theme for the kickass geek :sunglasses:
-
-#### It'd be really awesome if ,<br>
-1.  You wish to create some new feature and would like to integrate those in DevJournal. Pull requests are most welcome!
-2.  Consider opening issues if you find bugs or feature requests.
-
-Just so you know, the license type is MIT.
-
-
->Its' all about being community driven.  :bus: :bus: :dash:
-
-Have a great day!  :smile: :smile: :smiley:
-

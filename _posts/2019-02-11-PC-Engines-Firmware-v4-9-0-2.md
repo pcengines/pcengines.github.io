@@ -98,7 +98,7 @@ may not match with the information from the previous newsletter.
 
 ### Mainline
 
-* [apu1 v4.9.0.2](https://cloud.3mdeb.com/index.php/s/XTGTbRnkQCMoGrK/download)
+* [apu1 v4.9.0.2](https://cloud.3mdeb.com/index.php/s/a5YewDw9PqMriFr/download)
 
   SHA256: 21618e83de50e87eb6f0cacf95e6e62c8d8d453a82b0fbeffa0b6fde8eed0e6d
 
@@ -124,7 +124,7 @@ may not match with the information from the previous newsletter.
 
   SHA256: 43880c9566cbafca1874bb66dcc0444186a89c4a5408696b432f3fdf01e1b267
 
-* [apu3v4.0.24](https://cloud.3mdeb.com/index.php/s/fBefFydWbMTaFHg/download)
+* [apu3 v4.0.24](https://cloud.3mdeb.com/index.php/s/fBefFydWbMTaFHg/download)
 
   SHA256: f26f9744a12b971605bd9b954e8fc5252c4789d95d86e615bc3a0df66630d59d
 

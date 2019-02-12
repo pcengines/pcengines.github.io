@@ -10,37 +10,52 @@ categories: Firmware
 
 Mainline:
 
-1. Enabled CPB feature.
-2. Corrected AGESA headers, which were for newer AGESA version than used in
+1. **Enabled** CPB feature.
+2. **Corrected AGESA headers**, which were for newer AGESA version than used in
    coreboot.
 3. [Reproducible builds limiation](https://github.com/pcengines/coreboot/issues/267) -
-   currently set iPXE and Memtest86+ master revisions do not guarantee the
-   build reproducibility in long term. Correct revisions will be set in
-   v4.9.0.3.
-4. Performed an analysis how to safely reboot platform after firmware upgrade
-   using available reset methods:
+   currently set **iPXE** and **Memtest86**+ master revisions do not guarantee
+   the build reproducibility in long term. Correct revisions will be set in
+   **v4.9.0.3**.
+4. Performed an **analysis** how to **safely reboot** platform after firmware
+   upgrade using available reset methods:
    https://github.com/pcengines/apu2-documentation/pull/131
    https://github.com/pcengines/apu2-documentation/pull/108
-5. pcengines.github.io page has been updated with newsletter subscription
-   option and a blog with release reports containing key changes, test
-   statistics/charts etc.
+5. pcengines.github.io page has been **updated** with **newsletter**
+   **subscription** option and a **blog** with release reports containing key
+   changes, test statistics/charts etc.
 
 Legacy:
 
-1. Enabled CPB feature.
+1. **Enabled** CPB feature.
 2. [Reproducible builds limiation](https://github.com/pcengines/coreboot/issues/267) -
-   currently set iPXE and Memtest86+ master revisions do not guarantee the
-   build reproducibility in long term. Correct revisions will be set in
-   v4.0.25.
+   currently set **iPXE** and **Memtest86**+ master revisions do not guarantee
+   the build reproducibility in long term. Correct revisions will be set in
+   **v4.0.25**.
 
 ## Statistics
 
 ![Files Changed](https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/3a8427b8-98dc-4316-883c-a28728f34d7c.png)
 
+The chart shows the total files changed from release tag against the rebase point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml excluded from statistics). Check the statistics with:
+
+```
+git diff --stat <rebase_point_sha> ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+```
+
 ![Addition and Deletion](https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/7d99ca25-985b-4839-a72e-76d7e3aaa4fc.png)
 
-Difference has grown a little, since some patches have not yet been merged and
-sent (e.g. AGESA headers).
+The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for given release. Check the statistics
+with:
+
+```
+git diff --stat <rebase_point_sha> ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+```
+
+Two files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree. The difference has grown a little since some
+patches have not yet been merged and/or sent (AGESA headers).
 
 ## coreboot community
 
@@ -56,18 +71,28 @@ Patches merged:
 
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
-![Legacy test results](https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/b41875ae-8b34-4e7f-ae29-5cf090cf2cbf.png)
+Test changes in this release:
+
+* **Added** 2 new test-cases: Serial output redirection enable/disable.
+* **Improved** network interface tests.
+* **Improved** HUAWEI modem detection tests.
+* **Fixed** OS installation tests for configs with WLE900VX modem.
 
 ![Mainline test results](https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/fb10bb89-9625-4465-ae1d-206c86e367d3.png)
+
+![Legacy test results](https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/b41875ae-8b34-4e7f-ae29-5cf090cf2cbf.png)
+
+We have updated some tests reults after re-testing, therefore some statistics
+may not match with the information from the previous newsletter.
 
 * Mainline:
   * PASSED: 306 (+12)
   * FAILED: 16 (-2)
-  * PASSED [%]: 95,03%
+  * PASSED [%]: 95,03% (+0.8%)
 * Legacy:
   * PASSED: 286 (+10)
   * FAILED: 23 (0)
-  * PASSED [%]: 92,56%
+  * PASSED [%]: 92,56% (+0.25%)
 
 ## Binaries
 

@@ -90,48 +90,53 @@ may not match with the information from the previous newsletter.
   * FAILED: 16 (-2)
   * PASSED [%]: 95,03% (+0.8%)
 * Legacy:
-  * PASSED: 286 (+10)
-  * FAILED: 23 (0)
-  * PASSED [%]: 92,56% (+0.25%)
+  * PASSED: 282 (+10)
+  * FAILED: 15 (0)
+  * PASSED [%]: 94,95% (+0.18%)
+
+The increase in the number of PASSED tests results from new tests (+8) and
+resolved issue #219. Legacy tests have been updated to skip XEN tests. The
+number of FAILED tests is the aggregated amount of issues listed in the table
+below that happened during regression testing.
 
 ## Binaries
 
 ### Mainline
 
-* [apu1 v4.9.0.2](https://cloud.3mdeb.com/index.php/s/a5YewDw9PqMriFr/download)
+* [apu1 v4.9.0.2](https://cloud.3mdeb.com/index.php/s/4bExAC9GxNxKkEZ/download)
 
   SHA256: 21618e83de50e87eb6f0cacf95e6e62c8d8d453a82b0fbeffa0b6fde8eed0e6d
 
-* [apu2 v4.9.0.2](https://cloud.3mdeb.com/index.php/s/Yjx7PqAqFeQQCyC/download)
+* [apu2 v4.9.0.2](https://cloud.3mdeb.com/index.php/s/AF5XHB54gz4dpQL/download)
 
   SHA256: 4d64c5b7875b9877b4f149e0a0f082a614ae5572cfd7346b0c45d5378f887b75
 
-* [apu3 v4.9.0.2](https://cloud.3mdeb.com/index.php/s/Qf3oF4AqydiAxdr/download)
+* [apu3 v4.9.0.2](https://cloud.3mdeb.com/index.php/s/G4P4jeLFiwyne4p/download)
 
   SHA256: abc47e2c3db3e1e3189912076f9973771c184eb14397d85cea9067794d0fd8c7
 
-* [apu4 v4.9.0.2](https://cloud.3mdeb.com/index.php/s/4zg6LH2X9NM6wrL/download)
+* [apu4 v4.9.0.2](https://cloud.3mdeb.com/index.php/s/DKo4ZkxjxiTttEb/download)
 
   SHA256: fa4f1c1763ec918457ba22e57c3ff8fb19fc32cd0634ac9d7472b612cea806ae
 
-* [apu5 v4.9.0.2](https://cloud.3mdeb.com/index.php/s/WsjAj6AQTDTByYH/download)
+* [apu5 v4.9.0.2](https://cloud.3mdeb.com/index.php/s/mxMQamFwnXnwt6G/download)
   
   SHA256: e31e952dfcb549f3144d30eb25b2bcb2ddaeb9ed89372d2e548c0d3902cf14c5
 
 ### Legacy
 
-* [apu2 v4.0.24](https://cloud.3mdeb.com/index.php/s/MDSaP8CnWEQrKC3/download)
+* [apu2 v4.0.24](https://cloud.3mdeb.com/index.php/s/F2mk9GQMYWGrd9p/download)
 
   SHA256: 43880c9566cbafca1874bb66dcc0444186a89c4a5408696b432f3fdf01e1b267
 
-* [apu3 v4.0.24](https://cloud.3mdeb.com/index.php/s/fBefFydWbMTaFHg/download)
+* [apu3 v4.0.24](https://cloud.3mdeb.com/index.php/s/AdCzmcdRcnSzRFL/download)
 
   SHA256: f26f9744a12b971605bd9b954e8fc5252c4789d95d86e615bc3a0df66630d59d
 
-* [apu4 v4.0.24](https://cloud.3mdeb.com/index.php/s/ef5jSRw3rfZgocJ/download)
+* [apu4 v4.0.24](https://cloud.3mdeb.com/index.php/s/92ScGtQL7NPjkcr/download)
 
   SHA256: 262dceb5408d6ba8f14477465adc5c0313bb85bdc0c1a8722f52c28b09f9aa05
 
-* [apu5 v4.0.24](https://cloud.3mdeb.com/index.php/s/XRi7K2LDaJryqJF/download)
+* [apu5 v4.0.24](https://cloud.3mdeb.com/index.php/s/AJP9eSnkRBcoxtT/download)
 
   SHA256: fadca94b5618b6e93a6f5b8f5ff96e8ff1128b7d5d117fa91dd941a4180a4557

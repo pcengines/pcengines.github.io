@@ -128,6 +128,7 @@
                 <div class="main-list">
                     <h3>Mainline releases</h3>
                     <ul>
+                        <li><a href="#mr-19">v4.9.0.2</a></li>
                         <li><a href="#mr-18">v4.9.0.1</a></li>
                         <li><a href="#mr-17">v4.8.0.7</a></li>
                         <li><a href="#mr-16">v4.8.0.6</a></li>
@@ -152,6 +153,7 @@
                 <div class="main-list">
                     <h3>Legacy releases</h3>
                     <ul>
+                        <li><a href="#lr-16">v4.0.24</a></li>
                         <li><a href="#lr-15">v4.0.23</a></li>
                         <li><a href="#lr-14">v4.0.22</a></li>
                         <li><a href="#lr-13">v4.0.21</a></li>
@@ -218,15 +220,79 @@
 
         <div class="container">
 
+        <!-- mainline releases v4.9.0.2 -->
+
+        <!--<div class="break"></div>insert this code when a new update comes out to separate a new version from the current.-->
+
+        <div class="smaller-margin" id="mr-19">
+                <h2 class="text-middle">Mainline releases</h2>
+                <!-- h2 tag needs to be moved to the newest version -->
+                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.9.0.1...v4.9.0.2">v4.9.0.2</a></h4>
+            </div>
+    
+            <div class="dimmed-text">
+                <p>Release date: 2019-02-04</p>
+            </div>
+    
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>enabled CPB feature</li>
+                    <li>rebased with official coreboot repository commit 2b2325e</li>
+                    <li>removed AGESA headers changes introduced with 1.0.0.A</li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on
+                            certain OSes</a></li>
+                    <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
+                            sometimes results in detecting only 1 stick</a></li>
+                    <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
+                            boot menu</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
+                    <li><a href="https://github.com/pcengines/coreboot/issues/267">Reproducible builds limiation - currently set iPXE and Memtest86+ master revisions do not guarantee the build reproducibility in long term. Correct revisions will be set in v4.9.0.3. </a></li>
+                </ol>
+            </ul>
+    
+            <div class="source-code-links-binaries">
+                <div class="source-code-column">
+                    <div class="smaller-margin">
+                        <p>Binaries:</p>
+                    </div>
+                    <ul>
+                        <li><a href="http://pcengines.ch/file/apu1_v4.9.0.2.rom.tar.gz">apu1 v4.9.0.2</a></li>
+                        <li><a href="http://pcengines.ch/file/apu2_v4.9.0.2.rom.tar.gz">apu2 v4.9.0.2</a></li>
+                        <li><a href="http://pcengines.ch/file/apu3_v4.9.0.2.rom.tar.gz">apu3 v4.9.0.2</a></li>
+                        <li><a href="http://pcengines.ch/file/apu4_v4.9.0.2.rom.tar.gz">apu4 v4.9.0.2</a></li>
+                        <li><a href="http://pcengines.ch/file/apu5_v4.9.0.2.rom.tar.gz">apu5 v4.9.0.2</a></li>
+                    </ul>
+                </div>
+                <div class="source-code-column">
+                    <div class="smaller-margin">
+                        <p>Source code:</p>
+                    </div>
+                    <ul>
+                        <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.9.0.1...v4.9.0.2">coreboot
+                                v4.9.0.2</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.11.0.7...rel-1.12.0.1">SeaBIOS
+                                rel-1.12.0.1</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.11...v4.6.12">sortbootorder
+                                v4.6.12</a></li>
+                        <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                        <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="break"></div>
+            
         <!-- mainline releases v4.9.0.1 -->
 
         <!--<div class="break"></div>insert this code when a new update comes out to separate a new version from the current.-->
 
-        <div class="smaller-margin" id="mr-18">
-            <h2 class="text-middle">Mainline releases</h2>
-            <!-- h2 tag needs to be moved to the newest version -->
-            <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.8.0.7...v4.9.0.1">v4.9.0.1</a></h4>
-        </div>
+            <div class="smaller-margin" id="mr-17">
+                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.8.0.7...v4.9.0.1">v4.9.0.1</a></h4>
+            </div>
 
         <div class="dimmed-text">
             <p>Release date: 2019-01-04</p>
@@ -1130,6 +1196,68 @@
 
         <div class="container">
 
+<!-- legacy releases v4.0.24 -->
+<!--
+                <div class="break"></div>
+                insert this code when a new update comes out to separate a new version from the current.
+            -->
+
+            <div class="smaller-margin" id="lr-16">
+                    <h2 class="text-middle">Legacy releases</h2>
+                    <!-- h2 tag needs to be moved to the newest version -->
+                    <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.23...v4.0.24">v4.0.24</a></h4>
+                </div>
+                
+                <div class="dimmed-text">
+                    <p>Release date: 2019-02-04</p>
+                </div>
+                
+                <ul>
+                    <li>Fixed/added:</li>
+                    <ol>
+                        <li>enabled CPB feature</li>
+                    </ol>
+                    <li>Known issues:</li>
+                    <ol>
+                        <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+                        <li><a href="https://github.com/pcengines/coreboot/issues/267">Reproducible builds limiation - currently set iPXE and Memtest86+ master revisions do not guarantee the build reproducibility in long term. Correct revisions will be set in v4.0.25. </a></li>
+                    </ol>
+                </ul>
+                
+                <div class="source-code-links-binaries">
+                    <div class="source-code-column">
+                        <div class="smaller-margin">
+                            <p>Binaries:</p>
+                        </div>
+                        <ul>
+                            <li><a href="http://pcengines.ch/file/apu2_v4.0.24.rom.tar.gz">apu2 v4.0.24</a></li>
+                            <li><a href="http://pcengines.ch/file/apu3_v4.0.24.rom.tar.gz">apu3 v4.0.24</a></li>
+                            <li><a href="http://pcengines.ch/file/apu4_v4.0.24.rom.tar.gz">apu4 v4.0.24</a></li>
+                            <li><a href="http://pcengines.ch/file/apu5_v4.0.24.rom.tar.gz">apu5 v4.0.24</a></li>
+                        </ul>
+                    </div>
+                    <div class="source-code-column">
+                        <div class="smaller-margin">
+                            <p>Source code:</p>
+                        </div>
+                        <ul>
+                            <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.23...v4.0.24">coreboot
+                                    v4.0.24</a></li>
+                            <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.11.0.7...rel-1.12.0.1">SeaBIOS
+                                    rel-1.12.0.1</a></li>
+                            <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.11...v4.6.12">sortbootorder
+                                    v4.6.12</a></li>
+                            <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                            <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+
+                                    v4.0.1</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="break"></div>
+                
+
 <!-- legacy releases v4.0.23 -->
 <!--
                 <div class="break"></div>
@@ -1137,7 +1265,6 @@
             -->
 
 <div class="smaller-margin" id="lr-15">
-    <h2 class="text-middle">Legacy releases</h2>
     <!-- h2 tag needs to be moved to the newest version -->
     <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.22...v4.0.23">v4.0.23</a></h4>
 </div>

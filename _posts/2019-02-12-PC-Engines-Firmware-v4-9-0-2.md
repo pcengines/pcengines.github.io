@@ -82,7 +82,7 @@ Test changes in this release:
 
 ![Legacy test results](https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/b41875ae-8b34-4e7f-ae29-5cf090cf2cbf.png)
 
-We have updated some tests reults after re-testing, therefore some statistics
+We have updated some tests results after re-testing, therefore some statistics
 may not match with the information from the previous newsletter.
 
 * Mainline:

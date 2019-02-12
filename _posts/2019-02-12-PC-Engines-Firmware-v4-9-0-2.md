@@ -176,3 +176,5 @@ below that happened during regression testing.
   [SHA256 file](https://cloud.3mdeb.com/index.php/s/jEJqDWBpRiBJJLx/download)
 
   [SHA256 sig](https://cloud.3mdeb.com/index.php/s/SewAjA3fjkZHnrY/download)
+
+See how to verify the signatures on [asciinema](https://asciinema.org/a/227035)

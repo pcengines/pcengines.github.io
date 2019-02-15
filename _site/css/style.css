@@ -271,6 +271,28 @@ sup {
     font-size: 9px;
 }
 
+.sha-button {
+    border: solid 1px #CC0000;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.sha-button:hover {
+    background-color: #fff !important;
+}
+
 @media (max-width: 462px) {
     th,
     td {

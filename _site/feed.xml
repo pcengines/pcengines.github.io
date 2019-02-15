@@ -5,9 +5,232 @@
     <description>&lt;h1&gt;PC ENGINES™&lt;/h1&gt;&lt;h3&gt;Blog&lt;/h3&gt;</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Feb 2019 14:41:47 +0100</pubDate>
-    <lastBuildDate>Mon, 11 Feb 2019 14:41:47 +0100</lastBuildDate>
+    <pubDate>Fri, 15 Feb 2019 15:16:24 +0100</pubDate>
+    <lastBuildDate>Fri, 15 Feb 2019 15:16:24 +0100</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>PC Engines apu coreboot Open Source Firmware v4.9.0.2</title>
+        <description>&lt;h1 id=&quot;pc-engines-apu-coreboot-open-source-firmware-v4902&quot;&gt;PC Engines apu coreboot Open Source Firmware v4.9.0.2&lt;/h1&gt;
+
+&lt;h2 id=&quot;key-changes&quot;&gt;Key changes&lt;/h2&gt;
+
+&lt;p&gt;Mainline:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Enabled&lt;/strong&gt; CPB feature.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Corrected AGESA headers&lt;/strong&gt;, which were for newer AGESA version than used in
+coreboot.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/pcengines/coreboot/issues/267&quot;&gt;Reproducible builds limiation&lt;/a&gt; -
+currently set &lt;strong&gt;iPXE&lt;/strong&gt; and &lt;strong&gt;Memtest86&lt;/strong&gt;+ master revisions do not guarantee
+the build reproducibility in long term. Correct revisions will be set in
+&lt;strong&gt;v4.9.0.3&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Performed an &lt;strong&gt;analysis&lt;/strong&gt; how to &lt;strong&gt;safely reboot&lt;/strong&gt; platform after firmware
+upgrade using available reset methods:
+https://github.com/pcengines/apu2-documentation/pull/131
+https://github.com/pcengines/apu2-documentation/pull/108&lt;/li&gt;
+  &lt;li&gt;pcengines.github.io page has been &lt;strong&gt;updated&lt;/strong&gt; with &lt;strong&gt;newsletter&lt;/strong&gt;
+&lt;strong&gt;subscription&lt;/strong&gt; option and a &lt;strong&gt;blog&lt;/strong&gt; with release reports containing key
+changes, test statistics/charts etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Legacy:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Enabled&lt;/strong&gt; CPB feature.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/pcengines/coreboot/issues/267&quot;&gt;Reproducible builds limiation&lt;/a&gt; -
+currently set &lt;strong&gt;iPXE&lt;/strong&gt; and &lt;strong&gt;Memtest86&lt;/strong&gt;+ master revisions do not guarantee
+the build reproducibility in long term. Correct revisions will be set in
+&lt;strong&gt;v4.0.25&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;statistics&quot;&gt;Statistics&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/3a8427b8-98dc-4316-883c-a28728f34d7c.png&quot; alt=&quot;Files Changed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The chart shows the total files changed from release tag against the rebase point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml excluded from statistics). Check the statistics with:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git diff --stat &amp;lt;rebase_point_sha&amp;gt; ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/7d99ca25-985b-4839-a72e-76d7e3aaa4fc.png&quot; alt=&quot;Addition and Deletion&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for given release. Check the statistics
+with:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git diff --stat &amp;lt;rebase_point_sha&amp;gt; ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Two files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree. The difference has grown a little since some
+patches have not yet been merged and/or sent (AGESA headers).&lt;/p&gt;
+
+&lt;h2 id=&quot;coreboot-community&quot;&gt;coreboot community&lt;/h2&gt;
+
+&lt;p&gt;Patches merged:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/30354&quot;&gt;Enable LPC TPM on apu1&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/31229&quot;&gt;Enable CPB&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/wp-content/uploads/2019/02/3mdeb-lab-hw-matrix.png&quot;&gt;PC Engines hardware configuration matrix&lt;/a&gt; - hardware configurations available for testing in 3mdeb laboratory.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=96d9b426c0&amp;amp;e=16ffa34a09&quot;&gt;PC Engines release validation results&lt;/a&gt; - please note there are separate sheets for each board-release.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Test changes in this release:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Added&lt;/strong&gt; 2 new test-cases: Serial output redirection enable/disable.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Improved&lt;/strong&gt; network interface tests.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Improved&lt;/strong&gt; HUAWEI modem detection tests.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fixed&lt;/strong&gt; OS installation tests for configs with WLE900VX modem.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/fb10bb89-9625-4465-ae1d-206c86e367d3.png&quot; alt=&quot;Mainline test results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/b41875ae-8b34-4e7f-ae29-5cf090cf2cbf.png&quot; alt=&quot;Legacy test results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We have updated some tests results after re-testing, therefore some statistics
+may not match with the information from the previous newsletter.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mainline:
+    &lt;ul&gt;
+      &lt;li&gt;PASSED: 306 (+12)&lt;/li&gt;
+      &lt;li&gt;FAILED: 16 (-2)&lt;/li&gt;
+      &lt;li&gt;PASSED [%]: 95,03% (+0.8%)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Legacy:
+    &lt;ul&gt;
+      &lt;li&gt;PASSED: 282 (+10)&lt;/li&gt;
+      &lt;li&gt;FAILED: 15 (0)&lt;/li&gt;
+      &lt;li&gt;PASSED [%]: 94,95% (+0.18%)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The increase in the number of PASSED tests results from new tests (+8) and
+resolved issue #219. Legacy tests have been updated to skip XEN tests. The
+number of FAILED tests is the aggregated amount of issues listed in the table
+below that happened during regression testing.&lt;/p&gt;
+
+&lt;h2 id=&quot;binaries&quot;&gt;Binaries&lt;/h2&gt;
+
+&lt;h3 id=&quot;mainline&quot;&gt;Mainline&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/4bExAC9GxNxKkEZ/download&quot;&gt;apu1 v4.9.0.2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;SHA256: 21618e83de50e87eb6f0cacf95e6e62c8d8d453a82b0fbeffa0b6fde8eed0e6d&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/gW78434jwxZZqGe/download&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/fX8FCzAbMEyy6cr/download&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/AF5XHB54gz4dpQL/download&quot;&gt;apu2 v4.9.0.2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;SHA256: 4d64c5b7875b9877b4f149e0a0f082a614ae5572cfd7346b0c45d5378f887b75&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/6YmfLeCjtEYsgQP/download&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/ZjZ96mmEg2XiHpF/download&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/G4P4jeLFiwyne4p/download&quot;&gt;apu3 v4.9.0.2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;SHA256: abc47e2c3db3e1e3189912076f9973771c184eb14397d85cea9067794d0fd8c7&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/WxDxFSGrf2fNWcg/download&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/ccq3ejZBYCF8kGj/download&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/DKo4ZkxjxiTttEb/download&quot;&gt;apu4 v4.9.0.2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;SHA256: fa4f1c1763ec918457ba22e57c3ff8fb19fc32cd0634ac9d7472b612cea806ae&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/9PLqiW2okoLRz2p/download&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/m4W4A244y6wQcas/download&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/mxMQamFwnXnwt6G/download&quot;&gt;apu5 v4.9.0.2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;SHA256: e31e952dfcb549f3144d30eb25b2bcb2ddaeb9ed89372d2e548c0d3902cf14c5&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/WCKyX9Zc6iPSnBn/download&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/zysRfnHZnEzccYs/download&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;legacy&quot;&gt;Legacy&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/F2mk9GQMYWGrd9p/download&quot;&gt;apu2 v4.0.24&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;SHA256: 43880c9566cbafca1874bb66dcc0444186a89c4a5408696b432f3fdf01e1b267&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/HAiidQ676JaK5GQ/download&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/ERfW8HzJGdtgmTL/download&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/AdCzmcdRcnSzRFL/download&quot;&gt;apu3 v4.0.24&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;SHA256: f26f9744a12b971605bd9b954e8fc5252c4789d95d86e615bc3a0df66630d59d&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/C3Po9LZszD43e2o/download&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/GKeXGgdsfJrf4x4/download&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/92ScGtQL7NPjkcr/download&quot;&gt;apu4 v4.0.24&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;SHA256: 262dceb5408d6ba8f14477465adc5c0313bb85bdc0c1a8722f52c28b09f9aa05&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/Q3xkBNGJFawsy6i/download&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/MK4qc22FB7KLyRC/download&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/AJP9eSnkRBcoxtT/download&quot;&gt;apu5 v4.0.24&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;SHA256: fadca94b5618b6e93a6f5b8f5ff96e8ff1128b7d5d117fa91dd941a4180a4557&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/jEJqDWBpRiBJJLx/download&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/SewAjA3fjkZHnrY/download&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See how to verify the signatures on &lt;a href=&quot;https://asciinema.org/a/227035&quot;&gt;asciinema&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 12 Feb 2019 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/firmware/2019/02/12/PC-Engines-Firmware-v4-9-0-2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/firmware/2019/02/12/PC-Engines-Firmware-v4-9-0-2.html</guid>
+        
+        
+        <category>Firmware</category>
+        
+      </item>
     
       <item>
         <title>PC Engines apu coreboot Open Source Firmware v4.9.0.1</title>

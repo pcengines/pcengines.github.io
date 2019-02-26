@@ -10,7 +10,8 @@ categories: Firmware
 
 Mainline:
 
-1. **Enabled** CPB feature.
+1. **Enabled** Core Peformance Boost feature. For details how it works and how
+   to verify it really works, please refer to [this blog post](https://3mdeb.com/firmware/amd-cpu-boost/)
 2. **Corrected AGESA headers**, which were for newer AGESA version than used in
    coreboot.
 3. [Reproducible builds limiation](https://github.com/pcengines/coreboot/issues/267) -
@@ -27,7 +28,8 @@ Mainline:
 
 Legacy:
 
-1. **Enabled** CPB feature.
+1. **Enabled** Core Peformance Boost feature. For details how it works and how
+   to verify it really works, please refer to [this blog post](https://3mdeb.com/firmware/amd-cpu-boost/))
 2. [Reproducible builds limiation](https://github.com/pcengines/coreboot/issues/267) -
    currently set **iPXE** and **Memtest86**+ master revisions do not guarantee
    the build reproducibility in long term. Correct revisions will be set in
@@ -63,7 +65,7 @@ Patches merged:
 
 * [Enable LPC TPM on apu1](https://review.coreboot.org/c/coreboot/+/30354)
 
-* [Enable CPB](https://review.coreboot.org/c/coreboot/+/31229)
+* [Enable Core Performance Boost](https://review.coreboot.org/c/coreboot/+/31229)
 
 ## Testing
 

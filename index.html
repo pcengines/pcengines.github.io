@@ -140,6 +140,7 @@
                 <div class="main-list">
                     <h3>Mainline releases</h3>
                     <ul>
+                        <li><a href="#mr-20">v4.9.0.3</a></li>
                         <li><a href="#mr-19">v4.9.0.2</a></li>
                         <li><a href="#mr-18">v4.9.0.1</a></li>
                         <li><a href="#mr-17">v4.8.0.7</a></li>
@@ -165,6 +166,7 @@
                 <div class="main-list">
                     <h3>Legacy releases</h3>
                     <ul>
+                        <li><a href="#lr-17">v4.0.25</a></li>
                         <li><a href="#lr-16">v4.0.24</a></li>
                         <li><a href="#lr-15">v4.0.23</a></li>
                         <li><a href="#lr-14">v4.0.22</a></li>
@@ -232,13 +234,79 @@
 
         <div class="container">
 
-        <!-- mainline releases v4.9.0.2 -->
+        <!-- mainline releases v4.9.0.3 -->
 
         <!--<div class="break"></div>insert this code when a new update comes out to separate a new version from the current.-->
 
-        <div class="smaller-margin" id="mr-19">
+        <div class="smaller-margin" id="mr-20">
                 <h2 class="text-middle">Mainline releases</h2>
                 <!-- h2 tag needs to be moved to the newest version -->
+                <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.9.0.2...v4.9.0.3">v4.9.0.3</a></h4>
+            </div>
+    
+            <div class="dimmed-text">
+                <p>Release date: 2019-03-08</p>
+            </div>
+    
+            <ul>
+                <li>Fixed/added:</li>
+                <ol>
+                    <li>rebased with official coreboot repository commit 7a732b4</li>
+                    <li>sortbootorder updated to v4.6.13 introducing CPU boost runtime configuration</li>
+                    <li>release firmware is now built with coreboot SDK 1.52</li>
+                    <li>configured pull-ups on WLAN_DISABLE# pins on the mPCIe connectors which could cause issues with certain modems when floating</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/75#issuecomment-463067220">fixed microcode update option in menuconfig</a></a></li>
+                    <li>added information about ECC memory capability in SMBIOS tables on 4GB platforms</li>
+                    <li>added interrupt configuration entries for PCIe bridge devices 2.4 and 2.5</li>
+                    <li><a href="https://github.com/pcengines/coreboot/issues/267">reproducible builds limiation has been eliminated by setting fixed revisions for iPXE and Memtest86+.</a></li>
+                </ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
+                            sometimes results in detecting only 1 stick</a></li>
+                    <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
+                            boot menu</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
+                </ol>
+            </ul>
+    
+            <div class="source-code-links-binaries">
+                <div class="source-code-column">
+                    <div class="smaller-margin">
+                        <p>Binaries:</p>
+                    </div>
+                    <ul>
+                        <li><a class="sha-button" href="https://cloud.3mdeb.com/index.php/s/Xxcsxyb5T6gq4Zb/download">apu1 v4.9.0.3</a><a href="https://cloud.3mdeb.com/index.php/s/JdGFFEqnqSz7zmF/download" class="sha-button">SHA256</a><a href="https://cloud.3mdeb.com/index.php/s/eimcQrPTtw7C7mQ/download" class="sha-button">SHA256.sig</a></li>
+                        <li><a class="sha-button" href="https://cloud.3mdeb.com/index.php/s/aroRiaaRfoXsRJE/download">apu2 v4.9.0.3</a><a href="https://cloud.3mdeb.com/index.php/s/739Y6cg6E23bpzn/download" class="sha-button">SHA256</a><a href="https://cloud.3mdeb.com/index.php/s/cy37owiFs8ZWaMN/download" class="sha-button">SHA256.sig</a></li>
+                        <li><a class="sha-button" href="https://cloud.3mdeb.com/index.php/s/AbEX3keWGtGMFdD/download">apu3 v4.9.0.3</a><a href="https://cloud.3mdeb.com/index.php/s/CgdpBDx3jXqAaS4/download" class="sha-button">SHA256</a><a href="https://cloud.3mdeb.com/index.php/s/EggEQaLZmH3edDE/download" class="sha-button">SHA256.sig</a></li>
+                        <li><a class="sha-button" href="https://cloud.3mdeb.com/index.php/s/HmYYgQNnXCyyxD7/download">apu4 v4.9.0.3</a><a href="https://cloud.3mdeb.com/index.php/s/cgdyNNtQndCZRjK/download" class="sha-button">SHA256</a><a href="https://cloud.3mdeb.com/index.php/s/PapaR2daNrDjZ9r/download" class="sha-button">SHA256.sig</a></li>
+                        <li><a class="sha-button" href="https://cloud.3mdeb.com/index.php/s/Yotxg6WRoDCHHgp/download">apu5 v4.9.0.3</a><a href="https://cloud.3mdeb.com/index.php/s/FTHNN3g4mYwwkWw/download" class="sha-button">SHA256</a><a href="https://cloud.3mdeb.com/index.php/s/tARS2XqEafCQaDb/download" class="sha-button">SHA256.sig</a></li>
+                    </ul>
+                </div>
+                <div class="source-code-column">
+                    <div class="smaller-margin">
+                        <p>Source code:</p>
+                    </div>
+                    <ul>
+                        <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.9.0.2...v4.9.0.3">coreboot
+                                v4.9.0.3</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.11.0.7...rel-1.12.0.1">SeaBIOS
+                                rel-1.12.0.1</a></li>
+                        <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.12...v4.6.13">sortbootorder
+                                v4.6.13</a></li>
+                        <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                        <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="break"></div>
+
+        <!-- mainline releases v4.9.0.2 -->
+
+
+        <div class="smaller-margin" id="mr-19">
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.9.0.1...v4.9.0.2">v4.9.0.2</a></h4>
             </div>
     
@@ -255,8 +323,7 @@
                 </ol>
                 <li>Known issues:</li>
                 <ol>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on
-                            certain OSes</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                     <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
                             sometimes results in detecting only 1 stick</a></li>
                     <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
@@ -323,8 +390,7 @@
             </ol>
             <li>Known issues:</li>
             <ol>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on
-                        certain OSes</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
                         sometimes results in detecting only 1 stick</a></li>
                 <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
@@ -390,7 +456,7 @@
 		<li>Known issues:</li>
 		<ol>
 		    <li><a href="https://github.com/pcengines/coreboot/issues/196">CPU frequency is stuck at low frequencies and does not react to stressin"</a></li>
-		    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes</a></li>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
 		    <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
 		    <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
 		    <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
@@ -443,7 +509,7 @@
         <li>Known issues:</li>
         <ol>
             <li><a href="https://github.com/pcengines/coreboot/issues/196">CPU frequency is stuck at low frequencies and does not react to stressin"</a></li>
-            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes</a></li>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
             <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
             <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
             <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
@@ -496,7 +562,7 @@
         <li>Known issues:</li>
         <ol>
             <li><a href="https://github.com/pcengines/coreboot/issues/196">CPU frequency is stuck at low frequencies and does not react to stressin"</a></li>
-            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes</a></li>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
             <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
             <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
             <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
@@ -550,7 +616,7 @@
                 <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
                 <li><a href="https://github.com/pcengines/coreboot/issues/205">wrong firmware version on apu1</a></li>
                 <li><a href="https://github.com/pcengines/apu2-documentation/issues/120">broken serial console in SeaBIOS on apu1</a></li>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
                 <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
                 <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
@@ -604,7 +670,7 @@
             <li>Known issues:</li>
             <ol>
                 <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
                 <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
                 <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
@@ -653,7 +719,7 @@
             <li>Known issues:</li>
             <ol>
                 <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
-                <li>some PCIe cards are not detected on certain OSes</li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 <li>booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</li>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
             </ol>
@@ -700,7 +766,7 @@
             <li>Known issues:</li>
             <ol>
                 <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
-                <li>some PCIe cards are not detected on certain OSes</li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 <li>booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</li>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
             </ol>
@@ -748,7 +814,7 @@
             <li>Known issues:</li>
             <ol>
                 <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
-                <li>some PCIe cards are not detected on certain OSes</li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 <li>booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</li>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
             </ol>
@@ -797,7 +863,7 @@
             <li>Known issues:</li>
             <ol>
                 <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
-                <li>some PCIe cards are not detected on certain OSes</li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 <li>booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</li>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
             </ol>
@@ -843,7 +909,7 @@
                 <li>Known issues:</li>
                 <ol>
                     <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
-                    <li>some PCIe cards are not detected on certain OSes</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                     <li>booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</li>
                     <li>certain USB 3.x sticks happen to not appear in boot menu</li>
                 </ol>
@@ -890,7 +956,7 @@
                 <li>Known issues:</li>
                 <ol>
                     <li>pfSense installation may fail on hard disks - <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">workaround</a></li>
-                    <li>some PCIe cards are not detected on certain OSes</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -938,7 +1004,7 @@
                     <li>USB 3.x sticks are handled like USB 2.0 sticks, but are detected</li>
                     <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
                     <li>SD card performance is lower than in legacy releases</li>
-                    <li>some PCIe cards are not detected on certain OSes</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -987,7 +1053,7 @@
                     <li>refreshing screen dos not work properly in Memtest86+</li>
                     <li>serial console disable option does not affect SeaBIOS</li>
                     <li>SD card performance is lower than in legacy releases</li>
-                    <li>some PCIe cards are not detected on certain OSes</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -1038,7 +1104,7 @@
                     <li>serial console disable option does not affect SeaBIOS</li>
                     <li>SeaBIOS serial console output is sometimes wrongly shifted</li>
                     <li>SD card performance is lower than in legacy releases</li>
-                    <li>some PCIe cards are not detected on certain OSes</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -1084,7 +1150,7 @@
                     <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
                     <li>SD card performance is lower than in legacy releases</li>
-                    <li>some PCIe cards are not detected on certain OSes</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -1131,7 +1197,7 @@
                     <li>UARTc/c and mPCIe2 CLK enable/disable runtime configuration do not work</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
                     <li>SD card performance is lower than in legacy releases</li>
-                    <li>some PCIe cards are not detected on certain OSes</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -1178,7 +1244,7 @@
                     <li>UARTc/c and mPCIe2 CLK enable/disable runtime configuration do not work</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
                     <li>SD card performance is lower than in legacy releases</li>
-                    <li>some PCIe cards are not detected on certain OSes</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -1208,15 +1274,70 @@
 
         <div class="container">
 
-<!-- legacy releases v4.0.24 -->
+
+<!-- legacy releases v4.0.25 -->
 <!--
     <div class="break"></div>
     insert this code when a new update comes out to separate a new version from the current.
 -->
 
-    <div class="smaller-margin" id="lr-16">
+<div class="smaller-margin" id="lr-17">
         <h2 class="text-middle">Legacy releases</h2>
         <!-- h2 tag needs to be moved to the newest version -->
+        <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.24...v4.0.25">v4.0.25</a></h4>
+    </div>
+
+    <div class="dimmed-text">
+        <p>Release date: 2019-03-07</p>
+    </div>
+    
+    <ul>
+        <li>Fixed/added:</li>
+        <ol>
+            <li><a href="https://3mdeb.com/firmware/amd-cpu-boost/">enabled Core Performance Boost feature</a></li>
+        </ol>
+        <li>Known issues:</li>
+        <ol>
+            <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+        </ol>
+    </ul>
+
+    <div class="source-code-links-binaries">
+        <div class="source-code-column">
+            <div class="smaller-margin">
+                <p>Binaries:</p>
+            </div>
+            <ul>
+                <li><a class="sha-button" href="https://cloud.3mdeb.com/index.php/s/dpKqXzooprK6aJr/download">apu2 v4.0.25</a><a href="https://cloud.3mdeb.com/index.php/s/NfBptrfx9B56iJb/download" class="sha-button">SHA256</a><a href="https://cloud.3mdeb.com/index.php/s/EKfJTccSYTrwDt6/download" class="sha-button">SHA256.sig</a></li>
+                <li><a class="sha-button" href="https://cloud.3mdeb.com/index.php/s/ACK32Wy6QtZbyNs/download">apu3 v4.0.25</a><a href="https://cloud.3mdeb.com/index.php/s/HyFkRnj3zmKHod3/download" class="sha-button">SHA256</a><a href="https://cloud.3mdeb.com/index.php/s/7WXMWAoWrAdWFz9/download" class="sha-button">SHA256.sig</a></li>
+                <li><a class="sha-button" href="https://cloud.3mdeb.com/index.php/s/nzSMyApkKimzsEf/download">apu4 v4.0.25</a><a href="https://cloud.3mdeb.com/index.php/s/2W4EjpTii7LmwrC/download" class="sha-button">SHA256</a><a href="https://cloud.3mdeb.com/index.php/s/4wzJRPZ9FszRNYy/download" class="sha-button">SHA256.sig</a></li>
+                <li><a class="sha-button" href="https://cloud.3mdeb.com/index.php/s/nzSMyApkKimzsEf/download">apu5 v4.0.25</a><a href="https://cloud.3mdeb.com/index.php/s/5DdxdmmzsCxSrkf/download" class="sha-button">SHA256</a><a href="https://cloud.3mdeb.com/index.php/s/jnaKWRBz7XWBxWA/download" class="sha-button">SHA256.sig</a></li>
+            </ul>
+        </div>
+        <div class="source-code-column">
+            <div class="smaller-margin">
+                <p>Source code:</p>
+            </div>
+            <ul>
+                <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.24...v4.0.25">coreboot
+                        v4.0.25</a></li>
+                <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.11.0.7...rel-1.12.0.1">SeaBIOS
+                        rel-1.12.0.1</a></li>
+                <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.12...v4.6.13">sortbootorder
+                        v4.6.13</a></li>
+                <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+
+                        v4.0.1</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="break"></div>
+
+<!-- legacy releases v4.0.24 -->
+
+    <div class="smaller-margin" id="lr-16">
         <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.23...v4.0.24">v4.0.24</a></h4>
     </div>
 
@@ -1232,6 +1353,7 @@
         <li>Known issues:</li>
         <ol>
             <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
             <li><a href="https://github.com/pcengines/coreboot/issues/267">Reproducible builds limiation - currently set iPXE and Memtest86+ master revisions do not guarantee the build reproducibility in long term. Correct revisions will be set in v4.0.25. </a></li>
         </ol>
     </ul>
@@ -1294,6 +1416,7 @@
     <li>Known issues:</li>
     <ol>
         <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
     </ol>
 </ul>
 
@@ -1356,7 +1479,8 @@
     </ol>
     <li>Known issues:</li>
     <ol>
-	<li>certain USB 3.x sticks happen to not appear in boot menu</li>
+        <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
         <li>Sometimes pfSense hangs during boot on boards with legacy firmware when no USB stick present. Plugging USB stick workarounds the issue. Problem is during investigation.</li>
     </ol>
 </ul>
@@ -1403,7 +1527,8 @@
     <li>Known issues:</li>
     <ol>
         <li>certain USB 3.x sticks happen to not appear in boot menu</li>
-	<li>Sometimes pfSense hangs during boot on boards with legacy firmware when no USB stick present. Plugging USB stick workarounds the issue. Problem is during investigation.</li>
+        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+        <li>Sometimes pfSense hangs during boot on boards with legacy firmware when no USB stick present. Plugging USB stick workarounds the issue. Problem is during investigation.</li>
     </ol>
 </ul>
 
@@ -1447,6 +1572,7 @@
     <li>Known issues:</li>
     <ol>
         <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
     </ol>
 </ul>
 
@@ -1492,6 +1618,7 @@
             <ol>
                 <li>pfSense 2.4.x fails to boot when no USB stick is plugged</li>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
             </ol>
         </ul>
 
@@ -1543,6 +1670,7 @@
             <li>Known issues:</li>
             <ol>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
             </ol>
         </ul>
 
@@ -1587,6 +1715,7 @@
             <li>Known issues:</li>
             <ol>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
             </ol>
         </ul>
 
@@ -1631,6 +1760,7 @@
                 <ol>
                     <li>certain USB 3.x sticks happen to not appear in boot menu</li>
                     <li>Serial console can not be enabled yet on apu3 using S1 button</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -1677,6 +1807,7 @@
                 <ol>
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
                     <li>Serial console can not be enabled using S1 button</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -1722,6 +1853,7 @@
                     <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
                     <li><a href="https://github.com/pcengines/apu2-documentation/issues/111">Serial console can be disabled only in coreboot and can not be enabled using S1 button</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -1765,6 +1897,7 @@
                 <ol>
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
                     <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -1807,6 +1940,7 @@
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
                     <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -1848,6 +1982,7 @@
                 <ol>
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -1888,6 +2023,7 @@
                 <ol>
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 
@@ -1928,6 +2064,7 @@
                 <ol>
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
                 </ol>
             </ul>
 

@@ -83,7 +83,7 @@ Test changes in this release:
 * **Updated** apu5 hardware configuration with `Quectel_EP06` LTE module and
   `WLE1216V5-20` WiFi module
 * **Verified** (manually) OPNsense installation on apu3 platform
-* **Verified** that USB modem on apu2 USB3.0 port is initialized correctly
+* **Verified** that USB modem (TL-WN722N) on apu2 USB3.0 port is initialized correctly
 * **Verified** CPU boost load in terms of hard-locks (38h apu2 stress testing
   according to [blog post method](https://3mdeb.com/firmware/amd-cpu-boost/))
 

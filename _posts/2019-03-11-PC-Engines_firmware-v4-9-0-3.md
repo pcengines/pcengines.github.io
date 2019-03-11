@@ -133,7 +133,7 @@ caused mainly by XEN tests problems, that are not supported in `legacy` testing.
 
   [SHA256 sig](https://cloud.3mdeb.com/index.php/s/PapaR2daNrDjZ9r/download)
 
-* [apu5 v4.9.0.2](https://cloud.3mdeb.com/index.php/s/Yotxg6WRoDCHHgp/download)
+* [apu5 v4.9.0.3](https://cloud.3mdeb.com/index.php/s/Yotxg6WRoDCHHgp/download)
 
   [SHA256 file](https://cloud.3mdeb.com/index.php/s/FTHNN3g4mYwwkWw/download)
 
@@ -141,25 +141,25 @@ caused mainly by XEN tests problems, that are not supported in `legacy` testing.
 
 ### Legacy
 
-* [apu2 v4.0.24](https://cloud.3mdeb.com/index.php/s/dpKqXzooprK6aJr/download)
+* [apu2 v4.0.25](https://cloud.3mdeb.com/index.php/s/dpKqXzooprK6aJr/download)
 
   [SHA256 file](https://cloud.3mdeb.com/index.php/s/NfBptrfx9B56iJb/download)
 
   [SHA256 sig](https://cloud.3mdeb.com/index.php/s/EKfJTccSYTrwDt6/download)
 
-* [apu3 v4.0.24](https://cloud.3mdeb.com/index.php/s/ACK32Wy6QtZbyNs/download)
+* [apu3 v4.0.25](https://cloud.3mdeb.com/index.php/s/ACK32Wy6QtZbyNs/download)
 
   [SHA256 file](https://cloud.3mdeb.com/index.php/s/HyFkRnj3zmKHod3/download)
 
   [SHA256 sig](https://cloud.3mdeb.com/index.php/s/7WXMWAoWrAdWFz9/download)
 
-* [apu4 v4.0.24](https://cloud.3mdeb.com/index.php/s/nzSMyApkKimzsEf/download)
+* [apu4 v4.0.25](https://cloud.3mdeb.com/index.php/s/nzSMyApkKimzsEf/download)
 
   [SHA256 file](https://cloud.3mdeb.com/index.php/s/2W4EjpTii7LmwrC/download)
 
   [SHA256 sig](https://cloud.3mdeb.com/index.php/s/4wzJRPZ9FszRNYy/download)
 
-* [apu5 v4.0.24](https://cloud.3mdeb.com/index.php/s/ito92SCGrn4pEyq/download)
+* [apu5 v4.0.25](https://cloud.3mdeb.com/index.php/s/ito92SCGrn4pEyq/download)
 
   [SHA256 file](https://cloud.3mdeb.com/index.php/s/5DdxdmmzsCxSrkf/download)
 

@@ -45,7 +45,7 @@ Legacy:
 
 ## Statistics
 
-![Files Changed](TBD)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/5TXiKGgiZSnWJ5m/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -55,7 +55,7 @@ excluded from statistics). Check the statistics with:
 git diff --stat 7a732b4 ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 ```
 
-![Addition and Deletion](TBD)
+![Addition and Deletion](https://cloud.3mdeb.com/index.php/s/JGj2bTDdw3xo7wg/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 corebootÂ fork against the rebase point for given release. Check the statistics
@@ -76,23 +76,34 @@ not a part of coreboot tree.
 
 Test changes in this release:
 
-TBD
+* **Added** Verify ECC Presence test (1 test-case)
+* **Added** Install Debian amd64 on SATA storage test (2 test-cases)
+* **Fixed** ATA kernel boot time measurement automated test regarding missing
+  tools on the booted OS
+* **Updated** apu5 hardware configuration with `Quectel_EP06` LTE module and
+  `WLE1216V5-20` WiFi module
+* **Verified** (manually) OPNsense installation on apu3 platform
+* **Verified** that USB modem on apu2 USB3.0 port is initialized correctly
+* **Verified** CPU boost load in terms of hard-locks (38h apu2 stress testing
+  according to [blog post method](https://3mdeb.com/firmware/amd-cpu-boost/))
 
-![Mainline test results](TBD)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/xr4zCeHwPtw97kq/preview)
 
-![Legacy test results](TBD)
-
+![Legacy test results](https://cloud.3mdeb.com/index.php/s/7Jng9M8QE5DkPco/preview)
 
 * Mainline:
-  * PASSED:
-  * FAILED:
-  * PASSED [%]
+  * PASSED: 318 (+12)
+  * FAILED: 14 (-2)
+  * PASSED [%]: 95,78% (+0.75%)
 * Legacy:
-  * PASSED:
-  * FAILED:
-  * PASSED [%]:
+  * PASSED: 293 (+11)
+  * FAILED: 4 (-11)
+  * PASSED [%]: 98.65% (+3.7%)
 
-TBD
+The improvement of the PASSED tests coverage results from adding 3 test-cases
+and fixing ATA kernel boot time test (resolved [#220](https://github.com/pcengines/coreboot/issues/220)
+issue). The difference in `mainline` and `legacy` FAILED tests statistics is
+caused mainly by XEN tests problems, that are not supported in `legacy` testing.
 
 ## Binaries
 

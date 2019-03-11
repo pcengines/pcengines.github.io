@@ -42,7 +42,9 @@ Legacy:
 
 ![Files Changed](TBD)
 
-The chart shows the total files changed from release tag against the rebase point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml excluded from statistics). Check the statistics with:
+The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:
 
 ```
 git diff --stat 7a732b4 ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
@@ -51,7 +53,7 @@ git diff --stat 7a732b4 ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 ![Addition and Deletion](TBD)
 
 The chart represents the total line added and deleted on the PC Engines
-coreboot fork against the rebase point for given release. Check the statistics
+corebootÂ fork against the rebase point for given release. Check the statistics
 with:
 
 ```

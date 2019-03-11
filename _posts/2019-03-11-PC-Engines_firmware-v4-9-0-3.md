@@ -26,7 +26,7 @@ Mainline:
 7. **Added** information about **ECC** memory capability in **SMBIOS tables**
    on 4GB platforms. `Physical Memory Array` structure in `dmidecode` should
    report `Multi-bit ECC` in `Error Correction Type` field. Note: the ECC is
-   present only on 4GB platforms. Check [how to verify](https://asciinema.org/a/233013)
+   present only on 4GB platforms. Check [how to verify](https://asciinema.org/a/233041)
 8. **Added interrupt** configuration entries for **PCIe bridge** devices 2.4
    and 2.5. The interrupt ocnfiguration for 2 PCIe bridges were not programmed
    in BIOS. Kernel/OS will not always program it by itself, thus rely on BIOS

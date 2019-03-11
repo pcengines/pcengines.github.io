@@ -23,7 +23,7 @@ Mainline:
 6. **Fixed microcode update** feature, which broke due to the upstream changes
    in coreboot. More details [here](https://github.com/pcengines/apu2-documentation/issues/75#issuecomment-463067220)
 7. **Added** information about **ECC** memory capability in **SMBIOS tables**
-   on 4GB platforms.
+   on 4GB platforms. Check [how to verify](https://asciinema.org/a/233013)
 8. **Added interrupt** configuration entries for **PCIe bridge** devices 2.4
    and 2.5.
 9.  **Rebased** with official coreboot repository **commit** 7a732b4.

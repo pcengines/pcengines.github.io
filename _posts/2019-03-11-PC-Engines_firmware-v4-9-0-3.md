@@ -15,7 +15,8 @@ Mainline:
    runtime configurable.
 2. We have **upgraded** to coreboot **SDK 1.52** in mainline releases.
 3. Configured **pull-ups** on **WLAN_DISABLE#** pins on the mPCIe connectors
-   which could cause issues with certain modems when floating.
+   which could cause issues with certain modems (e.g. Quectel EP06) when
+   floating.
 4. **Reproducible builds limiation** has been **eliminated** by setting iPXE
    and Memtest86+ fixed revisions. More details [here](https://github.com/pcengines/coreboot/issues/267)
 5. Uploaded SHA256 and signatures of all previous firmware releases. SHA256
@@ -23,10 +24,14 @@ Mainline:
 6. **Fixed microcode update** feature, which broke due to the upstream changes
    in coreboot. More details [here](https://github.com/pcengines/apu2-documentation/issues/75#issuecomment-463067220)
 7. **Added** information about **ECC** memory capability in **SMBIOS tables**
-   on 4GB platforms. Check [how to verify](https://asciinema.org/a/233013)
+   on 4GB platforms. `Physical Memory Array` structure in `dmidecode` should
+   report `Multi-bit ECC` in `Error Correction Type` field. Note: the ECC is
+   present only on 4GB platforms. Check [how to verify](https://asciinema.org/a/233013)
 8. **Added interrupt** configuration entries for **PCIe bridge** devices 2.4
-   and 2.5.
-9.  **Rebased** with official coreboot repository **commit** 7a732b4.
+   and 2.5. The interrupt ocnfiguration for 2 PCIe bridges were not programmed
+   in BIOS. Kernel/OS will not always program it by itself, thus rely on BIOS
+   programmed values in case kernel will not handle that.
+9. **Rebased** with official coreboot repository **commit** 7a732b4.
 
 Legacy:
 

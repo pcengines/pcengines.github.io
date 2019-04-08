@@ -42,7 +42,7 @@ Mainline:
 
 ## Statistics
 
-![Files Changed]()
+![Files Changed](https://cloud.3mdeb.com/index.php/s/L2FzDtTe6bLf3DB/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -54,7 +54,7 @@ git diff --stat 7a732b4 ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 
 `72 files changed, 2240 insertions(+), 138 deletions(-)`
 
-![Addition and Deletion]()
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/c5rmF8zXpkzYcHx/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 corebootÂ fork against the rebase point for given release. Check the statistics
@@ -77,16 +77,26 @@ not a part of coreboot tree.
 
 Test changes in this release:
 
-TBD
+* **Added** automatic test for ROCA TPM vulnerability (1 test-case)
+    * more information about ROCA: [link1][1], [link2][2]
+* **Added** Quectel EP06 and WLE1216V5-20 modems detection tests (3 test-cases)
+* **Added** Wake On Lan feature verification test (1 test-case)
+* **Added** bootorder verification test (1 test-case)
+* **Added** CPB (Core Performance Boost) enable/disable tests (3 test-cases)
+* **Fixed** test regarding booting Xen over iPXE (boot and login problem)
+* **Verified** OPNsense installation on all bootable devices ([OS-table][3])
+* **Improved** cooling system in the 3mdeb laboratory (better platforms stability)
 
-![Mainline test results]()
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/RtMoDYjPqpkGHBT/preview)
 
 * Mainline:
-  * PASSED: 318 (+12)
-  * FAILED: 14 (-2)
-  * PASSED [%]: 95,78% (+0.75%)
+  * PASSED: **341** (+23)
+  * FAILED: **11** (-3)
+  * PASSED [%]: **96,88%** (+1.1%)
 
-(Description)
+The improvement of the PASSED tests coverage results from adding 9 test-cases
+and populating all Ethernet ports in PC Engines platforms in the rack
+infrastructure (some test-cases are now supported by all tested platforms).
 
 ## Binaries
 
@@ -123,3 +133,7 @@ TBD
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.4.SHA256.sig)
 
 See how to verify the signatures on [asciinema](https://asciinema.org/a/227035)
+
+[1]: https://en.wikipedia.org/wiki/ROCA_vulnerability
+[2]: https://github.com/pcengines/apu2-documentation/blob/master/docs/research/ROCA.md
+[3]: https://github.com/pcengines/apu2-documentation/blob/master/docs/os-status.md

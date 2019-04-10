@@ -35,10 +35,13 @@ Mainline:
    The document describes how to **upgrade TPM firmware** and
    **get rid of the vulnerability**.
 7. Added a [list of supported and verified mPCIe modules](https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md).
-   The list also describes **known issues** with modules and **workarounds** to get the **modules working** properly. Please check the list when
+   The list also describes **known issues** with modules and **workarounds**
+   to get the **modules working** properly. Please check the list when
    encountered any issues with mPCIe modules. Contribution is welcome. Also be
-   sure to check whether the slot is compatible with the module. In order to do so, look at the interfaces connected to each mPCIe slot [here](https://github.com/pcengines/apu2-documentation/blob/master/docs/APU_mPCIe_capabilities.md) and the interfaces required by the module in its
-   product specification etc.
+   sure to check whether the slot is compatible with the module. In order to
+   do so, look at the interfaces connected to each mPCIe slot [here](https://github.com/pcengines/apu2-documentation/blob/master/docs/APU_mPCIe_capabilities.md)
+   and the interfaces required by the module in its product specification etc.
+
 
 ## Statistics
 
@@ -57,8 +60,8 @@ git diff --stat 7a732b4 ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 ![Process of mainlining](https://cloud.3mdeb.com/index.php/s/c5rmF8zXpkzYcHx/preview)
 
 The chart represents the total line added and deleted on the PC Engines
-corebootÂ fork against the rebase point for given release. Check the statistics
-with:
+coreboot fork against the rebase point for a given release. Check the
+statistics with:
 
 ```
 git diff --stat 7a732b4 ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'

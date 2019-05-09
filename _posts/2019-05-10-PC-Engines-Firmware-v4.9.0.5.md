@@ -23,12 +23,17 @@ Mainline:
    in order to leverage problems with USB stick detection in BIOS. It is a
    first step before analyzing USB protocol on low level to search for issues
    and possible fixes.
+6. Prepared migration for platform to use postcar stage. Usage of postcar stage
+   is an requirement to keep board in the main coreboot tree for next November
+   release.
 
 ## Community
 
 Patches sent for review:
 
 * [Microcode update infrastructure for AMD family 16h processors](https://review.coreboot.org/c/coreboot/+/29272)
+
+* [Migrate to postcar stage](https://review.coreboot.org/c/coreboot/+/32363)
 
 ## Statistics
 

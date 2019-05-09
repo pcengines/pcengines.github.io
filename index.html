@@ -140,6 +140,7 @@
                 <div class="main-list">
                     <h3>Mainline releases</h3>
                     <ul>
+                        <li><a href="#mr-22">v4.9.0.5</a></li>
                         <li><a href="#mr-21">v4.9.0.4</a></li>
                         <li><a href="#mr-20">v4.9.0.3</a></li>
                         <li><a href="#mr-19">v4.9.0.2</a></li>
@@ -242,13 +243,72 @@
 
         <div class="container">
 
-        <!-- mainline releases v4.9.0.4 -->
+        <!-- mainline releases v4.9.0.5 -->
 
         <!--<div class="break"></div>insert this code when a new update comes out to separate a new version from the current.-->
 
-        <div class="smaller-margin" id="mr-21">
+        <div class="smaller-margin" id="mr-22">
             <h2 class="text-middle">Mainline releases</h2>
             <!-- h2 tag needs to be moved to the newest version -->
+            <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.9.0.4...v4.9.0.5">v4.9.0.5</a></h4>
+        </div>
+
+        <div class="dimmed-text">
+            <p>Release date: `2019-05-10`</p>
+        </div>
+
+        <ul>
+            <li>Fixed/added:</li>
+            <ol>
+                <li>rebased with official coreboot repository commit fe80bf2</li>
+                <li>MP table creation: fixed SDHCI, xHCI interrupt entries</li>
+                <li>removed redundant SVI2 information string in sign-of-life</li>
+                <li>added MP table entries for PCIe bridges, endpoints and IOMMU</li>
+            </ol>
+            <li>Known issues:</li>
+            <ol>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
+                        sometimes results in detecting only 1 stick</a></li>
+                <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
+                        boot menu</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
+            </ol>
+        </ul>
+
+        <div class="source-code-links-binaries">
+            <div class="source-code-column">
+                <div class="smaller-margin">
+                    <p>Binaries:</p>
+                </div>
+                <ul>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.5.rom">apu1 v4.9.0.5</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.5.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.5.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.5.rom">apu2 v4.9.0.5</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.5.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.5.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.5.rom">apu3 v4.9.0.5</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.5.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.5.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.5.rom">apu4 v4.9.0.5</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.5.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.5.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.5.rom">apu5 v4.9.0.5</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.5.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.5.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                </ul>
+            </div>
+            <div class="source-code-column">
+                <div class="smaller-margin">
+                    <p>Source code:</p>
+                </div>
+                <ul>
+                    <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.9.0.4...v4.9.0.5">coreboot v4.9.0.5</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.0.1...rel-1.12.1.1">SeaBIOS rel-1.12.1.1</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.12...v4.6.13">sortbootorder v4.6.13</a></li>
+                    <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                    <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="break"></div>
+
+
+        <!-- mainline releases v4.9.0.4 -->
+
+        <div class="smaller-margin" id="mr-21">
             <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.9.0.3...v4.9.0.4">v4.9.0.4</a></h4>
         </div>
 

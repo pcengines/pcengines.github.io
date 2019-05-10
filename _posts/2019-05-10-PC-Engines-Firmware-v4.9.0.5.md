@@ -37,7 +37,7 @@ Patches sent for review:
 
 ## Statistics
 
-![Files Changed](TBD)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/ysXTSd8kW5HX2b2/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -49,7 +49,7 @@ git diff --stat fe80bf2 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 
 `76 files changed, 2102 insertions(+), 163 deletions(-)`
 
-![Process of mainlining](TBD)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/yjJAC5m3m6DJBLF/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release. Check the
@@ -68,22 +68,26 @@ not a part of coreboot tree.
 
 * [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/wRi33Zo5sdgbpWn/preview) - hardware configurations available for testing in 3mdeb laboratory.
 
-* [PC Engines release validation results](TBD) - please note there are separate sheets for each board-release.
+* [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
 Test changes in this release:
 
-TBD
+* **Added** TPM menu verification test (2 test-cases)
+* **Added** Clear TPM validation test (1 test-case)
+* **Added** TPM PCR banks verification (2 test-cases)
+* **Improved** Sign of Life test with additional restrictions regarding SoL lines
+* **Improved** stability of the hardware infrastructure with an additional
+  isolated network
 
-![Mainline test results](TBD)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/yR6BYof9fAKXFd2/preview)
 
 * Mainline:
-  * PASSED: TBD
-  * FAILED: TBD
-  * PASSED [%]: TBD
+  * PASSED: **360** (+19)
+  * FAILED: **12** (+1)
+  * PASSED [%]: **96.77%** (-0.11%)
 
-The improvement of the PASSED tests coverage results from adding 9 test-cases
-and populating all Ethernet ports in PC Engines platforms in the rack
-infrastructure (some test-cases are now supported by all tested platforms).
+The small reduction of the PASSED tests coverage results from returning problem
+with stable XEN/Core booting and USB sticks detection on apu5.
 
 ## Binaries
 

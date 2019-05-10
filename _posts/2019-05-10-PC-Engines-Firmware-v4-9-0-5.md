@@ -14,7 +14,7 @@ Mainline:
 2. **Fixed MP table** creation. There were small **errors in entries** for PCI
    interrupts for **xHCI, SDHCI, PCIe bridges**. Also added entries for IOMMU
    and PCIe endpoint devices.
-3. Removed redundant SVI2 message in sign-of-life durign boot process.
+3. Removed redundant SVI2 message in sign-of-life during boot process.
 4. Created **[theory of operation](https://github.com/pcengines/apu2-documentation/blob/master/docs/theory-of-operation.md)**
    for apu firmware features in order to help understand and properly utilize
    the features and advantages of the PC Engines firmware. They have been
@@ -24,7 +24,7 @@ Mainline:
    first step before analyzing USB protocol on low level to search for issues
    and possible fixes.
 6. Prepared migration for platform to use postcar stage. Usage of postcar stage
-   is an requirement to keep board in the main coreboot tree for next November
+   is a requirement to keep board in the main coreboot tree for next November
    release.
 
 ## Community

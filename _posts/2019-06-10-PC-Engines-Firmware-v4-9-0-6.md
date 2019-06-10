@@ -121,7 +121,7 @@ Patches sent for review:
 
 ## Statistics
 
-![Files Changed](https://cloud.3mdeb.com/index.php/s/ysXTSd8kW5HX2b2/preview)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/yFZx4T78w9QXZ9K/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -133,7 +133,7 @@ git diff --stat 3b4d0e0 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 
 `88 files changed, 2573 insertions(+), 178 deletions(-)`
 
-![Process of mainlining](https://cloud.3mdeb.com/index.php/s/yjJAC5m3m6DJBLF/preview)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/aJnsJH4PGYyZo7e/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release. Check the
@@ -153,25 +153,36 @@ options introduced in this version.
 
 ## Testing
 
-* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/wRi33Zo5sdgbpWn/preview) - hardware configurations available for testing in 3mdeb laboratory.
+* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/ce829QADwA7sHx9/preview) - hardware configurations available for testing in 3mdeb laboratory.
 
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
 Test changes in this release:
 
-TBD
+* **Added** SD card detect in BIOS test-suite (3 test-cases)
+* **Improved** Voyage installation test with partitioning error-check
+* **Replaced** HDD disk in the apu3 hardware configuration for better stability
+* **Implemented** full automated regression testing:
+  From now on regression tests start automatically by Jenkins machine that is
+  integrated with pcengines/coreboot build system on GitHub
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/yR6BYof9fAKXFd2/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/wkXxXY4zTnzMbTp/preview)
+
+![Legacy test results](https://cloud.3mdeb.com/index.php/s/pkeNPqEN6XAWqJD/preview)
 
 * Mainline:
-  * PASSED: TBD
-  * FAILED: TBD
-  * PASSED [%]: TBD
+  * PASSED: **373** (+13)
+  * FAILED: **11** (-1)
+  * PASSED [%]: **97.14%** (+0.37%)
 
-The small reduction of the PASSED tests coverage results from returning problem
-with stable XEN/Core booting and USB sticks detection on apu5.
+* Legacy:
+  * PASSED: **333** (+40)
+  * FAILED: **5** (+1)
+  * PASSED [%]: **98.52%** (-0.13%)
 
-TBD legacy results
+Improvement in the PASS aggregated statistics results from new SD card test and
+adding SD card to the apu3 hardware matrix configuration enabling some of the
+`NOT-SUPPORTED` tests before.
 
 ## Binaries
 

@@ -119,7 +119,6 @@ Patches sent for review:
 
 * [Describe serial ports in ACPI](https://review.coreboot.org/c/coreboot/+/32989)
 
-
 ## Statistics
 
 ![Files Changed](https://cloud.3mdeb.com/index.php/s/ysXTSd8kW5HX2b2/preview)
@@ -132,7 +131,7 @@ excluded from statistics). Check the statistics with:
 git diff --stat 3b4d0e0 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 ```
 
-`76 files changed, 2102 insertions(+), 163 deletions(-)`
+`88 files changed, 2573 insertions(+), 178 deletions(-)`
 
 ![Process of mainlining](https://cloud.3mdeb.com/index.php/s/yjJAC5m3m6DJBLF/preview)
 
@@ -144,10 +143,13 @@ statistics with:
 git diff --stat 3b4d0e0 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 ```
 
-`76 files changed, 2102 insertions(+), 163 deletions(-)`
+`88 files changed, 2573 insertions(+), 178 deletions(-)`
 
 Two files have not been included in the diff as mentioned above since they are
 not a part of coreboot tree.
+
+The statistics has grown significantly due to two many configuration
+options introduced in this version.
 
 ## Testing
 

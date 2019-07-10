@@ -67,7 +67,7 @@ Patches merged by community:
 
 ## Statistics
 
-![Files Changed](https://cloud.3mdeb.com/index.php/s/yFZx4T78w9QXZ9K/preview)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/rfrq6FaxNLCLzSa/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -79,7 +79,7 @@ git diff --stat c32ccb7 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 
 `87 files changed, 2589 insertions(+), 184 deletions(-)`
 
-![Process of mainlining](https://cloud.3mdeb.com/index.php/s/aJnsJH4PGYyZo7e/preview)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/Mew82wtGox4iKR8/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release. Check the
@@ -105,24 +105,30 @@ options introduced in this version.
 
 Test changes in this release:
 
+* **added** SeaBIOS verification test for unbootable devices (4 test cases)
+* **added** Watchdog verification tests (4 test cases)
+* **added** SD3.0 enable/disable mode verification (2 test cases)
+* **added** SD3.0 performance test (1 test case)
+* **upgraded** pfSense stick installer to version `2.4.4-RELEASE-p3`
+* **improved** autoregression testing on Jenkins machine
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/wkXxXY4zTnzMbTp/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/94yRGRnaJGi83Mk/preview)
 
-![Legacy test results](https://cloud.3mdeb.com/index.php/s/pkeNPqEN6XAWqJD/preview)
+![Legacy test results](https://cloud.3mdeb.com/index.php/s/dxx7B6T9CKprsJ6/preview)
 
 * Mainline:
-  * PASSED:
-  * FAILED:
-  * PASSED [%]:
+  * PASSED: **410** (+37)
+  * FAILED: **14** (+3)
+  * PASSED [%]: **96.70%** (-0.44%)
 
 * Legacy:
-  * PASSED:
-  * FAILED:
-  * PASSED [%]:
+  * PASSED: **368** (+35)
+  * FAILED: **9** (+4)
+  * PASSED [%]: **97.61%** (-0.91%)
 
-Improvement in the PASS aggregated statistics results from new SD card test and
-adding SD card to the apu3 hardware matrix configuration enabling some of the
-`NOT-SUPPORTED` tests before.
+Improvement in the `PASSED` aggregated statistics results from the new 11
+test-cases and enabling ECC tests on legacy. Summary of `FAILED` tests increased
+due to [#321](https://github.com/pcengines/coreboot/issues/321) issue.
 
 ## Binaries
 

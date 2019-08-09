@@ -18,6 +18,12 @@ support via kernel sysfs including:
     - LEDs
     - S1 switch button
     - SIMSWAP
+3. Validated problem with ESXi v6.7 U2 installation. We have located the source
+   of the issue and now we are working to resolve it.
+4. Added [documentation](https://github.com/pcengines/apu2-documentation/blob/master/docs/apu_CPU_boost.md)
+   about APU Core Performance Boost.
+5. Updated WLE200NX [documentation](https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md#wle200nx)
+   with issue workarounds.
 
 ## Statistics
 

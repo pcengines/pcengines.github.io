@@ -14,16 +14,21 @@ Mainline:
 2. Added ACPI support for GPIOs. Detailes are available in
 [apu2-documentation](https://github.com/pcengines/apu2-documentation/blob/master/docs/gpios.md).
 So far access to GPIOs was possible only via dedicated driver. Now, there is
-support via kernel sysfs including:
+support via Linux kernel sysfs including:
     - LEDs
-    - S1 switch button
+    - S1 switch button with interrupts
     - SIMSWAP
-3. Validated problem with ESXi v6.7 U2 installation. We have located the source
+1. Validated problem with ESXi v6.7 U2 installation. We have located the source
    of the issue and now we are working to resolve it.
-4. Added [documentation](https://github.com/pcengines/apu2-documentation/blob/master/docs/apu_CPU_boost.md)
+2. Added [documentation](https://github.com/pcengines/apu2-documentation/blob/master/docs/apu_CPU_boost.md)
    about APU Core Performance Boost.
-5. Updated WLE200NX [documentation](https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md#wle200nx)
+3. Updated WLE200NX [documentation](https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md#wle200nx)
    with issue workarounds.
+4. Updated the pcengines.github.io site with new section containing useful
+   documentation from apu2-documentation repository. Also the link to the
+   repository is now accessible in the top panel. Below the binaries section
+   for each release we have added a note with link how to verify signatures of
+   the binaries.
 
 ## Statistics
 

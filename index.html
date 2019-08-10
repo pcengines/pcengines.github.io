@@ -31,6 +31,7 @@
             <a target="_blank" href="https://docs.opnsense.org/manual/install.html"><div class="link">OPNsense</div></a>
             <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md"><div class="link">pfSense</div></a>
             <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md"><div class="link">Pxelinux</div></a>
+            <a target="_blank" href="https://github.com/pcengines/apu2-documentation"><div class="link">Documentation</div></a>
             <a target="_blank" href="https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0"><div class="link">Regression Test Results</div></a>
             <a target="_blank" href="https://gitlab.com/pcengines/coreboot/pipelines"><div class="link">GitLab CI</div></a>
             <a href="/blog"><div class="link">Blog</div></a>
@@ -125,7 +126,7 @@
            <h2>Release notes</h2>
             <p>Release notes describing changes, fixes and known issues in PC Engines apux releases.<br><br></p>
             <div class="main-list">
-                <p>The recommended firmware version is latest mainline v4.9.0.x. Reasons:</p>
+                <p>The recommended firmware version is latest mainline v4.10.0.x. Reasons:</p>
                 <ul>
                     <li>most of the new features are firstly introduced here in mainline</li>
                     <li>mainline version is more actively developed and maintained than legacy</li>
@@ -140,6 +141,7 @@
                 <div class="main-list">
                     <h3>Mainline releases</h3>
                     <ul>
+                        <li><a href="#mr-25">v4.10.0.0</a></li>
                         <li><a href="#mr-24">v4.9.0.7</a></li>
                         <li><a href="#mr-23">v4.9.0.6</a></li>
                         <li><a href="#mr-22">v4.9.0.5</a></li>
@@ -197,7 +199,7 @@
 <!-- os-status.md -->
         <div class="container">
             <h2>OS status</h2>
-            <p>Some operating system have problems running with different storage medias. These table shows currently tested systems on BIOS v4.9.0.x with corresponding medias:</p>
+            <p>Some operating system have problems running with different storage medias. These table shows currently tested systems on BIOS v4.10.0.x with corresponding medias:</p>
 
             <table>
                 <tr>
@@ -221,7 +223,7 @@
                     <td>OK</td>
                     <td><sup>OK(2)</sup></td>
                 </tr>
-		<tr>
+                <tr>
                     <td>OPNSense</td>
                     <td>OK</td>
                     <td>OK</td>
@@ -237,23 +239,104 @@
                 </tr>
             </table>
 
-            <p><sup>*</sup> - works well with BIOS v4.6.8 or later in mainline and all legacy releases; for v4.6.7 and older mainline versions issues with installation and system functionality (installation break, unwanted reboots), can be fixed by adding a hint hint.ahci.0.msi="0", for more information see this <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">document</a></p>
+            <p><sup>*</sup> - works well with BIOS v4.6.8 or later in mainline and all legacy releases; for v4.6.7 and older mainline versions issues with installation and system functionality (installation break, unwanted reboots), can be fixed by adding a hint hint.ahci.0.msi="0", for more information see this <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">document</a></p>
             <p><sup>(2)</sup> - all apu boards have problems with USB 3.x stick detection in BIOS, system is working properly, but after reboot/warmboot/coldboot USB stick may not appear in BIOS boot menu (depends on the stick, well working sticks are mentioned in this <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/debug/usb-tests.md">document</a>)</p>
             <p><sup>(1)</sup> - Voyage Linux is bootable on SD card and works well in read-only mode, remounting as read-write and writing changes to SD sometimes results in kernel panic which often leads to non-operable system</p>
 
-            <h5><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/os-status.md" target="_blank">Read more...</a></h5>
-        </div>
+            <h5><ahref="https://github.com/pcengines/apu2-documentation/blob/master/docs/os-status.md">Read more...</a></h5>
+	</div>
+	
+	<div class="container">
+		<h2>Documentation</h2>
+			<p>The list of most useful documents from documentation:</p>
+		<ul>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/apu_CPU_boost.md">CPU Boost</a> - document briefly describes what the Core Performance Boost is and how to verify it works in BIOS and operating system.</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/research/fast_boot.md">Fast Boot</a> - document describing research for Fast Boot path for apu boards. The Fast Boot was intended to restore memory configuration from non-volatile storage and reduce the boot time of the platform. You will find the issues and limitations which did not allow to implement the feature.</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/research/ROCA.md">ROCA TPM vulnerability</a> - document describing ROCA TPM vulnerablity status and verification on TPM1a module form PC Engines.</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/APU_mPCIe_capabilities.md">APU mPCIe capabilities</a> - list of all signals and interfaces present on mPCIe connectors for apu2/3/4 boards. The document also describes possible usage of the slots.</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/cold_reset.md">Cold reset</a> - document describing reset types for the platform.</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/firmware_flashing.md">Firmware flashing</a> - document describes how to flash new firmware for apu2 board on various operating systems. Also there is a description how to safely reboot the platform after a firmware update.</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/microcode_patching.md">Microcode patching</a> - a guide how to apply a microcode patch on the firmware level by building a custom firmware image.</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> - list of supported and tested WiFi and LTE modules. The document also describes issues with certain modules and possible solutions/workarounds.</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/release_process.md">Old build system procedure (deprecated)</a> - document describing build procedure for older PC Engines firmware releases. It is deprecated, do not use unless You want to build old binaries.</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/serial_console.md">COM2 serial console</a> - a practical guide how to build a firmware binary with native COM2 console support. If You want to use full RS232 COM1 port for other purposes, read the document how to change the main console port.</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/tpm_menu.md">TPM menu</a> - document describes the usage of TPM configuration menu in SeaBIOS.</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/tpm_pin_mapping.md">TPM pin mapping</a> - document showing the TPM1a module pinout. It may be useful for users that would like to connect the TPM1a module to boards other than apu2.</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/apu2_vboot.md">VBOOT HOWTO</a> - document describing how to build a coreboot image with vboot support and measured boot mode</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/tianocore_build.md">coreboot with Tianocore payload</a> - document describes how to build a coreboot image with Tianocore payload</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/gpio.md">GPIO guide</a> - quick guide how to manipulate GPIOs from Linux sysfs</li>
+		</ul>
+	</div>
 
 
         <div class="container">
 
-        <!-- mainline releases v4.9.0.7 -->
+        <!-- mainline releases v4.10.0.0 -->
 
         <!--<div class="break"></div>insert this code when a new update comes out to separate a new version from the current.-->
 
-        <div class="smaller-margin" id="mr-24">
+        <div class="smaller-margin" id="mr-25">
             <h2 class="text-middle">Mainline releases</h2>
             <!-- h2 tag needs to be moved to the newest version -->
+            <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.9.0.7...v4.10.0.0">v4.10.0.0</a></h4>
+        </div>
+
+        <div class="dimmed-text">
+            <p>Release date: '2019-08-09'</p>
+        </div>
+
+        <ul>
+            <li>Fixed/added:</li>
+            <ol>
+                <li>rebased with official coreboot repository commit 2a20d13</li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/gpios.md">enable basic ACPI support for GPIOs</a></li>
+            </ol>
+            <li>Known issues:</li>
+            <ol>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
+                <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
+                        sometimes results in detecting only 1 stick</a></li>
+                <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
+                        boot menu</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
+                <li><a href="https://github.com/pcengines/coreboot/issues/321">watchdog cannot be enabled on apu3</a></li>
+            </ol>
+        </ul>
+
+        <div class="source-code-links-binaries">
+            <div class="source-code-column">
+                <div class="smaller-margin">
+                    <p>Binaries:</p>
+                </div>
+                <ul>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.0.rom">apu1 v4.10.0.0</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.0.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.0.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.0.rom">apu2 v4.10.0.0</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.0.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.0.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.0.rom">apu3 v4.10.0.0</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.0.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.0.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.0.rom">apu4 v4.10.0.0</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.0.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.0.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.10.0.0.rom">apu5 v4.10.0.0</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.10.0.0.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.10.0.0.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
+            </div>
+            <div class="source-code-column">
+                <div class="smaller-margin">
+                    <p>Source code:</p>
+                </div>
+                <ul>
+                    <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.9.0.7...v4.10.0.0">coreboot v4.10.0.0</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...'rel-1.12.1.3'">SeaBIOS 'rel-1.12.1.3'</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...'v4.6.15'">sortbootorder 'v4.6.15'</a></li>
+                    <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                    <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="break"></div>
+
+
+        <!-- mainline releases v4.9.0.7 -->
+
+        <div class="smaller-margin" id="mr-24">
             <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.9.0.6...v4.9.0.7">v4.9.0.7</a></h4>
         </div>
 
@@ -274,7 +357,7 @@
             </ol>
             <li>Known issues:</li>
             <ol>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
                         sometimes results in detecting only 1 stick</a></li>
                 <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
@@ -296,6 +379,7 @@
                     <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.7.rom">apu4 v4.9.0.7</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.7.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.7.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.7.rom">apu5 v4.9.0.7</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.7.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.7.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin">
@@ -338,7 +422,7 @@
             </ol>
             <li>Known issues:</li>
             <ol>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
                         sometimes results in detecting only 1 stick</a></li>
                 <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
@@ -360,6 +444,7 @@
                     <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.6.rom">apu4 v4.9.0.6</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.6.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.6.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.6.rom">apu5 v4.9.0.6</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.6.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.6.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin">
@@ -398,7 +483,7 @@
             </ol>
             <li>Known issues:</li>
             <ol>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
                         sometimes results in detecting only 1 stick</a></li>
                 <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
@@ -419,6 +504,7 @@
                     <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.5.rom">apu4 v4.9.0.5</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.5.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.5.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.5.rom">apu5 v4.9.0.5</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.5.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.5.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin">
@@ -457,7 +543,7 @@
             </ol>
             <li>Known issues:</li>
             <ol>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
                         sometimes results in detecting only 1 stick</a></li>
                 <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
@@ -478,6 +564,7 @@
                     <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.4.rom">apu4 v4.9.0.4</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.4.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.4.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.4.rom">apu5 v4.9.0.4</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.4.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.4.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin">
@@ -519,7 +606,7 @@
                 </ol>
                 <li>Known issues:</li>
                 <ol>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                     <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
                             sometimes results in detecting only 1 stick</a></li>
                     <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
@@ -540,6 +627,7 @@
                         <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.3.rom">apu4 v4.9.0.3</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.3.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.3.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.3.rom">apu5 v4.9.0.3</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.3.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.3.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin">
@@ -580,7 +668,7 @@
                 </ol>
                 <li>Known issues:</li>
                 <ol>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                     <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
                             sometimes results in detecting only 1 stick</a></li>
                     <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
@@ -602,6 +690,7 @@
                         <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.2.rom">apu4 v4.9.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.2.rom">apu5 v4.9.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin">
@@ -647,7 +736,7 @@
             </ol>
             <li>Known issues:</li>
             <ol>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
                         sometimes results in detecting only 1 stick</a></li>
                 <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
@@ -668,6 +757,7 @@
                     <li><a class="sha-button" href="">apu4 v4.9.0.1</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.1.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.1.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="">apu5 v4.9.0.1</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.1.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.1.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin">
@@ -710,15 +800,15 @@
                     <li>sortbootorder: BIOS WP is now set after saving bootorder changes</li>
                     <li>sortbootorder: set SRP bit on Macronix SPI (apu1) when enabling BIOS WP</li>
                 </ol>
-		<li>Known issues:</li>
-		<ol>
-		    <li><a href="https://github.com/pcengines/coreboot/issues/196">CPU frequency is stuck at low frequencies and does not react to stressin"</a></li>
-            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
-		    <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
-		    <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
-		    <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
-		    <li><a href="https://github.com/pcengines/apu2-documentation/issues/64">platforms happen to hang after reboot</a></li>
-		</ol>
+                <li>Known issues:</li>
+                <ol>
+                    <li><a href="https://github.com/pcengines/coreboot/issues/196">CPU frequency is stuck at low frequencies and does not react to stressin"</a></li>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
+                    <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
+                    <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/64">platforms happen to hang after reboot</a></li>
+                </ol>
             </ul>
 
             <div class="source-code-links-binaries">
@@ -731,6 +821,7 @@
                         <li><a class="sha-button" href="">apu4 v4.8.0.7</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.7.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.7.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.8.0.7</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.7.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.7.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -766,7 +857,7 @@
         <li>Known issues:</li>
         <ol>
             <li><a href="https://github.com/pcengines/coreboot/issues/196">CPU frequency is stuck at low frequencies and does not react to stressin"</a></li>
-            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
             <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
             <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
             <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
@@ -784,6 +875,7 @@
                 <li><a class="sha-button" href="">apu4 v4.8.0.6</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.6.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.6.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 <li><a class="sha-button" href="">apu5 v4.8.0.6</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.6.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.6.SHA256.sig" class="sha-button">SHA256.sig</a></li>
             </ul>
+            <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
         </div>
         <div class="source-code-column">
             <div class="smaller-margin"><p>Source code:</p></div>
@@ -819,7 +911,7 @@
         <li>Known issues:</li>
         <ol>
             <li><a href="https://github.com/pcengines/coreboot/issues/196">CPU frequency is stuck at low frequencies and does not react to stressin"</a></li>
-            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
             <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
             <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
             <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
@@ -837,6 +929,7 @@
                 <li><a class="sha-button" href="">apu4 v4.8.0.5</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.5.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.5.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 <li><a class="sha-button" href="">apu5 v4.8.0.5</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.5.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.5.SHA256.sig" class="sha-button">SHA256.sig</a></li>
             </ul>
+            <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
         </div>
         <div class="source-code-column">
             <div class="smaller-margin"><p>Source code:</p></div>
@@ -873,7 +966,7 @@
                 <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
                 <li><a href="https://github.com/pcengines/coreboot/issues/205">wrong firmware version on apu1</a></li>
                 <li><a href="https://github.com/pcengines/apu2-documentation/issues/120">broken serial console in SeaBIOS on apu1</a></li>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
                 <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
                 <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
@@ -891,6 +984,7 @@
                     <li><a class="sha-button" href="">apu4 v4.8.0.4</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.4.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.4.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="">apu5 v4.8.0.4</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.4.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.4.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin"><p>Source code:</p></div>
@@ -909,7 +1003,7 @@
 
             <!-- mainline releases v4.8.0.3 -->
 
-	<div class="smaller-margin" id="mr-13">
+        <div class="smaller-margin" id="mr-13">
             <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.8.0.2...v4.8.0.3">v4.8.0.3</a></h4>
         </div>
 
@@ -927,7 +1021,7 @@
             <li>Known issues:</li>
             <ol>
                 <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</a></li>
                 <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in boot menu</a></li>
                 <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
@@ -945,6 +1039,7 @@
                     <li><a class="sha-button" href="">apu4 v4.8.0.3</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.3.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.3.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="">apu5 v4.8.0.3</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.3.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.3.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin"><p>Source code:</p></div>
@@ -976,7 +1071,7 @@
             <li>Known issues:</li>
             <ol>
                 <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 <li>booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</li>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
             </ol>
@@ -992,6 +1087,7 @@
                     <li><a class="sha-button" href="">apu4 v4.8.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="">apu5 v4.8.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin"><p>Source code:</p></div>
@@ -1023,7 +1119,7 @@
             <li>Known issues:</li>
             <ol>
                 <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 <li>booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</li>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
             </ol>
@@ -1039,6 +1135,7 @@
                     <li><a class="sha-button" href="">apu4 v4.8.0.1</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.1.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.8.0.1.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="">apu5 v4.8.0.1</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.1.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.8.0.1.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin"><p>Source code:</p></div>
@@ -1071,7 +1168,7 @@
             <li>Known issues:</li>
             <ol>
                 <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 <li>booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</li>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
             </ol>
@@ -1087,6 +1184,7 @@
                     <li><a class="sha-button" href="">apu4 v4.6.10</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.10.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.10.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="">apu5 v4.6.10</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.10.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.10.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin"><p>Source code:</p></div>
@@ -1120,7 +1218,7 @@
             <li>Known issues:</li>
             <ol>
                 <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 <li>booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</li>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
             </ol>
@@ -1136,6 +1234,7 @@
                     <li><a class="sha-button" href="">apu4 v4.6.9</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.9.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.9.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="">apu5 v4.6.9</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.9.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.9.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin"><p>Source code:</p></div>
@@ -1166,7 +1265,7 @@
                 <li>Known issues:</li>
                 <ol>
                     <li><a href="https://github.com/pcengines/coreboot/issues/138">changing bootorder on apu1 does not work</a></li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                     <li>booting with 2 USB 3.x sticks plugged in apu4 sometimes results in detecting only 1 stick</li>
                     <li>certain USB 3.x sticks happen to not appear in boot menu</li>
                 </ol>
@@ -1182,6 +1281,7 @@
                         <li><a class="sha-button" href="">apu4 v4.6.8</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.8.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.8.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.6.8</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.8.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.8.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -1213,7 +1313,7 @@
                 <li>Known issues:</li>
                 <ol>
                     <li>pfSense installation may fail on hard disks - <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">workaround</a></li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -1226,6 +1326,7 @@
                         <li><a class="sha-button" href="">apu4 v4.6.7</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.7.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.7.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.6.7</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.7.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.7.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -1261,7 +1362,7 @@
                     <li>USB 3.x sticks are handled like USB 2.0 sticks, but are detected</li>
                     <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
                     <li>SD card performance is lower than in legacy releases</li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -1274,6 +1375,7 @@
                         <li><a class="sha-button" href="">apu4 v4.6.6</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.6.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.6.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.6.6</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.6.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.6.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -1310,7 +1412,7 @@
                     <li>refreshing screen dos not work properly in Memtest86+</li>
                     <li>serial console disable option does not affect SeaBIOS</li>
                     <li>SD card performance is lower than in legacy releases</li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -1323,6 +1425,7 @@
                         <li><a class="sha-button" href="">apu4 v4.6.5</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.5.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.5.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.6.5</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.5.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.5.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -1361,7 +1464,7 @@
                     <li>serial console disable option does not affect SeaBIOS</li>
                     <li>SeaBIOS serial console output is sometimes wrongly shifted</li>
                     <li>SD card performance is lower than in legacy releases</li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -1374,6 +1477,7 @@
                         <li><a class="sha-button" href="">apu4 v4.6.4</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.4.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.6.4.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.6.4</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.4.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.4.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -1407,7 +1511,7 @@
                     <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
                     <li>SD card performance is lower than in legacy releases</li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -1419,6 +1523,7 @@
                         <li><a class="sha-button" href="">apu3 v4.6.3</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.6.3.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.6.3.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.6.3</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.3.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.3.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -1454,7 +1559,7 @@
                     <li>UARTc/c and mPCIe2 CLK enable/disable runtime configuration do not work</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
                     <li>SD card performance is lower than in legacy releases</li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -1466,6 +1571,7 @@
                         <li><a class="sha-button" href="">apu3 v4.6.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.6.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.6.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.6.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -1501,7 +1607,7 @@
                     <li>UARTc/c and mPCIe2 CLK enable/disable runtime configuration do not work</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
                     <li>SD card performance is lower than in legacy releases</li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -1513,6 +1619,7 @@
                         <li><a class="sha-button" href="">apu3 v4.6.1</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.6.1.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.6.1.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.6.1</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.1.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.6.1.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -1532,7 +1639,7 @@
         <div class="container">
 
 
-<!-- legacy releases v4.0.26 -->
+<!-- legacy releases v4.0.27 -->
 <!--
     <div class="break"></div>
     insert this code when a new update comes out to separate a new version from the current.
@@ -1559,7 +1666,7 @@
     <li>Known issues:</li>
     <ol>
         <li>certain USB 3.x sticks happen to not appear in boot menu</li>
-        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
         <li><a href="https://github.com/pcengines/coreboot/issues/321">watchdog cannot be enabled on apu3</a></li>
     </ol>
 </ul>
@@ -1575,6 +1682,7 @@
             <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.27.rom">apu4 v4.0.27</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.27.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.27.SHA256.sig" class="sha-button">SHA256.sig</a></li>
             <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.27.rom">apu5 v4.0.27</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.27.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.27.SHA256.sig" class="sha-button">SHA256.sig</a></li>
         </ul>
+        <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
     </div>
     <div class="source-code-column">
         <div class="smaller-margin">
@@ -1617,7 +1725,7 @@
     <li>Known issues:</li>
     <ol>
         <li>certain USB 3.x sticks happen to not appear in boot menu</li>
-        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
         <li><a href="https://github.com/pcengines/coreboot/issues/321">watchdog cannot be enabled on apu3</a></li>
     </ol>
 </ul>
@@ -1633,6 +1741,7 @@
             <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.26.rom">apu4 v4.0.26</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.26.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.26.SHA256.sig" class="sha-button">SHA256.sig</a></li>
             <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.26.rom">apu5 v4.0.26</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.26.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.26.SHA256.sig" class="sha-button">SHA256.sig</a></li>
         </ul>
+        <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
     </div>
     <div class="source-code-column">
         <div class="smaller-margin">
@@ -1668,7 +1777,7 @@
         <li>Known issues:</li>
         <ol>
             <li>certain USB 3.x sticks happen to not appear in boot menu</li>
-            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
         </ol>
     </ul>
 
@@ -1683,6 +1792,7 @@
                 <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.25.rom">apu4 v4.0.25</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.25.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.25.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.25.rom">apu5 v4.0.25</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.25.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.25.SHA256.sig" class="sha-button">SHA256.sig</a></li>
             </ul>
+            <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
         </div>
         <div class="source-code-column">
             <div class="smaller-margin">
@@ -1722,7 +1832,7 @@
         <li>Known issues:</li>
         <ol>
             <li>certain USB 3.x sticks happen to not appear in boot menu</li>
-            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+            <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
             <li><a href="https://github.com/pcengines/coreboot/issues/267">Reproducible builds limiation - currently set iPXE and Memtest86+ master revisions do not guarantee the build reproducibility in long term. Correct revisions will be set in v4.0.25. </a></li>
         </ol>
     </ul>
@@ -1738,6 +1848,7 @@
                 <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.24.rom">apu4 v4.0.24</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.24.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.24.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.24.rom">apu5 v4.0.24</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.24.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.24.SHA256.sig" class="sha-button">SHA256.sig</a></li>
             </ul>
+            <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
         </div>
         <div class="source-code-column">
             <div class="smaller-margin">
@@ -1785,7 +1896,7 @@
     <li>Known issues:</li>
     <ol>
         <li>certain USB 3.x sticks happen to not appear in boot menu</li>
-        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
     </ol>
 </ul>
 
@@ -1800,6 +1911,7 @@
             <li><a class="sha-button" href="">apu4 v4.0.23</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.23.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.23.SHA256.sig" class="sha-button">SHA256.sig</a></li>
             <li><a class="sha-button" href="">apu5 v4.0.23</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.23.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.23.SHA256.sig" class="sha-button">SHA256.sig</a></li>
         </ul>
+        <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
     </div>
     <div class="source-code-column">
         <div class="smaller-margin">
@@ -1849,7 +1961,7 @@
     <li>Known issues:</li>
     <ol>
         <li>certain USB 3.x sticks happen to not appear in boot menu</li>
-        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
         <li>Sometimes pfSense hangs during boot on boards with legacy firmware when no USB stick present. Plugging USB stick workarounds the issue. Problem is during investigation.</li>
     </ol>
 </ul>
@@ -1863,6 +1975,7 @@
             <li><a class="sha-button" href="">apu4 v4.0.22</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.22.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.22.SHA256.sig" class="sha-button">SHA256.sig</a></li>
             <li><a class="sha-button" href="">apu5 v4.0.22</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.22.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.22.SHA256.sig" class="sha-button">SHA256.sig</a></li>
         </ul>
+        <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
     </div>
     <div class="source-code-column">
         <div class="smaller-margin"><p>Source code:</p></div>
@@ -1896,7 +2009,7 @@
     <li>Known issues:</li>
     <ol>
         <li>certain USB 3.x sticks happen to not appear in boot menu</li>
-        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
         <li>Sometimes pfSense hangs during boot on boards with legacy firmware when no USB stick present. Plugging USB stick workarounds the issue. Problem is during investigation.</li>
     </ol>
 </ul>
@@ -1910,6 +2023,7 @@
             <li><a class="sha-button" href="">apu4 v4.0.21</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.21.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.21.SHA256.sig" class="sha-button">SHA256.sig</a></li>
             <li><a class="sha-button" href="">apu5 v4.0.21</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.21.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.21.SHA256.sig" class="sha-button">SHA256.sig</a></li>
         </ul>
+        <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
     </div>
     <div class="source-code-column">
         <div class="smaller-margin"><p>Source code:</p></div>
@@ -1941,7 +2055,7 @@
     <li>Known issues:</li>
     <ol>
         <li>certain USB 3.x sticks happen to not appear in boot menu</li>
-        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
     </ol>
 </ul>
 
@@ -1954,6 +2068,7 @@
             <li><a class="sha-button" href="">apu4 v4.0.20</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.20.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.20.SHA256.sig" class="sha-button">SHA256.sig</a></li>
             <li><a class="sha-button" href="">apu5 v4.0.20</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.20.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.20.SHA256.sig" class="sha-button">SHA256.sig</a></li>
         </ul>
+        <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
     </div>
     <div class="source-code-column">
         <div class="smaller-margin"><p>Source code:</p></div>
@@ -1987,7 +2102,7 @@
             <ol>
                 <li>pfSense 2.4.x fails to boot when no USB stick is plugged</li>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
             </ol>
         </ul>
 
@@ -2000,6 +2115,7 @@
                     <li><a class="sha-button" href="">apu4 v4.0.19</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.19.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.19.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="">apu5 v4.0.19</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.19.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.19.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin"><p>Source code:</p></div>
@@ -2039,7 +2155,7 @@
             <li>Known issues:</li>
             <ol>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
             </ol>
         </ul>
 
@@ -2052,6 +2168,7 @@
                     <li><a class="sha-button" href="">apu4 v4.0.18</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.18.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.18.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="">apu5 v4.0.18</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.18.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.18.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin"><p>Source code:</p></div>
@@ -2084,7 +2201,7 @@
             <li>Known issues:</li>
             <ol>
                 <li>certain USB 3.x sticks happen to not appear in boot menu</li>
-                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
             </ol>
         </ul>
 
@@ -2097,6 +2214,7 @@
                     <li><a class="sha-button" href="">apu4 v4.0.17</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.17.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.17.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     <li><a class="sha-button" href="">apu5 v4.0.17</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.17.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.17.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                 </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
             </div>
             <div class="source-code-column">
                 <div class="smaller-margin"><p>Source code:</p></div>
@@ -2129,7 +2247,7 @@
                 <ol>
                     <li>certain USB 3.x sticks happen to not appear in boot menu</li>
                     <li>Serial console can not be enabled yet on apu3 using S1 button</a></li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -2142,6 +2260,7 @@
                         <li><a class="sha-button" href="">apu4 v4.0.16</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.16.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.16.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.0.16</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.16.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.16.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -2176,7 +2295,7 @@
                 <ol>
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
                     <li>Serial console can not be enabled using S1 button</a></li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -2187,8 +2306,8 @@
                         <li><a class="sha-button" href="">apu2 v4.0.15</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.15.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.15.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu3 v4.0.15</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.15.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.15.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.0.15</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.15.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.15.SHA256.sig" class="sha-button">SHA256.sig</a></li>
-
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -2222,7 +2341,7 @@
                     <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
                     <li><a href="https://github.com/pcengines/apu2-documentation/issues/111">Serial console can be disabled only in coreboot and can not be enabled using S1 button</a></li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -2234,6 +2353,7 @@
                         <li><a class="sha-button" href="">apu3 v4.0.14</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.14.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.14.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.0.14</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.14.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.14.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -2266,7 +2386,7 @@
                 <ol>
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
                     <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -2278,6 +2398,7 @@
                         <li><a class="sha-button" href="">apu3 v4.0.13</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.13.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.13.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.0.13</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.13.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.13.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -2309,7 +2430,7 @@
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
                     <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -2321,6 +2442,7 @@
                         <li><a class="sha-button" href="">apu3 v4.0.12</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.12.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.12.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu5 v4.0.12</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.12.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.12.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -2351,7 +2473,7 @@
                 <ol>
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -2362,6 +2484,7 @@
                         <li><a class="sha-button" href="">apu2 v4.0.11</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.11.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.11.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu3 v4.0.11</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.11.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.11.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -2392,7 +2515,7 @@
                 <ol>
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -2403,6 +2526,7 @@
                         <li><a class="sha-button" href="">apu2 v4.0.10</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.10.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.10.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                         <li><a class="sha-button" href="">apu3 v4.0.10</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.10.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.10.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>
@@ -2433,7 +2557,7 @@
                 <ol>
                     <li>USB 3.x sticks happen to not appear in boot menu</li>
                     <li>restoring default configuration in sortbootorder works only for bootorder</li>
-                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots</a></li>
+                    <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
                 </ol>
             </ul>
 
@@ -2443,6 +2567,7 @@
                     <ul>
                         <li><a class="sha-button" href="">apu2 v4.0.9</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.9.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.9.SHA256.sig" class="sha-button">SHA256.sig</a></li>
                     </ul>
+                    <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
                 </div>
                 <div class="source-code-column">
                     <div class="smaller-margin"><p>Source code:</p></div>

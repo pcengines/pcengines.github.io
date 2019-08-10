@@ -32,7 +32,7 @@ support via Linux kernel sysfs including:
 
 ## Statistics
 
-![Files Changed](link-to-file)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/cfKkNEZXs43NfQG/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -44,7 +44,7 @@ git diff --stat 2a20d13 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 
 `88 files changed, 2784 insertions(+), 196 deletions(-)`
 
-![Process of mainlining](link-to-file)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/Gad3L44ZEW6wEgP/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release. Check the
@@ -60,6 +60,25 @@ Two files have not been included in the diff as mentioned above since they are
 not a part of coreboot tree.
 
 ## Testing
+
+* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/ce829QADwA7sHx9/preview) - hardware configurations available for testing in 3mdeb laboratory.
+
+* [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
+
+Test changes in this release:
+* **improved** ATA boot perfomance tests for measuring "Loading Linux" time
+* **replaced** APU3b2 testing platform with model **APU3c4**
+
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/LiG5NJszHQnXTKt/preview)
+
+* Mainline:
+  * PASSED: **406** (-2)
+  * FAILED: **11** (-3)
+  * PASSED [%]: **97.36%** (+0.68%)
+
+The difference in the `PASSED`/`FAILED` aggregated statistics results from ATA
+boot test improvement and minor platform problem (5 stable tests on apu4 were
+not tested).
 
 ## Binaries
 

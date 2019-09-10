@@ -12,6 +12,10 @@ Mainline:
 
 1. **Rebased** with official coreboot repository **commit** 22d66ef.
 2. **Enabled watchdog** on **apu3**.
+3. **MCFG ACPI** table generation. MCFG ACPI table contains each PCI Device
+   Configuration Space.
+4. **Updated GPIOs** [documentation](https://github.com/pcengines/apu2-documentation/blob/master/docs/gpios.md)
+with known issue section and workaround.
 
 Legacy:
 1. **Enabled watchdog** on **apu3**.

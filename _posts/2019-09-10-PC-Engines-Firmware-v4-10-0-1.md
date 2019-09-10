@@ -11,14 +11,27 @@ categories: Firmware
 Mainline:
 
 1. **Rebased** with official coreboot repository **commit** 22d66ef.
-2. **Enabled watchdog** on **apu3**.
-3. **MCFG ACPI** table generation. MCFG ACPI table contains each PCI Device
-   Configuration Space.
-4. **Updated GPIOs** [documentation](https://github.com/pcengines/apu2-documentation/blob/master/docs/gpios.md)
-with known issue section and workaround.
+2. **Fixed watchdog** runtime option on **apu3**.
+3. **Updated GPIOs** [documentation](https://github.com/pcengines/apu2-documentation/blob/master/docs/gpios.md)
+   with known issue section and workaround.
 
 Legacy:
-1. **Enabled watchdog** on **apu3**.
+1. **Fixed watchdog** runtime option on **apu3**.
+
+There are little changes in this release because the effort was closely
+focused on the runtime configuration reimplementation. The new runtime
+configuration implementation will be based on VPD and will bring tools for
+offline binary modification. It is planned to be introduced in v4.10.0.2.
+
+## coreboot community
+
+Patches merged:
+
+* [MCFG ACPI table generation](https://review.coreboot.org/c/coreboot/+/35286)
+
+Patches sent for review:
+
+* [Enable AER and ACS for PCIe ports](https://review.coreboot.org/c/coreboot/+/35313)
 
 ## Statistics
 

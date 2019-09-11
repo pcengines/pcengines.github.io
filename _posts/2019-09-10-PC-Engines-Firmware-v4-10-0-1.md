@@ -35,7 +35,7 @@ Patches sent for review:
 
 ## Statistics
 
-![Files Changed](link1)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/Sab6M8XJJ48GGbN/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -47,7 +47,7 @@ git diff --stat 22d66ef ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 
 `90 files changed, 2793 insertions(+), 199 deletions(-)`
 
-![Process of mainlining](link2)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/rx2q4Cp2MtonQE6/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release. Check the

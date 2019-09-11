@@ -69,19 +69,27 @@ not a part of coreboot tree.
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
 Test changes in this release:
-* **improved** ATA boot perfomance tests for measuring "Loading Linux" time
-* **replaced** APU3b2 testing platform with model **APU3c4**
+* **added** GPIO driver (LED control) tests (3 test-cases)
+* **added** GPIO driver (S1 switch handler) tests (1 test-case)
+* **improved** Voyage installation test with regexp matches
+* **improved** apu5 platform heat dissipation in the 3mdeb lab (CPB problems)
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/LiG5NJszHQnXTKt/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/dRHMyDndi54aBLd/preview)
+
+![Legacy test results](https://cloud.3mdeb.com/index.php/s/ZNEHy4FABxRpBJw/preview)
 
 * Mainline:
-  * PASSED: **406** (-2)
-  * FAILED: **11** (-3)
-  * PASSED [%]: **97.36%** (+0.68%)
+  * PASSED: **425** (+19)
+  * FAILED: **12** (+1)
+  * PASSED [%]: **97.25%** (-0.11%)
 
-The difference in the `PASSED`/`FAILED` aggregated statistics results from ATA
-boot test improvement and minor platform problem (5 stable tests on apu4 were
-not tested).
+* Legacy:
+  * PASSED: **372** (+4)
+  * FAILED: **10** (+1)
+  * PASSED [%]: **97.38%** (-0.23%)
+
+The difference in the `PASSED`/`FAILED` aggregated statistics results from the
+apu3 watchdog fix, new GPIO driver tests and the returning USB detection problem.
 
 ## Binaries
 

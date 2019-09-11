@@ -98,7 +98,7 @@ deployment for the new coreboot 4.10 release. Each release beginning with
 v4.10.0.0 and v4.0.28 will be signed with PC Engines Open Source Firmware
 Release 4.10 Signing Key instead of 4.9. A new key will be announced along with
 a fresh canary publicly available at
-[3mdeb-seckpack](https://github.com/3mdeb/3mdeb-secpack/tree/master/canaries/pcengines).
+[3mdeb-secpack](https://github.com/3mdeb/3mdeb-secpack/tree/master/canaries/pcengines).
 The signature files will be updated as soon as the new key will be deployed.
 
 ### Mainline

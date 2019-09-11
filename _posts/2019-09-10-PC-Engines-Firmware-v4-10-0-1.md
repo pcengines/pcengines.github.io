@@ -45,7 +45,7 @@ excluded from statistics). Check the statistics with:
 git diff --stat 22d66ef ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 ```
 
-`90 files changed, 2787 insertions(+), 208 deletions(-)`
+`90 files changed, 2793 insertions(+), 199 deletions(-)`
 
 ![Process of mainlining](link2)
 
@@ -57,7 +57,7 @@ statistics with:
 git diff --stat 22d66ef ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 ```
 
-`90 files changed, 2787 insertions(+), 208 deletions(-)`
+`90 files changed, 2793 insertions(+), 199 deletions(-)`
 
 Two files have not been included in the diff as mentioned above since they are
 not a part of coreboot tree.

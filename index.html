@@ -125,7 +125,7 @@
         <div class="container">
            <h2>Release notes</h2>
             <p>Release notes describing changes, fixes and known issues in PC Engines apux releases.<br><br>
-                Each binary (or archive in case of older images) is cryptographically signed by PC Engines Open Source Firmware Release Signing Key adequate to the official coreboot release (i.e. 4.9.0.x releases are signed by 4.9 Signing Key and 4.10.0.x by 4.10 Signing Key). Legacy releases starting from v4.0.28 are being signed with PC Engines Open Source Firmware Release 4.10 Signing Key. The keys are maintained and managed by 3mdeb company responsible for maintaining PC Engines firmware. Under each release binaries one may find an asciinema record showing example firmware signature verification using appropriate key. The public parts of the keys are available at <a href="https://github.com/3mdeb/3mdeb-secpack/tree/master/customer-keys/pcengines/release-keys" target="_blank">3mdeb-secpack</a> repository. For the details of the change please refer to <a href="https://github.com/3mdeb/3mdeb-secpack/blob/master/canaries/pcengines/canary-002-2019.txt" target"_blank">Canary #2</a>. 
+                Each binary (or archive in case of older images) is cryptographically signed by PC Engines Open Source Firmware Release Signing Key adequate to the official coreboot release (i.e. 4.9.0.x releases are signed by 4.9 Signing Key and 4.10.0.x by 4.10 Signing Key). Legacy releases starting from v4.0.28 are being signed with PC Engines Open Source Firmware Release 4.10 Signing Key. The keys are maintained and managed by 3mdeb company responsible for maintaining PC Engines firmware. Under each release binaries one may find an asciinema record showing example firmware signature verification using appropriate key. The public parts of the keys are available at <a href="https://github.com/3mdeb/3mdeb-secpack/tree/master/customer-keys/pcengines/release-keys" target="_blank">3mdeb-secpack</a> repository. For the details of the change please refer to <a href="https://github.com/3mdeb/3mdeb-secpack/blob/master/canaries/pcengines/canary-002-2019.txt" target"_blank">Canary #2</a>.
                 <br><br></p>
             <div class="main-list">
                 <p>The recommended firmware version is latest mainline v4.10.0.x. Reasons:</p>
@@ -143,6 +143,7 @@
                 <div class="main-list">
                     <h3>Mainline releases</h3>
                     <ul>
+                        <li><a href="#mr-27">v4.10.0.2</a></li>
                         <li><a href="#mr-26">v4.10.0.1</a></li>
                         <li><a href="#mr-25">v4.10.0.0</a></li>
                         <li><a href="#mr-24">v4.9.0.7</a></li>
@@ -175,6 +176,7 @@
                 <div class="main-list">
                     <h3>Legacy releases</h3>
                     <ul>
+                        <li><a href="#lr-21">v4.0.29</a></li>
                         <li><a href="#lr-20">v4.0.28</a></li>
                         <li><a href="#lr-19">v4.0.27</a></li>
                         <li><a href="#lr-18">v4.0.26</a></li>
@@ -275,13 +277,73 @@
 
         <div class="container">
 
-        <!-- mainline releases v4.10.0.1 -->
+        <!-- mainline releases v4.10.0.2 -->
 
         <!--<div class="break"></div>insert this code when a new update comes out to separate a new version from the current.-->
 
-        <div class="smaller-margin" id="mr-26">
+        <div class="smaller-margin" id="mr-27">
             <h2 class="text-middle">Mainline releases</h2>
             <!-- h2 tag needs to be moved to the newest version -->
+            <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.10.0.1...v4.10.0.2">v4.10.0.2</a></h4>
+        </div>
+
+        <div class="dimmed-text">
+            <p>Release date: 2019-10-09</p>
+        </div>
+
+        <ul>
+            <li>Fixed/added:</li>
+            <ol>
+                <li>rebased with official coreboot repository commit 64c14b5</li>
+                <li>soft reset SuperIO GPIOs to set default state</li>
+                <li>enable IO Base Address mode for SuperIO GPIOs</li>
+            </ol>
+            <li>Known issues:</li>
+            <ol>
+                <li><a href="https://github.com/pcengines/coreboot/issues/329">apuled driver doesn't work in FreeBSD.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/gpios.md">GPIOs</a> document for workaround.</li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
+                <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
+                        sometimes results in detecting only 1 stick</a></li>
+                <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
+                        boot menu</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
+            </ol>
+        </ul>
+
+        <div class="source-code-links-binaries">
+            <div class="source-code-column">
+                <div class="smaller-margin">
+                    <p>Binaries:</p>
+                </div>
+                <ul>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.2.rom">apu1 v4.10.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.2.rom">apu2 v4.10.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.2.rom">apu3 v4.10.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.2.rom">apu4 v4.10.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.10.0.2.rom">apu5 v4.10.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.10.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.10.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/269426">asciinema</a></p>
+            </div>
+            <div class="source-code-column">
+                <div class="smaller-margin">
+                    <p>Source code:</p>
+                </div>
+                <ul>
+                    <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.10.0.1...v4.10.0.2">coreboot v4.10.0.2</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...'rel-1.12.1.3'">SeaBIOS 'rel-1.12.1.3'</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...'v4.6.15'">sortbootorder 'v4.6.15'</a></li>
+                    <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                    <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="break"></div>
+
+
+        <!-- mainline releases v4.10.0.1 -->
+
+        <div class="smaller-margin" id="mr-26">
             <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.10.0.0...v4.10.0.1">v4.10.0.1</a></h4>
         </div>
 
@@ -1782,15 +1844,74 @@
 
         <div class="container">
 
-<!-- legacy releases v4.0.28 -->
+<!-- legacy releases v4.0.29 -->
 <!--
     <div class="break"></div>
     insert this code when a new update comes out to separate a new version from the current.
 -->
 
-<div class="smaller-margin" id="lr-20">
+<div class="smaller-margin" id="lr-21">
     <h2 class="text-middle">Legacy releases</h2>
     <!-- h2 tag needs to be moved to the newest version -->
+    <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.28...v4.0.29">v4.0.29</a></h4>
+</div>
+
+<div class="dimmed-text">
+    <p>Release date: 2019-10-09</p>
+</div>
+
+<ul>
+    <li>Fixed/added:</li>
+
+    <ol>
+        <li>fix SD 3.0 mode to be runtime configurable</li>
+        <li><a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/gpios.md">enable basic ACPI support for GPIOs</a></li>
+        <li>soft reset SuperIO GPIOs to set default state</li>
+        <li>enable IO Base Address mode for SuperIO GPIOs</li>
+    </ol>
+    <li>Known issues:</li>
+    <ol>
+        <li>certain USB 3.x sticks happen to not appear in boot menu</li>
+        <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a>Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
+    </ol>
+</ul>
+
+<div class="source-code-links-binaries">
+    <div class="source-code-column">
+        <div class="smaller-margin">
+            <p>Binaries:</p>
+        </div>
+	<ul>
+		<li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.29.rom">apu2 v4.0.29</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.29.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.29.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+		<li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.29.rom">apu3 v4.0.29</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.29.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.29.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+		<li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.29.rom">apu4 v4.0.29</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.29.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.29.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+		<li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.29.rom">apu5 v4.0.29</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.29.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.29.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+	    </ul>
+        <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/269426">asciinema</a></p>
+    </div>
+    <div class="source-code-column">
+        <div class="smaller-margin">
+            <p>Source code:</p>
+        </div>
+        <ul>
+            <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.28...v4.0.29">coreboot
+                    v4.0.29</a></li>
+            <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...rel-1.12.1.3">SeaBIOS
+                    rel-1.12.1.3</a></li>
+            <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...v4.6.15">sortbootorder
+                    v4.6.15</a></li>
+            <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+            <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+
+                    v4.0.1</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="break"></div>
+
+<!-- legacy releases v4.0.28 -->
+
+<div class="smaller-margin" id="lr-20">
     <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.27...v4.0.28">v4.0.28</a></h4>
 </div>
 
@@ -1830,8 +1951,10 @@
         <ul>
             <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.27...v4.0.28">coreboot
                     v4.0.28</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...rel-1.12.1.3">SeaBIOS rel-1.12.1.3</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...v4.6.15">sortbootorder v4.6.15</a></li>
+            <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...rel-1.12.1.3">SeaBIOS
+                    rel-1.12.1.3</a></li>
+            <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...v4.6.15">sortbootorder
+                    v4.6.15</a></li>
             <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
             <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+
                     v4.0.1</a></li>
@@ -1887,8 +2010,10 @@
         <ul>
             <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.26...v4.0.27">coreboot
                     v4.0.27</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...rel-1.12.1.3">SeaBIOS rel-1.12.1.3</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...v4.6.15">sortbootorder v4.6.15</a></li>
+            <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...rel-1.12.1.3">SeaBIOS
+                    rel-1.12.1.3</a></li>
+            <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...v4.6.15">sortbootorder
+                    v4.6.15</a></li>
             <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
             <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+
                     v4.0.1</a></li>
@@ -1946,8 +2071,10 @@
         <ul>
             <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.25...v4.0.26">coreboot
                     v4.0.26</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.0.1...rel-1.12.1.2">SeaBIOS rel-1.12.1.2</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.13...v4.6.14">sortbootorder v4.6.14</a></li>
+            <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.0.1...rel-1.12.1.2">SeaBIOS
+                    rel-1.12.1.2</a></li>
+            <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.13...v4.6.14">sortbootorder
+                    v4.6.14</a></li>
             <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
             <li><a target="_blank" href="https://github.com/pcengines/memtest86plus/compare/620a64eb50400d315ef411357936e4824a0ac592...v4.0.1">memtest86+
                     v4.0.1</a></li>

@@ -11,29 +11,29 @@ categories: Firmware
 Mainline:
 
 1. **Rebased** with official coreboot repository **commit** 64c14b5.
-2. Added soft reset feature for SuperIO GPIOS. With every platform boot SuperIO
-   GPIOs are set to default state: input and open-drain.
-3. Support IO Base Address mode for SuperIO GPIOs.
-   GPIOs can be controlled now in two ways.
-   - through configuration registers (only method used so far)
+2. Added **soft reset** feature for **SuperIO GPIOs**. With every platform boot
+   **SuperIO GPIOs are set to default state**: input and open-drain.
+3. **Support IO Base Address mode** for SuperIO GPIOs.
+   SuperIO GPIOs can be controlled now in two ways:
+   - through configuration registers
    - through direct access to I/O register with **base address 0x220**
 
    Both methods work in parallel without any disruptions.
 
 Legacy:
 
-1. Added ACPI support for GPIOs. Detailes are available in
+1. Added **ACPI support for GPIOs**. Detailes are available in
 [apu2-documentation](https://github.com/pcengines/apu2-documentation/blob/master/docs/gpios.md).
 So far access to GPIOs was possible only via dedicated driver. Now, there is
 support via Linux kernel sysfs including:
     - LEDs
     - S1 switch button with interrupts
     - SIMSWAP
-2. Fixed SD 3.0 mode to be runtime configurable now.
-3. Added soft reset feature for SuperIO GPIOS. With every platform boot GPIOs
-   are set to default state: input and open-drain.
-4. Support IO Base Address mode for SuperIO GPIOs.
-   GPIOs can be controlled now in two ways.
+2. **Fixed SD 3.0 mode** to be **runtime configurable** now.
+3. Added **soft reset** feature for **SuperIO GPIOs**. With every platform boot
+   **SuperIO GPIOs are set to default state**: input and open-drain.
+4. **Support IO Base Address mode** for SuperIO GPIOs.
+   SuperIO GPIOs can be controlled now in two ways:
    - through configuration registers
    - through direct access to I/O register with **base address 0x220**
 
@@ -109,14 +109,6 @@ The difference in the `PASSED`/`FAILED` aggregated statistics results from the
 apu3 watchdog fix, new GPIO driver tests and the returning USB detection problem.
 
 ## Binaries
-
-The signature files are not available yet. We are undergoing a new key
-deployment for the new coreboot 4.10 release. Each release beginning with
-v4.10.0.0 and v4.0.28 will be signed with PC Engines Open Source Firmware
-Release 4.10 Signing Key instead of 4.9. A new key will be announced along with
-a fresh canary publicly available at
-[3mdeb-secpack](https://github.com/3mdeb/3mdeb-secpack/tree/master/canaries/pcengines).
-The signature files will be updated as soon as the new key will be deployed.
 
 ### Mainline
 

@@ -22,7 +22,7 @@ Mainline:
 
 Legacy:
 
-1. Added **ACPI support for GPIOs**. Detailes are available in
+1. Added **ACPI support for GPIOs**. Details are available in
 [apu2-documentation](https://github.com/pcengines/apu2-documentation/blob/master/docs/gpios.md).
 So far access to GPIOs was possible only via dedicated driver. Now, there is
 support via Linux kernel sysfs including:
@@ -52,7 +52,7 @@ Patches sent for review:
 
 ## Statistics
 
-![Files Changed](https://cloud.3mdeb.com/index.php/s/Sab6M8XJJ48GGbN/preview)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/2gwAPC6LwD3CQx9/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -64,7 +64,7 @@ git diff --stat 64c14b5 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 
 `93 files changed, 2899 insertions(+), 205 deletions(-)`
 
-![Process of mainlining](https://cloud.3mdeb.com/index.php/s/rx2q4Cp2MtonQE6/preview)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/kdk7PX3HCfzb4N6/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release. Check the
@@ -86,27 +86,27 @@ not a part of coreboot tree.
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
 Test changes in this release:
-* **added** GPIO driver (LED control) tests (3 test-cases)
-* **added** GPIO driver (S1 switch handler) tests (1 test-case)
-* **improved** Voyage installation test with regexp matches
-* **improved** apu5 platform heat dissipation in the 3mdeb lab (CPB problems)
+* **improved** coreboot flashing test with FTP server option
+* **fixed** the python modules deprecation warning in the test infrastructure
+* **started** the migration of test infrastructure to python3
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/dRHMyDndi54aBLd/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/bfFnytdiXA5oBJq/preview)
 
-![Legacy test results](https://cloud.3mdeb.com/index.php/s/ZNEHy4FABxRpBJw/preview)
+![Legacy test results](https://cloud.3mdeb.com/index.php/s/DGLG6wdX9E33A4o/preview)
 
 * Mainline:
-  * PASSED: **425** (+19)
-  * FAILED: **12** (+1)
-  * PASSED [%]: **97.25%** (-0.11%)
+  * PASSED: **424** (-1)
+  * FAILED: **13** (+1)
+  * PASSED [%]: **97.03%** (-0.22%)
 
 * Legacy:
-  * PASSED: **372** (+4)
-  * FAILED: **10** (+1)
-  * PASSED [%]: **97.38%** (-0.23%)
+  * PASSED: **372** (no changes)
+  * FAILED: **10** (no changes)
+  * PASSED [%]: **97.38%** (no changes)
 
-The difference in the `PASSED`/`FAILED` aggregated statistics results from the
-apu3 watchdog fix, new GPIO driver tests and the returning USB detection problem.
+This release does not have tests changes, therefore there is nearly no
+difference in the aggregated statistics. Slightly worse tests performance on
+`FAILED` tests results from the on-going USB detection problem.
 
 ## Binaries
 

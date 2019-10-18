@@ -186,7 +186,12 @@ ul li:last-child {padding-bottom: 10px;}
     justify-content: space-between; }
 
 .source-code-column {
-    max-width: 50%;
+    max-width: 40%;
+    display: block;
+    flex: 1; }
+
+.binaries-column {
+    max-width: 60%;
     display: block;
     flex: 1; }
 
@@ -299,6 +304,10 @@ sup {
         padding: 8px 2px;
     }
     .source-code-links-binaries {
+        max-width: 100%;
+        display: block;
+    }
+    .binaries-column {
         max-width: 100%;
         display: block;
     }

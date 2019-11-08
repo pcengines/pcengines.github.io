@@ -85,31 +85,41 @@ difference in the aggregated statistics. Slightly worse tests performance on
 
 ### Mainline
 
-* [apu1 v4.10.0.3](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.3.rom)
+* [apu1 v4.10.0.3.zip](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.3.zip)
+
+  [apu1 v4.10.0.3.rom](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.3.rom)
 
   [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.3.SHA256)
 
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.3.SHA256.sig)
 
-* [apu2 v4.10.0.3](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.3.rom)
+* [apu2 v4.10.0.3.zip](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.3.zip)
+
+  [apu2 v4.10.0.3.rom](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.3.rom)
 
   [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.3.SHA256)
 
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.3.SHA256.sig)
 
-* [apu3 v4.10.0.3](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.3.rom)
+* [apu3 v4.10.0.3.zip](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.3.zip)
+
+  [apu3 v4.10.0.3.rom](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.3.rom)
 
   [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.3.SHA256)
 
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.3.SHA256.sig)
 
-* [apu4 v4.10.0.3](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.3.rom)
+* [apu4 v4.10.0.3.zip](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.3.zip)
+
+  [apu4 v4.10.0.3.rom](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.3.rom)
 
   [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.3.SHA256)
 
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.3.SHA256.sig)
 
-* [apu5 v4.10.0.3](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.10.0.3.rom)
+* [apu5 v4.10.0.3.zip](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.10.0.3.zip)
+
+  [apu5 v4.10.0.3.rom](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.10.0.3.rom)
 
   [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.10.0.3.SHA256)
 

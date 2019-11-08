@@ -38,10 +38,10 @@ point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
 excluded from statistics). Check the statistics with:
 
 ```
-git diff --stat 64c14b5 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+git diff --stat 2d90cb1 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 ```
 
-`93 files changed, 2899 insertions(+), 205 deletions(-)`
+`93 files changed, 2901 insertions(+), 213 deletions(-)`
 
 ![Process of mainlining](https://cloud.3mdeb.com/index.php/s/kdk7PX3HCfzb4N6/preview)
 
@@ -50,10 +50,10 @@ coreboot fork against the rebase point for a given release. Check the
 statistics with:
 
 ```
-git diff --stat 64c14b5 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+git diff --stat 2d90cb1 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 ```
 
-`93 files changed, 2899 insertions(+), 205 deletions(-)`
+`93 files changed, 2901 insertions(+), 213 deletions(-)`
 
 Two files have not been included in the diff as mentioned above since they are
 not a part of coreboot tree.

@@ -16,12 +16,6 @@ Mainline:
 
 Patches sent for review:
 
-* [Fix AMDFW outside CBFS](https://review.coreboot.org/c/coreboot/+/35853)
-* [SuperIO Nuvoton NCT5104D GPIO soft reset](https://review.coreboot.org/c/coreboot/+/35482)
-* [SuperIO Nuvoton NCT5104D enable Base Address mode](https://review.coreboot.org/c/coreboot/+/35849)
-* [Add SMBIOS type 16 structure](https://review.coreboot.org/c/coreboot/+/35888)
-* [Fill PC Engines apu2 SMBIOS type 16 and 17](https://review.coreboot.org/c/coreboot/+/35889)
-* [Adjust AGESA.h headers to AGESA version used in apu2](https://review.coreboot.org/c/coreboot/+/35906)
 * [Default SATA in AHCI mode for apu2](https://review.coreboot.org/c/coreboot/+/35891)
 * [Handle USB keyboards function keys in Memtest86+](https://review.coreboot.org/c/memtest86plus/+/36630)
 * [Implement bootblock in C environment](https://review.coreboot.org/c/coreboot/+/35754)

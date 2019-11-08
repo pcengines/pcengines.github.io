@@ -25,7 +25,7 @@ Patches sent for review:
 
 ## Statistics
 
-![Files Changed](https://cloud.3mdeb.com/index.php/s/2gwAPC6LwD3CQx9/preview)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/bBosq9KfmwCMXLC/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -37,7 +37,7 @@ git diff --stat 2d90cb1 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 
 `93 files changed, 2901 insertions(+), 213 deletions(-)`
 
-![Process of mainlining](https://cloud.3mdeb.com/index.php/s/kdk7PX3HCfzb4N6/preview)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/ct6o6Xt3724JD9C/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release. Check the
@@ -58,28 +58,19 @@ not a part of coreboot tree.
 
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
-Test changes in this release:
-* **improved** coreboot flashing test with FTP server option
-* **fixed** the python modules deprecation warning in the test infrastructure
-* **started** the migration of test infrastructure to python3
+There are no test changes in this release.
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/bfFnytdiXA5oBJq/preview)
-
-![Legacy test results](https://cloud.3mdeb.com/index.php/s/DGLG6wdX9E33A4o/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/CxbppNW5bBnzGMg/preview)
 
 * Mainline:
-  * PASSED: **424** (-1)
-  * FAILED: **13** (+1)
-  * PASSED [%]: **97.03%** (-0.22%)
+  * PASSED: **428** (+4)
+  * FAILED: **9** (-4)
+  * PASSED [%]: **97.94%** (+0.56%)
 
-* Legacy:
-  * PASSED: **372** (no changes)
-  * FAILED: **10** (no changes)
-  * PASSED [%]: **97.38%** (no changes)
-
-This release does not have tests changes, therefore there is nearly no
-difference in the aggregated statistics. Slightly worse tests performance on
-`FAILED` tests results from the on-going USB detection problem.
+This release does not have tests changes, therefore there is slight difference
+in the aggregated statistics. Slightly better overall `PASSED` tests percentage
+results from the on-going random USB detection problem, whether it will affect
+the current iteration or not.
 
 ## Binaries
 

@@ -11,8 +11,8 @@ categories: Firmware
 Mainline:
 
 1. **Rebased** with official coreboot repository **commit** 2d90cb1.
-2. Add ZIP packages with released coreboot image, SHA256 file and SHA256
-   signature for Windows users.
+2. **Added ZIP packages** with released coreboot image, SHA256 file and SHA256
+   signature **for Windows users**.
 
 ## coreboot community
 

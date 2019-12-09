@@ -23,7 +23,7 @@ Patches merged by community:
 
 ## Statistics
 
-![Files Changed](https://cloud.3mdeb.com/index.php/s/bBosq9KfmwCMXLC/preview)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/fx55cpRb2ScwLgf/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -35,7 +35,7 @@ git diff --stat 9f56eed ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 
 `97 files changed, 3219 insertions(+), 413 deletions(-)`
 
-![Process of mainlining](https://cloud.3mdeb.com/index.php/s/ct6o6Xt3724JD9C/preview)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/95MLrFL7g2TpDJD/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release. Check the
@@ -58,17 +58,17 @@ not a part of coreboot tree.
 
 There are no test changes in this release.
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/CxbppNW5bBnzGMg/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/Mx69zQBScReaDtK/preview)
 
 * Mainline:
-  * PASSED: **428** (+4)
-  * FAILED: **9** (-4)
-  * PASSED [%]: **97.94%** (+0.56%)
+  * PASSED: **427** (-1)
+  * FAILED: **10** (+1)
+  * PASSED [%]: **97.71%** (-0.23%)
 
 This release does not have tests changes, therefore there is slight difference
-in the aggregated statistics. Slightly better overall `PASSED` tests percentage
-results from the on-going random USB detection problem, whether it will affect
-the current iteration or not.
+in the aggregated statistics. Slightly worse overall `PASSED` tests percentage
+results from the on-going random USB detection problem and TinyCore boot
+stability, whether it will affect the current iteration or not.
 
 ## Binaries
 

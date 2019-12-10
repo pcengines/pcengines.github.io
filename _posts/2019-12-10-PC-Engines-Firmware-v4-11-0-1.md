@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.11.0.1"
-date:   2019-12-09
+date:   2019-12-10
 categories: Firmware
 ---
 # PC Engines apu coreboot Open Source Firmware v4.11.0.1
@@ -11,15 +11,61 @@ categories: Firmware
 Mainline:
 
 1. **Rebased** with official coreboot repository **commit** 9f56eed.
-2. **Temperature is now being showed in pfSense** dashboard.
-
+2. **Temperature** is now being **showed in pfSense** dashboard.
 
 ## coreboot community
 
+Recent month was focused mainly on contribution to official coreboot repository
+in order to keep PC Engines boards in the tree. Recent coreboot release is
+enforcing certain features that board/silicon must support in order to be
+maintained on the master branch. Here is the list of patches sent for review
+and merged in order to achieve the goal.
+
 Patches sent for review:
+
+* [AGESA, binaryPI: implement C bootblock](https://review.coreboot.org/c/coreboot/+/36914)
+
+* [sb/amd/{agesa,pi}: use ACPIMMIO common block wherever possible](https://review.coreboot.org/c/coreboot/+/37400)
+
+* [pcengines/apu2: Switch away from ROMCC_BOOTBLOCK](https://review.coreboot.org/c/coreboot/+/36915)
+
+* [pcengines/apu1: Switch away from ROMCC_BOOTBLOCK](https://review.coreboot.org/c/coreboot/+/37332)
+
+* [amdblocks/pci: add common implementation of MMCONF enabling](https://review.coreboot.org/c/coreboot/+/37552)
+
+* [mb/\*/\*: use ACPIMMIO common block wherever possible](https://review.coreboot.org/c/coreboot/+/37401)
 
 Patches merged by community:
 
+* [cpu/amd/{agesa,pi}/Kconfig: select SSE2](https://review.coreboot.org/c/coreboot/+/37292)
+
+* [sb/amd/{agesa,pi}/hudson: enable support for AMD common ACPIMMIO blocks](https://review.coreboot.org/c/coreboot/+/37177)
+
+* [binaryPI: Use Kconfig to define the number of IOAPICs](https://review.coreboot.org/c/coreboot/+/37169)
+
+* [amd/pi/00730F01: Add support without BINARYPI_LEGACY_WRAPPER](https://review.coreboot.org/c/coreboot/+/32421)
+
+* [vendorcode/amd/pi/Makefile.inc: remove -fno-zero-initialized-in-bss](https://review.coreboot.org/c/coreboot/+/36976)
+
+* [pcengines/apu2: Switch away from BINARYPI_LEGACY_WRAPPER](https://review.coreboot.org/c/coreboot/+/32363)
+
+* [sb/amd/{agesa,pi}/hudson: add southbridge C bootblock initialization](https://review.coreboot.org/c/coreboot/+/37168)
+
+* [sb/amd/cimx/sb800: add C bootblock southbridge initialization](https://review.coreboot.org/c/coreboot/+/37329)
+
+* [amdblocks/acpimmio: add common functions for AP entry](https://review.coreboot.org/c/coreboot/+/37416)
+
+* [amdblocks/acpimmio: Unify BIOSRAM usage](https://review.coreboot.org/c/coreboot/+/37402)
+
+* [soc/amd/common/block/acpimmio: fix ACPIMMIO decode enable function](https://review.coreboot.org/c/coreboot/+/37178)
+
+* [sb/amd/cimx: replace cimx_util with common ACPIMMIO AMD block](https://review.coreboot.org/c/coreboot/+/37328)
+
+* [AGESA,binaryPI: Fix stack location on entry to romstage](https://review.coreboot.org/c/coreboot/+/37351)
+
+* [AGESA,binaryPI: Remove \_\_x86_64\_\_ long mode in CAR](https://review.coreboot.org/c/coreboot/+/37350)
+
+* [AGESA,binaryPI: Remove redundant SSE enable](https://review.coreboot.org/c/coreboot/+/37349)
 
 ## Statistics
 

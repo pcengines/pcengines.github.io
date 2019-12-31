@@ -143,6 +143,7 @@
                 <div class="main-list">
                     <h3>Mainline releases</h3>
                     <ul>
+                        <li><a href="#mr-30">v4.11.0.2</a></li>
                         <li><a href="#mr-29">v4.11.0.1</a></li>
                         <li><a href="#mr-28">v4.10.0.3</a></li>
                         <li><a href="#mr-27">v4.10.0.2</a></li>
@@ -272,25 +273,97 @@
 			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/tpm_pin_mapping.md">TPM pin mapping</a> - document showing the TPM1a module pinout. It may be useful for users that would like to connect the TPM1a module to boards other than apu2.</li>
 			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/apu2_vboot.md">VBOOT HOWTO</a> - document describing how to build a coreboot image with vboot support and measured boot mode</li>
 			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/tianocore_build.md">coreboot with Tianocore payload</a> - document describes how to build a coreboot image with Tianocore payload</li>
+			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/apu2_vboot.md">VBOOT HOWTO</a> - document describing how to build a coreboot image with vboot support and measured boot mode</li>
 			<li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/gpios.md">GPIO guide</a> - quick guide how to manipulate GPIOs from Linux sysfs</li>
+			<li><a target="_blank" href="https://github.com/pcengines/sortbootorder/blob/master/README.md">Setup menu</a> - briefly describes the runtime configuration options, setup menu and its usage</li>
 		</ul>
 	</div>
 
 
         <div class="container">
 
-        <!-- mainline releases v4.11.0.1 -->
+        <!-- mainline releases v4.11.0.2 -->
 
         <!--<div class="break"></div>insert this code when a new update comes out to separate a new version from the current.-->
 
-        <div class="smaller-margin" id="mr-29">
+        <div class="smaller-margin" id="mr-30">
             <h2 class="text-middle">Mainline releases</h2>
             <!-- h2 tag needs to be moved to the newest version -->
+            <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.11.0.1...v4.11.0.2">v4.11.0.2</a></h4>
+        </div>
+
+        <div class="dimmed-text">
+            <p>Release date: 2019-12-31</p>
+        </div>
+
+        <ul>
+            <li>Fixed/added:</li>
+            <ol>
+                <li>rebased with official coreboot repository commit 536799d</li>
+                <li>added IOMMU runtime configuration</li>
+                <li>in the setup menu top banner displays correct board name</li>
+            </ol>
+            <li>Known issues:</li>
+            <ol>
+                <li><a href="https://github.com/pcengines/coreboot/issues/329">apuled driver doesn't work in FreeBSD.</a> Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/gpios.md">GPIOs</a> document for workaround.</li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/115">some PCIe cards are not detected on certain OSes and/or in certain mPCIe slots.</a> Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">mPCIe modules</a> document for solution/workaround.</li>
+                <li><a href="https://github.com/pcengines/seabios/issues/30">booting with 2 USB 3.x sticks plugged in apu4
+                        sometimes results in detecting only 1 stick</a></li>
+                <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
+                        boot menu</a></li>
+                <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
+            </ol>
+        </ul>
+
+        <div class="source-code-links-binaries">
+            <div class="binaries-column">
+                <div class="smaller-margin">
+                    <p>Binaries:</p>
+                </div>
+                <ul>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.rom">apu1 v4.11.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.rom">apu2 v4.11.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.rom">apu3 v4.11.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.rom">apu4 v4.11.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.rom">apu5 v4.11.0.2</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.SHA256" class="sha-button">SHA256</a><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.SHA256.sig" class="sha-button">SHA256.sig</a></li>
+                </ul>
+                <div class="smaller-margin">
+                    <p>Zip packages:</p>
+                </div>
+                <ul>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.1.zip">apu1 v4.11.0.1.zip</a>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.1.zip">apu2 v4.11.0.1.zip</a>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.1.zip">apu3 v4.11.0.1.zip</a>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.1.zip">apu4 v4.11.0.1.zip</a>
+                    <li><a class="sha-button" href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.1.zip">apu5 v4.11.0.1.zip</a>
+                </ul>
+                <p>See an example how to verify the signatures on <a href="https://asciinema.org/a/269426">asciinema</a></p>
+            </div>
+            <div class="source-code-column">
+                <div class="smaller-margin">
+                    <p>Source code:</p>
+                </div>
+                <ul>
+                    <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.11.0.1...v4.11.0.2">coreboot v4.11.0.2</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...rel-1.12.1.3">SeaBIOS rel-1.12.1.3</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.15...v4.6.16">sortbootorder v4.6.16</a></li>
+                    <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
+                    <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="break"></div>
+
+
+        <!-- mainline releases v4.11.0.1 -->
+
+        <div class="smaller-margin" id="mr-29">
             <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.10.0.3...v4.11.0.1">v4.11.0.1</a></h4>
         </div>
 
         <div class="dimmed-text">
-            <p>Release date: '2019-12-09'</p>
+            <p>Release date: 2019-12-09</p>
         </div>
 
         <ul>
@@ -308,6 +381,7 @@
                 <li><a href="https://github.com/pcengines/seabios/issues/29">certain USB 3.x sticks happen to not appear in
                         boot menu</a></li>
                 <li><a href="https://github.com/pcengines/apu2-documentation/issues/109">booting Xen is unstable</a></li>
+                <li><a href="https://github.com/pcengines/coreboot/issues/356">Issue booting OpenBSD 6.6 (current) on v4.11.0.1</a></li>
             </ol>
         </ul>
 
@@ -341,8 +415,8 @@
                 </div>
                 <ul>
                     <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.10.0.3...v4.11.0.1">coreboot v4.11.0.1</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...'rel-1.12.1.3'">SeaBIOS 'rel-1.12.1.3'</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...'v4.6.15'">sortbootorder 'v4.6.15'</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...rel-1.12.1.3">SeaBIOS rel-1.12.1.3</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...v4.6.15">sortbootorder v4.6.15</a></li>
                     <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
                     <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
                 </ul>
@@ -359,7 +433,7 @@
         </div>
 
         <div class="dimmed-text">
-            <p>Release date: '2019-11-08'</p>
+            <p>Release date: 2019-11-08</p>
         </div>
 
         <ul>
@@ -410,8 +484,8 @@
                 </div>
                 <ul>
                     <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.10.0.2...v4.10.0.3">coreboot v4.10.0.3</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...'rel-1.12.1.3'">SeaBIOS 'rel-1.12.1.3'</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...'v4.6.15'">sortbootorder 'v4.6.15'</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...rel-1.12.1.3">SeaBIOS rel-1.12.1.3</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...v4.6.15">sortbootorder v4.6.15</a></li>
                     <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
                     <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
                 </ul>
@@ -480,8 +554,8 @@
                 </div>
                 <ul>
                     <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.10.0.1...v4.10.0.2">coreboot v4.10.0.2</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...'rel-1.12.1.3'">SeaBIOS 'rel-1.12.1.3'</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...'v4.6.15'">sortbootorder 'v4.6.15'</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...rel-1.12.1.3">SeaBIOS rel-1.12.1.3</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...v4.6.15">sortbootorder v4.6.15</a></li>
                     <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
                     <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
                 </ul>
@@ -498,7 +572,7 @@
         </div>
 
         <div class="dimmed-text">
-            <p>Release date: '2019-09-10'</p>
+            <p>Release date: 2019-09-10</p>
         </div>
 
         <ul>
@@ -549,8 +623,8 @@
                 </div>
                 <ul>
                     <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.10.0.0...v4.10.0.1">coreboot v4.10.0.1</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...'rel-1.12.1.3'">SeaBIOS 'rel-1.12.1.3'</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...'v4.6.15'">sortbootorder 'v4.6.15'</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...rel-1.12.1.3">SeaBIOS rel-1.12.1.3</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...v4.6.15">sortbootorder v4.6.15</a></li>
                     <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
                     <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
                 </ul>
@@ -567,7 +641,7 @@
         </div>
 
         <div class="dimmed-text">
-            <p>Release date: '2019-08-09'</p>
+            <p>Release date: 2019-08-09</p>
         </div>
 
         <ul>
@@ -619,8 +693,8 @@
                 </div>
                 <ul>
                     <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.9.0.7...v4.10.0.0">coreboot v4.10.0.0</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...'rel-1.12.1.3'">SeaBIOS 'rel-1.12.1.3'</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...'v4.6.15'">sortbootorder 'v4.6.15'</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...rel-1.12.1.3">SeaBIOS rel-1.12.1.3</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...v4.6.15">sortbootorder v4.6.15</a></li>
                     <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
                     <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
                 </ul>
@@ -637,7 +711,7 @@
         </div>
 
         <div class="dimmed-text">
-            <p>Release date: '2019-07-09'</p>
+            <p>Release date: 2019-07-09</p>
         </div>
 
         <ul>
@@ -695,8 +769,8 @@
                 </div>
                 <ul>
                     <li><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.9.0.6...v4.9.0.7">coreboot v4.9.0.7</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...'rel-1.12.1.3'">SeaBIOS 'rel-1.12.1.3'</a></li>
-                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...'v4.6.15'">sortbootorder 'v4.6.15'</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/seabios/compare/rel-1.12.1.2...rel-1.12.1.3">SeaBIOS rel-1.12.1.3</a></li>
+                    <li><a target="_blank" href="https://github.com/pcengines/sortbootorder/compare/v4.6.14...v4.6.15">sortbootorder v4.6.15</a></li>
                     <li><a target="_blank" href="https://git.ipxe.org/ipxe.git">ipxe</a></li>
                     <li><a target="_blank" href="https://review.coreboot.org/cgit/memtest86plus.git/">memtest86+ v5.0.1</a></li>
                 </ul>

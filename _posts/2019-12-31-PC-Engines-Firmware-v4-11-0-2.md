@@ -21,6 +21,12 @@ Mainline:
 
 ## coreboot community
 
+Patches sent for review:
+
+* [amd/agesa/state_machine: Add BeforeInitLate hooks](https://review.coreboot.org/c/coreboot/+/37998)
+
+* [nb/amd/pi/00730F01/state_machine: Add lost options](https://review.coreboot.org/c/coreboot/+/37999)
+
 Patches merged by community:
 
 * [AGESA, binaryPI: implement C bootblock](https://review.coreboot.org/c/coreboot/+/36914)

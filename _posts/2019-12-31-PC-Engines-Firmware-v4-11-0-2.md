@@ -18,6 +18,9 @@ Mainline:
    **OpenBSD 6.6** on v4.11.0.1 firmware.
 4. PC Engines **platforms reached** all the **requirements** necessary to **stay in the**
    official **coreboot tree**.
+5. **Found the culprit** of the **problem** with **booting ESXi 6.7** U2 on apu
+   platforms. Created an [issue](https://github.com/vmware/esx-boot/issues/4)
+   on the correct repository.
 
 ## coreboot community
 
@@ -76,17 +79,19 @@ not a part of coreboot tree.
 
 There are no test changes in this release.
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/Mx69zQBScReaDtK/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/SApP4Qm2nrCfCdK/preview)
 
 * Mainline:
-  * PASSED: **427** (-1)
-  * FAILED: **10** (+1)
-  * PASSED [%]: **97.71%** (-0.23%)
+  * PASSED: **431** (+4)
+  * FAILED: **14** (+4)
+  * PASSED [%]: **96.85%** (-0.86%)
 
-This release does not have tests changes, therefore there is slight difference
-in the aggregated statistics. Slightly worse overall `PASSED` tests percentage
-results from the on-going random USB detection problem and TinyCore boot
-stability, whether it will affect the current iteration or not.
+Test changes:
+* **Added** IOMMU runtime configuration tests (2 test-cases)
+* **Added** pfSense CPU temperature check (1 test-case)
+
+Slightly worse overall `PASSED` tests percentage results from the on-going
+random USB detection problem and TinyCore boot stability.
 
 ## Binaries
 
@@ -132,7 +137,7 @@ stability, whether it will affect the current iteration or not.
 
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.SHA256.sig)
 
-See how to verify the signatures on [asciinema](https://asciinema.org/a/227035)
+See how to verify the signatures on [asciinema](https://asciinema.org/a/269426)
 
 ## What we planned
 

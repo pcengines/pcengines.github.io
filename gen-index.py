@@ -62,6 +62,10 @@ def replace_line(keyword, replacement):
 # set variables
 latest_release_notes = []
 filename = "index.html"
+coreboot_url = "https://github.com/pcengines/coreboot/"
+seabios_url = "https://github.com/pcengines/seabios/"
+sortbootorder_url = "https://github.com/pcengines/sortbootorder/"
+ftp_url = "https://3mdeb.com/open-source-firmware/pcengines/"
 version = input("Coreboot version (e.g. 'v4.9.0.4'): ")
 seabios_ver = raw_input("SeaBIOS version (e.g. 'rel-1.12.1.1') or leave empty if doesn't change: ")
 sortbootorder_ver = raw_input("sortbootorder version (e.g. 'v4.6.13') or leave empty if doesn't change: ")
@@ -70,13 +74,13 @@ if not date:
     date = datetime.date.today()
 
 # get old versions
-old_version = get_old_version("https://github.com/pcengines/coreboot/compare")
+old_version = get_old_version(coreboot_url+"compare")
 if old_version == -1:
     sys.exit("'get_old_version' of coreboot returned status -1")
-old_seabios_ver = get_old_version("https://github.com/pcengines/seabios/compare")
+old_seabios_ver = get_old_version(seabios_url+"compare")
 if old_seabios_ver == -1:
     sys.exit("'get_old_version' of seabios returned status -1")
-old_sortbootorder_ver = get_old_version("https://github.com/pcengines/sortbootorder/compare")
+old_sortbootorder_ver = get_old_version(sortbootorder_url+"compare")
 if old_sortbootorder_ver == -1:
     sys.exit("'get_old_version' of sortbootorder returned status -1")
 
@@ -115,22 +119,19 @@ input = "        <!-- mainline releases " + version + " -->\n"
 replace_line("<!-- mainline releases ", input)
 input = "        <div class=\"smaller-margin\" id=\"mr-" + str(mr_number) + "\">\n"
 replace_line("<div class=\"smaller-margin\" id=\"mr-", input)
-input = "            <h4><a target=\"_blank\" href=\"https://github.com/pcengines/coreboot/compare/" +old_version + "..." + version + "\">" + version + "</a></h4>\n"
-replace_line("<h4><a target=\"_blank\" href=\"https://github.com/pcengines/coreboot/compare", input)
+input = "            <h4><a target=\"_blank\" href=\""+coreboot_url+"compare/" +old_version + "..." + version + "\">" + version + "</a></h4>\n"
+replace_line("<h4><a target=\"_blank\" href=\""+coreboot_url+"compare", input)
 input = "            <p>Release date: " + str(date) +"</p>\n"
 replace_line("<p>Release date:", input)
 
-# update binaries links
-input = "                    <li><a class=\"sha-button\" href=\"https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_"+version+".rom\">apu1 "+version+"</a><a href=\"https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_"+version+".SHA256\" class=\"sha-button\">SHA256</a><a href=\"https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_"+version+".SHA256.sig\" class=\"sha-button\">SHA256.sig</a></li>\n"
-replace_line("https://3mdeb.com/open-source-firmware/pcengines/apu1", input)
-input = "                    <li><a class=\"sha-button\" href=\"https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_"+version+".rom\">apu2 "+version+"</a><a href=\"https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_"+version+".SHA256\" class=\"sha-button\">SHA256</a><a href=\"https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_"+version+".SHA256.sig\" class=\"sha-button\">SHA256.sig</a></li>\n"
-replace_line("https://3mdeb.com/open-source-firmware/pcengines/apu2", input)
-input = "                    <li><a class=\"sha-button\" href=\"https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_"+version+".rom\">apu3 "+version+"</a><a href=\"https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_"+version+".SHA256\" class=\"sha-button\">SHA256</a><a href=\"https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_"+version+".SHA256.sig\" class=\"sha-button\">SHA256.sig</a></li>\n"
-replace_line("https://3mdeb.com/open-source-firmware/pcengines/apu3", input)
-input = "                    <li><a class=\"sha-button\" href=\"https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_"+version+".rom\">apu4 "+version+"</a><a href=\"https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_"+version+".SHA256\" class=\"sha-button\">SHA256</a><a href=\"https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_"+version+".SHA256.sig\" class=\"sha-button\">SHA256.sig</a></li>\n"
-replace_line("https://3mdeb.com/open-source-firmware/pcengines/apu4", input)
-input = "                    <li><a class=\"sha-button\" href=\"https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_"+version+".rom\">apu5 "+version+"</a><a href=\"https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_"+version+".SHA256\" class=\"sha-button\">SHA256</a><a href=\"https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_"+version+".SHA256.sig\" class=\"sha-button\">SHA256.sig</a></li>\n"
-replace_line("https://3mdeb.com/open-source-firmware/pcengines/apu5", input)
+# platforms names
+platforms = ['apu1', 'apu2', 'apu3', 'apu4', 'apu5']
+# update binaries and zip links
+for name in platforms:
+    input = "                    <li><a class=\"sha-button\" href=\""+ftp_url+name+"/"+name+"_"+version+".rom\">"+name+" "+version+"</a><a href=\""+ftp_url+name+"/"+name+"_"+version+".SHA256\" class=\"sha-button\">SHA256</a><a href=\""+ftp_url+name+"/"+name+"_"+version+".SHA256.sig\" class=\"sha-button\">SHA256.sig</a></li>\n"
+    replace_line(ftp_url+name+"/"+name+"_"+old_version+".rom", input)
+    input = "                    <li><a class=\"sha-button\" href=\""+ftp_url+name+"/"+name+"_"+version+".zip\">"+name+" "+version+".zip</a></li>\n"
+    replace_line(ftp_url+name+"/"+name+"_"+old_version+".zip", input)
 
 # update source code links
 input = "                    <li><a target=\"_blank\" href=\"https://github.com/pcengines/coreboot/compare/"+old_version+"..."+version+"\">coreboot "+version+"</a></li>\n"

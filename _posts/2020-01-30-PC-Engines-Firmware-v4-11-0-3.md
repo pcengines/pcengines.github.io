@@ -99,8 +99,6 @@ Test changes in this release:
   * FAILED: **20** (+6)
   * PASSED [%]: **95.55%** (-1.30%)
 
-No test changes in this release.
-
 Slightly worse overall `PASSED` tests percentage results from the on-going
 random USB detection problem and TinyCore boot stability.
 

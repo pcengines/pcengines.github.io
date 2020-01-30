@@ -52,7 +52,7 @@ to official coreboot repository.
 
 ## Statistics
 
-![Files Changed](https://cloud.3mdeb.com/index.php/s/JSNcdBBJBZR4mTS/preview)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/6Kcnsa5pdiMHZye/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -64,7 +64,7 @@ git diff --stat 98eeb96 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 
 `93 files changed, 3073 insertions(+), 395 deletions(-)`
 
-![Process of mainlining](https://cloud.3mdeb.com/index.php/s/BLz8eypQAjLFPS3/preview)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/cdSCMYPar85DfRC/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release. Check the
@@ -88,14 +88,16 @@ by community.
 
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
-There are no test changes in this release.
+Test changes in this release:
+* added test for Watchdog triggering reboot verification after coldboot (1 test
+  case)
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/SApP4Qm2nrCfCdK/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/ffdPGTXk6mBJTiX/preview)
 
 * Mainline:
-  * PASSED: **431** (+4)
-  * FAILED: **14** (+4)
-  * PASSED [%]: **96.85%** (-0.86%)
+  * PASSED: **429** (-2)
+  * FAILED: **20** (+6)
+  * PASSED [%]: **95.55%** (-1.30%)
 
 No test changes in this release.
 

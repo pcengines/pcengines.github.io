@@ -15,7 +15,7 @@ Mainline:
 3. Added **ARM management controller interaction** on apu5.
 4. The **new PC Engines Open Source Firmware Release 4.10 Signing Key** has
    been enrolled and all coreboot v4.11.0.x versions are signed by this key.
-   See how to verify the image with new key on [asciinema.](https://asciinema.org/a/303584)
+   See how to verify the image with a new key on [asciinema.](https://asciinema.org/a/303584)
 
 Legacy:
 
@@ -23,7 +23,7 @@ Legacy:
 2. Added **ARM management controller interaction** on apu5.
 3. The **new PC Engines Open Source Firmware Release 4.10 Signing Key** has
    been enrolled and coreboot v4.0.30 and later versions will be signed by this key.
-   See how to verify the image with new key on [asciinema.](https://asciinema.org/a/303584)
+   See how to verify the image with a new key on [asciinema.](https://asciinema.org/a/303584)
 
 ## coreboot community
 

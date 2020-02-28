@@ -35,8 +35,8 @@ Patches merged by community:
 
 **Total:**
 
-* 1182 lines added,
-* 831 lines removed,
+* 51 lines added,
+* 2 lines removed,
 
 to official coreboot repository.
 
@@ -69,8 +69,7 @@ git diff --stat e53f8c9 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 Two files have not been included in the diff as mentioned above since they are
 not a part of coreboot tree.
 
-The number of changed files and lines decreased due to certain changes merged
-by community.
+The number of changes increased due to SD boot order fix on apu5.
 
 ## Testing
 

@@ -48,7 +48,7 @@ to official coreboot repository.
 
 ## Statistics
 
-![Files Changed](https://3mdeb.com/open-source-firmware/files-changed-v4.11.0.4.png)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/jfy6XDXBiCQs7Wn/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -60,7 +60,7 @@ git diff --stat e53f8c9 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 
 `93 files changed, 3158 insertions(+), 366 deletions(-)`
 
-![Process of mainlining](https://3mdeb.com/open-source-firmware/process-of-mainlining-v4.11.0.4.png)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/ZHinsE25nYs9GCM/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release. Check the
@@ -86,7 +86,7 @@ The number of changes increased due to SD boot order fix on apu5.
 Test changes in this release:
 * enabled SD cards tests on apu5
 
-![Mainline test results](https://3mdeb.com/open-source-firmware/mainline-test-results-v4.11.0.4.png)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/LczG7F3LqqjADYZ/preview)
 
 * Mainline:
   * PASSED: **433** (+4)
@@ -97,7 +97,7 @@ Slightly worse overall `PASSED` tests percentage results from the on-going
 random USB detection problem and TinyCore boot stability. The increased number
 of PASSED tests is a result of enabling SD card tests on apu5.
 
-![Legacy test results](https://3mdeb.com/open-source-firmware/legacy-test-results-v4.0.30.png)
+![Legacy test results](https://cloud.3mdeb.com/index.php/s/iWTo3JeaArnipaH/preview)
 
 * Legacy:
   * PASSED: **379** (+7)

@@ -53,17 +53,18 @@ Patches merged by community:
 * [acpi: correct the processor devices scope](https://review.coreboot.org/c/coreboot/+/39698)
 * [amd/common/acpi: move thermal zone to common location](https://review.coreboot.org/c/coreboot/+/39779)
 * [nb/amd/agesa/family14: Improve HTC threshold handling](https://review.coreboot.org/c/coreboot/+/39697)
+* [mb/pcengines/apu2: do not pass enabled PCIe ClockPM to AGESA](https://review.coreboot.org/c/coreboot/+/39970)
 
 **Total:**
 
-* 487 lines added,
-* 126 lines removed,
+* 492 lines added,
+* 131 lines removed,
 
-to official coreboot repository.
+in official coreboot repository.
 
 ## Statistics
 
-![Files Changed]()
+![Files Changed](https://cloud.3mdeb.com/index.php/s/rBiiDSd4annFnGG/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -73,9 +74,9 @@ excluded from statistics). Check the statistics with:
 git diff --stat 90557f4 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 ```
 
-` `
+`88 files changed, 2840 insertions(+), 166 deletions(-)`
 
-![Process of mainlining]()
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/co4WnMBsrw4p44R/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release. Check the
@@ -85,12 +86,13 @@ statistics with:
 git diff --stat 90557f4 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 ```
 
-` `
+`88 files changed, 2840 insertions(+), 166 deletions(-)`
 
 Two files have not been included in the diff as mentioned above since they are
 not a part of coreboot tree.
 
-The number of changes increased due to SD boot order fix on apu5.
+The number of changes significantly reduced due to many patches merged by
+community.
 
 ## Testing
 
@@ -98,12 +100,15 @@ The number of changes increased due to SD boot order fix on apu5.
 
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
-![Mainline test results]()
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/B4imeoGmrLCmzoY/preview)
 
 * Mainline:
-  * PASSED: **433** (+4)
-  * FAILED: **22** (+2)
-  * PASSED [%]: **95.16%** (-0.39%)
+  * PASSED: **433** (+0)
+  * FAILED: **22** (+0)
+  * PASSED [%]: **95.16** (+0%)
+
+No particular changes in tests in this release. Regression didn't detect new
+bugs.
 
 ## Binaries
 

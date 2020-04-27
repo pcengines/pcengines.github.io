@@ -20,7 +20,7 @@ Mainline:
    [impact the network performance](https://github.com/pcengines/coreboot/issues/387).
 3. **Reverted changes to ACPI CPU definitions** causing BSD systems to
    [not probe CPU frequency driver](https://github.com/pcengines/coreboot/issues/389).
-   **The ACPI compliance of current BSD systems is not up to date**, The
+   **The ACPI compliance of current BSD systems is not up to date**, the
    situation should improve when the distribution will start to use FreeBSD
    12.x, which works well with most recent rules of defining processors in
    ACPI.
@@ -71,7 +71,8 @@ work which is based on the flagship PC Engines apu2 model:
 * [Project basics](https://blog.3mdeb.com/2020/2020-03-31-trenchboot-nlnet-lz/)
 * [Validating the DRTM functionality](https://blog.3mdeb.com/2020/2020-04-03-trenchboot-nlnet-lz-validation/)
 
-If you are interested in the project follow us on our blog and [Twitter](https://twitter.com/3mdeb_com).
+If you are interested in the project follow us on our blog and [Twitter](https://twitter.com/3mdeb_com),
+or contact us directly over [email](mailto:contact@3mdeb.com).
 
 ## Statistics
 

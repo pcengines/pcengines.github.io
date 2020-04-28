@@ -76,7 +76,7 @@ or contact us directly over [email](mailto:contact@3mdeb.com).
 
 ## Statistics
 
-![Files Changed](https://cloud.3mdeb.com/index.php/s/rBiiDSd4annFnGG/preview)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/gXtePkQ3fdz2a9C/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -88,7 +88,7 @@ git diff --stat d6f7ec5 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 
 `93 files changed, 3279 insertions(+), 379 deletions(-)`
 
-![Process of mainlining](https://cloud.3mdeb.com/index.php/s/co4WnMBsrw4p44R/preview)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/Q3y7tAN78DMbPnw/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release. Check the
@@ -112,7 +112,7 @@ changes locally on our fork repository.
 
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/B4imeoGmrLCmzoY/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/F9SZtab5bErgyXg/preview)
 
 * Mainline:
   * PASSED: **433** (+0)

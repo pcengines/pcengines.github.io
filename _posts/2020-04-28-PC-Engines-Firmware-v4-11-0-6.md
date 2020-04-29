@@ -108,7 +108,7 @@ changes locally on our fork repository.
 
 ## Testing
 
-* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/ce829QADwA7sHx9/preview) - hardware configurations available for testing in 3mdeb laboratory.
+* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/LMfrmjTgXc9tdxR/preview) - hardware configurations available for testing in 3mdeb laboratory.
 
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 

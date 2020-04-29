@@ -35,6 +35,7 @@ Mainline:
    support is available along with FreeBSD ports offering TPM2 tools. We will
    provide documentation how to install and utilize those tools on FreeBSD
    systems soon.
+8. **Fixed** a problem where **SD 3.0 mode could not be disabled**.
 
 ## coreboot community
 

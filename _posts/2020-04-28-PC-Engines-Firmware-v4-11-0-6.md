@@ -120,7 +120,9 @@ changes locally on our fork repository.
   * PASSED [%]: **96.90** (+1.73%)
 
 No particular changes in tests in this release. Regression didn't detect new
-bugs.
+bugs. Improvement in results is mainly a result of the correction of SD3.0
+option in sortbootorder and verification of IOMMU option before tests, that
+could be affected by it.
 
 ## Binaries
 

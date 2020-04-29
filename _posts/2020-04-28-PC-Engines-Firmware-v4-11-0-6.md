@@ -115,9 +115,9 @@ changes locally on our fork repository.
 ![Mainline test results](https://cloud.3mdeb.com/index.php/s/F9SZtab5bErgyXg/preview)
 
 * Mainline:
-  * PASSED: **433** (+0)
-  * FAILED: **22** (+0)
-  * PASSED [%]: **95.16** (+0%)
+  * PASSED: **437** (+4)
+  * FAILED: **14** (-8)
+  * PASSED [%]: **96.90** (+1.73%)
 
 No particular changes in tests in this release. Regression didn't detect new
 bugs.

@@ -131,7 +131,7 @@ bugs.
 
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.1.SHA256.sig)
 
-See how to verify the signatures on [asciinema](https://asciinema.org/a/303584)
+See how to verify the signatures on [asciinema](https://asciinema.org/a/335785)
 
 ## What we planned
 

@@ -77,15 +77,17 @@ fixes for apu1.
 
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/F9SZtab5bErgyXg/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/45snkiHepeJDTKf/preview)
+
 
 * Mainline:
-  * PASSED: **437** (+4)
-  * FAILED: **14** (-8)
-  * PASSED [%]: **96.90** (+1.73%)
+  * PASSED: **443** (+7)
+  * FAILED: **9** (-6)
+  * PASSED [%]: **98.23** (+1.33%)
+
 
 No particular changes in tests in this release. Regression didn't detect new
-bugs.
+bugs. Increased pass ratio has been caused by avoiding [USB detection bug](https://github.com/pcengines/coreboot/issues/264) 
 
 ## Binaries
 

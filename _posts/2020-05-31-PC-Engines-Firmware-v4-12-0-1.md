@@ -59,18 +59,6 @@ The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release. Check the
 statistics with:
 
-```
-git diff --stat 8952d1c ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
-```
-
-`94 files changed, 3283 insertions(+), 381 deletions(-)`
-
-Two files have not been included in the diff as mentioned above since they are
-not a part of coreboot tree.
-
-The number of changes slightly increased, because we did not yet upstream all
-fixes for apu1.
-
 ## Testing
 
 * [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/LMfrmjTgXc9tdxR/preview) - hardware configurations available for testing in 3mdeb laboratory.
@@ -87,7 +75,7 @@ fixes for apu1.
 
 
 No particular changes in tests in this release. Regression didn't detect new
-bugs. Increased pass ratio has been caused by avoiding [USB detection bug](https://github.com/pcengines/coreboot/issues/264) 
+bugs. Increased pass ratio has been caused by avoiding [USB detection bug](https://github.com/pcengines/coreboot/issues/264)
 
 ## Binaries
 

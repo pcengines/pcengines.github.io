@@ -56,8 +56,13 @@ git diff --stat 8952d1c ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 ![Process of mainlining](https://cloud.3mdeb.com/index.php/s/9SSoC6BFBMdfy7t/preview)
 
 The chart represents the total line added and deleted on the PC Engines
-coreboot fork against the rebase point for a given release. Check the
-statistics with:
+coreboot fork against the rebase point for a given release. 
+
+Two files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree.
+
+The number of changes slightly increased, because we did not yet upstream all
+fixes for apu1.
 
 ## Testing
 

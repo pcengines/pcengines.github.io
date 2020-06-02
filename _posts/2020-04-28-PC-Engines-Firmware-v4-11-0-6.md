@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.11.0.6"
-date:   2020-03-31
+date:   2020-04-28
 categories: Firmware
 ---
 # PC Engines apu coreboot Open Source Firmware v4.11.0.6

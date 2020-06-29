@@ -13,7 +13,7 @@ Mainline:
 1. **Rebased** with official coreboot repository **commit** f183626.
 2. **New revisions** of apu3 and apu4 named **apu3d** and **apu4d** will come
    with TPM header. Thus **v4.12.0.2 enables TPM 2.0** on those platforms.
-3. **Fixed incorrrect serial number** in dmidecode for **apu1**.
+3. **Fixed incorrect serial number** in dmidecode for **apu1**.
 4. With the new release of coreboot 4.12 **3mdeb has a new key used for signing
    release images**: [PC Engines Open Source Firmware Release 4.12 Signing Key](https://github.com/3mdeb/3mdeb-secpack/blob/master/customer-keys/pcengines/release-keys/pcengines-open-source-firmware-release-4.12-key.asc).
    Remember to import it to your GPG (or other key management software) before

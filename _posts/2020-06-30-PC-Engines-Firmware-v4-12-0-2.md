@@ -39,6 +39,8 @@ Patches sent for review:
 
 * [mb/pcengines/apu2/mptable.c: fix invalid MP table and IRQ table](https://review.coreboot.org/c/coreboot/+/42097)
 
+* [fix the incorrect serial number on apu1](https://review.coreboot.org/c/coreboot/+/42512)
+
 **Total:**
 
 * 3 lines added,

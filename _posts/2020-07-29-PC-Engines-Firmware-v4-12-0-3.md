@@ -101,6 +101,42 @@ git diff --stat 8d5cedf ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 
 See how to verify the signatures on [asciinema](https://asciinema.org/a/335785)
 
+### Legacy
+
+* [apu2 v4.0.32.zip](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.32.zip)
+
+  [apu2 v4.0.32.rom](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.32.rom)
+
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.32.SHA256)
+
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.32.SHA256.sig)
+
+* [apu3 v4.0.32.zip](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.32.zip)
+
+  [apu3 v4.0.32.rom](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.32.rom)
+
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.32.SHA256)
+
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.32.SHA256.sig)
+
+* [apu4 v4.0.32.zip](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.32.zip)
+
+  [apu4 v4.0.32.rom](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.32.rom)
+
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.32.SHA256)
+
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.32.SHA256.sig)
+
+* [apu5 v4.0.32.zip](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.32.zip)
+
+  [apu5 v4.0.32.rom](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.32.rom)
+
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.32.SHA256)
+
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.32.SHA256.sig)
+
+See how to verify the signatures on [asciinema](https://asciinema.org/a/303584)
+
 ## What we planned
 
 1. Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only

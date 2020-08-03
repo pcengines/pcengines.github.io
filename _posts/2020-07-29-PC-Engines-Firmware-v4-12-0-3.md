@@ -17,19 +17,13 @@ speed of the bus not the memory thus it was 2 times smaller.
 4. **Updated** sortbootorder to version 4.6.19 with an option in the runtime
 configuration allowing to reverse PCI addressing order. Previously, if a new PCI
 device was added to the PCIe slot, all other devices' addresses were incremented,
-which could result in renaming the internet interfaces.
+which could result in renaming the Ethernet interfaces.
 
 Legacy:
 1. **Updated** sortbootorder to version 4.6.19 with an option in the runtime
 configuration allowing to reverse PCI addressing order. Previously, if a new PCI
 device was added to the PCIe slot, all other devices' addresses were incremented,
-which could result in renaming the internet interfaces.
-
-## coreboot community
-
-Patches merged by community:
-
-* [mb/protectli/vault_kbl: Enable Intel PTT](https://review.coreboot.org/c/coreboot/+/42565)
+which could result in renaming the Ethernet interfaces.
 
 
 **Total:**
@@ -43,11 +37,11 @@ in official coreboot repository.
 ![Files Changed](https://cloud.3mdeb.com/index.php/s/JRiyzzy2se8mLaz/preview)
 
 The chart shows the total files changed from release tag against the rebase
-point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
-excluded from statistics). Check the statistics with:
+point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml and
+gitlab-ci/regression.sh excluded from statistics). Check the statistics with:
 
 ```
-git diff --stat 8d5cedf ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+git diff --stat 8d5cedf ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
 ```
 
 `103 files changed, 4043 insertions(+), 422 deletions(-)`
@@ -57,7 +51,7 @@ git diff --stat 8d5cedf ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release.
 
-Two files have not been included in the diff as mentioned above since they are
+Three files have not been included in the diff as mentioned above since they are
 not a part of coreboot tree.
 
 The number of changes increased significantly, due to the TrenchBoot project development.

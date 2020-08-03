@@ -80,7 +80,7 @@ The number of changes increased significantly, due to the TrenchBoot project dev
 No particular changes in tests in this release. Regression didn't detect new
 bugs. Decreased pass ratio for mainline has been caused by random Xen booting
 problems. Legacy has increased pass percentage due to fixed cold boot watchdog
-problem. There were some failures due to USD stick malfunction.
+problem. There were some failures due to USB stick malfunction.
 
 ## Binaries
 

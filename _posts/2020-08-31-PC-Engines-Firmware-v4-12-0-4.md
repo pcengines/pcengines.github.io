@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.12.0.4"
-date:   2020-08-27
+date:   2020-08-31
 categories: Firmware
 ---
 # PC Engines apu coreboot Open Source Firmware v4.12.0.4
@@ -11,10 +11,10 @@ categories: Firmware
 Mainline:
 
 1. **Rebased** with official coreboot repository **commit** 81a2f45.
-2. **Fixed** TPM2 visibility in OS for apu3d and apu4d
-3. **Fixed** issues with IRQ vectors reported in Xen and Linux dmesg
-4. **Updated** sortbootorder to version 4.6.20 adding minor build fix for
-mainline coreboot
+2. **Fixed** TPM2 visibility in OS for apu3d and apu4d.
+3. **Fixed** issues with IRQ vectors reported in Xen and Linux dmesg.
+4. **Updated sortbootorder** to version **v4.6.20** adding minor build fix for
+   mainline coreboot.
 
 
 ## Statistics

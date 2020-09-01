@@ -19,13 +19,53 @@ Mainline:
 
 ## Statistics
 
+![Files Changed](https://cloud.3mdeb.com/index.php/s/C8kHB5AeZ3eaei3/preview)
+
+The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml and
+gitlab-ci/regression.sh excluded from statistics). Check the statistics with:
+
 ```
 git diff --stat 81a2f45bd2 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
 ```
 
 `103 files changed, 4058 insertions(+), 422 deletions(-)`
 
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/rAAmor4qzdSSe9c/preview)
+
+The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release.
+
+Three files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree.
+
 ## Testing
+
+* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/sakiLj98Zxqz2D3/preview) - hardware configurations available for testing in 3mdeb laboratory.
+
+Please notice that it has been significantly improved.
+
+* [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
+
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/4jDqGgS7iRJbJBW/preview)
+
+* Mainline:
+  * PASSED: **542** (+102)
+  * FAILED: **6** (-6)
+  * PASSED [%]: **98.91** (+1.56%)
+
+### Key Changes in testing
+
+1. PC Engines apu1d has been integrated into Automated Regression
+   infrastructure. This immediately greatly increased the range of tests.
+
+2. There were some hardware modifications, apu3d and apu4d has been added TPM2.
+
+3. Some USB sticks has been replaced - this decreased the number some random
+   issues.
+
+4. Xen is still unstable - this is the cause of over a half of the failures.
+
 
 ## Binaries
 

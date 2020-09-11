@@ -1,0 +1,214 @@
+I"J$<h1 id="pc-engines-apu-coreboot-open-source-firmware-v4902">PC Engines apu coreboot Open Source Firmware v4.9.0.2</h1>
+
+<h2 id="key-changes">Key changes</h2>
+
+<p>Mainline:</p>
+
+<ol>
+  <li><strong>Enabled</strong> Core Peformance Boost feature. For details how it works and how
+to verify it really works, please refer to <a href="https://3mdeb.com/firmware/amd-cpu-boost/">this blog post</a></li>
+  <li><strong>Corrected AGESA headers</strong>, which were for newer AGESA version than used in
+coreboot.</li>
+  <li><a href="https://github.com/pcengines/coreboot/issues/267">Reproducible builds limiation</a> -
+currently set <strong>iPXE</strong> and <strong>Memtest86</strong>+ master revisions do not guarantee
+the build reproducibility in long term. Correct revisions will be set in
+<strong>v4.9.0.3</strong>.</li>
+  <li>Performed an <strong>analysis</strong> how to <strong>safely reboot</strong> platform after firmware
+upgrade using available reset methods:
+https://github.com/pcengines/apu2-documentation/pull/131
+https://github.com/pcengines/apu2-documentation/pull/108</li>
+  <li>pcengines.github.io page has been <strong>updated</strong> with <strong>newsletter</strong>
+<strong>subscription</strong> option and a <strong>blog</strong> with release reports containing key
+changes, test statistics/charts etc.</li>
+</ol>
+
+<p>Legacy:</p>
+
+<ol>
+  <li><strong>Enabled</strong> Core Peformance Boost feature. For details how it works and how
+to verify it really works, please refer to <a href="https://3mdeb.com/firmware/amd-cpu-boost/">this blog post</a>)</li>
+  <li><a href="https://github.com/pcengines/coreboot/issues/267">Reproducible builds limiation</a> -
+currently set <strong>iPXE</strong> and <strong>Memtest86</strong>+ master revisions do not guarantee
+the build reproducibility in long term. Correct revisions will be set in
+<strong>v4.0.25</strong>.</li>
+</ol>
+
+<h2 id="statistics">Statistics</h2>
+
+<p><img src="https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/3a8427b8-98dc-4316-883c-a28728f34d7c.png" alt="Files Changed" /></p>
+
+<p>The chart shows the total files changed from release tag against the rebase point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml excluded from statistics). Check the statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat &lt;rebase_point_sha&gt; ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><img src="https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/7d99ca25-985b-4839-a72e-76d7e3aaa4fc.png" alt="Addition and Deletion" /></p>
+
+<p>The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for given release. Check the statistics
+with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat &lt;rebase_point_sha&gt; ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p>Two files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree. The difference has grown a little since some
+patches have not yet been merged and/or sent (AGESA headers).</p>
+
+<h2 id="coreboot-community">coreboot community</h2>
+
+<p>Patches merged:</p>
+
+<ul>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/30354">Enable LPC TPM on apu1</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/31229">Enable Core Performance Boost</a></p>
+  </li>
+</ul>
+
+<h2 id="testing">Testing</h2>
+
+<ul>
+  <li>
+    <p><a href="https://3mdeb.com/wp-content/uploads/2019/02/3mdeb-lab-hw-matrix.png">PC Engines hardware configuration matrix</a> - hardware configurations available for testing in 3mdeb laboratory.</p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;id=96d9b426c0&amp;e=16ffa34a09">PC Engines release validation results</a> - please note there are separate sheets for each board-release.</p>
+  </li>
+</ul>
+
+<p>Test changes in this release:</p>
+
+<ul>
+  <li><strong>Added</strong> 2 new test-cases: Serial output redirection enable/disable.</li>
+  <li><strong>Improved</strong> network interface tests.</li>
+  <li><strong>Improved</strong> HUAWEI modem detection tests.</li>
+  <li><strong>Fixed</strong> OS installation tests for configs with WLE900VX modem.</li>
+</ul>
+
+<p><img src="https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/fb10bb89-9625-4465-ae1d-206c86e367d3.png" alt="Mainline test results" /></p>
+
+<p><img src="https://gallery.mailchimp.com/fce95b885fc13fbf1db611816/images/b41875ae-8b34-4e7f-ae29-5cf090cf2cbf.png" alt="Legacy test results" /></p>
+
+<p>We have updated some tests results after re-testing, therefore some statistics
+may not match with the information from the previous newsletter.</p>
+
+<ul>
+  <li>Mainline:
+    <ul>
+      <li>PASSED: 306 (+12)</li>
+      <li>FAILED: 16 (-2)</li>
+      <li>PASSED [%]: 95,03% (+0.8%)</li>
+    </ul>
+  </li>
+  <li>Legacy:
+    <ul>
+      <li>PASSED: 282 (+10)</li>
+      <li>FAILED: 15 (0)</li>
+      <li>PASSED [%]: 94,95% (+0.18%)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The increase in the number of PASSED tests results from new tests (+8) and
+resolved issue #219. Legacy tests have been updated to skip XEN tests. The
+number of FAILED tests is the aggregated amount of issues listed in the table
+below that happened during regression testing.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<h3 id="mainline">Mainline</h3>
+
+<ul>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/4bExAC9GxNxKkEZ/download">apu1 v4.9.0.2</a></p>
+
+    <p>SHA256: 21618e83de50e87eb6f0cacf95e6e62c8d8d453a82b0fbeffa0b6fde8eed0e6d</p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/gW78434jwxZZqGe/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/fX8FCzAbMEyy6cr/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/AF5XHB54gz4dpQL/download">apu2 v4.9.0.2</a></p>
+
+    <p>SHA256: 4d64c5b7875b9877b4f149e0a0f082a614ae5572cfd7346b0c45d5378f887b75</p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/6YmfLeCjtEYsgQP/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/ZjZ96mmEg2XiHpF/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/G4P4jeLFiwyne4p/download">apu3 v4.9.0.2</a></p>
+
+    <p>SHA256: abc47e2c3db3e1e3189912076f9973771c184eb14397d85cea9067794d0fd8c7</p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/WxDxFSGrf2fNWcg/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/ccq3ejZBYCF8kGj/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/DKo4ZkxjxiTttEb/download">apu4 v4.9.0.2</a></p>
+
+    <p>SHA256: fa4f1c1763ec918457ba22e57c3ff8fb19fc32cd0634ac9d7472b612cea806ae</p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/9PLqiW2okoLRz2p/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/m4W4A244y6wQcas/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/mxMQamFwnXnwt6G/download">apu5 v4.9.0.2</a></p>
+
+    <p>SHA256: e31e952dfcb549f3144d30eb25b2bcb2ddaeb9ed89372d2e548c0d3902cf14c5</p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/WCKyX9Zc6iPSnBn/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/zysRfnHZnEzccYs/download">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<h3 id="legacy">Legacy</h3>
+
+<ul>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/F2mk9GQMYWGrd9p/download">apu2 v4.0.24</a></p>
+
+    <p>SHA256: 43880c9566cbafca1874bb66dcc0444186a89c4a5408696b432f3fdf01e1b267</p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/HAiidQ676JaK5GQ/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/ERfW8HzJGdtgmTL/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/AdCzmcdRcnSzRFL/download">apu3 v4.0.24</a></p>
+
+    <p>SHA256: f26f9744a12b971605bd9b954e8fc5252c4789d95d86e615bc3a0df66630d59d</p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/C3Po9LZszD43e2o/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/GKeXGgdsfJrf4x4/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/92ScGtQL7NPjkcr/download">apu4 v4.0.24</a></p>
+
+    <p>SHA256: 262dceb5408d6ba8f14477465adc5c0313bb85bdc0c1a8722f52c28b09f9aa05</p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/Q3xkBNGJFawsy6i/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/MK4qc22FB7KLyRC/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/AJP9eSnkRBcoxtT/download">apu5 v4.0.24</a></p>
+
+    <p>SHA256: fadca94b5618b6e93a6f5b8f5ff96e8ff1128b7d5d117fa91dd941a4180a4557</p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/jEJqDWBpRiBJJLx/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/SewAjA3fjkZHnrY/download">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<p>See how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
+:ET

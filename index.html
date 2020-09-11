@@ -40,7 +40,6 @@
                         <span><a target="_blank" href="https://docs.opnsense.org/manual/install.html">OPNsense</a></span>
                         <span></span>
                         <span><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md">pfSense</span></a>
-                        </span>
                         <span><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md">Pxelinux</a></span>
                         <span><a target="_blank" href="https://github.com/pcengines/apu2-documentation">Documentation</a></span>
                         <span><a target="_blank" href="https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0">Regression Test Results</a></span>
@@ -53,9 +52,9 @@
                 <!-- Begin Mailchimp Signup Form -->
             
                 <div class="container__form">
-                    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+                    <!-- <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css"> -->
                     <style type="text/css">
-                        #mc_embed_signup {
+                        /* #mc_embed_signup {
                             background: #fff;
                             clear: left;
                             width: 100%;
@@ -65,17 +64,17 @@
                         
                         @media screen and (max-width:600px) {
                             #mc_embed_signup .button {
-                                border: solid 1px #CB0E00 !important;
+                                border: solid 10px #CB0E00 !important;
                                 background: #ccc !important;
                                 color: #fff !important;
                                 width: 100px;
                             }
-                        }
+                        } */
                         /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
                                             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
                     </style>
                     <style type="text/css">
-                        #mc-embedded-subscribe-form input[type=checkbox] {
+                        /* #mc-embedded-subscribe-form input[type=checkbox] {
                             display: inline;
                             margin-right: 10px;
                         }
@@ -93,8 +92,8 @@
                             min-height: 0px;
                             padding-bottom: 0px;
                         }
-                        
-                        #mc_embed_signup input.email {
+                         */
+                        /* #mc_embed_signup input.email {
                             background: #F7F9F4;
                             border-radius: 3px;
                             margin: 0 0.2em 0 0;
@@ -111,7 +110,7 @@
                             border: solid 1px#ABB0B2;
                             background: #F7F9F4;
                             color: #38D430;
-                        }
+                        } */
                     </style>
                     <div id="mc_embed_signup">
                         <form action="https://3mdeb.us16.list-manage.com/subscribe/post?u=fce95b885fc13fbf1db611816&amp;id=b9727cda45" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -120,7 +119,7 @@
                                 <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fce95b885fc13fbf1db611816_b9727cda45" tabindex="-1" value=""></div>
-                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
                             </div>
                         </form>
                     </div>
@@ -137,13 +136,14 @@
     <div class="container__brighter">
         <div class="wrapper">
             <h2>Release notes</h2>
+            <hr class="line">
             <p>Release notes describing changes, fixes and known issues in PC Engines apux releases.<br><br> Each binary (or archive in case of older images) is cryptographically signed by PC Engines Open Source Firmware Release Signing Key adequate to the
                 official coreboot release (i.e. 4.9.0.x releases are signed by 4.9 Signing Key and 4.10.0.x by 4.10 Signing Key). Legacy releases starting from v4.0.28 are being signed with PC Engines Open Source Firmware Release 4.10 Signing Key. The
                 keys are maintained and managed by 3mdeb company responsible for maintaining PC Engines firmware. Under each release binaries one may find an asciinema record showing example firmware signature verification using appropriate key. The public
                 parts of the keys are available at <a href="https://github.com/3mdeb/3mdeb-secpack/tree/master/customer-keys/pcengines/release-keys" target="_blank">3mdeb-secpack</a> repository. For the details of the change please refer to <a href="https://github.com/3mdeb/3mdeb-secpack/blob/master/canaries/pcengines/canary-002-2019.txt"
-                    target "_blank">Canary #2</a>. <br> Following new coreboot release 4.11, a new PC Engines Open Source Firmware Release 4.10 Signing Key has been enrolled. Since v4.11.0.1 and v4.0.30 firmware releases are signed by PC Engines Open Source
+                    target="_blank">Canary #2</a>. <br> Following new coreboot release 4.11, a new PC Engines Open Source Firmware Release 4.10 Signing Key has been enrolled. Since v4.11.0.1 and v4.0.30 firmware releases are signed by PC Engines Open Source
                 Firmware Release 4.10 Signing Key. The public parts of the keys may be found on <a href="https://github.com/3mdeb/3mdeb-secpack/tree/master/customer-keys/pcengines/release-keys" target="_blank">3mdeb-secpack</a>. The details of the change
-                are also available on <a href="https://github.com/3mdeb/3mdeb-secpack/blob/master/canaries/pcengines/canary-003-2020.txt" target "_blank">Canary #3</a>.
+                are also available on <a href="https://github.com/3mdeb/3mdeb-secpack/blob/master/canaries/pcengines/canary-003-2020.txt" target="_blank">Canary #3</a>.
                 <br><br></p>
             <div class="main-list">
                 <p>The recommended firmware version is latest mainline v4.11.0.x. Reasons:</p>
@@ -160,7 +160,7 @@
             <div class="table-of-content">
                 <div class="main-list">
                     <h3>Mainline releases</h3>
-                    <ul>
+                    <ul class="list">
                         <li><a href="#mr-37">v4.12.0.3</a></li>
                         <li><a href="#mr-36">v4.12.0.2</a></li>
                         <li><a href="#mr-35">v4.12.0.1</a></li>
@@ -203,7 +203,7 @@
 
                 <div class="main-list">
                     <h3>Legacy releases</h3>
-                    <ul>
+                    <ul class="list">
                         <li><a href="#lr-24">v4.0.32</a></li>
                         <li><a href="#lr-23">v4.0.31</a></li>
                         <li><a href="#lr-22">v4.0.30</a></li>
@@ -238,6 +238,7 @@
     <div class="container__darker">
         <div class="wrapper">
             <h2>OS status</h2>
+            <hr class="line">
             <p>Some operating system have problems running with different storage medias. These table shows currently tested systems on BIOS v4.10.0.x with corresponding medias:</p>
 
             <table>
@@ -293,6 +294,7 @@
     <div class="container__brighter">
         <div class="wrapper">
             <h2>Documentation</h2>
+            <hr class="line">
             <p>The list of most useful documents from documentation:</p>
             <ul>
                 <li><a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/apu_CPU_boost.md">CPU Boost</a> - document briefly describes what the Core Performance Boost is and how to verify it works in BIOS and operating
@@ -332,12 +334,15 @@
 
             <!-- mainline releases v4.12.0.3 -->
 
-            <insert this code when a new update comes out to separate a new version from the current.-->
+            <h2>Mainline releases</h2>
+
+            <hr class="line">
+
 
                 <div class="smaller-margin" id="mr-37">
-                    <h2 class="text-middle">Mainline releases</h2>
-                    <!-- h2 tag needs to be moved to the newest version -->
+
                     <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.12.0.2...v4.12.0.3">v4.12.0.3</a></h4>
+
                 </div>
 
                 <div class="dimmed-text">
@@ -3464,11 +3469,15 @@
 
     <!-- LEGACY RELEASES -->
 
-    <h2 class="text-middle">Legacy releases</h2>
+   
 
     <div class="container__brighter">
 
         <div class="wrapper">
+
+            <h2>Legacy releases</h2>
+
+            <hr class="line">
 
             <!-- legacy releases v4.0.32 -->
             <!-- insert this code when a new update comes out to separate a new version from the current. -->
@@ -3477,6 +3486,7 @@
                 
                 <!-- h2 tag needs to be moved to the newest version -->
                 <h4><a target="_blank" href="https://github.com/pcengines/coreboot/compare/v4.0.31...v4.0.32">v4.0.32</a></h4>
+                
             </div>
 
             <div class="dimmed-text">
@@ -5283,19 +5293,18 @@
             </a>
         </div>
     </footer>
-
-    <a href="#top"><button class="up" id="up-button">UP!</button></a>
+    <a href="#top" class="up-link"><button class="up" id="up-button">UP!</button></a>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ad75dbb362a9183"></script>
+    <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ad75dbb362a9183"></script> -->
 
     <script>
         window.onload = function() {
             if (typeof(window.google_jobrunner) === "undefined") {
                 function myFunction(x) {
                     if (x.matches) { // If media query matches
-                        document.getElementById('responsive-footer').style.bottom = "48px";
-                        document.getElementById('up-button').style.bottom = "3.5rem";
+                        // document.getElementById('responsive-footer').style.bottom = "48px";
+                        // document.getElementById('up-button').style.bottom = "3.5rem";
                     }
                 }
 

@@ -1,0 +1,272 @@
+I"B.<h1 id="pc-engines-apu-coreboot-open-source-firmware-v41002">PC Engines apu coreboot Open Source Firmware v4.10.0.2</h1>
+
+<h2 id="key-changes">Key changes</h2>
+
+<p>Mainline:</p>
+
+<ol>
+  <li><strong>Rebased</strong> with official coreboot repository <strong>commit</strong> 64c14b5.</li>
+  <li>Added <strong>soft reset</strong> feature for <strong>SuperIO GPIOs</strong>. With every platform boot
+<strong>SuperIO GPIOs are set to default state</strong>: input and open-drain.</li>
+  <li><strong>Support IO Base Address mode</strong> for SuperIO GPIOs.
+SuperIO GPIOs can be controlled now in two ways:
+    <ul>
+      <li>through configuration registers</li>
+      <li>through direct access to I/O register with <strong>base address 0x220</strong></li>
+    </ul>
+
+    <p>Both methods work in parallel without any disruptions.</p>
+  </li>
+</ol>
+
+<p>Legacy:</p>
+
+<ol>
+  <li>Added <strong>ACPI support for GPIOs</strong>. Details are available in
+<a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/gpios.md">apu2-documentation</a>.
+So far access to GPIOs was possible only via dedicated driver. Now, there is
+support via Linux kernel sysfs including:
+    <ul>
+      <li>LEDs</li>
+      <li>S1 switch button with interrupts</li>
+      <li>SIMSWAP</li>
+    </ul>
+  </li>
+  <li><strong>Fixed SD 3.0 mode</strong> to be <strong>runtime configurable</strong> now.</li>
+  <li>Added <strong>soft reset</strong> feature for <strong>SuperIO GPIOs</strong>. With every platform boot
+<strong>SuperIO GPIOs are set to default state</strong>: input and open-drain.</li>
+  <li><strong>Support IO Base Address mode</strong> for SuperIO GPIOs.
+SuperIO GPIOs can be controlled now in two ways:
+    <ul>
+      <li>through configuration registers</li>
+      <li>through direct access to I/O register with <strong>base address 0x220</strong></li>
+    </ul>
+
+    <p>Both methods work in parallel without any disruptions.</p>
+  </li>
+</ol>
+
+<h2 id="coreboot-community">coreboot community</h2>
+
+<p>Patches sent for review:</p>
+
+<ul>
+  <li><a href="https://review.coreboot.org/c/coreboot/+/35853">Fix AMDFW outside CBFS</a></li>
+  <li><a href="https://review.coreboot.org/c/coreboot/+/35482">SuperIO Nuvoton NCT5104D GPIO soft reset</a></li>
+  <li><a href="https://review.coreboot.org/c/coreboot/+/35849">SuperIO Nuvoton NCT5104D enable Base Address mode</a></li>
+  <li><a href="https://review.coreboot.org/c/coreboot/+/35889">Fill PC Engines apu2 SMBIOS type 16 and 17</a></li>
+  <li><a href="https://review.coreboot.org/c/coreboot/+/35906">Adjust AGESA.h headers to AGESA version used in apu2</a></li>
+  <li><a href="https://review.coreboot.org/c/coreboot/+/35891">Default SATA in AHCI mode for apu2</a></li>
+</ul>
+
+<h2 id="statistics">Statistics</h2>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/2gwAPC6LwD3CQx9/preview" alt="Files Changed" /></p>
+
+<p>The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 64c14b5 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">93 files changed, 2899 insertions(+), 205 deletions(-)</code></p>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/kdk7PX3HCfzb4N6/preview" alt="Process of mainlining" /></p>
+
+<p>The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release. Check the
+statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 64c14b5 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">93 files changed, 2899 insertions(+), 205 deletions(-)</code></p>
+
+<p>Two files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree.</p>
+
+<h2 id="testing">Testing</h2>
+
+<ul>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/ce829QADwA7sHx9/preview">PC Engines hardware configuration matrix</a> - hardware configurations available for testing in 3mdeb laboratory.</p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;id=96d9b426c0&amp;e=16ffa34a09">PC Engines release validation results</a> - please note there are separate sheets for each board-release.</p>
+  </li>
+</ul>
+
+<p>Test changes in this release:</p>
+<ul>
+  <li><strong>improved</strong> coreboot flashing test with FTP server option</li>
+  <li><strong>fixed</strong> the python modules deprecation warning in the test infrastructure</li>
+  <li><strong>started</strong> the migration of test infrastructure to python3</li>
+</ul>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/bfFnytdiXA5oBJq/preview" alt="Mainline test results" /></p>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/DGLG6wdX9E33A4o/preview" alt="Legacy test results" /></p>
+
+<ul>
+  <li>Mainline:
+    <ul>
+      <li>PASSED: <strong>424</strong> (-1)</li>
+      <li>FAILED: <strong>13</strong> (+1)</li>
+      <li>PASSED [%]: <strong>97.03%</strong> (-0.22%)</li>
+    </ul>
+  </li>
+  <li>Legacy:
+    <ul>
+      <li>PASSED: <strong>372</strong> (no changes)</li>
+      <li>FAILED: <strong>10</strong> (no changes)</li>
+      <li>PASSED [%]: <strong>97.38%</strong> (no changes)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>This release does not have tests changes, therefore there is nearly no
+difference in the aggregated statistics. Slightly worse tests performance on
+<code class="language-plaintext highlighter-rouge">FAILED</code> tests results from the on-going USB detection problem.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<h3 id="mainline">Mainline</h3>
+
+<ul>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.2.rom">apu1 v4.10.0.2</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.10.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.2.rom">apu2 v4.10.0.2</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.10.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.2.rom">apu3 v4.10.0.2</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.10.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.2.rom">apu4 v4.10.0.2</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.10.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.10.0.2.rom">apu5 v4.10.0.2</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.10.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.10.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<h3 id="legacy">Legacy</h3>
+
+<ul>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.29.rom">apu2 v4.0.29</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.29.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.29.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.29.rom">apu3 v4.0.29</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.29.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.29.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.29.rom">apu4 v4.0.29</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.29.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.29.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.29.rom">apu5 v4.0.29</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.29.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.29.SHA256.sig">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<p>See how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
+
+<h2 id="what-we-planned">What we planned</h2>
+
+<ol>
+  <li>
+    <p>Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
+the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
+existing entries in TPM2 log area. <code class="language-plaintext highlighter-rouge">cbmem</code> utility also lacks support for
+displaying TPM2 log area.</p>
+
+    <p><strong>WORK IN PROGRESS</strong></p>
+  </li>
+  <li>
+    <p>Validate ESXi 6.7. We have got information that booting ESXi 6.7 U2 fails on
+apu2 and are investigating the issue.</p>
+
+    <p><strong>WORK IN PROGRESS</strong></p>
+  </li>
+  <li>
+    <p>Fix bugs related to Nuvoton NCT5104D reset and implement GPIO access
+improvements.</p>
+
+    <p><strong>DONE</strong></p>
+  </li>
+  <li>
+    <p>Reorganize runtime configuration by making it persistent across updates and
+accessible from user space. Also prepare a tool for offline binary
+modification.</p>
+
+    <p><strong>WORK IN PROGRESS</strong></p>
+  </li>
+  <li>
+    <p>Vital Product Data (VPD) support. User will have possibility to store
+and change VPD configuration in Read-Write section of SPI flash. Moreover,
+default VPD keys and values will be stored in Read-Only region to protect
+data against corruption. Also, sortbootorder runtime configuration will be
+stored in VPD Read-Write section, so access to it will be possible in OS
+via dedicated util.</p>
+
+    <p><strong>WORK IN PROGRESS</strong></p>
+  </li>
+</ol>
+
+<h2 id="coming-soon">Coming soon</h2>
+
+<p>Feature and improvements on the roadmap:</p>
+
+<ol>
+  <li>Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
+the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
+existing entries in TPM2 log area. <code class="language-plaintext highlighter-rouge">cbmem</code> utility also lacks support for
+displaying TPM2 log area.</li>
+  <li>Validate ESXi 6.7. We have got information that booting ESXi 6.7 U2 fails on
+apu2 and are investigating the issue.</li>
+  <li>Reorganize runtime configuration by making it persistent across updates and
+accessible from user space. Also prepare a tool for offline binary
+modification.</li>
+  <li>Vital Product Data (VPD) support. User will have possibility to store
+and change VPD configuration in Read-Write section of SPI flash. Moreover,
+default VPD keys and values will be stored in Read-Only region to protect
+data against corruption. Also, sortbootorder runtime configuration will be
+stored in VPD Read-Write section, so access to it will be possible in OS
+via dedicated util.</li>
+</ol>
+:ET

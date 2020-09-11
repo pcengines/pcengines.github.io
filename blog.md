@@ -7,10 +7,11 @@ permalink: /blog/
 <section>
     <div class="jumbotron">
         <div class="container">
-            <h1>PC ENGINES™</h1>
-            <h3 class="blog">Blog</h3>
+            <span class="header-decor"></span>
+            <h1>Blog</h1>
         </div>
     </div>
+    <img class="jumbotron-img" src="/assets/bground.jpg" alt="PC ENGINES" />
 </section>
 
 <section id="page-content">
@@ -39,8 +40,10 @@ permalink: /blog/
                         {% endfor %}
                     </span>
                 </div>
+                <a class="read-more" href="{{post.url | prepend:site.baseurl }}">read more</a>
             </div>
             {% endfor %}
         </div>
-    </div>    
+    </div>
+
 </section>

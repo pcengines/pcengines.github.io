@@ -29,9 +29,9 @@
   <body>
     <!-- header -->
 
-    <div class="container__image">
+    <div class="container--image" id="top">
       <div class="wrapper">
-        <header id="top">
+        <header>
           <div class="pcengines-header">
             <h1 class="title">PC ENGINES</h1>
             <span class="green-text">&trade;</span>
@@ -40,7 +40,7 @@
 
         <!-- nav -->
 
-        <nav>
+        <nav class="main-page">
           <span
             ><a
               target="_blank"
@@ -89,7 +89,7 @@
 
         <!-- Begin Mailchimp Signup Form -->
 
-        <div class="container__form">
+        <div class="container--form">
           <div id="mc_embed_signup">
             <form
               action="https://3mdeb.us16.list-manage.com/subscribe/post?u=fce95b885fc13fbf1db611816&amp;id=b9727cda45"
@@ -146,7 +146,7 @@
     <!-- intro -->
 
     <main>
-      <div class="container first-container">
+      <div class="container container--first">
         <div class="wrapper">
           <article>
             <h1>Release notes</h1>
@@ -2024,7 +2024,7 @@
                     >some PCIe cards are not detected on certain OSes and/or in
                     certain mPCIe slots.</a
                   >
-                  Check the 
+                  Check the
                   <a
                     target="_blank"
                     href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md"
@@ -2516,8 +2516,8 @@
                   >rebased with official coreboot repository commit 536799d</li
                 >
                 <li>added IOMMU runtime configuration</li>
-                <li>
-                  in the setup menu top banner displays correct board name
+                <li
+                  >in the setup menu top banner displays correct board name
                 </li>
               </ol>
               <li>Known issues:</li>
@@ -4602,11 +4602,11 @@
                   >rebased with official coreboot repository commit fe80bf2</li
                 >
                 <li>MP table creation: fixed SDHCI, xHCI interrupt entries</li>
-                <li>
-                  removed redundant SVI2 information string in sign-of-life
+                <li
+                  >removed redundant SVI2 information string in sign-of-life
                 </li>
-                <li>
-                  added MP table entries for PCIe bridges, endpoints and IOMMU
+                <li
+                  >added MP table entries for PCIe bridges, endpoints and IOMMU
                 </li>
               </ol>
               <li>Known issues:</li>
@@ -5106,13 +5106,13 @@
                 <li
                   >rebased with official coreboot repository commit 7a732b4</li
                 >
-                <li>
-                  sortbootorder updated to v4.6.13 introducing CPU boost runtime
-                  configuration
+                <li
+                  >sortbootorder updated to v4.6.13 introducing CPU boost
+                  runtime configuration
                 </li>
                 <li>release firmware is now built with coreboot SDK 1.52</li>
-                <li>
-                  configured pull-ups on WLAN_DISABLE# pins on the mPCIe
+                <li
+                  >configured pull-ups on WLAN_DISABLE# pins on the mPCIe
                   connectors which could cause issues with certain modems when
                   floating
                 </li>
@@ -5128,8 +5128,8 @@
                     tables on 4GB platforms</a
                   >
                 </li>
-                <li>
-                  added interrupt configuration entries for PCIe bridge devices
+                <li
+                  >added interrupt configuration entries for PCIe bridge devices
                   2.4 and 2.5
                 </li>
                 <li>
@@ -5634,16 +5634,16 @@
                 >
                 <li>updated SeaBIOS to rel-1.12.0.1</li>
                 <li>prepared apu1 platform for TPM usage</li>
-                <li>
-                  enabled TPM2.0 module on apu1, apu2 and apu5 in default
+                <li
+                  >enabled TPM2.0 module on apu1, apu2 and apu5 in default
                   configuration
                 </li>
-                <li>
-                  disabled waiting for SVI2 command completion causing reboot
+                <li
+                  >disabled waiting for SVI2 command completion causing reboot
                   hangs
                 </li>
-                <li>
-                  introduced reproducible builds by passing build ID to iPXE
+                <li
+                  >introduced reproducible builds by passing build ID to iPXE
                 </li>
                 <li>AGESA AmdInitLate error caused by AGESA bugs</li>
               </ol>
@@ -5897,24 +5897,24 @@
                     >coreboot: added COM2 redirection runtime configuration</a
                   >
                 </li>
-                <li>
-                  coreboot: fixed generating serial number from MAC address of
+                <li
+                  >coreboot: fixed generating serial number from MAC address of
                   first NIC
                 </li>
-                <li>
-                  coreboot: synced and rebased with coreboot official repo
+                <li
+                  >coreboot: synced and rebased with coreboot official repo
                   commit 26d706b
                 </li>
-                <li>
-                  sortbootorder: fixed BIOS WP feature for different Winbond
+                <li
+                  >sortbootorder: fixed BIOS WP feature for different Winbond
                   chips
                 </li>
-                <li>
-                  sortbootorder: BIOS WP is now set after saving bootorder
+                <li
+                  >sortbootorder: BIOS WP is now set after saving bootorder
                   changes
                 </li>
-                <li>
-                  sortbootorder: set SRP bit on Macronix SPI (apu1) when
+                <li
+                  >sortbootorder: set SRP bit on Macronix SPI (apu1) when
                   enabling BIOS WP
                 </li>
               </ol>
@@ -6167,11 +6167,11 @@
               <li>Fixed/added:</li>
               <ol>
                 <li>SeaBIOS: updated to rel-1.11.0.6</li>
-                <li>
-                  coreboot: added console output redirection to COM2 option
+                <li
+                  >coreboot: added console output redirection to COM2 option
                 </li>
-                <li>
-                  coreboot: synced and rebased with coreboot official repo
+                <li
+                  >coreboot: synced and rebased with coreboot official repo
                   commit de46280
                 </li>
               </ol>
@@ -6423,11 +6423,11 @@
               <ol>
                 <li>Updated sortbootorder to v4.6.11</li>
                 <li>Removed custom libpayload modifications</li>
-                <li>
-                  Synced and rebased with coreboot official repo commit b7b085d
+                <li
+                  >Synced and rebased with coreboot official repo commit b7b085d
                 </li>
-                <li>
-                  ECC exclusion range, ECC now works properly. For details see
+                <li
+                  >ECC exclusion range, ECC now works properly. For details see
                   also
                   <a
                     href="https://3mdeb.com/firmware/enabling-ecc-on-pc-engines-platforms/"
@@ -6692,8 +6692,8 @@
             <ul>
               <li>Fixed/added:</li>
               <ol>
-                <li>
-                  Synced and rebased with coreboot official repo commit e27c096
+                <li
+                  >Synced and rebased with coreboot official repo commit e27c096
                 </li>
                 <li>iPXE revision to master</li>
                 <li>iPXE autoboot is enabled for all interfaces</li>
@@ -6956,11 +6956,11 @@
             <ul>
               <li>Fixed/added:</li>
               <ol>
-                <li>
-                  synced and rebased with coreboot official repo commit c8e974f
+                <li
+                  >synced and rebased with coreboot official repo commit c8e974f
                 </li>
-                <li>
-                  change of date format in sign of life string now applies only
+                <li
+                  >change of date format in sign of life string now applies only
                   to PC Engines
                 </li>
                 <li>use CONFIG_LOCALVERSION as a coreboot version string</li>
@@ -7214,8 +7214,8 @@
             <ul>
               <li>Fixed/added:</li>
               <ol>
-                <li>
-                  synced and rebased with coreboot official repo commit afc74ca
+                <li
+                  >synced and rebased with coreboot official repo commit afc74ca
                 </li>
               </ol>
               <li>Known issues:</li>
@@ -7917,8 +7917,8 @@
               <ol>
                 <li>infrastructure to include microcode update</li>
                 <li>support for new building system pce-fw-builder</li>
-                <li>
-                  building is now possible with official coreboot-sdk container
+                <li
+                  >building is now possible with official coreboot-sdk container
                 </li>
                 <li>retrieving board serial number</li>
               </ol>
@@ -8388,8 +8388,8 @@
               <ol>
                 <li>SD card low performance</li>
                 <li>SMBIOS wrong entries</li>
-                <li>
-                  xHCi is enabled (timeouts has been adjusted in SeaBIOS, as a
+                <li
+                  >xHCi is enabled (timeouts has been adjusted in SeaBIOS, as a
                   result USB 3.x sticks detection rate increased)
                 </li>
               </ol>
@@ -8597,8 +8597,8 @@
             <ul>
               <li>Fixed/added:</li>
               <ol>
-                <li>
-                  SeaBIOS 1.11.0.3 - enabled UDMA for faster boot, fixed serial
+                <li
+                  >SeaBIOS 1.11.0.3 - enabled UDMA for faster boot, fixed serial
                   console disable bug
                 </li>
                 <li>screen is refreshed properly in Memtest86+</li>
@@ -8812,8 +8812,8 @@
             <ul>
               <li>Fixed/added:</li>
               <ol>
-                <li>
-                  SeaBIOS 1.11.0.2 - fixes bug with serial console output shift
+                <li
+                  >SeaBIOS 1.11.0.2 - fixes bug with serial console output shift
                 </li>
                 <li>disabled xHCI, force EHCI controller on front ports</li>
               </ol>
@@ -9251,8 +9251,8 @@
             <ul>
               <li>Fixed/added:</li>
               <ol>
-                <li>
-                  UARTc/c and mPCIe2 CLK enable/disable runtime configuration
+                <li
+                  >UARTc/c and mPCIe2 CLK enable/disable runtime configuration
                   works now
                 </li>
               </ol>
@@ -9848,7 +9848,6 @@
 
             <ul>
               <li>Fixed/added:</li>
-
               <ol>
                 <li>
                   <a href="https://github.com/pcengines/coreboot/issues/392"
@@ -10055,7 +10054,6 @@
 
             <ul>
               <li>Fixed/added:</li>
-
               <ol>
                 <li>
                   <a href="https://github.com/pcengines/coreboot/issues/380"
@@ -10257,7 +10255,6 @@
 
             <ul>
               <li>Fixed/added:</li>
-
               <ol>
                 <li>SD card boot order is fixed on apu5</li>
                 <li>added ARM management controller interaction on apu5</li>
@@ -10460,7 +10457,6 @@
 
             <ul>
               <li>Fixed/added:</li>
-
               <ol>
                 <li>fix SD 3.0 mode to be runtime configurable</li>
                 <li>
@@ -10675,8 +10671,8 @@
               </ol>
               <li>Known issues:</li>
               <ol>
-                <li>
-                  certain USB 3.x sticks happen to not appear in boot menu
+                <li
+                  >certain USB 3.x sticks happen to not appear in boot menu
                 </li>
                 <li>
                   <a
@@ -10872,8 +10868,8 @@
             <ul>
               <li>Fixed/added:</li>
               <ol>
-                <li>
-                  disabled IPv6 in iPXE that often caused the dhcp/autoboot
+                <li
+                  >disabled IPv6 in iPXE that often caused the dhcp/autoboot
                   command to time out
                 </li>
                 <li>
@@ -11724,19 +11720,19 @@
               <li>Fixed/added:</li>
               <ol>
                 <li>enabled ECC</li>
-                <li>
-                  disabled EHCI0 controller on apu2 which caused problems with
+                <li
+                  >disabled EHCI0 controller on apu2 which caused problems with
                   pfSense booting
                 </li>
                 <li>updated SeaBIOS to rel-1.12.0.1</li>
-                <li>
-                  introduced reproducible builds by providing build ID to iPXE
+                <li
+                  >introduced reproducible builds by providing build ID to iPXE
                 </li>
               </ol>
               <li>Known issues:</li>
               <ol>
-                <li>
-                  certain USB 3.x sticks happen to not appear in boot menu
+                <li
+                  >certain USB 3.x sticks happen to not appear in boot menu
                 </li>
                 <li>
                   <a
@@ -11941,27 +11937,27 @@
                     >coreboot: added COM2 redirection runtime configuration</a
                   >
                 </li>
-                <li>
-                  coreboot: fixed generating serial number from MAC address of
+                <li
+                  >coreboot: fixed generating serial number from MAC address of
                   first NIC
                 </li>
-                <li>
-                  sortbootorder: fixed BIOS WP feature for different Winbond
+                <li
+                  >sortbootorder: fixed BIOS WP feature for different Winbond
                   chips
                 </li>
-                <li>
-                  sortbootorder: BIOS WP is now set after saving bootorder
+                <li
+                  >sortbootorder: BIOS WP is now set after saving bootorder
                   changes
                 </li>
-                <li>
-                  sortbootorder: set SRP bit on Macronix SPI (apu1) when
+                <li
+                  >sortbootorder: set SRP bit on Macronix SPI (apu1) when
                   enabling BIOS WP
                 </li>
               </ol>
               <li>Known issues:</li>
               <ol>
-                <li>
-                  certain USB 3.x sticks happen to not appear in boot menu
+                <li
+                  >certain USB 3.x sticks happen to not appear in boot menu
                 </li>
                 <li>
                   <a
@@ -11976,8 +11972,8 @@
                   >
                   document for solution/workaround.
                 </li>
-                <li>
-                  Sometimes pfSense hangs during boot on boards with legacy
+                <li
+                  >Sometimes pfSense hangs during boot on boards with legacy
                   firmware when no USB stick present. Plugging USB stick
                   workarounds the issue. Problem is during investigation.
                 </li>
@@ -12162,8 +12158,8 @@
               <ol>
                 <li>SeaBIOS: updated to rel-1.11.0.6</li>
                 <li>coreboot: fixed release date format in DMI tables</li>
-                <li>
-                  coreboot: added console output redirection to COM2 option
+                <li
+                  >coreboot: added console output redirection to COM2 option
                 </li>
               </ol>
               <li>Known issues:</li>
@@ -12184,8 +12180,8 @@
                   >
                   document for solution/workaround.
                 </li>
-                <li>
-                  Sometimes pfSense hangs during boot on boards with legacy
+                <li
+                  >Sometimes pfSense hangs during boot on boards with legacy
                   firmware when no USB stick present. Plugging USB stick
                   workarounds the issue. Problem is during investigation.
                 </li>
@@ -12372,8 +12368,8 @@
               </ol>
               <li>Known issues:</li>
               <ol>
-                <li>
-                  certain USB 3.x sticks happen to not appear in boot menu
+                <li
+                  >certain USB 3.x sticks happen to not appear in boot menu
                 </li>
                 <li>
                   <a
@@ -12573,11 +12569,11 @@
               </ol>
               <li>Known issues:</li>
               <ol>
-                <li>
-                  pfSense 2.4.x fails to boot when no USB stick is plugged
+                <li
+                  >pfSense 2.4.x fails to boot when no USB stick is plugged
                 </li>
-                <li>
-                  certain USB 3.x sticks happen to not appear in boot menu
+                <li
+                  >certain USB 3.x sticks happen to not appear in boot menu
                 </li>
                 <li>
                   <a
@@ -12780,8 +12776,8 @@
               </ol>
               <li>Known issues:</li>
               <ol>
-                <li>
-                  certain USB 3.x sticks happen to not appear in boot menu
+                <li
+                  >certain USB 3.x sticks happen to not appear in boot menu
                 </li>
                 <li>
                   <a
@@ -12977,15 +12973,15 @@
               <ol>
                 <li>infrastructure to include microcode update</li>
                 <li>support for new building system pce-fw-builder</li>
-                <li>
-                  Memtest86+ is now a part of coreboot build system and does not
-                  have to be built externally
+                <li
+                  >Memtest86+ is now a part of coreboot build system and does
+                  not have to be built externally
                 </li>
               </ol>
               <li>Known issues:</li>
               <ol>
-                <li>
-                  certain USB 3.x sticks happen to not appear in boot menu
+                <li
+                  >certain USB 3.x sticks happen to not appear in boot menu
                 </li>
                 <li>
                   <a
@@ -13186,11 +13182,11 @@
               </ol>
               <li>Known issues:</li>
               <ol>
-                <li>
-                  certain USB 3.x sticks happen to not appear in boot menu
+                <li
+                  >certain USB 3.x sticks happen to not appear in boot menu
                 </li>
-                <li>
-                  Serial console can not be enabled yet on apu3 using S1 button
+                <li
+                  >Serial console can not be enabled yet on apu3 using S1 button
                 </li>
                 <li>
                   <a
@@ -13386,20 +13382,20 @@
             <ul>
               <li>Fixed/added:</li>
               <ol>
-                <li>
-                  fixed Kconfig default options for SeaBIOS repo, console
+                <li
+                  >fixed Kconfig default options for SeaBIOS repo, console
                   loglevel
                 </li>
                 <li>SMBIOS wrong entries</li>
-                <li>
-                  restoring default features in sortbootorder available now
+                <li
+                  >restoring default features in sortbootorder available now
                 </li>
-                <li>
-                  iPXE is built from official iPXE repository, no need to build
+                <li
+                  >iPXE is built from official iPXE repository, no need to build
                   it externally
                 </li>
-                <li>
-                  updated SeaBIOS to 1.11.0.3 (xHCI timeouts adjusted - USB 3.x
+                <li
+                  >updated SeaBIOS to 1.11.0.3 (xHCI timeouts adjusted - USB 3.x
                   sticks detection rate increased)
                 </li>
               </ol>
@@ -13584,12 +13580,12 @@
               <li>Known issues:</li>
               <ol>
                 <li>USB 3.x sticks happen to not appear in boot menu</li>
-                <li>
-                  wrong names in SMBIOS causes some modules not being loaded on
+                <li
+                  >wrong names in SMBIOS causes some modules not being loaded on
                   certain OSes
                 </li>
-                <li>
-                  restoring default configuration in sortbootorder works only
+                <li
+                  >restoring default configuration in sortbootorder works only
                   for bootorder
                 </li>
                 <li>
@@ -13777,8 +13773,8 @@
               <li>Known issues:</li>
               <ol>
                 <li>USB 3.x sticks happen to not appear in boot menu</li>
-                <li>
-                  wrong names in SMBIOS causes some modules not being loaded on
+                <li
+                  >wrong names in SMBIOS causes some modules not being loaded on
                   certain OSes
                 </li>
                 <li>
@@ -13957,9 +13953,13 @@
               <li>Known issues:</li>
               <ol>
                 <li>USB 3.x sticks happen to not appear in boot menu</li>
-                <li>wrong names in SMBIOS causes some modules not being loaded on certain OSes
+                <li
+                  >wrong names in SMBIOS causes some modules not being loaded on
+                  certain OSes
                 </li>
-                <li>restoring default configuration in sortbootorder works only for bootorder
+                <li
+                  >restoring default configuration in sortbootorder works only
+                  for bootorder
                 </li>
                 <li>
                   <a
@@ -14137,8 +14137,8 @@
               <li>Known issues:</li>
               <ol>
                 <li>USB 3.x sticks happen to not appear in boot menu</li>
-                <li>
-                  restoring default configuration in sortbootorder works only
+                <li
+                  >restoring default configuration in sortbootorder works only
                   for bootorder
                 </li>
                 <li>
@@ -14294,8 +14294,8 @@
               <li>Known issues:</li>
               <ol>
                 <li>USB 3.x sticks happen to not appear in boot menu</li>
-                <li>
-                  restoring default configuration in sortbootorder works only
+                <li
+                  >restoring default configuration in sortbootorder works only
                   for bootorder
                 </li>
                 <li>
@@ -14451,8 +14451,8 @@
               <li>Known issues:</li>
               <ol>
                 <li>USB 3.x sticks happen to not appear in boot menu</li>
-                <li>
-                  restoring default configuration in sortbootorder works only
+                <li
+                  >restoring default configuration in sortbootorder works only
                   for bootorder
                 </li>
                 <li>
@@ -14570,7 +14570,10 @@
     >
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ad75dbb362a9183"></script> -->
+    <script
+      type="text/javascript"
+      src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ad75dbb362a9183"
+    ></script>
 
     <script>
       window.onload = function () {
@@ -14578,8 +14581,9 @@
           function myFunction(x) {
             if (x.matches) {
               // If media query matches
-              // document.getElementById('responsive-footer').style.bottom = "48px";
-              // document.getElementById('up-button').style.bottom = "3.5rem";
+              // document.getElementById("responsive-footer").style.bottom =
+              //   "48px";
+              // document.getElementById("up-button").style.bottom = "3.5rem";
             }
           }
 

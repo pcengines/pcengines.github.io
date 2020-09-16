@@ -265,6 +265,8 @@ ul li::before {
     padding: 10px 0 10px 40px;
     li {
       list-style-type: square;
+      margin-bottom: 10px;
+
       a {
         display: inline-block;
         border: solid 1px #8bad64;

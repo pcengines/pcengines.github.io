@@ -1,11 +1,11 @@
-I"ÁS<section>
+I"8]<section>
     <div class="jumbotron">
         <div class="container">
-            <h1>Blog</h1>
-            <h3 class="blog">Blog</h3>
+            <span class="header-decor"></span>
+            <h1><span>PC Engines</span> Blog</h1>
         </div>
     </div>
-<img class="jumbotron-img" src="/assets/bground.jpg" alt="PC ENGINES" />
+    <img class="jumbotron-img" src="/assets/bground.jpg" alt="PC ENGINES" />
 </section>
 
 <section id="page-content">
@@ -34,6 +34,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2020/08/31/PC-Engines-Firmware-v4-12-0-4.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -58,6 +59,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2020/07/31/PC-Engines-Firmware-v4-12-0-3.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -82,6 +84,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2020/06/30/PC-Engines-Firmware-v4-12-0-2.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -106,6 +109,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2020/05/31/PC-Engines-Firmware-v4-12-0-1.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -130,6 +134,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2020/04/28/PC-Engines-Firmware-v4-11-0-6.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -154,6 +159,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2020/03/31/PC-Engines-Firmware-v4-11-0-5.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -178,6 +184,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2020/02/29/PC-Engines-Firmware-v4-11-0-4.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -202,6 +209,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2020/01/30/PC-Engines-Firmware-v4-11-0-3.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -226,6 +234,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2019/12/31/PC-Engines-Firmware-v4-11-0-2.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -250,6 +259,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2019/12/10/PC-Engines-Firmware-v4-11-0-1.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -274,6 +284,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2019/11/08/PC-Engines-Firmware-v4-10-0-3.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -298,6 +309,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2019/10/10/PC-Engines-Firmware-v4-10-0-2.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -322,6 +334,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2019/09/10/PC-Engines-Firmware-v4-10-0-1.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -346,6 +359,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2019/08/10/PC-Engines-Firmware-v4-10-0-0.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -370,6 +384,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2019/07/10/PC-Engines-Firmware-v4-9-0-7.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -394,6 +409,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2019/06/10/PC-Engines-Firmware-v4-9-0-6.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -418,6 +434,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2019/05/10/PC-Engines-Firmware-v4-9-0-5.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -442,6 +459,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2019/04/09/PC-Engines-Firmware-v4-9-0-4.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -466,6 +484,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2019/03/11/PC-Engines-firmware-v4-9-0-3.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -490,6 +509,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2019/02/12/PC-Engines-Firmware-v4-9-0-2.html">read more</a>
             </div>
             
             <div class="post-box">
@@ -514,6 +534,7 @@
                         
                     </span>
                 </div>
+                <a class="read-more" href="/firmware/2019/01/20/PC-Engines-Firmware-v4-9-0-1.html">read more</a>
             </div>
             
         </div>

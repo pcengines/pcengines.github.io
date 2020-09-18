@@ -12,9 +12,9 @@
   </head>
   <body>
     <!-- header -->
-    <nav>
-      <div class="pcengines-header--about">
-        <header>
+    <nav class="nav">
+      <div class="container--navbar">
+        <header class="header--about">
           <div class="pcengines-header">
             <a class="green-text--title" href="index.html">
               <h1 class="title">PC ENGINES</h1>
@@ -22,51 +22,72 @@
             </a>
           </div>
         </header>
-
-        <span
-          ><a
-            target="_blank"
-            href="https://docs.opnsense.org/manual/install.html"
-            >OPNsense</a
-          ></span
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"
+          ><span class="navicon"></span
+        ></label>
+        <ul class="menu">
+          <li class="menu__item">
+            <span
+              ><a
+                target="_blank"
+                href="https://docs.opnsense.org/manual/install.html"
+                >OPNsense</a
+              ></span
+            >
+          </li>
+          <li class="menu__item">
+            <span
+              ><a
+                target="_blank"
+                href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md"
+                >pfSense</a
+              ></span
+            >
+          </li>
+          <li class="menu__item">
+            <span
+              ><a
+                target="_blank"
+                href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md"
+                >Pxelinux</a
+              ></span
+            >
+          </li>
+          <li class="menu__item">
+            <span
+              ><a
+                target="_blank"
+                href="https://github.com/pcengines/apu2-documentation"
+                >Documentation</a
+              ></span
+            >
+          </li>
+          <li class="menu__item">
+            <span
+              ><a
+                target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0"
+                >Regression Test Results</a
+              ></span
+            >
+          </li>
+          <li class="menu__item">
+            <span
+              ><a
+                target="_blank"
+                href="https://gitlab.com/pcengines/coreboot/pipelines"
+                >GitLab CI</a
+              ></span
+            >
+          </li>
+          <li class="menu__item"
+            ><span><a href="/blog">Blog</a></span></li
+          >
+          <li class="menu__item"
+            ><span><a href="about.html">About</a></span></li
+          ></ul
         >
-        <span
-          ><a
-            target="_blank"
-            href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md"
-            >pfSense</a
-          ></span
-        >
-        <span
-          ><a
-            target="_blank"
-            href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md"
-            >Pxelinux</a
-          ></span
-        >
-        <span
-          ><a
-            target="_blank"
-            href="https://github.com/pcengines/apu2-documentation"
-            >Documentation</a
-          ></span
-        >
-        <span
-          ><a
-            target="_blank"
-            href="https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0"
-            >Regression Test Results</a
-          ></span
-        >
-        <span
-          ><a
-            target="_blank"
-            href="https://gitlab.com/pcengines/coreboot/pipelines"
-            >GitLab CI</a
-          ></span
-        >
-        <span><a href="/blog">Blog</a></span>
-        <span><a href="about.html">About</a></span>
       </div>
     </nav>
 

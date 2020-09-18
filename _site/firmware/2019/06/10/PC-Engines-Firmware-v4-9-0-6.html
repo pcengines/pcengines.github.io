@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="PC Engines" property="og:site_name">
+
+  <meta content="PC Engines apu coreboot Open Source Firmware v4.9.0.6" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="<h1>PC ENGINES™</h1><h3>Blog</h3>" property="og:description">
+
+
+  <meta content="http://localhost:4000/firmware/2019/06/10/PC-Engines-Firmware-v4-9-0-6.html" property="og:url">
+
+
+  <meta content="2019-06-10T00:00:00+02:00" property="article:published_time">
+  <meta content="http://localhost:4000/about/" property="article:author">
+
+
+  <meta property="og:image" content="">
+
+
+  
+  <meta content="Firmware" property="article:section">
+  
+
+
+  
+
+  <title>PC Engines apu coreboot Open Source Firmware v4.9.0.6</title>
+  <meta name="description" content="PC Engines apu coreboot Open Source Firmware v4.9.0.6">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/main.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+  <link rel="canonical" href="http://localhost:4000/firmware/2019/06/10/PC-Engines-Firmware-v4-9-0-6.html">
+  <link rel="alternate" type="application/rss+xml" title="PC Engines" href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+<section>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"
+          >PC Engines&trade;</a
+        >
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ol class="nav navbar-nav">
+          <li><a href="/blog ">Blog</a></li>
+          <li>
+            <a href="/about-blog "
+              >About this blog</a
+            >
+          </li>
+        </ol>
+
+        <!--  <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Know More!</a></li>
+
+      </ul>-->
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+</section>
+
+<section>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">PC Engines apu coreboot Open Source Firmware v4.9.0.6</h1>
+      <p class="post-meta">
+        <time
+          datetime="2019-06-10T00:00:00+02:00"
+          itemprop="datePublished"
+          >Jun 10, 2019</time
+        >
+      </p>
+    </div>
+  </div>
+  <img class="jumbotron-img" src="/assets/bground.jpg" alt="PC ENGINES" />
+
+  <div class="post-content container" itemprop="articleBody"><h1 id="pc-engines-apu-coreboot-open-source-firmware-v4906">PC Engines apu coreboot Open Source Firmware v4.9.0.6</h1>
+
+<h2 id="key-changes">Key changes</h2>
+
+<p>Mainline:</p>
+
+<ol>
+  <li><strong>Rebased</strong> with official coreboot repository <strong>commit</strong> 3b4d0e0.</li>
+  <li>Added initial <strong>support</strong> of <strong>vboot</strong> with measured boot mode on APU2.
+This feature brings the FMAP layout of SPI flash, 3 fully bootable firmware
+volumes (which may act as a recovery fallback) and the TPM measurement of
+the BIOS components used during boot process. Details on how to build an
+image available in <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/apu2_vboot.md">apu2-documentation</a></li>
+  <li><strong>Updated SeaBIOS</strong> to <strong>rel-1.12.1.2</strong> introducing small <strong>fixes</strong> for
+<strong>SD 3.0</strong> mode and <strong>hard disk fallback boot</strong> functionality. From now on
+platform will always try to boot hard disks first according to bootorder
+(or iPXE if set and enabled). When the first device is not bootable (i.e.
+contains invalid MBR signature), SeaBIOS will try next device in boot order
+until all storage devices have been tried. If no bootable device found,
+reboot after minute. Secondary payloads will not boot automatically from
+now. If one desires to launch setup or memtest, it requires physical
+presence in order to explicitly select the payload in the boot menu.</li>
+  <li>Published a <strong>blog post</strong> presenting the status of <strong>Meltdown and Spectre</strong>
+on <strong>apu2</strong>. Visit <a href="https://blog.3mdeb.com/2019/2019-05-29-spectre-and-meltdown-on-apu2/">3mdeb blog to read</a></li>
+  <li><strong>Enabled SD 3.0</strong> mode allowing transfers of <strong>~100MB/s</strong>. All <strong>UHS-I</strong>
+capable cards should be able to be detected as <strong>SDR104 or SDR50</strong> (depending on the
+card). Tested SD cards were able to <strong>reach 80MB/s</strong> read transfer for SDR104
+(the manufacturer of the card guaranteed the transfers up to 80MB/s).
+Currently the SD 3.0 mode is disabled by default, because the operating
+system sometimes detected SDR104 capable card as SDR50 or as SD 2.0
+compliant card. So far no issues with SD card detection in SeaBIOS. For
+those interested in SD 3.0 mode, the option is available in setup menu as
+<strong>runtime configurable</strong>.</li>
+  <li>Enabled <strong>runtime configuration</strong> of <strong>watchdog</strong>. By default the timeout is
+set to 0 seconds (disabled state). To enable watchdog, enter setup menu and
+toggle watchdog option. You will be prompted to specify the timeout after
+which the platform should reset. <a href="https://github.com/pcengines/sortbootorder#settings-description">Options description</a>
+<strong>WARNING</strong> do not set short timeouts! It may lead to a reset loop and
+brick Your platform. Please take into consideration that platform boot time
+and OS boot time also counts to the overall timeout time, so set at least
+few minutes timeout to still be able to enter setup menu to disable the
+watchdog! The operating system has to support the watchdog, otherwise the
+platform will constantly reboot. For Linux OSes the driver is <code class="language-plaintext highlighter-rouge">sp5100_tco</code>,
+however it conflicts with <code class="language-plaintext highlighter-rouge">i2c_piix4</code> leaving the watchdog driver unloaded
+completely. One has to properly blacklist the <code class="language-plaintext highlighter-rouge">i2c_piix4</code> driver in order
+to get the watchdog working.</li>
+  <li>Added a hidden <strong>flash lockdown menu</strong> in sortbootorder. Its purpose is to
+freely choose the <strong>protection</strong> of <strong>BIOS</strong> SPI flash offered by a Winbond
+W25Q64*V chip. The menu supports all block protection ranges and the status
+register protection. NOTE: the permanent lock does not work for the Winbond
+chips, this feature is available only on demand after contacting Winbond.
+For details how to use menu, see the <a href="https://github.com/pcengines/sortbootorder#hidden-flash-lockdown-menu">sortbootorder documentation</a></li>
+  <li>All USB devices (either external plugged to front USB 3.0 connector or
+attached to USb internal headers) have a single boot order entry. Previously
+the USb devices connected via headers did not have any boot order and landed
+at the end of boot device list despite USB was set to a high priority.</li>
+  <li>According to a <a href="http://pcengines.info/forums/?page=post&amp;fid=6D8DBBA4-9D40-4C87-B471-80CB5D9BD945&amp;lastp=1&amp;id=776921E8-222D-45F7-A234-910DEBBDA767">customer using FreeBSD</a>
+the serial ports were not configured automatically because, they were not
+present in the APCI namespace. Added entries for both serial ports to ACPI.</li>
+</ol>
+
+<p>Legacy:</p>
+
+<ol>
+  <li><strong>Updated SeaBIOS</strong> to <strong>rel-1.12.1.2</strong> introducing small <strong>fixes</strong> for
+<strong>SD 3.0</strong> mode and <strong>hard disk fallback boot</strong> functionality. From now on
+platform will always try to boot hard disks first according to bootorder
+(or iPXE if set and enabled). When the first device is not bootable (i.e.
+contains invalid MBR signature), SeaBIOS will try next device in boot order
+until all storage devices have been tried. If no bootable device found,
+reboot after minute. Secondary payloads will not boot automatically from
+now. If one desires to launch setup or memtest, it requires physical
+presence in order to explicitly select the payload in the boot menu.</li>
+  <li><strong>Enabled SD 3.0</strong> mode allowing transfers of <strong>~100MB/s</strong>. All <strong>UHS-I</strong>
+capable cards should be able to be detected as <strong>SDR104 or SDR50</strong> (depending on the
+card). Tested SD cards were able to <strong>reach 80MB/s</strong> read transfer for SDR104
+(the manufacturer of the card guaranteed the transfers up to 80MB/s).
+Currently the SD 3.0 mode is disabled by default, because the operating
+system sometimes detected SDR104 capable card as SDR50 or as SD 2.0
+compliant card. So far no issues with SD card detection in SeaBIOS. For
+those interested in SD 3.0 mode, the option is available in setup menu as
+<strong>runtime configurable</strong>.</li>
+  <li>Enabled <strong>runtime configuration</strong> of <strong>watchdog</strong>. By default the timeout is
+set to 0 seconds (disabled state). To enable watchdog, enter setup menu and
+toggle watchdog option. You will be prompted to specify the timeout after
+which the platform should reset. <a href="https://github.com/pcengines/sortbootorder#settings-description">Options description</a>
+<strong>WARNING</strong> do not set short timeouts! It may lead to a reset loop and
+brick Your platform. Please take into consideration that platform boot time
+and OS boot time also counts to the overall timeout time, so set at least
+few minutes timeout to still be able to enter setup menu to disable the
+watchdog! The operating system has to support the watchdog, otherwise the
+platform will constantly reboot. For Linux OSes the driver is <code class="language-plaintext highlighter-rouge">sp5100_tco</code>,
+however it conflicts with <code class="language-plaintext highlighter-rouge">i2c_piix4</code> leaving the watchdog driver unloaded
+completely. One has to properly blacklist the <code class="language-plaintext highlighter-rouge">i2c_piix4</code> driver in order
+to get the watchdog working.</li>
+  <li>Added a hidden <strong>flash lockdown menu</strong> in sortbootorder. Its purpose is to
+freely choose the <strong>protection</strong> of <strong>BIOS</strong> SPI flash offered by a Winbond
+W25Q64*V chip. The menu supports all block protection ranges and the status
+register protection. NOTE: the permanent lock does not work for the Winbond
+chips, this feature is available only on demand after contacting Winbond.
+For details how to use menu, see the <a href="https://github.com/pcengines/sortbootorder#hidden-flash-lockdown-menu">sortbootorder documentation</a></li>
+  <li>All USB devices (either external plugged to front USB 3.0 connector or
+attached to USb internal headers) have a single boot order entry. Previously
+the USB devices connected via headers did not have any boot order and landed
+at the end of boot device list despite USB was set to a high priority.</li>
+  <li><strong>ECC presence</strong> is reported <strong>in SMBIOS tables</strong>. It is a backport from
+mainline versions.</li>
+</ol>
+
+<h2 id="community">Community</h2>
+
+<p>Patches sent for review:</p>
+
+<ul>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/32907">APU1 documentation</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/33146">APU2 documentation</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/32989">Describe serial ports in ACPI</a></p>
+  </li>
+</ul>
+
+<h2 id="statistics">Statistics</h2>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/yFZx4T78w9QXZ9K/preview" alt="Files Changed" /></p>
+
+<p>The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 3b4d0e0 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">88 files changed, 2573 insertions(+), 178 deletions(-)</code></p>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/aJnsJH4PGYyZo7e/preview" alt="Process of mainlining" /></p>
+
+<p>The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release. Check the
+statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 3b4d0e0 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">88 files changed, 2573 insertions(+), 178 deletions(-)</code></p>
+
+<p>Two files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree.</p>
+
+<p>The statistics has grown significantly due to two many configuration
+options introduced in this version.</p>
+
+<h2 id="testing">Testing</h2>
+
+<ul>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/ce829QADwA7sHx9/preview">PC Engines hardware configuration matrix</a> - hardware configurations available for testing in 3mdeb laboratory.</p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;id=96d9b426c0&amp;e=16ffa34a09">PC Engines release validation results</a> - please note there are separate sheets for each board-release.</p>
+  </li>
+</ul>
+
+<p>Test changes in this release:</p>
+
+<ul>
+  <li><strong>Added</strong> SD card detect in BIOS test-suite (3 test-cases)</li>
+  <li><strong>Improved</strong> Voyage installation test with partitioning error-check</li>
+  <li><strong>Replaced</strong> HDD disk in the apu3 hardware configuration for better stability</li>
+  <li><strong>Implemented</strong> full automated regression testing:
+From now on regression tests start automatically by Jenkins machine that is
+integrated with pcengines/coreboot build system on GitHub</li>
+</ul>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/wkXxXY4zTnzMbTp/preview" alt="Mainline test results" /></p>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/pkeNPqEN6XAWqJD/preview" alt="Legacy test results" /></p>
+
+<ul>
+  <li>Mainline:
+    <ul>
+      <li>PASSED: <strong>373</strong> (+13)</li>
+      <li>FAILED: <strong>11</strong> (-1)</li>
+      <li>PASSED [%]: <strong>97.14%</strong> (+0.37%)</li>
+    </ul>
+  </li>
+  <li>Legacy:
+    <ul>
+      <li>PASSED: <strong>333</strong> (+40)</li>
+      <li>FAILED: <strong>5</strong> (+1)</li>
+      <li>PASSED [%]: <strong>98.52%</strong> (-0.13%)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Improvement in the PASS aggregated statistics results from new SD card test and
+adding SD card to the apu3 hardware matrix configuration enabling some of the
+<code class="language-plaintext highlighter-rouge">NOT-SUPPORTED</code> tests before.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<h3 id="mainline">Mainline</h3>
+
+<ul>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.6.rom">apu1 v4.9.0.6</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.6.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.6.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.6.rom">apu2 v4.9.0.6</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.6.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.6.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.6.rom">apu3 v4.9.0.6</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.6.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.6.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.6.rom">apu4 v4.9.0.6</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.6.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.6.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.6.rom">apu5 v4.9.0.6</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.6.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.6.SHA256.sig">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<h3 id="legacy">Legacy</h3>
+
+<ul>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.26.rom">apu2 v4.0.26</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.26.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.26.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.26.rom">apu3 v4.0.26</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.26.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.26.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.26.rom">apu4 v4.0.26</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.26.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.26.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.26.rom">apu5 v4.0.26</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.26.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.26.SHA256.sig">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<p>See how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
+
+<h2 id="what-we-planned">What we planned</h2>
+
+<p>On v4.9.0.5 release we have announced:</p>
+
+<ol>
+  <li>Verified and measured boot with vboot and TPM. Advantages:
+    <ul>
+      <li>signed firmware components; each boot stage is signed with keys, where
+public part of the key lies in recovery partition</li>
+      <li>possibility to lock recovery partition and protect the keys while keeping
+updatable partitions unlocked for firmware upgrades</li>
+      <li>measured boot stages and firmware components; ensure Your firmware was not
+tampered thanks to PCRs in TPM</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>DONE</strong></p>
+
+<ol>
+  <li>coreboot image layout in flashmap allowing to have few CBFS images in one
+ROM. Advantages:
+    <ul>
+      <li>one recovery full firmware partition, one or two updatable
+partitions with full firmware. In case of failed update of one partition,
+other partitions still work and vboot will fall back to other working
+partition</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>DONE</strong></p>
+
+<ol>
+  <li>Tianocore UEFI payload integration. Build image with UEFI payload instead of
+SeaBIOS payload and boot UEFI OSes.</li>
+</ol>
+
+<p><strong>WORK IN PROGRESS</strong></p>
+
+<ol>
+  <li>Blog post presenting the state of Meltdown and Spectre on apu2 with and
+without microcode updates. Coming end of May.</li>
+</ol>
+
+<p><strong>DONE</strong></p>
+
+<ol>
+  <li>ECC memory presence status in SMBIOS/DMI tables in legacy BIOS.</li>
+</ol>
+
+<p><strong>DONE</strong></p>
+
+<p>4 out of 5 items has been addressed. Due to the preparations to the
+<a href="https://osfc.io/">Open Source Firmware Conference (OSFC) 2019</a> we did not manage to
+check the recent Tianocore payload on apu2. If You are interested in PC Engines
+firmware, would like to design something special or have some ideas in mind
+contact us or see us directly at OSFC 2019.</p>
+
+<h2 id="coming-soon">Coming soon</h2>
+
+<p>Feature and improvements on the roadmap:</p>
+
+<ol>
+  <li>Tianocore UEFI payload integration. Build image with UEFI payload instead of
+SeaBIOS payload and boot UEFI OSes.</li>
+  <li>PXE autoboot from the starting from the last interface with Wake on LAN
+support.</li>
+  <li>Improve the support of TPM2 in coreboot and SeaBIOS. Currently the is only
+the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
+existing entries in TPM2 log area. <code class="language-plaintext highlighter-rouge">cbmem</code> utility also lacks support for
+displaying TPM2 log area.</li>
+  <li>Validate ESXi 6.7. We have got information that booting ESXi 6.7 U2 fails on
+apu2 and are investigating the issue.</li>
+  <li>Linux GPIO support via ACPI tables. It will allow to control certain GPIOs
+via kernel sysfs (LEDs, S1 button, SIMSWAP).</li>
+  <li>Improve the iPXE performance. The DHCP autoconfiguration is very slow and
+sometimes fails (link autoconfiguration has to be repeated in iPXE shell).</li>
+</ol>
+</div>
+</article>
+
+</section>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container footer-content">
+    <a target="_blank" href="https://pcengines.ch/">https://pcengines.ch/
+    </a>
+  </div>
+</nav>
+
+  </body>
+
+</html>

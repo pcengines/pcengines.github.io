@@ -1,0 +1,228 @@
+I"�&<h1 id="pc-engines-apu-coreboot-open-source-firmware-v41102">PC Engines apu coreboot Open Source Firmware v4.11.0.2</h1>
+
+<h2 id="key-changes">Key changes</h2>
+
+<p>Mainline:</p>
+
+<ol>
+  <li><strong>Rebased</strong> with official coreboot repository <strong>commit</strong> 536799d.</li>
+  <li><strong>Updated</strong> sortbootorder to <strong>v4.6.16</strong> bringing <strong>IOMMU runtime</strong>
+<strong>configuration</strong> and <strong>board autodetection</strong> in the top banner of setup
+menu.</li>
+  <li><strong>Fixed</strong> <a href="https://github.com/pcengines/coreboot/issues/356">issue</a> with booting
+<strong>OpenBSD 6.6</strong> on v4.11.0.1 firmware.</li>
+  <li>PC Engines <strong>platforms reached</strong> all the <strong>requirements</strong> necessary to <strong>stay in the</strong>
+official <strong>coreboot tree</strong>.</li>
+  <li><strong>Found the culprit</strong> of the <strong>problem</strong> with <strong>booting ESXi 6.7</strong> U2 on apu
+platforms. Created an <a href="https://github.com/vmware/esx-boot/issues/4">issue</a>
+on the correct repository.</li>
+</ol>
+
+<h2 id="coreboot-community">coreboot community</h2>
+
+<p>Patches sent for review:</p>
+
+<ul>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/37998">amd/agesa/state_machine: Add BeforeInitLate hooks</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/37999">nb/amd/pi/00730F01/state_machine: Add lost options</a></p>
+  </li>
+</ul>
+
+<p>Patches merged by community:</p>
+
+<ul>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/36914">AGESA, binaryPI: implement C bootblock</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/36915">pcengines/apu2: Switch away from ROMCC_BOOTBLOCK</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/37332">pcengines/apu1: Switch away from ROMCC_BOOTBLOCK</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/37552">amdblocks/pci: add common implementation of MMCONF enabling</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/37835">AMD {SoC, AGESA, binaryPI}: Don’t use both of _ADR and _HID</a></p>
+  </li>
+</ul>
+
+<h2 id="statistics">Statistics</h2>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/yTQrwdqCfsjLYqL/preview" alt="Files Changed" /></p>
+
+<p>The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 536799d ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">100 files changed, 3252 insertions(+), 424 deletions(-)</code></p>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/szWeD85ggoHikdY/preview" alt="Process of mainlining" /></p>
+
+<p>The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release. Check the
+statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 536799d ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">100 files changed, 3252 insertions(+), 424 deletions(-)</code></p>
+
+<p>Two files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree.</p>
+
+<h2 id="testing">Testing</h2>
+
+<ul>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/ce829QADwA7sHx9/preview">PC Engines hardware configuration matrix</a> - hardware configurations available for testing in 3mdeb laboratory.</p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;id=96d9b426c0&amp;e=16ffa34a09">PC Engines release validation results</a> - please note there are separate sheets for each board-release.</p>
+  </li>
+</ul>
+
+<p>There are no test changes in this release.</p>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/SApP4Qm2nrCfCdK/preview" alt="Mainline test results" /></p>
+
+<ul>
+  <li>Mainline:
+    <ul>
+      <li>PASSED: <strong>431</strong> (+4)</li>
+      <li>FAILED: <strong>14</strong> (+4)</li>
+      <li>PASSED [%]: <strong>96.85%</strong> (-0.86%)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Test changes:</p>
+<ul>
+  <li><strong>Added</strong> IOMMU runtime configuration tests (2 test-cases)</li>
+  <li><strong>Added</strong> pfSense CPU temperature check (1 test-case)</li>
+</ul>
+
+<p>Slightly worse overall <code class="language-plaintext highlighter-rouge">PASSED</code> tests percentage results from the on-going
+random USB detection problem and TinyCore boot stability.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<h3 id="mainline">Mainline</h3>
+
+<ul>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.zip">apu1 v4.11.0.2.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.rom">apu1 v4.11.0.2.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.zip">apu2 v4.11.0.2.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.rom">apu2 v4.11.0.2.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.zip">apu3 v4.11.0.2.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.rom">apu3 v4.11.0.2.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.zip">apu4 v4.11.0.2.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.rom">apu4 v4.11.0.2.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.zip">apu5 v4.11.0.2.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.rom">apu5 v4.11.0.2.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<p>See how to verify the signatures on <a href="https://asciinema.org/a/269426">asciinema</a></p>
+
+<h2 id="what-we-planned">What we planned</h2>
+
+<ol>
+  <li>
+    <p>Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
+the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
+existing entries in TPM2 log area. <code class="language-plaintext highlighter-rouge">cbmem</code> utility also lacks support for
+displaying TPM2 log area.</p>
+
+    <p><strong>WORK IN PROGRESS</strong></p>
+  </li>
+  <li>
+    <p>Validate ESXi 6.7. We have got information that booting ESXi 6.7 U2 fails on
+apu2 and are investigating the issue.</p>
+
+    <p><strong>DONE</strong></p>
+
+    <p>The problem lies in the incorrectly written bootloader by VMWare. An issue
+has been created with explanation of the problem:
+https://github.com/vmware/esx-boot/issues/4</p>
+  </li>
+  <li>
+    <p>Reorganize runtime configuration by making it persistent across updates and
+accessible from user space. Also prepare a tool for offline binary
+modification.</p>
+
+    <p><strong>WORK IN PROGRESS</strong></p>
+  </li>
+  <li>
+    <p>Vital Product Data (VPD) support. User will have possibility to store
+and change VPD configuration in Read-Write section of SPI flash. Moreover,
+default VPD keys and values will be stored in Read-Only region to protect
+data against corruption. Also, sortbootorder runtime configuration will be
+stored in VPD Read-Write section, so access to it will be possible in OS
+via dedicated util.</p>
+
+    <p><strong>WORK IN PROGRESS</strong></p>
+  </li>
+</ol>
+
+<h2 id="coming-soon">Coming soon</h2>
+
+<p>Feature and improvements on the roadmap:</p>
+
+<ol>
+  <li>Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
+the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
+existing entries in TPM2 log area. <code class="language-plaintext highlighter-rouge">cbmem</code> utility also lacks support for
+displaying TPM2 log area.</li>
+  <li>Reorganize runtime configuration by making it persistent across updates and
+accessible from user space. Also prepare a tool for offline binary
+modification.</li>
+  <li>Vital Product Data (VPD) support. User will have possibility to store
+and change VPD configuration in Read-Write section of SPI flash. Moreover,
+default VPD keys and values will be stored in Read-Only region to protect
+data against corruption. Also, sortbootorder runtime configuration will be
+stored in VPD Read-Write section, so access to it will be possible in OS
+via dedicated util.</li>
+</ol>
+:ET

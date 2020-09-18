@@ -1,0 +1,156 @@
+I"B"<h1 id="pc-engines-apu-coreboot-open-source-firmware-v4904">PC Engines apu coreboot Open Source Firmware v4.9.0.4</h1>
+
+<h2 id="key-changes">Key changes</h2>
+
+<p>Mainline:</p>
+
+<ol>
+  <li><strong>Added possibility</strong> to reboot platform with coldboot path to ensure full
+platform reset during <strong>remote firmware update</strong>, option is intended to
+mitigate reboot issue when migrating from BIOS version older than v4.9.0.x.
+For detail how to safely update firmware remotely, please refer to
+the <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/firmware_flashing.md#corebootrom-flashing">documentation</a>.</li>
+  <li><strong>Updated SeaBIOS</strong> to rel-1.12.1.1 with <strong>new TPM menu</strong> option. For
+details <strong>how to use</strong> the menu options for <strong>TPM</strong> please refer to the
+<a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/tpm_menu.md">documentation</a>.</li>
+  <li><strong>Rebased</strong> with official coreboot repository <strong>commit</strong> 28def8b.</li>
+  <li>Created a <strong>repository structure</strong> for <a href="https://github.com/pcengines/apu2-documentation#repository-structure">apu2-documentatation</a>
+repository for <strong>better overview</strong> of the contents inside the
+<strong>documentation</strong> repository.</li>
+  <li>Performed comprehensive <strong>research</strong> of <strong>fastboot</strong> capability for PC
+Engines platforms. The outcome is available <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/research/fast_boot.md">here</a>.
+In short, it is <strong>not possible</strong> to achieve Intel like fastboot feature,
+which allows <strong>to skip full memory training</strong> during boot using stored
+configuration in MRC cache. That is also an official <strong>AMD statement</strong>, that
+the <strong>fastboot</strong> is possible <strong>only</strong> during <strong>S3 wakeup</strong>.</li>
+  <li>We have been reached by our customers with a question about
+<strong>ROCA TPM vulnerability</strong> for Infineon SLB9665 chips present on
+<strong>TPM1a modules</strong>. The engineers verified that the <strong>TPMs are vulnerable</strong>.
+For details and mitigation refer to the <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/research/ROCA.md">documentation</a>.
+The document describes how to <strong>upgrade TPM firmware</strong> and
+<strong>get rid of the vulnerability</strong>.</li>
+  <li>Added a <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">list of supported and verified mPCIe modules</a>.
+The list also describes <strong>known issues</strong> with modules and <strong>workarounds</strong>
+to get the <strong>modules working</strong> properly. Please check the list when
+encountered any issues with mPCIe modules. Contribution is welcome. Also be
+sure to check whether the slot is compatible with the module. In order to
+do so, look at the interfaces connected to each mPCIe slot <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/APU_mPCIe_capabilities.md">here</a>
+and the interfaces required by the module in its product specification etc.</li>
+</ol>
+
+<h2 id="statistics">Statistics</h2>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/L2FzDtTe6bLf3DB/preview" alt="Files Changed" /></p>
+
+<p>The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 7a732b4 ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">72 files changed, 2240 insertions(+), 138 deletions(-)</code></p>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/c5rmF8zXpkzYcHx/preview" alt="Process of mainlining" /></p>
+
+<p>The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release. Check the
+statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 7a732b4 ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">72 files changed, 2240 insertions(+), 138 deletions(-)</code></p>
+
+<p>Two files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree.</p>
+
+<h2 id="testing">Testing</h2>
+
+<ul>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/wRi33Zo5sdgbpWn/preview">PC Engines hardware configuration matrix</a> - hardware configurations available for testing in 3mdeb laboratory.</p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;id=96d9b426c0&amp;e=16ffa34a09">PC Engines release validation results</a> - please note there are separate sheets for each board-release.</p>
+  </li>
+</ul>
+
+<p>Test changes in this release:</p>
+
+<ul>
+  <li><strong>Added</strong> automatic test for ROCA TPM vulnerability (1 test-case)
+    <ul>
+      <li>more information about ROCA: <a href="https://en.wikipedia.org/wiki/ROCA_vulnerability">link1</a>, <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/research/ROCA.md">link2</a></li>
+    </ul>
+  </li>
+  <li><strong>Added</strong> Quectel EP06 and WLE1216V5-20 modems detection tests (3 test-cases)</li>
+  <li><strong>Added</strong> Wake On Lan feature verification test (1 test-case)</li>
+  <li><strong>Added</strong> bootorder verification test (1 test-case)</li>
+  <li><strong>Added</strong> CPB (Core Performance Boost) enable/disable tests (3 test-cases)</li>
+  <li><strong>Fixed</strong> test regarding booting Xen over iPXE (boot and login problem)</li>
+  <li><strong>Verified</strong> OPNsense installation on all bootable devices (<a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/os-status.md">OS-table</a>)</li>
+  <li><strong>Improved</strong> cooling system in the 3mdeb laboratory (better platforms stability)</li>
+</ul>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/RtMoDYjPqpkGHBT/preview" alt="Mainline test results" /></p>
+
+<ul>
+  <li>Mainline:
+    <ul>
+      <li>PASSED: <strong>341</strong> (+23)</li>
+      <li>FAILED: <strong>11</strong> (-3)</li>
+      <li>PASSED [%]: <strong>96,88%</strong> (+1.1%)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The improvement of the PASSED tests coverage results from adding 9 test-cases
+and populating all Ethernet ports in PC Engines platforms in the rack
+infrastructure (some test-cases are now supported by all tested platforms).</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<h3 id="mainline">Mainline</h3>
+
+<ul>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.4.rom">apu1 v4.9.0.4</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.4.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.4.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.4.rom">apu2 v4.9.0.4</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.4.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.4.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.4.rom">apu3 v4.9.0.4</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.4.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.4.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.4.rom">apu4 v4.9.0.4</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.4.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.4.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.4.rom">apu5 v4.9.0.4</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.4.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.4.SHA256.sig">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<p>See how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
+
+:ET

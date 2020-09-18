@@ -1,31 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PC Engines - github pages - About</title>
-</head>
-<body>
-<!-- header -->
-    <header id="top">
-        <div class="pcengines-header">
-            <h1>PC ENGINES</h1>
-            <h4>&trade;</h4>
-        </div>
-    </header>
+  </head>
+  <body>
+    <!-- header -->
+    <nav class="nav">
+      <div class="container--navbar">
+        <header class="header--about">
+          <div class="pcengines-header">
+            <a class="green-text--title" href="index.html">
+              <h1 class="title">PC ENGINES</h1>
+              <span class="green-text">&trade;</span>
+            </a>
+          </div>
+        </header>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"
+          ><span class="navicon"></span
+        ></label>
+        <ul class="menu">
+          <li class="menu__item">
+            <span
+              ><a
+                target="_blank"
+                href="https://docs.opnsense.org/manual/install.html"
+                >OPNsense</a
+              ></span
+            >
+          </li>
+          <li class="menu__item">
+            <span
+              ><a
+                target="_blank"
+                href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md"
+                >pfSense</a
+              ></span
+            >
+          </li>
+          <li class="menu__item">
+            <span
+              ><a
+                target="_blank"
+                href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md"
+                >Pxelinux</a
+              ></span
+            >
+          </li>
+          <li class="menu__item">
+            <span
+              ><a
+                target="_blank"
+                href="https://github.com/pcengines/apu2-documentation"
+                >Documentation</a
+              ></span
+            >
+          </li>
+          <li class="menu__item">
+            <span
+              ><a
+                target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0"
+                >Regression Test Results</a
+              ></span
+            >
+          </li>
+          <li class="menu__item">
+            <span
+              ><a
+                target="_blank"
+                href="https://gitlab.com/pcengines/coreboot/pipelines"
+                >GitLab CI</a
+              ></span
+            >
+          </li>
+          <li class="menu__item"
+            ><span><a href="/blog">Blog</a></span></li
+          >
+          <li class="menu__item"
+            ><span><a href="about.html">About</a></span></li
+          ></ul
+        >
+      </div>
+    </nav>
 
-    <div class="container">
-        <h2>About</h2>
-        <p><a href="https://3mdeb.com/">3mdeb Embedded Systems Consulting</a> maintains https://pcengines.github.io and https://github.com/pcengines on behalf of
-            <a href="https://pcengines.ch/">PC Engines</a>. Those services are provided as part of our coreboot maintainership package, if you are interested in similar support please
-            <a href="https://calendly.com/3mdeb/coreboot-maintainership-package">contact us</a>.</p>
-
-
-
-        <h4><a href="index.html">Come back to home page</a></h4>
+    <div class="container--image--about">
+      <div class="wrapper">
+        <hr class="line--about" />
+        <h2 class="text-middle">About</h2>
+      </div>
     </div>
 
-</body>
+    <main>
+      <div class="container">
+        <div class="wrapper--about">
+          <div class="about__info">
+            <p class="big-text">
+              <a class="green-text" href="https://3mdeb.com/"
+                >3mdeb Embedded Systems Consulting</a
+              >
+              maintains
+              <a href="https://pcengines.github.io"
+                >https://pcengines.github.io</a
+              >
+              and
+              <a href="https://github.com/pcengines"
+                >https://github.com/pcengines</a
+              >
+              on behalf of
+              <a class="green-text" href="https://pcengines.ch/">PC Engines</a>.
+              Those services are provided as part of our coreboot maintainership
+              package.
+            </p>
+          </div>
+
+          <div class="about__contact">
+            <p>If you are interested in similar support please</p>
+            <a href="index.html">CONTACT US</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="responsive-footer">
+      <div class="footer-text">
+        <a target="_blank" href="https://pcengines.ch/"> PC ENGINES </a>
+      </div>
+    </footer>
+  </body>
 </html>

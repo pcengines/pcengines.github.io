@@ -276,6 +276,7 @@ a.green-text:hover {
 .wrapper--about {
   max-width: 1020px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   margin: 2em auto;
@@ -287,30 +288,28 @@ a.green-text:hover {
 }
 
 .about__contact {
-  background: var(--pcengines-darkerwhite);
   text-align: center;
   padding: 2em 1em;
   margin: 0 2em;
-  min-width: 120px;
-  max-width: 156px;
-  height: 80px;
 }
 
 .about__contact p {
-  color: var(--pcengines-black);
-  width: 100%;
+  font-size: 1.2em;
 }
 
 .about__contact a {
-  color: var(--pcengines-black);
-  border: 1px solid var(--pcengines-black);
-  padding: 0.4em;
+  background-color: var(--pcengines-green);
+  color: var(--pcengines-white);
+  font-weight: 600;
+  border: 1px solid var(--pcengines-white);
+  padding: 0.8em;
 }
 
 .about__contact a:hover {
   color: var(--pcengines-green);
+  background-color: var(--pcengines-white);
   border: 1px solid var(--pcengines-green);
-  padding: 0.4em;
+  transform: scale(1.5);
 }
 
 .table-of-content {
@@ -373,10 +372,6 @@ ol li::before {
   vertical-align: middle;
   margin-right: 8px;
   background-color: var(--pcengines-green);
-}
-
-ul li:last-child {
-  padding-bottom: 10px;
 }
 
 li {
@@ -524,7 +519,6 @@ footer {
   text-decoration: none;
 }
 
-
 @media (max-width: 462px) {
   th,
   td {
@@ -617,7 +611,6 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-
 }
 
 @media screen and (max-width: 1000px) {
@@ -626,5 +619,160 @@ footer {
   }
   .container--image--about {
     background-size: 150%;
+  }
+}
+
+.container--navbar {
+  width: 1100px;
+  max-width: 85vw;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.about--header {
+  width: 1100px;
+  max-width: 85vw;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.header--about {
+  display: block;
+  float: left;
+}
+
+.nav-active {
+  background-color: red;
+}
+
+.nav {
+  display: flex;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  z-index: 3;
+}
+
+.nav .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.nav ul li::before {
+  content: none;
+}
+
+.nav li a {
+  display: block;
+  line-height: 18px;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0;
+}
+
+.nav ul li span a:hover {
+  color: var(--pcengines-green) !important;
+}
+
+li.menu__item {
+  padding: 6px;
+}
+
+li.menu__item a {
+  color: white;
+}
+
+.nav .menu {
+  clear: both;
+  max-height: 0;
+  text-align: center;
+  justify-content: flex-end;
+  transition: max-height 0.2s ease-out;
+}
+
+.nav .menu-icon {
+  cursor: pointer;
+  display: block;
+  float: right;
+  padding: 42px 0px;
+  position: relative;
+  user-select: none;
+}
+
+.nav .menu-icon .navicon {
+  background-color: #ffffff;
+  display: block;
+  height: 4px;
+  position: relative;
+  transition: background-color 0.2s ease-out;
+  width: 36px;
+}
+
+.nav .menu-icon .navicon:before,
+.nav .menu-icon .navicon:after {
+  background-color: #ffffff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.nav .menu-icon .navicon:before {
+  top: 10px;
+}
+
+.nav .menu-icon .navicon:after {
+  top: -10px;
+}
+
+.nav .menu-btn {
+  display: none;
+}
+
+.nav .menu-btn:checked ~ .menu {
+  max-height: 540px;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media only screen and (min-width: 1160px) {
+  .nav li {
+    float: left;
+  }
+  .nav li a {
+    padding: 20px 5px;
+  }
+  .nav .menu {
+    clear: none;
+    flex-direction: row;
+    max-height: none;
+  }
+  .nav .menu-icon {
+    display: none;
   }
 }

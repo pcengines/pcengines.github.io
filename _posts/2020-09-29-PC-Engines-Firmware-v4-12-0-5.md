@@ -11,6 +11,7 @@ categories: Firmware
 Mainline:
 
 1. **Rebased** with official coreboot repository **commit** da3375e.
+2. **Added apu6** platform **support**.
 
 ## Statistics
 
@@ -57,9 +58,9 @@ not a part of coreboot tree.
 
 3. There were added small corrections to handle ECC with more precision.
 
-4. OS Presseds have been differed between the platforms.
+4. OS Preseeds have been differed between the platforms.
 
-5. There has been added config for 10 pin TPM as a module.
+5. There has been added a config for 10 pin TPM as a module.
 
 ## Binaries
 
@@ -104,6 +105,14 @@ not a part of coreboot tree.
   [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.5.SHA256)
 
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.5.SHA256.sig)
+
+* [apu6 v4.12.0.5.zip](https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.12.0.5.zip)
+
+  [apu6 v4.12.0.5.rom](https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.12.0.5.rom)
+
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.12.0.5.SHA256)
+
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.12.0.5.SHA256.sig)
 
 See how to verify the signatures on [asciinema](https://asciinema.org/a/335785)
 

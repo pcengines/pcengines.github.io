@@ -25,7 +25,7 @@ gitlab-ci/regression.sh excluded from statistics). Check the statistics with:
 git diff --stat da3375e ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
 ```
 
-`104 files changed, 4091 insertions(+), 442 deletions(-)`
+`108 files changed, 4213 insertions(+), 451 deletions(-)`
 
 ![Process of mainlining](https://cloud.3mdeb.com/index.php/s/6G8iwHzS5sFLe5b/preview)
 

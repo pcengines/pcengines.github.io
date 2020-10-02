@@ -12,82 +12,69 @@
   </head>
   <body>
     <!-- header -->
-    <nav class="nav">
-      <div class="container--navbar">
-        <header class="header--about">
-          <div class="pcengines-header">
-            <a class="green-text--title" href="index.html">
-              <h1 class="title">PC ENGINES</h1>
-              <span class="green-text">&trade;</span>
-            </a>
-          </div>
-        </header>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"
-          ><span class="navicon"></span
-        ></label>
-        <ul class="menu">
-          <li class="menu__item">
-            <span
-              ><a
-                target="_blank"
-                href="https://docs.opnsense.org/manual/install.html"
-                >OPNsense</a
-              ></span
+    <nav class="nav" class="navigation">
+      <div class="navigation__container">
+        <div id="nav-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="navigation__list">
+          <li class="navigation__list-item navigation__list-item-logo">
+            <a href="index.html">PC ENGINES &trade;</a>
+          </li>
+          <li class="navigation__list-item navigation__list-item-link">
+            <a
+              target="_blank"
+              href="https://docs.opnsense.org/manual/install.html"
+              >OPNsense</a
             >
           </li>
-          <li class="menu__item">
-            <span
-              ><a
-                target="_blank"
-                href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md"
-                >pfSense</a
-              ></span
+          <li class="navigation__list-item navigation__list-item-link">
+            <a
+              target="_blank"
+              href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md"
+              >pfSense</a
             >
           </li>
-          <li class="menu__item">
-            <span
-              ><a
-                target="_blank"
-                href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md"
-                >Pxelinux</a
-              ></span
+          <li class="navigation__list-item navigation__list-item-link">
+            <a
+              target="_blank"
+              href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md"
+              >Pxelinux</a
             >
           </li>
-          <li class="menu__item">
-            <span
-              ><a
-                target="_blank"
-                href="https://github.com/pcengines/apu2-documentation"
-                >Documentation</a
-              ></span
+          <li class="navigation__list-item navigation__list-item-link">
+            <a
+              target="_blank"
+              href="https://github.com/pcengines/apu2-documentation"
+              >Documentation</a
             >
           </li>
-          <li class="menu__item">
-            <span
-              ><a
-                target="_blank"
-                href="https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0"
-                >Regression Test Results</a
-              ></span
+          <li class="navigation__list-item navigation__list-item-link">
+            <a
+              target="_blank"
+              href="https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0"
+              >Regression Test Results</a
             >
           </li>
-          <li class="menu__item">
-            <span
-              ><a
-                target="_blank"
-                href="https://gitlab.com/pcengines/coreboot/pipelines"
-                >GitLab CI</a
-              ></span
+          <li class="navigation__list-item navigation__list-item-link">
+            <a
+              target="_blank"
+              href="https://gitlab.com/pcengines/coreboot/pipelines"
+              >GitLab CI</a
             >
           </li>
-          <li class="menu__item"
-            ><span><a href="/blog">Blog</a></span></li
-          >
-          <li class="menu__item"
-            ><span><a href="about.html">About</a></span></li
-          ></ul
-        >
+          <li class="navigation__list-item navigation__list-item-link">
+            <a href="/blog">Blog</a>
+          </li>
+          <li class="navigation__list-item navigation__list-item-link">
+            <a href="about.html">About</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
@@ -134,5 +121,22 @@
         <a target="_blank" href="https://pcengines.ch/"> PC ENGINES </a>
       </div>
     </footer>
+    <script>
+      document.addEventListener("touchstart", function () {}, true);
+      let open = false;
+      const button = document.getElementById("nav-icon");
+      const nav = document.getElementById("nav");
+      const buttonClickHandler = function () {
+        open = !open;
+        if (open) {
+          button.classList.add("open");
+          nav.classList.add("navigation-active");
+        } else {
+          button.classList.remove("open");
+          nav.classList.remove("navigation-active");
+        }
+      };
+      button.addEventListener("click", buttonClickHandler);
+    </script>
   </body>
 </html>

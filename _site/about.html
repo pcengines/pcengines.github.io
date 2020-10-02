@@ -1,31 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PC Engines - github pages - About</title>
-</head>
-<body>
-<!-- header -->
-    <header id="top">
-        <div class="pcengines-header">
-            <h1>PC ENGINES</h1>
-            <h4>&trade;</h4>
+  </head>
+  <body>
+    <!-- header -->
+    <nav class="nav" class="navigation">
+      <div class="navigation__container">
+        <div id="nav-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </header>
+        <ul class="navigation__list">
+          <li class="navigation__list-item navigation__list-item-logo">
+            <a href="index.html">PC ENGINES &trade;</a>
+          </li>
+          <li class="navigation__list-item navigation__list-item-link">
+            <a
+              target="_blank"
+              href="https://docs.opnsense.org/manual/install.html"
+              >OPNsense</a
+            >
+          </li>
+          <li class="navigation__list-item navigation__list-item-link">
+            <a
+              target="_blank"
+              href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md"
+              >pfSense</a
+            >
+          </li>
+          <li class="navigation__list-item navigation__list-item-link">
+            <a
+              target="_blank"
+              href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md"
+              >Pxelinux</a
+            >
+          </li>
+          <li class="navigation__list-item navigation__list-item-link">
+            <a
+              target="_blank"
+              href="https://github.com/pcengines/apu2-documentation"
+              >Documentation</a
+            >
+          </li>
+          <li class="navigation__list-item navigation__list-item-link">
+            <a
+              target="_blank"
+              href="https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0"
+              >Regression Test Results</a
+            >
+          </li>
+          <li class="navigation__list-item navigation__list-item-link">
+            <a
+              target="_blank"
+              href="https://gitlab.com/pcengines/coreboot/pipelines"
+              >GitLab CI</a
+            >
+          </li>
+          <li class="navigation__list-item navigation__list-item-link">
+            <a href="/blog">Blog</a>
+          </li>
+          <li class="navigation__list-item navigation__list-item-link">
+            <a href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-    <div class="container">
-        <h2>About</h2>
-        <p><a href="https://3mdeb.com/">3mdeb Embedded Systems Consulting</a> maintains https://pcengines.github.io and https://github.com/pcengines on behalf of
-            <a href="https://pcengines.ch/">PC Engines</a>. Those services are provided as part of our coreboot maintainership package, if you are interested in similar support please
-            <a href="https://calendly.com/3mdeb/coreboot-maintainership-package">contact us</a>.</p>
-
-
-
-        <h4><a href="index.html">Come back to home page</a></h4>
+    <div class="container--image--about">
+      <div class="wrapper">
+        <hr class="line--about" />
+        <h2 class="text-middle">About</h2>
+      </div>
     </div>
 
-</body>
+    <main>
+      <div class="container">
+        <div class="wrapper--about">
+          <div class="about__info">
+            <p class="big-text">
+              <a class="green-text" href="https://3mdeb.com/"
+                >3mdeb Embedded Systems Consulting</a
+              >
+              maintains
+              <a href="https://pcengines.github.io"
+                >https://pcengines.github.io</a
+              >
+              and
+              <a href="https://github.com/pcengines"
+                >https://github.com/pcengines</a
+              >
+              on behalf of
+              <a class="green-text" href="https://pcengines.ch/">PC Engines</a>.
+              Those services are provided as part of our coreboot maintainership
+              package.
+            </p>
+          </div>
+
+          <div class="about__contact">
+            <p>If you are interested in similar support please</p>
+            <a href="index.html">CONTACT US</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="responsive-footer">
+      <div class="footer-text">
+        <a target="_blank" href="https://pcengines.ch/"> PC ENGINES </a>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("touchstart", function () {}, true);
+      let open = false;
+      const button = document.getElementById("nav-icon");
+      const nav = document.getElementById("nav");
+      const buttonClickHandler = function () {
+        open = !open;
+        if (open) {
+          button.classList.add("open");
+          nav.classList.add("navigation-active");
+        } else {
+          button.classList.remove("open");
+          nav.classList.remove("navigation-active");
+        }
+      };
+      button.addEventListener("click", buttonClickHandler);
+    </script>
+  </body>
 </html>

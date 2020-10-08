@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
 
   <body>
-{% include header.html %}
-<section>
-{{content}}
-</section>
-{% include footer.html %}
+    {% include header.html %}
+    <section>{{content}}</section>
+    {% include footer.html %}
+    <script>
+      document.addEventListener("touchstart", function () {}, true);
+      let open = false;
+      const button = document.getElementById("nav-icon");
+      const nav = document.getElementById("nav");
+      const buttonClickHandler = function () {
+        open = !open;
+        if (open) {
+          button.classList.add("open");
+          nav.classList.add("navigation-active");
+        } else {
+          button.classList.remove("open");
+          nav.classList.remove("navigation-active");
+        }
+      };
+      button.addEventListener("click", buttonClickHandler);
+    </script>
   </body>
-
 </html>

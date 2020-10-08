@@ -14,7 +14,7 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--pcengines-darker);
   margin: 0 auto;
-  font-weight: 300;
+  font-weight: 500;
   max-height: 100%;
   width: 100%;
   display: flex;
@@ -39,7 +39,7 @@ h2 {
 p {
   color: var(--pcengines-white);
   margin: 0 0 20px 0;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 main {
@@ -104,7 +104,7 @@ header h1 {
 }
 
 .dimmed-text p {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .smaller-margin p {
@@ -152,7 +152,7 @@ a.green-text:hover {
   border-radius: 3px;
   color: var(--pcengines-white);
   max-width: 240px;
-  font-size: 13px;
+  font-size: 15px;
   border: none;
   letter-spacing: 0.03em;
   box-sizing: border-box;
@@ -339,7 +339,7 @@ a.green-text:hover {
 
 ul,
 ol {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 170%;
   padding: 0;
   margin: 0;
@@ -433,7 +433,7 @@ li {
 table {
   max-width: 100%;
   margin: 24px auto;
-  font-size: 13px;
+  font-size: 15px;
   border: 1px solid var(--pcengines-white);
   border-collapse: collapse;
 }
@@ -445,7 +445,7 @@ tr:first-of-type {
 th {
   padding: 8px 12px;
   text-align: left;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--pcengines-green);
 }
 
@@ -455,7 +455,7 @@ td {
 }
 
 sup {
-  font-size: 9px;
+  font-size: 14px;
   color: var(--pcengines-white);
 }
 
@@ -498,7 +498,7 @@ sup {
   background-image: none;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.428571429;
   border-radius: 4px;
   margin-left: 5px;

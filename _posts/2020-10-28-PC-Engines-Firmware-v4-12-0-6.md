@@ -23,16 +23,58 @@ well. Which means that NIC with WoL should be first in system.
 
 ## Statistics
 
+![Files Changed](https://cloud.3mdeb.com/index.php/s/ZKafJdJojiitT8n/preview)
+
+The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:
 
 ```
 git diff --stat 43439f6 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
 ```
 
-108 files changed, 4214 insertions(+), 452 deletions(-)
+`108 files changed, 4214 insertions(+), 452 deletions(-)`
+
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/qfAyiq5B42BaTcH/preview)
+
+The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release.
+
+Three files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree.
 
 
 ## Testing
 
+* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/sakiLj98Zxqz2D3/preview) - hardware configurations available for testing in 3mdeb laboratory.
+
+* [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
+
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/cyjGHt3RXTgTtN2/preview)
+
+* Mainline:
+  * PASSED: **574** (-43)
+  * FAILED: **13** (+6)
+  * PASSED [%]: **97.74** (-1.15%)
+
+![Legacy test results](https://cloud.3mdeb.com/index.php/s/FtpH5DTRDx5nDDn/preview)
+
+* Legacy:
+  * PASSED: **389** (+4)
+  * FAILED: **4** (-3)
+  * PASSED [%]: **98.97** (+0.79%)
+
+### Key Changes in testing
+
+1. Validation infrastructure has been updated. Robot Framework has been rebased
+   with official **commit** 535d9a1.
+
+2. apu6a has not been tested in this iteration, which significantly decreased
+   the total number of tests.
+
+3. New USB sticks has had been added, which not necessarily have a good impact
+   on the regression tests results. Increased FAIL rate is caused mainly by this
+   change.
 
 ## Binaries
 

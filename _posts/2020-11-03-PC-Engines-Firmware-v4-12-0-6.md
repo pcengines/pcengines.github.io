@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.12.0.6"
-date:   2020-10-28
+date:   2020-11-03
 categories: Firmware
 ---
 # PC Engines apu coreboot Open Source Firmware v4.12.0.6
@@ -12,13 +12,16 @@ Mainline:
 
 1. **Rebased** with official coreboot repository **commit** 43439f6.
 2. **Fixed** runtime configuration allowing to reverse PCI addressing order.
-Previously it changed only addressing of mPCIe devices, now NICs are reversed as
-well. Which means that NIC with WoL should be the first booting in iPXE.
+   Previously it changed only addressing of mPCIe devices, now NICs are
+   reversed as well. Which means that NIC with WoL should be the first booting
+   in iPXE.
 
 Legacy:
+
 1. **Fixed** runtime configuration allowing to reverse PCI addressing order.
-Previously it changed only addressing of mPCIe devices, now NICs are reversed as
-well. Which means that NIC with WoL should be the first booting in iPXE.
+   Previously it changed only addressing of mPCIe devices, now NICs are
+   reversed as well. Which means that NIC with WoL should be the first booting
+   in iPXE.
 
 
 ## Statistics
@@ -40,8 +43,8 @@ git diff --stat 43439f6 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(e
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release.
 
-Three files have not been included in the diff as mentioned above since they are
-not a part of coreboot tree.
+Three files have not been included in the diff as mentioned above since they
+are not a part of coreboot tree.
 
 
 ## Testing
@@ -119,6 +122,42 @@ not a part of coreboot tree.
   [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.6.SHA256)
 
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.6.SHA256.sig)
+
+See how to verify the signatures on [asciinema](https://asciinema.org/a/335785)
+
+### Legacy
+
+* [apu2 v4.0.33.zip](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.33.zip)
+
+  [apu2 v4.0.33.rom](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.33.rom)
+
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.33.SHA256)
+
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.33.SHA256.sig)
+
+* [apu3 v4.0.33.zip](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.33.zip)
+
+  [apu3 v4.0.33.rom](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.33.rom)
+
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.33.SHA256)
+
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.33.SHA256.sig)
+
+* [apu4 v4.0.33.zip](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.33.zip)
+
+  [apu4 v4.0.33.rom](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.33.rom)
+
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.33.SHA256)
+
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.33.SHA256.sig)
+
+* [apu5 v4.0.33.zip](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.33.zip)
+
+  [apu5 v4.0.33.rom](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.33.rom)
+
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.33.SHA256)
+
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.33.SHA256.sig)
 
 See how to verify the signatures on [asciinema](https://asciinema.org/a/335785)
 

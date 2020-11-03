@@ -13,12 +13,12 @@ Mainline:
 1. **Rebased** with official coreboot repository **commit** 43439f6.
 2. **Fixed** runtime configuration allowing to reverse PCI addressing order.
 Previously it changed only addressing of mPCIe devices, now NICs are reversed as
-well. Which means that NIC with WoL should be first in system.
+well. Which means that NIC with WoL should be the first booting in iPXE.
 
 Legacy:
 1. **Fixed** runtime configuration allowing to reverse PCI addressing order.
 Previously it changed only addressing of mPCIe devices, now NICs are reversed as
-well. Which means that NIC with WoL should be first in system.
+well. Which means that NIC with WoL should be the first booting in iPXE.
 
 
 ## Statistics

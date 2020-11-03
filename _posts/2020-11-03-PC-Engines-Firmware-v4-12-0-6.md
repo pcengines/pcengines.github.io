@@ -75,7 +75,7 @@ are not a part of coreboot tree.
 2. apu6a has not been tested in this iteration, which significantly decreased
    the total number of tests.
 
-3. New USB sticks has had been added, which not necessarily have a good impact
+3. New USB sticks had been added, which not necessarily have a good impact
    on the regression tests results. Increased FAIL rate is caused mainly by this
    change.
 

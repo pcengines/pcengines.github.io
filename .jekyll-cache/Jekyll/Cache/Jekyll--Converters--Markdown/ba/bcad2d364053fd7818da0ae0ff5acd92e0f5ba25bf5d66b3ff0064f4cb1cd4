@@ -1,4 +1,4 @@
-I"8]<section>
+I"ùe<section>
     <div class="jumbotron">
         <div class="container">
             <span class="header-decor"></span>
@@ -11,6 +11,56 @@
 <section id="page-content">
     <div class="container">
         <div class="post-list">
+            
+            <div class="post-box">
+                <div class="post-title">
+                    <a class="post-title" href="/firmware/2020/11/03/PC-Engines-Firmware-v4-12-0-6.html"> PC Engines apu coreboot Open Source Firmware v4.12.0.6</a>
+                </div>
+                <div class="post-excerpt">
+                    PC Engines apu coreboot Open Source Firmware v4.12.0.6 Key changes Mainline: Rebased with official coreboot repository commit 43439f6. Fixed runtime...
+                </div>
+                <div class="posted">
+                    posted on
+                    <span class="posted-on">
+
+                        Tuesday, November 3, 2020
+                    </span>
+                    <span class="in">
+                        in
+                    </span>
+                    <span class="categories-on">
+                        
+                        Firmware&nbsp;
+                        
+                    </span>
+                </div>
+                <a class="read-more" href="/firmware/2020/11/03/PC-Engines-Firmware-v4-12-0-6.html">read more</a>
+            </div>
+            
+            <div class="post-box">
+                <div class="post-title">
+                    <a class="post-title" href="/firmware/2020/09/29/PC-Engines-Firmware-v4-12-0-5.html"> PC Engines apu coreboot Open Source Firmware v4.12.0.5</a>
+                </div>
+                <div class="post-excerpt">
+                    PC Engines apu coreboot Open Source Firmware v4.12.0.5 Key changes Mainline: Rebased with official coreboot repository commit da3375e. Added apu6...
+                </div>
+                <div class="posted">
+                    posted on
+                    <span class="posted-on">
+
+                        Tuesday, September 29, 2020
+                    </span>
+                    <span class="in">
+                        in
+                    </span>
+                    <span class="categories-on">
+                        
+                        Firmware&nbsp;
+                        
+                    </span>
+                </div>
+                <a class="read-more" href="/firmware/2020/09/29/PC-Engines-Firmware-v4-12-0-5.html">read more</a>
+            </div>
             
             <div class="post-box">
                 <div class="post-title">

@@ -5,9 +5,465 @@
     <description>&lt;h1&gt;PC ENGINES™&lt;/h1&gt;&lt;h3&gt;Blog&lt;/h3&gt;</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Oct 2020 12:33:42 +0200</pubDate>
-    <lastBuildDate>Mon, 05 Oct 2020 12:33:42 +0200</lastBuildDate>
+    <pubDate>Wed, 04 Nov 2020 11:25:14 +0100</pubDate>
+    <lastBuildDate>Wed, 04 Nov 2020 11:25:14 +0100</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>PC Engines apu coreboot Open Source Firmware v4.12.0.6</title>
+        <description>&lt;h1 id=&quot;pc-engines-apu-coreboot-open-source-firmware-v41206&quot;&gt;PC Engines apu coreboot Open Source Firmware v4.12.0.6&lt;/h1&gt;
+
+&lt;h2 id=&quot;key-changes&quot;&gt;Key changes&lt;/h2&gt;
+
+&lt;p&gt;Mainline:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Rebased&lt;/strong&gt; with official coreboot repository &lt;strong&gt;commit&lt;/strong&gt; 43439f6.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fixed&lt;/strong&gt; runtime configuration allowing to reverse PCI addressing order.
+Previously it changed only addressing of mPCIe devices, now NICs are
+reversed as well. Which means that NIC with WoL should be the first booting
+in iPXE.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Legacy:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Fixed&lt;/strong&gt; runtime configuration allowing to reverse PCI addressing order.
+Previously it changed only addressing of mPCIe devices, now NICs are
+reversed as well. Which means that NIC with WoL should be the first booting
+in iPXE.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;statistics&quot;&gt;Statistics&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.3mdeb.com/index.php/s/ZKafJdJojiitT8n/preview&quot; alt=&quot;Files Changed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git diff --stat 43439f6 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;108 files changed, 4214 insertions(+), 452 deletions(-)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.3mdeb.com/index.php/s/qfAyiq5B42BaTcH/preview&quot; alt=&quot;Process of mainlining&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release.&lt;/p&gt;
+
+&lt;p&gt;Three files have not been included in the diff as mentioned above since they
+are not a part of coreboot tree.&lt;/p&gt;
+
+&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/sakiLj98Zxqz2D3/preview&quot;&gt;PC Engines hardware configuration matrix&lt;/a&gt; - hardware configurations available for testing in 3mdeb laboratory.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=96d9b426c0&amp;amp;e=16ffa34a09&quot;&gt;PC Engines release validation results&lt;/a&gt; - please note there are separate sheets for each board-release.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.3mdeb.com/index.php/s/cyjGHt3RXTgTtN2/preview&quot; alt=&quot;Mainline test results&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mainline:
+    &lt;ul&gt;
+      &lt;li&gt;PASSED: &lt;strong&gt;574&lt;/strong&gt; (-43)&lt;/li&gt;
+      &lt;li&gt;FAILED: &lt;strong&gt;13&lt;/strong&gt; (+6)&lt;/li&gt;
+      &lt;li&gt;PASSED [%]: &lt;strong&gt;97.74&lt;/strong&gt; (-1.15%)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.3mdeb.com/index.php/s/FtpH5DTRDx5nDDn/preview&quot; alt=&quot;Legacy test results&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Legacy:
+    &lt;ul&gt;
+      &lt;li&gt;PASSED: &lt;strong&gt;389&lt;/strong&gt; (+4)&lt;/li&gt;
+      &lt;li&gt;FAILED: &lt;strong&gt;4&lt;/strong&gt; (-3)&lt;/li&gt;
+      &lt;li&gt;PASSED [%]: &lt;strong&gt;98.97&lt;/strong&gt; (+0.79%)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;key-changes-in-testing&quot;&gt;Key Changes in testing&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Validation infrastructure has been updated. Robot Framework has been rebased
+with official &lt;strong&gt;commit&lt;/strong&gt; 535d9a1.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;apu6a has not been tested in this iteration, which significantly decreased
+the total number of tests.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;New USB sticks had been added, which not necessarily have a good impact
+on the regression tests results. Increased FAIL rate is caused mainly by this
+change.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;binaries&quot;&gt;Binaries&lt;/h2&gt;
+
+&lt;h3 id=&quot;mainline&quot;&gt;Mainline&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.6.zip&quot;&gt;apu1 v4.12.0.6.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.6.rom&quot;&gt;apu1 v4.12.0.6.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.6.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.6.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.6.zip&quot;&gt;apu2 v4.12.0.6.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.6.rom&quot;&gt;apu2 v4.12.0.6.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.6.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.6.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.6.zip&quot;&gt;apu3 v4.12.0.6.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.6.rom&quot;&gt;apu3 v4.12.0.6.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.6.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.6.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.6.zip&quot;&gt;apu4 v4.12.0.6.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.6.rom&quot;&gt;apu4 v4.12.0.6.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.6.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.6.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.6.zip&quot;&gt;apu5 v4.12.0.6.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.6.rom&quot;&gt;apu5 v4.12.0.6.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.6.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.6.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See how to verify the signatures on &lt;a href=&quot;https://asciinema.org/a/335785&quot;&gt;asciinema&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;legacy&quot;&gt;Legacy&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.33.zip&quot;&gt;apu2 v4.0.33.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.33.rom&quot;&gt;apu2 v4.0.33.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.33.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.0.33.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.33.zip&quot;&gt;apu3 v4.0.33.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.33.rom&quot;&gt;apu3 v4.0.33.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.33.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.0.33.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.33.zip&quot;&gt;apu4 v4.0.33.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.33.rom&quot;&gt;apu4 v4.0.33.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.33.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.0.33.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.33.zip&quot;&gt;apu5 v4.0.33.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.33.rom&quot;&gt;apu5 v4.0.33.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.33.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.0.33.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See how to verify the signatures on &lt;a href=&quot;https://asciinema.org/a/335785&quot;&gt;asciinema&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-we-planned&quot;&gt;What we planned&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
+the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
+existing entries in TPM2 log area. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cbmem&lt;/code&gt; utility also lacks support for
+displaying TPM2 log area.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;WORK IN PROGRESS&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Reorganize runtime configuration by making it persistent across updates and
+accessible from user space. Also prepare a tool for offline binary
+modification.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;VERIFICATION&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Vital Product Data (VPD) support. User will have possibility to store
+and change VPD configuration in Read-Write section of SPI flash. Moreover,
+default VPD keys and values will be stored in Read-Only region to protect
+data against corruption. Also, sortbootorder runtime configuration will be
+stored in VPD Read-Write section, so access to it will be possible in OS
+via dedicated util.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;VERIFICATION&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;coming-soon&quot;&gt;Coming soon&lt;/h2&gt;
+
+&lt;p&gt;Feature and improvements on the roadmap:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
+the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
+existing entries in TPM2 log area. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cbmem&lt;/code&gt; utility also lacks support for
+displaying TPM2 log area.&lt;/li&gt;
+  &lt;li&gt;Reorganize runtime configuration by making it persistent across updates and
+accessible from user space. Also prepare a tool for offline binary
+modification.&lt;/li&gt;
+  &lt;li&gt;Vital Product Data (VPD) support. User will have possibility to store
+and change VPD configuration in Read-Write section of SPI flash. Moreover,
+default VPD keys and values will be stored in Read-Only region to protect
+data against corruption. Also, sortbootorder runtime configuration will be
+stored in VPD Read-Write section, so access to it will be possible in OS
+via dedicated util.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Tue, 03 Nov 2020 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/firmware/2020/11/03/PC-Engines-Firmware-v4-12-0-6.html</link>
+        <guid isPermaLink="true">http://localhost:4000/firmware/2020/11/03/PC-Engines-Firmware-v4-12-0-6.html</guid>
+        
+        
+        <category>Firmware</category>
+        
+      </item>
+    
+      <item>
+        <title>PC Engines apu coreboot Open Source Firmware v4.12.0.5</title>
+        <description>&lt;h1 id=&quot;pc-engines-apu-coreboot-open-source-firmware-v41205&quot;&gt;PC Engines apu coreboot Open Source Firmware v4.12.0.5&lt;/h1&gt;
+
+&lt;h2 id=&quot;key-changes&quot;&gt;Key changes&lt;/h2&gt;
+
+&lt;p&gt;Mainline:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Rebased&lt;/strong&gt; with official coreboot repository &lt;strong&gt;commit&lt;/strong&gt; da3375e.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Added apu6&lt;/strong&gt; platform &lt;strong&gt;support&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;statistics&quot;&gt;Statistics&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.3mdeb.com/index.php/s/X6TWWCSk9EqG5iP/preview&quot; alt=&quot;Files Changed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml and
+gitlab-ci/regression.sh excluded from statistics). Check the statistics with:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git diff --stat da3375e ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;108 files changed, 4213 insertions(+), 451 deletions(-)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.3mdeb.com/index.php/s/6G8iwHzS5sFLe5b/preview&quot; alt=&quot;Process of mainlining&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release.&lt;/p&gt;
+
+&lt;p&gt;Three files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree.&lt;/p&gt;
+
+&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/sakiLj98Zxqz2D3/preview&quot;&gt;PC Engines hardware configuration matrix&lt;/a&gt; - hardware configurations available for testing in 3mdeb laboratory.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=96d9b426c0&amp;amp;e=16ffa34a09&quot;&gt;PC Engines release validation results&lt;/a&gt; - please note there are separate sheets for each board-release.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.3mdeb.com/index.php/s/pX9beE5c2bTjQMd/preview&quot; alt=&quot;Mainline test results&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mainline:
+    &lt;ul&gt;
+      &lt;li&gt;PASSED: &lt;strong&gt;617&lt;/strong&gt; (+75)&lt;/li&gt;
+      &lt;li&gt;FAILED: &lt;strong&gt;7&lt;/strong&gt; (+1)&lt;/li&gt;
+      &lt;li&gt;PASSED [%]: &lt;strong&gt;98.89&lt;/strong&gt; (-0.04%)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;key-changes-in-testing&quot;&gt;Key Changes in testing&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Added manual tests results of apu6a (which significantly increased the total
+number of tests).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;There were changes to SD card device tests to handle SD expander modules
+properly.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;There were added small corrections to handle ECC with more precision.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;OS Preseeds have been differed between the platforms.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;There has been added a config for 10 pin TPM as a module.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;binaries&quot;&gt;Binaries&lt;/h2&gt;
+
+&lt;h3 id=&quot;mainline&quot;&gt;Mainline&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.5.zip&quot;&gt;apu1 v4.12.0.5.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.5.rom&quot;&gt;apu1 v4.12.0.5.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.5.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.5.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.5.zip&quot;&gt;apu2 v4.12.0.5.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.5.rom&quot;&gt;apu2 v4.12.0.5.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.5.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.5.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.5.zip&quot;&gt;apu3 v4.12.0.5.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.5.rom&quot;&gt;apu3 v4.12.0.5.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.5.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.5.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.5.zip&quot;&gt;apu4 v4.12.0.5.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.5.rom&quot;&gt;apu4 v4.12.0.5.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.5.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.5.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.5.zip&quot;&gt;apu5 v4.12.0.5.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.5.rom&quot;&gt;apu5 v4.12.0.5.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.5.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.5.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.12.0.5.zip&quot;&gt;apu6 v4.12.0.5.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.12.0.5.rom&quot;&gt;apu6 v4.12.0.5.rom&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.12.0.5.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.12.0.5.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See how to verify the signatures on &lt;a href=&quot;https://asciinema.org/a/335785&quot;&gt;asciinema&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-we-planned&quot;&gt;What we planned&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
+the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
+existing entries in TPM2 log area. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cbmem&lt;/code&gt; utility also lacks support for
+displaying TPM2 log area.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;WORK IN PROGRESS&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Reorganize runtime configuration by making it persistent across updates and
+accessible from user space. Also prepare a tool for offline binary
+modification.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;VERIFICATION&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Vital Product Data (VPD) support. User will have possibility to store
+and change VPD configuration in Read-Write section of SPI flash. Moreover,
+default VPD keys and values will be stored in Read-Only region to protect
+data against corruption. Also, sortbootorder runtime configuration will be
+stored in VPD Read-Write section, so access to it will be possible in OS
+via dedicated util.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;VERIFICATION&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;coming-soon&quot;&gt;Coming soon&lt;/h2&gt;
+
+&lt;p&gt;Feature and improvements on the roadmap:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
+the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
+existing entries in TPM2 log area. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cbmem&lt;/code&gt; utility also lacks support for
+displaying TPM2 log area.&lt;/li&gt;
+  &lt;li&gt;Reorganize runtime configuration by making it persistent across updates and
+accessible from user space. Also prepare a tool for offline binary
+modification.&lt;/li&gt;
+  &lt;li&gt;Vital Product Data (VPD) support. User will have possibility to store
+and change VPD configuration in Read-Write section of SPI flash. Moreover,
+default VPD keys and values will be stored in Read-Only region to protect
+data against corruption. Also, sortbootorder runtime configuration will be
+stored in VPD Read-Write section, so access to it will be possible in OS
+via dedicated util.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Tue, 29 Sep 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/firmware/2020/09/29/PC-Engines-Firmware-v4-12-0-5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/firmware/2020/09/29/PC-Engines-Firmware-v4-12-0-5.html</guid>
+        
+        
+        <category>Firmware</category>
+        
+      </item>
     
       <item>
         <title>PC Engines apu coreboot Open Source Firmware v4.12.0.4</title>
@@ -1927,517 +2383,6 @@ distributions of BSD systems.&lt;/li&gt;
         <pubDate>Thu, 30 Jan 2020 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/firmware/2020/01/30/PC-Engines-Firmware-v4-11-0-3.html</link>
         <guid isPermaLink="true">http://localhost:4000/firmware/2020/01/30/PC-Engines-Firmware-v4-11-0-3.html</guid>
-        
-        
-        <category>Firmware</category>
-        
-      </item>
-    
-      <item>
-        <title>PC Engines apu coreboot Open Source Firmware v4.11.0.2</title>
-        <description>&lt;h1 id=&quot;pc-engines-apu-coreboot-open-source-firmware-v41102&quot;&gt;PC Engines apu coreboot Open Source Firmware v4.11.0.2&lt;/h1&gt;
-
-&lt;h2 id=&quot;key-changes&quot;&gt;Key changes&lt;/h2&gt;
-
-&lt;p&gt;Mainline:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Rebased&lt;/strong&gt; with official coreboot repository &lt;strong&gt;commit&lt;/strong&gt; 536799d.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Updated&lt;/strong&gt; sortbootorder to &lt;strong&gt;v4.6.16&lt;/strong&gt; bringing &lt;strong&gt;IOMMU runtime&lt;/strong&gt;
-&lt;strong&gt;configuration&lt;/strong&gt; and &lt;strong&gt;board autodetection&lt;/strong&gt; in the top banner of setup
-menu.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Fixed&lt;/strong&gt; &lt;a href=&quot;https://github.com/pcengines/coreboot/issues/356&quot;&gt;issue&lt;/a&gt; with booting
-&lt;strong&gt;OpenBSD 6.6&lt;/strong&gt; on v4.11.0.1 firmware.&lt;/li&gt;
-  &lt;li&gt;PC Engines &lt;strong&gt;platforms reached&lt;/strong&gt; all the &lt;strong&gt;requirements&lt;/strong&gt; necessary to &lt;strong&gt;stay in the&lt;/strong&gt;
-official &lt;strong&gt;coreboot tree&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Found the culprit&lt;/strong&gt; of the &lt;strong&gt;problem&lt;/strong&gt; with &lt;strong&gt;booting ESXi 6.7&lt;/strong&gt; U2 on apu
-platforms. Created an &lt;a href=&quot;https://github.com/vmware/esx-boot/issues/4&quot;&gt;issue&lt;/a&gt;
-on the correct repository.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;coreboot-community&quot;&gt;coreboot community&lt;/h2&gt;
-
-&lt;p&gt;Patches sent for review:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37998&quot;&gt;amd/agesa/state_machine: Add BeforeInitLate hooks&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37999&quot;&gt;nb/amd/pi/00730F01/state_machine: Add lost options&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Patches merged by community:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/36914&quot;&gt;AGESA, binaryPI: implement C bootblock&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/36915&quot;&gt;pcengines/apu2: Switch away from ROMCC_BOOTBLOCK&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37332&quot;&gt;pcengines/apu1: Switch away from ROMCC_BOOTBLOCK&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37552&quot;&gt;amdblocks/pci: add common implementation of MMCONF enabling&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37835&quot;&gt;AMD {SoC, AGESA, binaryPI}: Don’t use both of _ADR and _HID&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;statistics&quot;&gt;Statistics&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cloud.3mdeb.com/index.php/s/yTQrwdqCfsjLYqL/preview&quot; alt=&quot;Files Changed&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The chart shows the total files changed from release tag against the rebase
-point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
-excluded from statistics). Check the statistics with:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git diff --stat 536799d ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;100 files changed, 3252 insertions(+), 424 deletions(-)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cloud.3mdeb.com/index.php/s/szWeD85ggoHikdY/preview&quot; alt=&quot;Process of mainlining&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The chart represents the total line added and deleted on the PC Engines
-coreboot fork against the rebase point for a given release. Check the
-statistics with:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git diff --stat 536799d ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;100 files changed, 3252 insertions(+), 424 deletions(-)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Two files have not been included in the diff as mentioned above since they are
-not a part of coreboot tree.&lt;/p&gt;
-
-&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/ce829QADwA7sHx9/preview&quot;&gt;PC Engines hardware configuration matrix&lt;/a&gt; - hardware configurations available for testing in 3mdeb laboratory.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=96d9b426c0&amp;amp;e=16ffa34a09&quot;&gt;PC Engines release validation results&lt;/a&gt; - please note there are separate sheets for each board-release.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There are no test changes in this release.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cloud.3mdeb.com/index.php/s/SApP4Qm2nrCfCdK/preview&quot; alt=&quot;Mainline test results&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mainline:
-    &lt;ul&gt;
-      &lt;li&gt;PASSED: &lt;strong&gt;431&lt;/strong&gt; (+4)&lt;/li&gt;
-      &lt;li&gt;FAILED: &lt;strong&gt;14&lt;/strong&gt; (+4)&lt;/li&gt;
-      &lt;li&gt;PASSED [%]: &lt;strong&gt;96.85%&lt;/strong&gt; (-0.86%)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Test changes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Added&lt;/strong&gt; IOMMU runtime configuration tests (2 test-cases)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Added&lt;/strong&gt; pfSense CPU temperature check (1 test-case)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Slightly worse overall &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PASSED&lt;/code&gt; tests percentage results from the on-going
-random USB detection problem and TinyCore boot stability.&lt;/p&gt;
-
-&lt;h2 id=&quot;binaries&quot;&gt;Binaries&lt;/h2&gt;
-
-&lt;h3 id=&quot;mainline&quot;&gt;Mainline&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.zip&quot;&gt;apu1 v4.11.0.2.zip&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.rom&quot;&gt;apu1 v4.11.0.2.rom&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.zip&quot;&gt;apu2 v4.11.0.2.zip&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.rom&quot;&gt;apu2 v4.11.0.2.rom&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.zip&quot;&gt;apu3 v4.11.0.2.zip&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.rom&quot;&gt;apu3 v4.11.0.2.rom&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.zip&quot;&gt;apu4 v4.11.0.2.zip&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.rom&quot;&gt;apu4 v4.11.0.2.rom&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.zip&quot;&gt;apu5 v4.11.0.2.zip&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.rom&quot;&gt;apu5 v4.11.0.2.rom&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;See how to verify the signatures on &lt;a href=&quot;https://asciinema.org/a/269426&quot;&gt;asciinema&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;what-we-planned&quot;&gt;What we planned&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
-the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
-existing entries in TPM2 log area. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cbmem&lt;/code&gt; utility also lacks support for
-displaying TPM2 log area.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;WORK IN PROGRESS&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Validate ESXi 6.7. We have got information that booting ESXi 6.7 U2 fails on
-apu2 and are investigating the issue.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;DONE&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;The problem lies in the incorrectly written bootloader by VMWare. An issue
-has been created with explanation of the problem:
-https://github.com/vmware/esx-boot/issues/4&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Reorganize runtime configuration by making it persistent across updates and
-accessible from user space. Also prepare a tool for offline binary
-modification.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;WORK IN PROGRESS&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Vital Product Data (VPD) support. User will have possibility to store
-and change VPD configuration in Read-Write section of SPI flash. Moreover,
-default VPD keys and values will be stored in Read-Only region to protect
-data against corruption. Also, sortbootorder runtime configuration will be
-stored in VPD Read-Write section, so access to it will be possible in OS
-via dedicated util.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;WORK IN PROGRESS&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;coming-soon&quot;&gt;Coming soon&lt;/h2&gt;
-
-&lt;p&gt;Feature and improvements on the roadmap:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
-the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
-existing entries in TPM2 log area. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cbmem&lt;/code&gt; utility also lacks support for
-displaying TPM2 log area.&lt;/li&gt;
-  &lt;li&gt;Reorganize runtime configuration by making it persistent across updates and
-accessible from user space. Also prepare a tool for offline binary
-modification.&lt;/li&gt;
-  &lt;li&gt;Vital Product Data (VPD) support. User will have possibility to store
-and change VPD configuration in Read-Write section of SPI flash. Moreover,
-default VPD keys and values will be stored in Read-Only region to protect
-data against corruption. Also, sortbootorder runtime configuration will be
-stored in VPD Read-Write section, so access to it will be possible in OS
-via dedicated util.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Tue, 31 Dec 2019 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/firmware/2019/12/31/PC-Engines-Firmware-v4-11-0-2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/firmware/2019/12/31/PC-Engines-Firmware-v4-11-0-2.html</guid>
-        
-        
-        <category>Firmware</category>
-        
-      </item>
-    
-      <item>
-        <title>PC Engines apu coreboot Open Source Firmware v4.11.0.1</title>
-        <description>&lt;h1 id=&quot;pc-engines-apu-coreboot-open-source-firmware-v41101&quot;&gt;PC Engines apu coreboot Open Source Firmware v4.11.0.1&lt;/h1&gt;
-
-&lt;h2 id=&quot;key-changes&quot;&gt;Key changes&lt;/h2&gt;
-
-&lt;p&gt;Mainline:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Rebased&lt;/strong&gt; with official coreboot repository &lt;strong&gt;commit&lt;/strong&gt; 9f56eed.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Temperature&lt;/strong&gt; is now being &lt;strong&gt;showed in pfSense&lt;/strong&gt; dashboard.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;coreboot-community&quot;&gt;coreboot community&lt;/h2&gt;
-
-&lt;p&gt;Recent month was focused mainly on contribution to official coreboot repository
-in order to keep PC Engines boards in the tree. Recent coreboot release is
-enforcing certain features that board/silicon must support in order to be
-maintained on the master branch. Here is the list of patches sent for review
-and merged in order to achieve the goal.&lt;/p&gt;
-
-&lt;p&gt;Patches sent for review:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/36914&quot;&gt;AGESA, binaryPI: implement C bootblock&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37400&quot;&gt;sb/amd/{agesa,pi}: use ACPIMMIO common block wherever possible&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/36915&quot;&gt;pcengines/apu2: Switch away from ROMCC_BOOTBLOCK&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37332&quot;&gt;pcengines/apu1: Switch away from ROMCC_BOOTBLOCK&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37552&quot;&gt;amdblocks/pci: add common implementation of MMCONF enabling&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37401&quot;&gt;mb/*/*: use ACPIMMIO common block wherever possible&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Patches merged by community:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37292&quot;&gt;cpu/amd/{agesa,pi}/Kconfig: select SSE2&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37177&quot;&gt;sb/amd/{agesa,pi}/hudson: enable support for AMD common ACPIMMIO blocks&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37169&quot;&gt;binaryPI: Use Kconfig to define the number of IOAPICs&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/32421&quot;&gt;amd/pi/00730F01: Add support without BINARYPI_LEGACY_WRAPPER&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/36976&quot;&gt;vendorcode/amd/pi/Makefile.inc: remove -fno-zero-initialized-in-bss&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/32363&quot;&gt;pcengines/apu2: Switch away from BINARYPI_LEGACY_WRAPPER&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37168&quot;&gt;sb/amd/{agesa,pi}/hudson: add southbridge C bootblock initialization&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37329&quot;&gt;sb/amd/cimx/sb800: add C bootblock southbridge initialization&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37416&quot;&gt;amdblocks/acpimmio: add common functions for AP entry&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37402&quot;&gt;amdblocks/acpimmio: Unify BIOSRAM usage&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37178&quot;&gt;soc/amd/common/block/acpimmio: fix ACPIMMIO decode enable function&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37328&quot;&gt;sb/amd/cimx: replace cimx_util with common ACPIMMIO AMD block&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37351&quot;&gt;AGESA,binaryPI: Fix stack location on entry to romstage&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37350&quot;&gt;AGESA,binaryPI: Remove __x86_64__ long mode in CAR&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://review.coreboot.org/c/coreboot/+/37349&quot;&gt;AGESA,binaryPI: Remove redundant SSE enable&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;statistics&quot;&gt;Statistics&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cloud.3mdeb.com/index.php/s/fx55cpRb2ScwLgf/preview&quot; alt=&quot;Files Changed&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The chart shows the total files changed from release tag against the rebase
-point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
-excluded from statistics). Check the statistics with:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git diff --stat 9f56eed ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;97 files changed, 3219 insertions(+), 413 deletions(-)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cloud.3mdeb.com/index.php/s/95MLrFL7g2TpDJD/preview&quot; alt=&quot;Process of mainlining&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The chart represents the total line added and deleted on the PC Engines
-coreboot fork against the rebase point for a given release. Check the
-statistics with:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git diff --stat 9f56eed ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;97 files changed, 3219 insertions(+), 413 deletions(-)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Two files have not been included in the diff as mentioned above since they are
-not a part of coreboot tree.&lt;/p&gt;
-
-&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://cloud.3mdeb.com/index.php/s/ce829QADwA7sHx9/preview&quot;&gt;PC Engines hardware configuration matrix&lt;/a&gt; - hardware configurations available for testing in 3mdeb laboratory.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;amp;id=96d9b426c0&amp;amp;e=16ffa34a09&quot;&gt;PC Engines release validation results&lt;/a&gt; - please note there are separate sheets for each board-release.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There are no test changes in this release.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cloud.3mdeb.com/index.php/s/Mx69zQBScReaDtK/preview&quot; alt=&quot;Mainline test results&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mainline:
-    &lt;ul&gt;
-      &lt;li&gt;PASSED: &lt;strong&gt;427&lt;/strong&gt; (-1)&lt;/li&gt;
-      &lt;li&gt;FAILED: &lt;strong&gt;10&lt;/strong&gt; (+1)&lt;/li&gt;
-      &lt;li&gt;PASSED [%]: &lt;strong&gt;97.71%&lt;/strong&gt; (-0.23%)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This release does not have tests changes, therefore there is slight difference
-in the aggregated statistics. Slightly worse overall &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PASSED&lt;/code&gt; tests percentage
-results from the on-going random USB detection problem and TinyCore boot
-stability, whether it will affect the current iteration or not.&lt;/p&gt;
-
-&lt;h2 id=&quot;binaries&quot;&gt;Binaries&lt;/h2&gt;
-
-&lt;h3 id=&quot;mainline&quot;&gt;Mainline&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.1.zip&quot;&gt;apu1 v4.11.0.1.zip&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.1.rom&quot;&gt;apu1 v4.11.0.1.rom&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.1.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.1.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.1.zip&quot;&gt;apu2 v4.11.0.1.zip&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.1.rom&quot;&gt;apu2 v4.11.0.1.rom&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.1.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.1.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.1.zip&quot;&gt;apu3 v4.11.0.1.zip&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.1.rom&quot;&gt;apu3 v4.11.0.1.rom&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.1.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.1.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.1.zip&quot;&gt;apu4 v4.11.0.1.zip&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.1.rom&quot;&gt;apu4 v4.11.0.1.rom&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.1.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.1.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.1.zip&quot;&gt;apu5 v4.11.0.1.zip&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.1.rom&quot;&gt;apu5 v4.11.0.1.rom&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.1.SHA256&quot;&gt;SHA256 file&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.1.SHA256.sig&quot;&gt;SHA256 sig&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;See how to verify the signatures on &lt;a href=&quot;https://asciinema.org/a/227035&quot;&gt;asciinema&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;what-we-planned&quot;&gt;What we planned&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
-the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
-existing entries in TPM2 log area. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cbmem&lt;/code&gt; utility also lacks support for
-displaying TPM2 log area.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;WORK IN PROGRESS&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Validate ESXi 6.7. We have got information that booting ESXi 6.7 U2 fails on
-apu2 and are investigating the issue.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;WORK IN PROGRESS&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Reorganize runtime configuration by making it persistent across updates and
-accessible from user space. Also prepare a tool for offline binary
-modification.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;WORK IN PROGRESS&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Vital Product Data (VPD) support. User will have possibility to store
-and change VPD configuration in Read-Write section of SPI flash. Moreover,
-default VPD keys and values will be stored in Read-Only region to protect
-data against corruption. Also, sortbootorder runtime configuration will be
-stored in VPD Read-Write section, so access to it will be possible in OS
-via dedicated util.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;WORK IN PROGRESS&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;coming-soon&quot;&gt;Coming soon&lt;/h2&gt;
-
-&lt;p&gt;Feature and improvements on the roadmap:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
-the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
-existing entries in TPM2 log area. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cbmem&lt;/code&gt; utility also lacks support for
-displaying TPM2 log area.&lt;/li&gt;
-  &lt;li&gt;Validate ESXi 6.7. We have got information that booting ESXi 6.7 U2 fails on
-apu2 and are investigating the issue.&lt;/li&gt;
-  &lt;li&gt;Reorganize runtime configuration by making it persistent across updates and
-accessible from user space. Also prepare a tool for offline binary
-modification.&lt;/li&gt;
-  &lt;li&gt;Vital Product Data (VPD) support. User will have possibility to store
-and change VPD configuration in Read-Write section of SPI flash. Moreover,
-default VPD keys and values will be stored in Read-Only region to protect
-data against corruption. Also, sortbootorder runtime configuration will be
-stored in VPD Read-Write section, so access to it will be possible in OS
-via dedicated util.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Tue, 10 Dec 2019 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/firmware/2019/12/10/PC-Engines-Firmware-v4-11-0-1.html</link>
-        <guid isPermaLink="true">http://localhost:4000/firmware/2019/12/10/PC-Engines-Firmware-v4-11-0-1.html</guid>
         
         
         <category>Firmware</category>

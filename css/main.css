@@ -207,10 +207,6 @@ body {
   padding-bottom: 0.3em;
 }
 
-.post-box .posted-on {
-  font-size: 14px !important;
-}
-
 .post-box:nth-child(1n) {
   background: #bec3c2;
 }
@@ -243,6 +239,7 @@ body {
   margin-bottom: 15px;
 }
 
+.post-box:first-child .posted,
 .post-box:first-child .posted-on {
   font-size: 20px !important;
 }

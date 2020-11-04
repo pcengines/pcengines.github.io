@@ -212,10 +212,6 @@ ul li::before {
     padding-bottom: 0.3em;
   }
 
-  .posted-on {
-    font-size: 14px !important;
-  }
-
   &:nth-child(1n) {
     background: #bec3c2;
   }
@@ -247,6 +243,7 @@ ul li::before {
       margin-bottom: 15px;
     }
 
+    .posted,
     .posted-on {
       font-size: 20px !important;
     }

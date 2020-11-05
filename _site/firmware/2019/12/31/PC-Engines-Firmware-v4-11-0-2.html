@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta content="PC Engines" property="og:site_name" />
+  
+  <meta content="PC Engines apu coreboot Open Source Firmware v4.11.0.2" property="og:title" />
+   
+  <meta content="article" property="og:type" />
+   
+  <meta content="<h1>PC ENGINES™</h1><h3>Blog</h3>" property="og:description" />
+   
+  <meta content="http://localhost:4000/firmware/2019/12/31/PC-Engines-Firmware-v4-11-0-2.html" property="og:url" />
+   
+  <meta
+    content="2019-12-31T00:00:00+01:00"
+    property="article:published_time"
+  />
+  <meta content="http://localhost:4000/about/" property="article:author" />
+  
+
+  <meta property="og:image" content="" />
+
+   
+  <meta content="Firmware" property="article:section" />
+      
+  <title>
+    PC Engines apu coreboot Open Source Firmware v4.11.0.2
+  </title>
+  <meta
+    name="description"
+    content="PC Engines apu coreboot Open Source Firmware v4.11.0.2"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"
+  ></script>
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=PT+Sans"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Fira+Mono"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Gentium+Basic:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    rel="stylesheet"
+    integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="canonical"
+    href="http://localhost:4000/firmware/2019/12/31/PC-Engines-Firmware-v4-11-0-2.html"
+  />
+  <link rel="alternate" type="application/rss+xml" title="PC Engines"
+  href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+    <section>
+  <nav id="nav" class="navigation">
+    <div class="navigation__container">
+      <div id="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="navigation__list">
+        <li class="navigation__list-item navigation__list-item-logo">
+          <a href="/" class="logo-link">PC ENGINES&trade;</a>
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a href="/blog ">Blog</a>
+        </li>
+        <!-- <li class="navigation__list-item navigation__list-item-link">
+          <a href="/about-blog ">About this blog</a>
+        </li> -->
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://docs.opnsense.org/manual/install.html"
+            >OPNsense</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md"
+            >pfSense</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md"
+            >Pxelinux</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://github.com/pcengines/apu2-documentation"
+            >Documentation</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0"
+            >Regression Test Results</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://gitlab.com/pcengines/coreboot/pipelines"
+            >GitLab CI</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</section>
+
+    <section><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">PC Engines apu coreboot Open Source Firmware v4.11.0.2</h1>
+      <p class="post-meta">
+        <time
+          datetime="2019-12-31T00:00:00+01:00"
+          itemprop="datePublished"
+          >Dec 31, 2019</time
+        >
+      </p>
+    </div>
+  </div>
+  <img class="jumbotron-img" src="/assets/bground.jpg" alt="PC ENGINES" />
+
+  <div class="post-content container" itemprop="articleBody"><h1 id="pc-engines-apu-coreboot-open-source-firmware-v41102">PC Engines apu coreboot Open Source Firmware v4.11.0.2</h1>
+
+<h2 id="key-changes">Key changes</h2>
+
+<p>Mainline:</p>
+
+<ol>
+  <li><strong>Rebased</strong> with official coreboot repository <strong>commit</strong> 536799d.</li>
+  <li><strong>Updated</strong> sortbootorder to <strong>v4.6.16</strong> bringing <strong>IOMMU runtime</strong>
+<strong>configuration</strong> and <strong>board autodetection</strong> in the top banner of setup
+menu.</li>
+  <li><strong>Fixed</strong> <a href="https://github.com/pcengines/coreboot/issues/356">issue</a> with booting
+<strong>OpenBSD 6.6</strong> on v4.11.0.1 firmware.</li>
+  <li>PC Engines <strong>platforms reached</strong> all the <strong>requirements</strong> necessary to <strong>stay in the</strong>
+official <strong>coreboot tree</strong>.</li>
+  <li><strong>Found the culprit</strong> of the <strong>problem</strong> with <strong>booting ESXi 6.7</strong> U2 on apu
+platforms. Created an <a href="https://github.com/vmware/esx-boot/issues/4">issue</a>
+on the correct repository.</li>
+</ol>
+
+<h2 id="coreboot-community">coreboot community</h2>
+
+<p>Patches sent for review:</p>
+
+<ul>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/37998">amd/agesa/state_machine: Add BeforeInitLate hooks</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/37999">nb/amd/pi/00730F01/state_machine: Add lost options</a></p>
+  </li>
+</ul>
+
+<p>Patches merged by community:</p>
+
+<ul>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/36914">AGESA, binaryPI: implement C bootblock</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/36915">pcengines/apu2: Switch away from ROMCC_BOOTBLOCK</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/37332">pcengines/apu1: Switch away from ROMCC_BOOTBLOCK</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/37552">amdblocks/pci: add common implementation of MMCONF enabling</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/37835">AMD {SoC, AGESA, binaryPI}: Don’t use both of _ADR and _HID</a></p>
+  </li>
+</ul>
+
+<h2 id="statistics">Statistics</h2>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/yTQrwdqCfsjLYqL/preview" alt="Files Changed" /></p>
+
+<p>The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 536799d ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">100 files changed, 3252 insertions(+), 424 deletions(-)</code></p>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/szWeD85ggoHikdY/preview" alt="Process of mainlining" /></p>
+
+<p>The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release. Check the
+statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 536799d ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">100 files changed, 3252 insertions(+), 424 deletions(-)</code></p>
+
+<p>Two files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree.</p>
+
+<h2 id="testing">Testing</h2>
+
+<ul>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/ce829QADwA7sHx9/preview">PC Engines hardware configuration matrix</a> - hardware configurations available for testing in 3mdeb laboratory.</p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;id=96d9b426c0&amp;e=16ffa34a09">PC Engines release validation results</a> - please note there are separate sheets for each board-release.</p>
+  </li>
+</ul>
+
+<p>There are no test changes in this release.</p>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/SApP4Qm2nrCfCdK/preview" alt="Mainline test results" /></p>
+
+<ul>
+  <li>Mainline:
+    <ul>
+      <li>PASSED: <strong>431</strong> (+4)</li>
+      <li>FAILED: <strong>14</strong> (+4)</li>
+      <li>PASSED [%]: <strong>96.85%</strong> (-0.86%)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Test changes:</p>
+<ul>
+  <li><strong>Added</strong> IOMMU runtime configuration tests (2 test-cases)</li>
+  <li><strong>Added</strong> pfSense CPU temperature check (1 test-case)</li>
+</ul>
+
+<p>Slightly worse overall <code class="language-plaintext highlighter-rouge">PASSED</code> tests percentage results from the on-going
+random USB detection problem and TinyCore boot stability.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<h3 id="mainline">Mainline</h3>
+
+<ul>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.zip">apu1 v4.11.0.2.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.rom">apu1 v4.11.0.2.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.11.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.zip">apu2 v4.11.0.2.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.rom">apu2 v4.11.0.2.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.11.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.zip">apu3 v4.11.0.2.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.rom">apu3 v4.11.0.2.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.11.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.zip">apu4 v4.11.0.2.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.rom">apu4 v4.11.0.2.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.11.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.zip">apu5 v4.11.0.2.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.rom">apu5 v4.11.0.2.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.11.0.2.SHA256.sig">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<p>See how to verify the signatures on <a href="https://asciinema.org/a/269426">asciinema</a></p>
+
+<h2 id="what-we-planned">What we planned</h2>
+
+<ol>
+  <li>
+    <p>Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
+the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
+existing entries in TPM2 log area. <code class="language-plaintext highlighter-rouge">cbmem</code> utility also lacks support for
+displaying TPM2 log area.</p>
+
+    <p><strong>WORK IN PROGRESS</strong></p>
+  </li>
+  <li>
+    <p>Validate ESXi 6.7. We have got information that booting ESXi 6.7 U2 fails on
+apu2 and are investigating the issue.</p>
+
+    <p><strong>DONE</strong></p>
+
+    <p>The problem lies in the incorrectly written bootloader by VMWare. An issue
+has been created with explanation of the problem:
+https://github.com/vmware/esx-boot/issues/4</p>
+  </li>
+  <li>
+    <p>Reorganize runtime configuration by making it persistent across updates and
+accessible from user space. Also prepare a tool for offline binary
+modification.</p>
+
+    <p><strong>WORK IN PROGRESS</strong></p>
+  </li>
+  <li>
+    <p>Vital Product Data (VPD) support. User will have possibility to store
+and change VPD configuration in Read-Write section of SPI flash. Moreover,
+default VPD keys and values will be stored in Read-Only region to protect
+data against corruption. Also, sortbootorder runtime configuration will be
+stored in VPD Read-Write section, so access to it will be possible in OS
+via dedicated util.</p>
+
+    <p><strong>WORK IN PROGRESS</strong></p>
+  </li>
+</ol>
+
+<h2 id="coming-soon">Coming soon</h2>
+
+<p>Feature and improvements on the roadmap:</p>
+
+<ol>
+  <li>Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
+the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
+existing entries in TPM2 log area. <code class="language-plaintext highlighter-rouge">cbmem</code> utility also lacks support for
+displaying TPM2 log area.</li>
+  <li>Reorganize runtime configuration by making it persistent across updates and
+accessible from user space. Also prepare a tool for offline binary
+modification.</li>
+  <li>Vital Product Data (VPD) support. User will have possibility to store
+and change VPD configuration in Read-Write section of SPI flash. Moreover,
+default VPD keys and values will be stored in Read-Only region to protect
+data against corruption. Also, sortbootorder runtime configuration will be
+stored in VPD Read-Write section, so access to it will be possible in OS
+via dedicated util.</li>
+</ol>
+</div>
+</article>
+</section>
+    <nav class="footer__container">
+  <a class="footer__container-link" target="_blank" href="https://pcengines.ch/"
+    >PC ENGINES</a
+  >
+</nav>
+
+    <script>
+      document.addEventListener("touchstart", function () {}, true);
+      let open = false;
+      const button = document.getElementById("nav-icon");
+      const nav = document.getElementById("nav");
+      const buttonClickHandler = function () {
+        open = !open;
+        if (open) {
+          button.classList.add("open");
+          nav.classList.add("navigation-active");
+        } else {
+          button.classList.remove("open");
+          nav.classList.remove("navigation-active");
+        }
+      };
+      button.addEventListener("click", buttonClickHandler);
+    </script>
+  </body>
+</html>

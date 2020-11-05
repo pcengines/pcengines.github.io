@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta content="PC Engines" property="og:site_name" />
+  
+  <meta content="PC Engines apu coreboot Open Source Firmware v4.12.0.5" property="og:title" />
+   
+  <meta content="article" property="og:type" />
+   
+  <meta content="<h1>PC ENGINES™</h1><h3>Blog</h3>" property="og:description" />
+   
+  <meta content="http://localhost:4000/firmware/2020/09/29/PC-Engines-Firmware-v4-12-0-5.html" property="og:url" />
+   
+  <meta
+    content="2020-09-29T00:00:00+02:00"
+    property="article:published_time"
+  />
+  <meta content="http://localhost:4000/about/" property="article:author" />
+  
+
+  <meta property="og:image" content="" />
+
+   
+  <meta content="Firmware" property="article:section" />
+      
+  <title>
+    PC Engines apu coreboot Open Source Firmware v4.12.0.5
+  </title>
+  <meta
+    name="description"
+    content="PC Engines apu coreboot Open Source Firmware v4.12.0.5"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"
+  ></script>
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=PT+Sans"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Fira+Mono"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Gentium+Basic:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    rel="stylesheet"
+    integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="canonical"
+    href="http://localhost:4000/firmware/2020/09/29/PC-Engines-Firmware-v4-12-0-5.html"
+  />
+  <link rel="alternate" type="application/rss+xml" title="PC Engines"
+  href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+    <section>
+  <nav id="nav" class="navigation">
+    <div class="navigation__container">
+      <div id="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="navigation__list">
+        <li class="navigation__list-item navigation__list-item-logo">
+          <a href="/" class="logo-link">PC ENGINES&trade;</a>
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a href="/blog ">Blog</a>
+        </li>
+        <!-- <li class="navigation__list-item navigation__list-item-link">
+          <a href="/about-blog ">About this blog</a>
+        </li> -->
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://docs.opnsense.org/manual/install.html"
+            >OPNsense</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md"
+            >pfSense</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md"
+            >Pxelinux</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://github.com/pcengines/apu2-documentation"
+            >Documentation</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0"
+            >Regression Test Results</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://gitlab.com/pcengines/coreboot/pipelines"
+            >GitLab CI</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</section>
+
+    <section><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">PC Engines apu coreboot Open Source Firmware v4.12.0.5</h1>
+      <p class="post-meta">
+        <time
+          datetime="2020-09-29T00:00:00+02:00"
+          itemprop="datePublished"
+          >Sep 29, 2020</time
+        >
+      </p>
+    </div>
+  </div>
+  <img class="jumbotron-img" src="/assets/bground.jpg" alt="PC ENGINES" />
+
+  <div class="post-content container" itemprop="articleBody"><h1 id="pc-engines-apu-coreboot-open-source-firmware-v41205">PC Engines apu coreboot Open Source Firmware v4.12.0.5</h1>
+
+<h2 id="key-changes">Key changes</h2>
+
+<p>Mainline:</p>
+
+<ol>
+  <li><strong>Rebased</strong> with official coreboot repository <strong>commit</strong> da3375e.</li>
+  <li><strong>Added apu6</strong> platform <strong>support</strong>.</li>
+</ol>
+
+<h2 id="statistics">Statistics</h2>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/X6TWWCSk9EqG5iP/preview" alt="Files Changed" /></p>
+
+<p>The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml and
+gitlab-ci/regression.sh excluded from statistics). Check the statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat da3375e ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">108 files changed, 4213 insertions(+), 451 deletions(-)</code></p>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/6G8iwHzS5sFLe5b/preview" alt="Process of mainlining" /></p>
+
+<p>The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release.</p>
+
+<p>Three files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree.</p>
+
+<h2 id="testing">Testing</h2>
+
+<ul>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/sakiLj98Zxqz2D3/preview">PC Engines hardware configuration matrix</a> - hardware configurations available for testing in 3mdeb laboratory.</p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;id=96d9b426c0&amp;e=16ffa34a09">PC Engines release validation results</a> - please note there are separate sheets for each board-release.</p>
+  </li>
+</ul>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/pX9beE5c2bTjQMd/preview" alt="Mainline test results" /></p>
+
+<ul>
+  <li>Mainline:
+    <ul>
+      <li>PASSED: <strong>617</strong> (+75)</li>
+      <li>FAILED: <strong>7</strong> (+1)</li>
+      <li>PASSED [%]: <strong>98.89</strong> (-0.04%)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="key-changes-in-testing">Key Changes in testing</h3>
+
+<ol>
+  <li>
+    <p>Added manual tests results of apu6a (which significantly increased the total
+number of tests).</p>
+  </li>
+  <li>
+    <p>There were changes to SD card device tests to handle SD expander modules
+properly.</p>
+  </li>
+  <li>
+    <p>There were added small corrections to handle ECC with more precision.</p>
+  </li>
+  <li>
+    <p>OS Preseeds have been differed between the platforms.</p>
+  </li>
+  <li>
+    <p>There has been added a config for 10 pin TPM as a module.</p>
+  </li>
+</ol>
+
+<h2 id="binaries">Binaries</h2>
+
+<h3 id="mainline">Mainline</h3>
+
+<ul>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.5.zip">apu1 v4.12.0.5.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.5.rom">apu1 v4.12.0.5.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.5.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.5.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.5.zip">apu2 v4.12.0.5.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.5.rom">apu2 v4.12.0.5.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.5.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.5.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.5.zip">apu3 v4.12.0.5.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.5.rom">apu3 v4.12.0.5.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.5.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.5.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.5.zip">apu4 v4.12.0.5.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.5.rom">apu4 v4.12.0.5.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.5.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.5.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.5.zip">apu5 v4.12.0.5.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.5.rom">apu5 v4.12.0.5.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.5.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.5.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.12.0.5.zip">apu6 v4.12.0.5.zip</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.12.0.5.rom">apu6 v4.12.0.5.rom</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.12.0.5.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.12.0.5.SHA256.sig">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<p>See how to verify the signatures on <a href="https://asciinema.org/a/335785">asciinema</a></p>
+
+<h2 id="what-we-planned">What we planned</h2>
+
+<ol>
+  <li>
+    <p>Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
+the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
+existing entries in TPM2 log area. <code class="language-plaintext highlighter-rouge">cbmem</code> utility also lacks support for
+displaying TPM2 log area.</p>
+
+    <p><strong>WORK IN PROGRESS</strong></p>
+  </li>
+  <li>
+    <p>Reorganize runtime configuration by making it persistent across updates and
+accessible from user space. Also prepare a tool for offline binary
+modification.</p>
+
+    <p><strong>VERIFICATION</strong></p>
+  </li>
+  <li>
+    <p>Vital Product Data (VPD) support. User will have possibility to store
+and change VPD configuration in Read-Write section of SPI flash. Moreover,
+default VPD keys and values will be stored in Read-Only region to protect
+data against corruption. Also, sortbootorder runtime configuration will be
+stored in VPD Read-Write section, so access to it will be possible in OS
+via dedicated util.</p>
+
+    <p><strong>VERIFICATION</strong></p>
+  </li>
+</ol>
+
+<h2 id="coming-soon">Coming soon</h2>
+
+<p>Feature and improvements on the roadmap:</p>
+
+<ol>
+  <li>Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
+the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
+existing entries in TPM2 log area. <code class="language-plaintext highlighter-rouge">cbmem</code> utility also lacks support for
+displaying TPM2 log area.</li>
+  <li>Reorganize runtime configuration by making it persistent across updates and
+accessible from user space. Also prepare a tool for offline binary
+modification.</li>
+  <li>Vital Product Data (VPD) support. User will have possibility to store
+and change VPD configuration in Read-Write section of SPI flash. Moreover,
+default VPD keys and values will be stored in Read-Only region to protect
+data against corruption. Also, sortbootorder runtime configuration will be
+stored in VPD Read-Write section, so access to it will be possible in OS
+via dedicated util.</li>
+</ol>
+</div>
+</article>
+</section>
+    <nav class="footer__container">
+  <a class="footer__container-link" target="_blank" href="https://pcengines.ch/"
+    >PC ENGINES</a
+  >
+</nav>
+
+    <script>
+      document.addEventListener("touchstart", function () {}, true);
+      let open = false;
+      const button = document.getElementById("nav-icon");
+      const nav = document.getElementById("nav");
+      const buttonClickHandler = function () {
+        open = !open;
+        if (open) {
+          button.classList.add("open");
+          nav.classList.add("navigation-active");
+        } else {
+          button.classList.remove("open");
+          nav.classList.remove("navigation-active");
+        }
+      };
+      button.addEventListener("click", buttonClickHandler);
+    </script>
+  </body>
+</html>

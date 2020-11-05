@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta content="PC Engines" property="og:site_name" />
+  
+  <meta content="PC Engines apu coreboot Open Source Firmware v4.9.0.3" property="og:title" />
+   
+  <meta content="article" property="og:type" />
+   
+  <meta content="<h1>PC ENGINES™</h1><h3>Blog</h3>" property="og:description" />
+   
+  <meta content="http://localhost:4000/firmware/2019/03/11/PC-Engines-firmware-v4-9-0-3.html" property="og:url" />
+   
+  <meta
+    content="2019-03-11T00:00:00+01:00"
+    property="article:published_time"
+  />
+  <meta content="http://localhost:4000/about/" property="article:author" />
+  
+
+  <meta property="og:image" content="" />
+
+   
+  <meta content="Firmware" property="article:section" />
+      
+  <title>
+    PC Engines apu coreboot Open Source Firmware v4.9.0.3
+  </title>
+  <meta
+    name="description"
+    content="PC Engines apu coreboot Open Source Firmware v4.9.0.3"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"
+  ></script>
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=PT+Sans"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Fira+Mono"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Gentium+Basic:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    rel="stylesheet"
+    integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="canonical"
+    href="http://localhost:4000/firmware/2019/03/11/PC-Engines-firmware-v4-9-0-3.html"
+  />
+  <link rel="alternate" type="application/rss+xml" title="PC Engines"
+  href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+    <section>
+  <nav id="nav" class="navigation">
+    <div class="navigation__container">
+      <div id="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="navigation__list">
+        <li class="navigation__list-item navigation__list-item-logo">
+          <a href="/" class="logo-link">PC ENGINES&trade;</a>
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a href="/blog ">Blog</a>
+        </li>
+        <!-- <li class="navigation__list-item navigation__list-item-link">
+          <a href="/about-blog ">About this blog</a>
+        </li> -->
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://docs.opnsense.org/manual/install.html"
+            >OPNsense</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md"
+            >pfSense</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md"
+            >Pxelinux</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://github.com/pcengines/apu2-documentation"
+            >Documentation</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0"
+            >Regression Test Results</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://gitlab.com/pcengines/coreboot/pipelines"
+            >GitLab CI</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</section>
+
+    <section><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">PC Engines apu coreboot Open Source Firmware v4.9.0.3</h1>
+      <p class="post-meta">
+        <time
+          datetime="2019-03-11T00:00:00+01:00"
+          itemprop="datePublished"
+          >Mar 11, 2019</time
+        >
+      </p>
+    </div>
+  </div>
+  <img class="jumbotron-img" src="/assets/bground.jpg" alt="PC ENGINES" />
+
+  <div class="post-content container" itemprop="articleBody"><h1 id="pc-engines-apu-coreboot-open-source-firmware-v4903">PC Engines apu coreboot Open Source Firmware v4.9.0.3</h1>
+
+<h2 id="key-changes">Key changes</h2>
+
+<p>Mainline:</p>
+
+<ol>
+  <li><strong>Enabled</strong> CPU <strong>boost</strong> feature in <strong>runtime</strong> configuration. Some
+platforms seem to have problems with boost thus we decided to make CPU boost
+runtime configurable.</li>
+  <li>We have <strong>upgraded</strong> to coreboot <strong>SDK 1.52</strong> in mainline releases.</li>
+  <li>Configured <strong>pull-ups</strong> on <strong>WLAN_DISABLE#</strong> pins on the mPCIe connectors
+which could cause issues with certain modems (e.g. Quectel EP06) when
+floating.</li>
+  <li><strong>Reproducible builds limiation</strong> has been <strong>eliminated</strong> by setting iPXE
+and Memtest86+ fixed revisions. More details <a href="https://github.com/pcengines/coreboot/issues/267">here</a></li>
+  <li>Uploaded SHA256 and signatures of all previous firmware releases. SHA256
+files and signatures have been uploaded to pcengines.github.io.</li>
+  <li><strong>Fixed microcode update</strong> feature, which broke due to the upstream changes
+in coreboot. More details <a href="https://github.com/pcengines/apu2-documentation/issues/75#issuecomment-463067220">here</a></li>
+  <li><strong>Added</strong> information about <strong>ECC</strong> memory capability in <strong>SMBIOS tables</strong>
+on 4GB platforms. <code class="language-plaintext highlighter-rouge">Physical Memory Array</code> structure in <code class="language-plaintext highlighter-rouge">dmidecode</code> should
+report <code class="language-plaintext highlighter-rouge">Multi-bit ECC</code> in <code class="language-plaintext highlighter-rouge">Error Correction Type</code> field. Note: the ECC is
+present only on 4GB platforms. Check <a href="https://asciinema.org/a/233041">how to verify</a></li>
+  <li><strong>Added interrupt</strong> configuration entries for <strong>PCIe bridge</strong> devices 2.4
+and 2.5. The interrupt ocnfiguration for 2 PCIe bridges were not programmed
+in BIOS. Kernel/OS will not always program it by itself, thus rely on BIOS
+programmed values in case kernel will not handle that.</li>
+  <li><strong>Rebased</strong> with official coreboot repository <strong>commit</strong> 7a732b4.</li>
+</ol>
+
+<p>Legacy:</p>
+
+<ol>
+  <li><strong>Enabled</strong> CPU <strong>boost</strong> feature in <strong>runtime</strong> configuration. Some
+platforms seem to have problems with boost thus we decided to make CPU boost
+runtime configurable.</li>
+  <li><strong>Reproducible builds limiation</strong> has been <strong>eliminated</strong> by setting iPXE
+and Memtest86+ fixed revisions. More details <a href="https://github.com/pcengines/coreboot/issues/267">here</a></li>
+  <li>Uploaded SHA256 and signatures of all previous firmware releases. SHA256
+files and signatures have been uploaded to pcengines.github.io.</li>
+</ol>
+
+<h2 id="statistics">Statistics</h2>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/5TXiKGgiZSnWJ5m/preview" alt="Files Changed" /></p>
+
+<p>The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 7a732b4 ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/JGj2bTDdw3xo7wg/preview" alt="Addition and Deletion" /></p>
+
+<p>The chart represents the total line added and deleted on the PC Engines
+corebootÂ fork against the rebase point for given release. Check the statistics
+with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 7a732b4 ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p>Two files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree.</p>
+
+<h2 id="testing">Testing</h2>
+
+<ul>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/wRi33Zo5sdgbpWn/preview">PC Engines hardware configuration matrix</a> - hardware configurations available for testing in 3mdeb laboratory.</p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;id=96d9b426c0&amp;e=16ffa34a09">PC Engines release validation results</a> - please note there are separate sheets for each board-release.</p>
+  </li>
+</ul>
+
+<p>Test changes in this release:</p>
+
+<ul>
+  <li><strong>Added</strong> Verify ECC Presence test (1 test-case)</li>
+  <li><strong>Added</strong> Install Debian amd64 on SATA storage test (2 test-cases)</li>
+  <li><strong>Fixed</strong> ATA kernel boot time measurement automated test regarding missing
+tools on the booted OS</li>
+  <li><strong>Updated</strong> apu5 hardware configuration with <code class="language-plaintext highlighter-rouge">Quectel_EP06</code> LTE module and
+<code class="language-plaintext highlighter-rouge">WLE1216V5-20</code> WiFi module</li>
+  <li><strong>Verified</strong> (manually) OPNsense installation on apu3 platform</li>
+  <li><strong>Verified</strong> that USB modem (TL-WN722N) on apu2 USB3.0 port is initialized correctly</li>
+  <li><strong>Verified</strong> CPU boost load in terms of hard-locks (38h apu2 stress testing
+according to <a href="https://3mdeb.com/firmware/amd-cpu-boost/">blog post method</a>)</li>
+</ul>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/xr4zCeHwPtw97kq/preview" alt="Mainline test results" /></p>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/7Jng9M8QE5DkPco/preview" alt="Legacy test results" /></p>
+
+<ul>
+  <li>Mainline:
+    <ul>
+      <li>PASSED: 318 (+12)</li>
+      <li>FAILED: 14 (-2)</li>
+      <li>PASSED [%]: 95,78% (+0.75%)</li>
+    </ul>
+  </li>
+  <li>Legacy:
+    <ul>
+      <li>PASSED: 293 (+11)</li>
+      <li>FAILED: 4 (-11)</li>
+      <li>PASSED [%]: 98.65% (+3.7%)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The improvement of the PASSED tests coverage results from adding 3 test-cases
+and fixing ATA kernel boot time test (resolved <a href="https://github.com/pcengines/coreboot/issues/220">#220</a>
+issue). The difference in <code class="language-plaintext highlighter-rouge">mainline</code> and <code class="language-plaintext highlighter-rouge">legacy</code> FAILED tests statistics is
+caused mainly by XEN tests problems, that are not supported in <code class="language-plaintext highlighter-rouge">legacy</code> testing.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<h3 id="mainline">Mainline</h3>
+
+<ul>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/Xxcsxyb5T6gq4Zb/download">apu1 v4.9.0.3</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/JdGFFEqnqSz7zmF/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/eimcQrPTtw7C7mQ/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/aroRiaaRfoXsRJE/download">apu2 v4.9.0.3</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/739Y6cg6E23bpzn/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/cy37owiFs8ZWaMN/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/AbEX3keWGtGMFdD/download">apu3 v4.9.0.3</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/CgdpBDx3jXqAaS4/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/EggEQaLZmH3edDE/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/HmYYgQNnXCyyxD7/download">apu4 v4.9.0.3</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/cgdyNNtQndCZRjK/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/PapaR2daNrDjZ9r/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/Yotxg6WRoDCHHgp/download">apu5 v4.9.0.3</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/FTHNN3g4mYwwkWw/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/tARS2XqEafCQaDb/download">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<h3 id="legacy">Legacy</h3>
+
+<ul>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/dpKqXzooprK6aJr/download">apu2 v4.0.25</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/NfBptrfx9B56iJb/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/EKfJTccSYTrwDt6/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/ACK32Wy6QtZbyNs/download">apu3 v4.0.25</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/HyFkRnj3zmKHod3/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/7WXMWAoWrAdWFz9/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/nzSMyApkKimzsEf/download">apu4 v4.0.25</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/2W4EjpTii7LmwrC/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/4wzJRPZ9FszRNYy/download">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/ito92SCGrn4pEyq/download">apu5 v4.0.25</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/5DdxdmmzsCxSrkf/download">SHA256 file</a></p>
+
+    <p><a href="https://cloud.3mdeb.com/index.php/s/jnaKWRBz7XWBxWA/download">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<p>See how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
+</div>
+</article>
+</section>
+    <nav class="footer__container">
+  <a class="footer__container-link" target="_blank" href="https://pcengines.ch/"
+    >PC ENGINES</a
+  >
+</nav>
+
+    <script>
+      document.addEventListener("touchstart", function () {}, true);
+      let open = false;
+      const button = document.getElementById("nav-icon");
+      const nav = document.getElementById("nav");
+      const buttonClickHandler = function () {
+        open = !open;
+        if (open) {
+          button.classList.add("open");
+          nav.classList.add("navigation-active");
+        } else {
+          button.classList.remove("open");
+          nav.classList.remove("navigation-active");
+        }
+      };
+      button.addEventListener("click", buttonClickHandler);
+    </script>
+  </body>
+</html>

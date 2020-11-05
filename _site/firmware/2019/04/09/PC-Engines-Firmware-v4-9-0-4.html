@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta content="PC Engines" property="og:site_name" />
+  
+  <meta content="PC Engines apu coreboot Open Source Firmware v4.9.0.4" property="og:title" />
+   
+  <meta content="article" property="og:type" />
+   
+  <meta content="<h1>PC ENGINES™</h1><h3>Blog</h3>" property="og:description" />
+   
+  <meta content="http://localhost:4000/firmware/2019/04/09/PC-Engines-Firmware-v4-9-0-4.html" property="og:url" />
+   
+  <meta
+    content="2019-04-09T00:00:00+02:00"
+    property="article:published_time"
+  />
+  <meta content="http://localhost:4000/about/" property="article:author" />
+  
+
+  <meta property="og:image" content="" />
+
+   
+  <meta content="Firmware" property="article:section" />
+      
+  <title>
+    PC Engines apu coreboot Open Source Firmware v4.9.0.4
+  </title>
+  <meta
+    name="description"
+    content="PC Engines apu coreboot Open Source Firmware v4.9.0.4"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"
+  ></script>
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=PT+Sans"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Fira+Mono"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Gentium+Basic:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    rel="stylesheet"
+    integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="canonical"
+    href="http://localhost:4000/firmware/2019/04/09/PC-Engines-Firmware-v4-9-0-4.html"
+  />
+  <link rel="alternate" type="application/rss+xml" title="PC Engines"
+  href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+    <section>
+  <nav id="nav" class="navigation">
+    <div class="navigation__container">
+      <div id="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="navigation__list">
+        <li class="navigation__list-item navigation__list-item-logo">
+          <a href="/" class="logo-link">PC ENGINES&trade;</a>
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a href="/blog ">Blog</a>
+        </li>
+        <!-- <li class="navigation__list-item navigation__list-item-link">
+          <a href="/about-blog ">About this blog</a>
+        </li> -->
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://docs.opnsense.org/manual/install.html"
+            >OPNsense</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pfSense-install-guide.md"
+            >pfSense</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://github.com/pcengines/apu2-documentation/blob/master/docs/pxelinux-cfg.md"
+            >Pxelinux</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://github.com/pcengines/apu2-documentation"
+            >Documentation</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0"
+            >Regression Test Results</a
+          >
+        </li>
+        <li class="navigation__list-item navigation__list-item-link">
+          <a
+            target="_blank"
+            href="https://gitlab.com/pcengines/coreboot/pipelines"
+            >GitLab CI</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</section>
+
+    <section><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">PC Engines apu coreboot Open Source Firmware v4.9.0.4</h1>
+      <p class="post-meta">
+        <time
+          datetime="2019-04-09T00:00:00+02:00"
+          itemprop="datePublished"
+          >Apr 9, 2019</time
+        >
+      </p>
+    </div>
+  </div>
+  <img class="jumbotron-img" src="/assets/bground.jpg" alt="PC ENGINES" />
+
+  <div class="post-content container" itemprop="articleBody"><h1 id="pc-engines-apu-coreboot-open-source-firmware-v4904">PC Engines apu coreboot Open Source Firmware v4.9.0.4</h1>
+
+<h2 id="key-changes">Key changes</h2>
+
+<p>Mainline:</p>
+
+<ol>
+  <li><strong>Added possibility</strong> to reboot platform with coldboot path to ensure full
+platform reset during <strong>remote firmware update</strong>, option is intended to
+mitigate reboot issue when migrating from BIOS version older than v4.9.0.x.
+For detail how to safely update firmware remotely, please refer to
+the <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/firmware_flashing.md#corebootrom-flashing">documentation</a>.</li>
+  <li><strong>Updated SeaBIOS</strong> to rel-1.12.1.1 with <strong>new TPM menu</strong> option. For
+details <strong>how to use</strong> the menu options for <strong>TPM</strong> please refer to the
+<a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/tpm_menu.md">documentation</a>.</li>
+  <li><strong>Rebased</strong> with official coreboot repository <strong>commit</strong> 28def8b.</li>
+  <li>Created a <strong>repository structure</strong> for <a href="https://github.com/pcengines/apu2-documentation#repository-structure">apu2-documentatation</a>
+repository for <strong>better overview</strong> of the contents inside the
+<strong>documentation</strong> repository.</li>
+  <li>Performed comprehensive <strong>research</strong> of <strong>fastboot</strong> capability for PC
+Engines platforms. The outcome is available <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/research/fast_boot.md">here</a>.
+In short, it is <strong>not possible</strong> to achieve Intel like fastboot feature,
+which allows <strong>to skip full memory training</strong> during boot using stored
+configuration in MRC cache. That is also an official <strong>AMD statement</strong>, that
+the <strong>fastboot</strong> is possible <strong>only</strong> during <strong>S3 wakeup</strong>.</li>
+  <li>We have been reached by our customers with a question about
+<strong>ROCA TPM vulnerability</strong> for Infineon SLB9665 chips present on
+<strong>TPM1a modules</strong>. The engineers verified that the <strong>TPMs are vulnerable</strong>.
+For details and mitigation refer to the <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/research/ROCA.md">documentation</a>.
+The document describes how to <strong>upgrade TPM firmware</strong> and
+<strong>get rid of the vulnerability</strong>.</li>
+  <li>Added a <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/mpcie_modules.md">list of supported and verified mPCIe modules</a>.
+The list also describes <strong>known issues</strong> with modules and <strong>workarounds</strong>
+to get the <strong>modules working</strong> properly. Please check the list when
+encountered any issues with mPCIe modules. Contribution is welcome. Also be
+sure to check whether the slot is compatible with the module. In order to
+do so, look at the interfaces connected to each mPCIe slot <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/APU_mPCIe_capabilities.md">here</a>
+and the interfaces required by the module in its product specification etc.</li>
+</ol>
+
+<h2 id="statistics">Statistics</h2>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/L2FzDtTe6bLf3DB/preview" alt="Files Changed" /></p>
+
+<p>The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 7a732b4 ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">72 files changed, 2240 insertions(+), 138 deletions(-)</code></p>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/c5rmF8zXpkzYcHx/preview" alt="Process of mainlining" /></p>
+
+<p>The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release. Check the
+statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat 7a732b4 ':(exclude)gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">72 files changed, 2240 insertions(+), 138 deletions(-)</code></p>
+
+<p>Two files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree.</p>
+
+<h2 id="testing">Testing</h2>
+
+<ul>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/wRi33Zo5sdgbpWn/preview">PC Engines hardware configuration matrix</a> - hardware configurations available for testing in 3mdeb laboratory.</p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;id=96d9b426c0&amp;e=16ffa34a09">PC Engines release validation results</a> - please note there are separate sheets for each board-release.</p>
+  </li>
+</ul>
+
+<p>Test changes in this release:</p>
+
+<ul>
+  <li><strong>Added</strong> automatic test for ROCA TPM vulnerability (1 test-case)
+    <ul>
+      <li>more information about ROCA: <a href="https://en.wikipedia.org/wiki/ROCA_vulnerability">link1</a>, <a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/research/ROCA.md">link2</a></li>
+    </ul>
+  </li>
+  <li><strong>Added</strong> Quectel EP06 and WLE1216V5-20 modems detection tests (3 test-cases)</li>
+  <li><strong>Added</strong> Wake On Lan feature verification test (1 test-case)</li>
+  <li><strong>Added</strong> bootorder verification test (1 test-case)</li>
+  <li><strong>Added</strong> CPB (Core Performance Boost) enable/disable tests (3 test-cases)</li>
+  <li><strong>Fixed</strong> test regarding booting Xen over iPXE (boot and login problem)</li>
+  <li><strong>Verified</strong> OPNsense installation on all bootable devices (<a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/os-status.md">OS-table</a>)</li>
+  <li><strong>Improved</strong> cooling system in the 3mdeb laboratory (better platforms stability)</li>
+</ul>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/RtMoDYjPqpkGHBT/preview" alt="Mainline test results" /></p>
+
+<ul>
+  <li>Mainline:
+    <ul>
+      <li>PASSED: <strong>341</strong> (+23)</li>
+      <li>FAILED: <strong>11</strong> (-3)</li>
+      <li>PASSED [%]: <strong>96,88%</strong> (+1.1%)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The improvement of the PASSED tests coverage results from adding 9 test-cases
+and populating all Ethernet ports in PC Engines platforms in the rack
+infrastructure (some test-cases are now supported by all tested platforms).</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<h3 id="mainline">Mainline</h3>
+
+<ul>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.4.rom">apu1 v4.9.0.4</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.4.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.4.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.4.rom">apu2 v4.9.0.4</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.4.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.4.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.4.rom">apu3 v4.9.0.4</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.4.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.4.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.4.rom">apu4 v4.9.0.4</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.4.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.4.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.4.rom">apu5 v4.9.0.4</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.4.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.4.SHA256.sig">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<p>See how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
+
+</div>
+</article>
+</section>
+    <nav class="footer__container">
+  <a class="footer__container-link" target="_blank" href="https://pcengines.ch/"
+    >PC ENGINES</a
+  >
+</nav>
+
+    <script>
+      document.addEventListener("touchstart", function () {}, true);
+      let open = false;
+      const button = document.getElementById("nav-icon");
+      const nav = document.getElementById("nav");
+      const buttonClickHandler = function () {
+        open = !open;
+        if (open) {
+          button.classList.add("open");
+          nav.classList.add("navigation-active");
+        } else {
+          button.classList.remove("open");
+          nav.classList.remove("navigation-active");
+        }
+      };
+      button.addEventListener("click", buttonClickHandler);
+    </script>
+  </body>
+</html>

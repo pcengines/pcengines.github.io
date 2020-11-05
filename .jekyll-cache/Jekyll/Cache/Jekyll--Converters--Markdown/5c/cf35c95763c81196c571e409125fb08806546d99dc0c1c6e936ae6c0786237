@@ -1,0 +1,177 @@
+I"�<h1 id="pc-engines-apu-coreboot-open-source-firmware-v4905">PC Engines apu coreboot Open Source Firmware v4.9.0.5</h1>
+
+<h2 id="key-changes">Key changes</h2>
+
+<p>Mainline:</p>
+
+<ol>
+  <li><strong>Rebased</strong> with official coreboot repository <strong>commit</strong> fe80bf2.</li>
+  <li><strong>Fixed MP table</strong> creation. There were small <strong>errors in entries</strong> for PCI
+interrupts for <strong>xHCI, SDHCI, PCIe bridges</strong>. Also added entries for IOMMU
+and PCIe endpoint devices.</li>
+  <li>Removed redundant SVI2 message in sign-of-life during boot process.</li>
+  <li>Created <strong><a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/theory-of-operation.md">theory of operation</a></strong>
+for apu firmware features in order to help understand and properly utilize
+the features and advantages of the PC Engines firmware. They have been
+present in a form of asciinema records.</li>
+  <li>Researched <strong><a href="https://github.com/pcengines/apu2-documentation/blob/master/docs/research/USB_compliance_test.md">USB compliance tests</a></strong>
+in order to leverage problems with USB stick detection in BIOS. It is a
+first step before analyzing USB protocol on low level to search for issues
+and possible fixes.</li>
+  <li>Prepared migration for platform to use postcar stage. Usage of postcar stage
+is a requirement to keep board in the main coreboot tree for next November
+release.</li>
+</ol>
+
+<h2 id="community">Community</h2>
+
+<p>Patches sent for review:</p>
+
+<ul>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/29272">Microcode update infrastructure for AMD family 16h processors</a></p>
+  </li>
+  <li>
+    <p><a href="https://review.coreboot.org/c/coreboot/+/32363">Migrate to postcar stage</a></p>
+  </li>
+</ul>
+
+<h2 id="statistics">Statistics</h2>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/ysXTSd8kW5HX2b2/preview" alt="Files Changed" /></p>
+
+<p>The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat fe80bf2 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">76 files changed, 2102 insertions(+), 163 deletions(-)</code></p>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/yjJAC5m3m6DJBLF/preview" alt="Process of mainlining" /></p>
+
+<p>The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release. Check the
+statistics with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff --stat fe80bf2 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">76 files changed, 2102 insertions(+), 163 deletions(-)</code></p>
+
+<p>Two files have not been included in the diff as mentioned above since they are
+not a part of coreboot tree.</p>
+
+<h2 id="testing">Testing</h2>
+
+<ul>
+  <li>
+    <p><a href="https://cloud.3mdeb.com/index.php/s/wRi33Zo5sdgbpWn/preview">PC Engines hardware configuration matrix</a> - hardware configurations available for testing in 3mdeb laboratory.</p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&amp;id=96d9b426c0&amp;e=16ffa34a09">PC Engines release validation results</a> - please note there are separate sheets for each board-release.</p>
+  </li>
+</ul>
+
+<p>Test changes in this release:</p>
+
+<ul>
+  <li><strong>Added</strong> TPM menu verification test (2 test-cases)</li>
+  <li><strong>Added</strong> Clear TPM validation test (1 test-case)</li>
+  <li><strong>Added</strong> TPM PCR banks verification (2 test-cases)</li>
+  <li><strong>Improved</strong> Sign of Life test with additional restrictions regarding SoL lines</li>
+  <li><strong>Improved</strong> stability of the hardware infrastructure with an additional
+isolated network</li>
+</ul>
+
+<p><img src="https://cloud.3mdeb.com/index.php/s/yR6BYof9fAKXFd2/preview" alt="Mainline test results" /></p>
+
+<ul>
+  <li>Mainline:
+    <ul>
+      <li>PASSED: <strong>360</strong> (+19)</li>
+      <li>FAILED: <strong>12</strong> (+1)</li>
+      <li>PASSED [%]: <strong>96.77%</strong> (-0.11%)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The small reduction of the PASSED tests coverage results from returning problem
+with stable XEN/Core booting and USB sticks detection on apu5.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<h3 id="mainline">Mainline</h3>
+
+<ul>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.5.rom">apu1 v4.9.0.5</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.5.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.9.0.5.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.5.rom">apu2 v4.9.0.5</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.5.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.9.0.5.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.5.rom">apu3 v4.9.0.5</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.5.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.9.0.5.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.5.rom">apu4 v4.9.0.5</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.5.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.9.0.5.SHA256.sig">SHA256 sig</a></p>
+  </li>
+  <li>
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.5.rom">apu5 v4.9.0.5</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.5.SHA256">SHA256 file</a></p>
+
+    <p><a href="https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.9.0.5.SHA256.sig">SHA256 sig</a></p>
+  </li>
+</ul>
+
+<p>See how to verify the signatures on <a href="https://asciinema.org/a/227035">asciinema</a></p>
+
+<h2 id="coming-soon">Coming soon</h2>
+
+<p>Feature and improvements on the roadmap:</p>
+
+<ol>
+  <li>Verified and measured boot with vboot and TPM. Advantages:
+    <ul>
+      <li>signed firmware components; each boot stage is signed with keys, where
+public part of the key lies in recovery partition</li>
+      <li>possibility to lock recovery partition and protect the keys while keeping
+updatable partitions unlocked for firmware upgrades</li>
+      <li>measured boot stages and firmware components; ensure Your firmware was not
+tampered thanks to PCRs in TPM</li>
+    </ul>
+  </li>
+  <li>coreboot image layout in flashmap allowing to have few CBFS images in one
+ROM. Advantages:
+    <ul>
+      <li>one recovery full firmware partition, one or two updatable
+partitions with full firmware. In case of failed update of one partition,
+other partitions still work and vboot will fall back to other working
+partition</li>
+    </ul>
+  </li>
+  <li>Tianocore UEFI payload integration. Build image with UEFI payload instead of
+SeaBIOS payload and boot UEFI OSes.</li>
+  <li>Blog post presenting the state of Meltdown and Spectre on apu2 with and
+without microcode updates. Coming end of May.</li>
+  <li>ECC memory presence status in SMBIOS/DMI tables in legacy BIOS.</li>
+</ol>
+:ET

@@ -4,14 +4,14 @@ title: Blog
 permalink: /blog/
 ---
 
-<section>
+<section class="jumbotron__wrapper">
     <div class="jumbotron">
         <div class="container">
             <span class="header-decor"></span>
             <h1><span>PC Engines</span> Blog</h1>
         </div>
     </div>
-    <img class="jumbotron-img" src="/assets/bground.jpg" alt="PC ENGINES" />
+    <div class="jumbotron-img"></div>
 </section>
 
 <section id="page-content">

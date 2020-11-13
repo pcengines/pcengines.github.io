@@ -297,6 +297,7 @@ a.green-text:hover {
 .about__info {
   margin-top: 50px;
   width: 100%;
+  text-align: center;
 }
 
 .about__contact {

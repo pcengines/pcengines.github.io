@@ -1,5 +1,5 @@
 :root {
-  --pcengines-green: #38d430;
+  --pcengines-green: #38d430;;
   --pcengines-white: #ffffff;
   --pcengines-darkerwhite: #e7e7e7;
   --pcengines-lightgray: #abb0b2;
@@ -297,6 +297,7 @@ a.green-text:hover {
 .about__info {
   margin-top: 50px;
   width: 100%;
+  text-align: center;
 }
 
 .about__contact {

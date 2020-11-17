@@ -1,5 +1,5 @@
 :root {
-  --pcengines-green: #38d430;;
+  --pcengines-green: #38d430;
   --pcengines-white: #ffffff;
   --pcengines-darkerwhite: #e7e7e7;
   --pcengines-lightgray: #abb0b2;
@@ -259,10 +259,20 @@ a.green-text:hover {
 .container--image--about {
   position: relative;
   background: center url("../assets/about_page_cover.jpg");
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
   width: 100%;
   z-index: 0;
-  min-height: 360px;
+  height: 393px;
+}
+
+.container--image--about-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7) !important;
 }
 
 .wrapper {

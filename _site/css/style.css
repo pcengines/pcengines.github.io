@@ -115,12 +115,6 @@ a.green-text:hover {
   color: var(--pcengines-white) !important;
 }
 
-.form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .form label {
   width: 100%;
   padding: 0 2em 0 0;
@@ -128,37 +122,40 @@ a.green-text:hover {
 }
 
 .form label h2 {
+  font-size: 26px;
   color: var(--pcengines-white);
   font-weight: 500;
-  text-shadow: 2px 2px var(--pcengines-black);
+  text-shadow: 1px 1px #2e2e2e;
+  margin-top: 0!important;
+  margin-bottom: 0!important;
 }
 
+
 .form input.email {
-  border-radius: 3px;
   margin: 0 0.2em 0 0;
   max-width: 240px;
-  font-size: 15px;
+  font-size: 17px;
   border: 1px solid var(--pcengines-lightgray);
   color: var(--pcengines-darker);
   background-color: var(--pcengines-white);
   box-sizing: border-box;
-  height: 32px;
+  height: 40px;
   min-width: 200px;
-  padding: 0px 0.4em;
+  padding: 0.3em 1em;
 }
 
 .form .button {
   background: var(--pcengines-green) !important;
-  border-radius: 3px;
   color: var(--pcengines-white);
+  font-weight: 500;
+  padding: 0.5em!important;
+  text-transform: uppercase;
   max-width: 240px;
-  font-size: 15px;
+  font-size: 17px;
   border: none;
   letter-spacing: 0.03em;
   box-sizing: border-box;
-  height: 32px;
-  line-height: 32px;
-  padding: 0 18px;
+  height: 40px;
   display: inline-block;
   margin: 0;
   cursor: pointer;
@@ -218,12 +215,12 @@ a.green-text:hover {
 }
 
 .container--form {
-  border: 1px solid var(--pcengines-white);
+  border: 3px solid var(--pcengines-lightgray);
   align-self: center;
   max-width: 570px;
-  padding: 0 2em;
+  padding: 1.5em 2.5em;
   margin: 2em 0;
-  background-color: rgba(56, 60, 56, 0.5);
+  background-color: rgba(32, 32, 32, 0.8);
 }
 
 .container--image {
@@ -625,6 +622,19 @@ footer {
     width: 100%;
   }
 
+  .form label h2 {
+    font-size: 22px;
+    margin-bottom: 20px!important;
+  }
+
+  .container--form {
+    padding: 1em 2em 0.5em 2em;
+  }
+
+  .form input.email {
+    text-align: center;
+  }
+
   .source-code-links {
     justify-content: space-between;
   }
@@ -855,6 +865,7 @@ footer {
   .nav .menu-icon {
     display: none;
   }
+
 }
 
 @media screen and (max-width: 1080px) {
@@ -882,6 +893,10 @@ footer {
 
   #nav-icon {
     display: block;
+  }
+
+  .form label h2 {
+    font-size: 24px!important;
   }
 }
 

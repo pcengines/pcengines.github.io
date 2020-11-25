@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "PC Engines apu coreboot Open Source Firmware v4.12.0.7"
+title:  "PC Engines apu coreboot Open Source Firmware v4.13.0.1"
 date:   2020-11-27
 categories: Firmware
 ---
-# PC Engines apu coreboot Open Source Firmware v4.12.0.7
+# PC Engines apu coreboot Open Source Firmware v4.13.0.1
 
 ## Key changes
 
 Mainline:
 
-1. **Rebased** with official coreboot repository **commit** 957a363.
+1. **Rebased** with official coreboot repository **commit** 9b7dc76.
 
 ## coreboot community
 
@@ -26,10 +26,10 @@ Patches merged by community:
 ## Statistics
 
 ```
-git diff --stat 957a363 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
+git diff --stat 9b7dc76 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
 ```
 
-`119 files changed, 4520 insertions(+), 574 deletions(-)`
+`107 files changed, 4333 insertions(+), 422 deletions(-)`
 
 ## Testing
 
@@ -37,45 +37,45 @@ git diff --stat 957a363 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(e
 
 ### Mainline
 
-* [apu1 v4.12.0.7.zip](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.7.zip)
+* [apu1 v4.13.0.1.zip](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.13.0.1.zip)
 
-  [apu1 v4.12.0.7.rom](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.7.rom)
+  [apu1 v4.13.0.1.rom](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.13.0.1.rom)
 
-  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.7.SHA256)
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.13.0.1.SHA256)
 
-  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.12.0.7.SHA256.sig)
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.13.0.1.SHA256.sig)
 
-* [apu2 v4.12.0.7.zip](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.7.zip)
+* [apu2 v4.13.0.1.zip](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.13.0.1.zip)
 
-  [apu2 v4.12.0.7.rom](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.7.rom)
+  [apu2 v4.13.0.1.rom](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.13.0.1.rom)
 
-  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.7.SHA256)
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.13.0.1.SHA256)
 
-  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.12.0.7.SHA256.sig)
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.13.0.1.SHA256.sig)
 
-* [apu3 v4.12.0.7.zip](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.7.zip)
+* [apu3 v4.13.0.1.zip](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.13.0.1.zip)
 
-  [apu3 v4.12.0.7.rom](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.7.rom)
+  [apu3 v4.13.0.1.rom](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.13.0.1.rom)
 
-  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.7.SHA256)
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.13.0.1.SHA256)
 
-  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.12.0.7.SHA256.sig)
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu3/apu3_v4.13.0.1.SHA256.sig)
 
-* [apu4 v4.12.0.7.zip](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.7.zip)
+* [apu4 v4.13.0.1.zip](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.13.0.1.zip)
 
-  [apu4 v4.12.0.7.rom](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.7.rom)
+  [apu4 v4.13.0.1.rom](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.13.0.1.rom)
 
-  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.7.SHA256)
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.13.0.1.SHA256)
 
-  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.12.0.7.SHA256.sig)
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu4/apu4_v4.13.0.1.SHA256.sig)
 
-* [apu5 v4.12.0.7.zip](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.7.zip)
+* [apu5 v4.13.0.1.zip](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.13.0.1.zip)
 
-  [apu5 v4.12.0.7.rom](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.7.rom)
+  [apu5 v4.13.0.1.rom](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.13.0.1.rom)
 
-  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.7.SHA256)
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.13.0.1.SHA256)
 
-  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.12.0.7.SHA256.sig)
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.13.0.1.SHA256.sig)
 
 See how to verify the signatures on [asciinema](https://asciinema.org/a/335785)
 

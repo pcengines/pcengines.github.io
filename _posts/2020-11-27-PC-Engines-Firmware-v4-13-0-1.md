@@ -12,17 +12,6 @@ Mainline:
 
 1. **Rebased** with official coreboot repository **commit** 9b7dc76.
 
-## coreboot community
-
-Patches merged by community:
-
-* [cpu/intel/model_206ax: Get CPU frequencies for SMBIOS type 4](https://review.coreboot.org/c/coreboot/+/47058)
-
-**Total:**
-
-* 20 lines added,
-* 0 lines removed,
-
 ## Statistics
 
 ```
@@ -76,6 +65,14 @@ git diff --stat 9b7dc76 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(e
   [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.13.0.1.SHA256)
 
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu5/apu5_v4.13.0.1.SHA256.sig)
+
+* [apu6 v4.13.0.1.zip](https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.13.0.1.zip)
+
+  [apu6 v4.13.0.1.rom](https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.13.0.1.rom)
+
+  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.13.0.1.SHA256)
+
+  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.13.0.1.SHA256.sig)
 
 See how to verify the signatures on [asciinema](https://asciinema.org/a/335785)
 

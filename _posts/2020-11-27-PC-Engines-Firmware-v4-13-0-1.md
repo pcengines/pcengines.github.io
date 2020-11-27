@@ -14,13 +14,48 @@ Mainline:
 
 ## Statistics
 
+![Files Changed](https://cloud.3mdeb.com/index.php/s/gDfnpETCC9zQr8K/preview)
+
+The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:
+
 ```
 git diff --stat 9b7dc76 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
 ```
 
 `107 files changed, 4333 insertions(+), 422 deletions(-)`
 
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/73aERKHeNCdTTJ7/preview)
+
+The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release.
+
+Three files have not been included in the diff as mentioned above since they
+are not a part of coreboot tree.
+
 ## Testing
+
+* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/sakiLj98Zxqz2D3/preview) - hardware configurations available for testing in 3mdeb laboratory.
+
+* [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
+
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/eZS28Jro7HZrbqT/preview)
+
+* Mainline:
+  * PASSED: **567** (+2)
+  * FAILED: **7** (-2)
+  * PASSED [%]: **98.78** (+0.35%)
+
+### Key Changes in testing
+
+1. Introduced new way of backup the regression logs in case of external
+   CI errors.
+
+2. Changed pyte library to a fork that ignores bad escape code errors.
+
+3. Some SD cards has been exchanged.
+
 
 ## Binaries
 

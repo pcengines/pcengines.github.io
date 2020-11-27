@@ -122,8 +122,8 @@ a.green-text:hover {
 }
 
 .form label h2 {
-  font-size: 26px;
-  color: var(--pcengines-white);
+  font-size: 23px;
+  color: var(--pcengines-darkerwhite);
   font-weight: 500;
   text-shadow: 1px 1px #2e2e2e;
   margin-top: 0!important;
@@ -631,7 +631,7 @@ footer {
   }
 
   .container--form {
-    border: 2px solid var(--pcengines-gray);
+    border: 3px solid var(--pcengines-gray);
     padding: 0.5em 1em 0 1em;
     margin-top: 0!important;
   }

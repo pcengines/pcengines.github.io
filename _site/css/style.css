@@ -215,11 +215,11 @@ a.green-text:hover {
 }
 
 .container--form {
-  border: 3px solid var(--pcengines-gray);
+  border: 2px solid var(--pcengines-lightgray);
   align-self: center;
   max-width: 570px;
-  padding: 1.5em 2.5em;
-  margin: 2em 0;
+  padding: 1em 2em;
+  margin-top: 2.5em;
   background-color: rgba(32, 32, 32, 0.8);
 }
 
@@ -625,12 +625,15 @@ footer {
   }
 
   .form label h2 {
-    font-size: 22px;
-    margin-bottom: 20px!important;
+    font-size: 20px;
+    margin-bottom: 10px!important;
+    color: var(--pcengines-darkerwhite);
   }
 
   .container--form {
-    padding: 1em 2em 0.5em 2em;
+    border: 2px solid var(--pcengines-gray);
+    padding: 0.5em 1em 0 1em;
+    margin-top: 0!important;
   }
 
   .form input.email {

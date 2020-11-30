@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.13.0.1"
-date:   2020-11-27
+date:   2020-11-30
 categories: Firmware
 ---
 # PC Engines apu coreboot Open Source Firmware v4.13.0.1
@@ -51,11 +51,8 @@ are not a part of coreboot tree.
 
 1. Introduced new way of backup the regression logs in case of external
    CI errors.
-
 2. Changed pyte library to a fork that ignores bad escape code errors.
-
 3. Some SD cards has been exchanged.
-
 
 ## Binaries
 

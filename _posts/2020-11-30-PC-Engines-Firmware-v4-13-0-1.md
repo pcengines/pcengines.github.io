@@ -106,7 +106,7 @@ are not a part of coreboot tree.
 
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.13.0.1.SHA256.sig)
 
-See how to verify the signatures on [asciinema](https://asciinema.org/a/335785)
+See how to verify the signatures on [asciinema](https://asciinema.org/a/376207)
 
 ## What we planned
 

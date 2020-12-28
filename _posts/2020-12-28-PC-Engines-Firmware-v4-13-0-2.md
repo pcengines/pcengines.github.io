@@ -28,14 +28,31 @@ in official coreboot repository.
 
 ## Statistics
 
+![Files Changed](https://cloud.3mdeb.com/index.php/s/b4J9ZsSKcyfnF2d/preview)
+
+The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:
+
 ```
 git diff --stat 8edb48b ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
 ```
 
 `106 files changed, 4328 insertions(+), 422 deletions(-)`
 
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/WL5We9Lm4T6CkDR/preview)
+
+The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release.
+
+Three files have not been included in the diff as mentioned above since they
+are not a part of coreboot tree.
 
 ## Testing
+
+* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/sakiLj98Zxqz2D3/preview) - hardware configurations available for testing in 3mdeb laboratory.
+
+* [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
 
 ## Binaries

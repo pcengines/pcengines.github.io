@@ -54,6 +54,18 @@ are not a part of coreboot tree.
 
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/H3Me4DR5LmZ24ei/preview)
+
+* Mainline:
+  * PASSED: **567** (+5)  
+  * FAILED: **6** (-1)  
+  * PASSED [%]: **98.95** (+0.18%)
+
+### Key Changes in testing
+
+1. Rebased `dbbot` library.
+2. Changed timeouts to handle some OS booting failures.
+3. Some USB dongles have been exchanged.
 
 ## Binaries
 

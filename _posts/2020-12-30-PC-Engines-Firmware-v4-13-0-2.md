@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.13.0.2"
-date:   2020-12-28
+date:   2020-12-30
 categories: Firmware
 ---
+
 # PC Engines apu coreboot Open Source Firmware v4.13.0.2
 
 ## Key changes
@@ -12,19 +13,6 @@ Mainline:
 
 1. **Rebased** with official coreboot repository **commit** 8edb48b.
 2. **Fixed** [serial number calculation on APU1](https://github.com/pcengines/coreboot/issues/436). Before, APUs1 had serial number incorrectly set to -64. Now, the serial number is correctly calculated from the MAC address of the first NIC as shown [here](https://www.pcengines.ch/ht_macid.htm).
-
-## coreboot community
-
-Patches merged by community:
-
-* [util/cbfstool/fit.c: Add support for adding Boot Guard manifests](https://review.coreboot.org/c/coreboot/+/48469)
-
-**Total:**
-
-* 45 lines added,
-* 2 lines removed,
-
-in official coreboot repository.
 
 ## Statistics
 
@@ -38,7 +26,7 @@ excluded from statistics). Check the statistics with:
 git diff --stat 8edb48b ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
 ```
 
-`106 files changed, 4328 insertions(+), 422 deletions(-)`
+`107 files changed, 4333 insertions(+), 422 deletions(-)`
 
 ![Process of mainlining](https://cloud.3mdeb.com/index.php/s/WL5We9Lm4T6CkDR/preview)
 
@@ -63,7 +51,8 @@ are not a part of coreboot tree.
 
 ### Key Changes in testing
 
-1. Rebased `dbbot` library.
+1. Rebased `dbbot` library to handle issue with automated test results
+   uploading.
 2. Changed timeouts to handle some OS booting failures.
 3. Some USB dongles have been exchanged.
 

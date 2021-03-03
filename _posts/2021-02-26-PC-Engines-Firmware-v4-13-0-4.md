@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.13.0.4"
-date:   2021-02-26
+date:   2021-03-03
 categories: Firmware
 ---
 
@@ -15,16 +15,40 @@ Mainline:
 
 ## Statistics
 
+![Files Changed](https://cloud.3mdeb.com/index.php/s/7SX8SsBY7dyACso/preview)
+
+The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:
+
 ```
 git diff --stat c79fc47 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
 ```
 
 `106 files changed, 4319 insertions(+), 413 deletions(-)`
 
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/JJ3CJHq8j8eD6ZE/preview)
+
+The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release.
 
 ## Testing
 
+* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/sakiLj98Zxqz2D3/preview) - hardware configurations available for testing in 3mdeb laboratory.
+
+* [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
+
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/a2NDZk6xYTrGm9N/preview)
+
+* Mainline:
+  * PASSED: **568**  
+  * FAILED: **4**
+  * PASSED [%]: **99.30**
+
 ### Key Changes in testing
+
+1. Fixed automation script that is responsible for pulling regression test 
+results to the [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09).
 
 ## Binaries
 

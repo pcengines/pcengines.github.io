@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.13.0.4"
-date:   2021-03-03
+date:   2021-03-04
 categories: Firmware
 ---
 
@@ -119,15 +119,6 @@ See how to verify the signatures on [asciinema](https://asciinema.org/a/376207)
 
    **VERIFICATION**
 
-3. Vital Product Data (VPD) support. User will have possibility to store
-   and change VPD configuration in Read-Write section of SPI flash. Moreover,
-   default VPD keys and values will be stored in Read-Only region to protect
-   data against corruption. Also, sortbootorder runtime configuration will be
-   stored in VPD Read-Write section, so access to it will be possible in OS
-   via dedicated util.
-
-   **VERIFICATION**
-
 ## Coming soon
 
 Feature and improvements on the roadmap:
@@ -139,9 +130,3 @@ Feature and improvements on the roadmap:
 2. Reorganize runtime configuration by making it persistent across updates and
    accessible from user space. Also prepare a tool for offline binary
    modification.
-3. Vital Product Data (VPD) support. User will have possibility to store
-   and change VPD configuration in Read-Write section of SPI flash. Moreover,
-   default VPD keys and values will be stored in Read-Only region to protect
-   data against corruption. Also, sortbootorder runtime configuration will be
-   stored in VPD Read-Write section, so access to it will be possible in OS
-   via dedicated util.

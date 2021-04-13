@@ -47,9 +47,7 @@ coreboot fork against the rebase point for a given release.
 
 ### Key Changes in testing
 
-1. Resolved problems with scripts that caused failures during the process. 
-This problem has forced manual checking results, which has affected the time 
-spent on the whole process.
+1. There were not major changes in the testing infrastructure.
 
 ## Binaries
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.13.0.5"
-date:   2021-04-02
+date:   2021-04-13
 categories: Firmware
 ---
 
@@ -15,6 +15,11 @@ Mainline:
 
 ## Statistics
 
+![Files Changed](https://cloud.3mdeb.com/index.php/s/J8jepHqk8K9nRHe/preview)
+
+The chart shows the total files changed from release tag against the rebase
+point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
+excluded from statistics). Check the statistics with:
 
 ```
 git diff --stat e7a68ec ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
@@ -22,9 +27,27 @@ git diff --stat e7a68ec ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(e
 
 `106 files changed, 4422 insertions(+), 404 deletions(-)`
 
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/n8QLLPsNayMq637/preview)
+
+The chart represents the total line added and deleted on the PC Engines
+coreboot fork against the rebase point for a given release.
+
 ## Testing
 
+* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/oWDDFxNDZBtJDQP/preview) - hardware configurations available for testing in 3mdeb laboratory.
+
+* [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
+
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/sF67YzfFekgYn8d/preview)
+
+* Mainline:
+  * PASSED: **569** (+1)
+  * FAILED: **4**
+  * PASSED [%]: **99.30**
+
 ### Key Changes in testing
+
+1. There were no major changes in the testing infrastructure.
 
 ## Binaries
 

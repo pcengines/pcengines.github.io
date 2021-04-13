@@ -34,7 +34,7 @@ coreboot fork against the rebase point for a given release.
 
 ## Testing
 
-* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/sakiLj98Zxqz2D3/preview) - hardware configurations available for testing in 3mdeb laboratory.
+* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/oWDDFxNDZBtJDQP/preview) - hardware configurations available for testing in 3mdeb laboratory.
 
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
@@ -47,7 +47,7 @@ coreboot fork against the rebase point for a given release.
 
 ### Key Changes in testing
 
-1. There were not major changes in the testing infrastructure.
+1. There were no major changes in the testing infrastructure.
 
 ## Binaries
 

@@ -15,7 +15,7 @@ Mainline:
 
 ## Statistics
 
-![Files Changed](https://cloud.3mdeb.com/index.php/s/J8jepHqk8K9nRHe/preview)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/3jWAJ87GmtmD7eF/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md and gitlab-ci.yml
@@ -27,7 +27,7 @@ git diff --stat e7a68ec ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(e
 
 `106 files changed, 4422 insertions(+), 404 deletions(-)`
 
-![Process of mainlining](https://cloud.3mdeb.com/index.php/s/n8QLLPsNayMq637/preview)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/Sbq39A7iAiK63Ny/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release.
@@ -38,16 +38,16 @@ coreboot fork against the rebase point for a given release.
 
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/sF67YzfFekgYn8d/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/3K36WaeCGJ3q8wQ/preview)
 
 * Mainline:
-  * PASSED: **569** (+1)
-  * FAILED: **4**
-  * PASSED [%]: **99.30**
+  * PASSED: **662** (+95)
+  * FAILED: **5** (+1)
+  * PASSED [%]: **99.25** (-0,05%)
 
 ### Key Changes in testing
 
-1. There were no major changes in the testing infrastructure.
+1. Added new platform to the testing infrastructure (APU6).
 
 ## Binaries
 

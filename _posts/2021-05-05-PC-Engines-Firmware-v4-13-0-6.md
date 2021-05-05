@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.13.0.6"
-date:   2021-05-04
+date:   2021-05-05
 categories: Firmware
 ---
 
@@ -47,7 +47,7 @@ coreboot fork against the rebase point for a given release.
 
 ### Key Changes in testing
 
-1. There were no major changes in the testing infrastructure.
+1. Added new set of automatic tests for apu6a test setup.
 
 ## Binaries
 

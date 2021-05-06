@@ -123,30 +123,3 @@ coreboot fork against the rebase point for a given release.
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.13.0.6.SHA256.sig)
 
 See how to verify the signatures on [asciinema](https://asciinema.org/a/376207)
-
-## What we planned
-
-1. Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
-   the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
-   existing entries in TPM2 log area. `cbmem` utility also lacks support for
-   displaying TPM2 log area.
-
-   **WORK IN PROGRESS**
-
-2. Reorganize runtime configuration by making it persistent across updates and
-   accessible from user space. Also prepare a tool for offline binary
-   modification.
-
-   **VERIFICATION**
-
-## Coming soon
-
-Feature and improvements on the roadmap:
-
-1. Improve the support of TPM2 in coreboot and SeaBIOS. Currently there is only
-   the TCPA (TPM1.2) log support in coreboot. Additionally SeaBIOS overwrites
-   existing entries in TPM2 log area. `cbmem` utility also lacks support for
-   displaying TPM2 log area.
-2. Reorganize runtime configuration by making it persistent across updates and
-   accessible from user space. Also prepare a tool for offline binary
-   modification.

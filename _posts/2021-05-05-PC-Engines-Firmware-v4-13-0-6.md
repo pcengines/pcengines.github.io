@@ -13,6 +13,27 @@ Mainline:
 
 1. **Rebased** with official coreboot repository **commit** a4c09c5.
 
+## coreboot community
+
+Patches sent for review:
+
+* [nb/amd/{agesa,pi}: Avoid overflows during DRAM calculation](https://review.coreboot.org/c/coreboot/+/52922)
+* [nb/amd/pi/00730F01/northbridge.c: Use generic allocation functions](https://review.coreboot.org/c/coreboot/+/52926)
+* [nb/amd/pi/00730F01/northbridge.c: Report missing resources](https://review.coreboot.org/c/coreboot/+/52927)
+* [nb/amd/pi/00730F01: enable RESOURCE_ALLOCATOR_V4](https://review.coreboot.org/c/coreboot/+/52761)
+* [cpu/amd/pi/00730F01/model_16_init.c: create correct MTRR solution](https://review.coreboot.org/c/coreboot/+/52762)
+* [nb/amd/agesa/family14/northbridge.c: Use generic allocation functions](https://review.coreboot.org/c/coreboot/+/52934)
+* [nb/amd/agesa/family14/northbridge.c:  Report missing resources](https://review.coreboot.org/c/coreboot/+/52935)
+* [northbridge/amd/agesa/family14: enable RESOURCE_ALLOCATOR_V4](https://review.coreboot.org/c/coreboot/+/52780)
+* [cpu/amd/agesa/family14/model_14_init.c: create correct MTRR solution](https://review.coreboot.org/c/coreboot/+/52781)
+* [mainboard/pcengines/apu1/OemCustomize.c: make AGESA AmdInitPost happy](https://review.coreboot.org/c/coreboot/+/52779)
+* [mb/pcengines/apu2/OemCustomize.c: make AGESA AmdInitPost happy](https://review.coreboot.org/c/coreboot/+/52759)
+
+Total:
+
+* Lines added: 329
+* Lines removed: 618
+
 ## Statistics
 
 ![Files Changed](https://cloud.3mdeb.com/index.php/s/4mrBz3eRSyDyrms/preview)
@@ -47,7 +68,7 @@ coreboot fork against the rebase point for a given release.
 
 ### Key Changes in testing
 
-1. Added new set of automatic tests for apu6a test setup.
+1. Enabled more automatic tests for apu6a setup.
 
 ## Binaries
 

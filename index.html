@@ -432,8 +432,18 @@
           <ul>
               <li>Changed:</li>
               <ol>
-                  <li>rebased with official coreboot repository commit a4c09c5</li>
-              </ol>
+		  <li>rebased with official coreboot repository commit 6a936fc</li>
+		  <li>updated sortbootorder to v4.6.21</li>
+		  <li>updated SeaBIOS to rel-1.14.0.1</li>
+	      </ol>
+	      <li>Fixed:</li>
+              <ol>
+		<li>inconsistent MTRRs warning in Linux</li>
+	      </ol>
+	      <li>Added:</li>
+	      <ol>
+		<li>persistent bootorder and runtime configuration in separate FMAP region for apu2-apu6 platforms</li>
+	      </ol>
               <li>Known issues:</li>
               <ol>
                   <li><a href="https://github.com/pcengines/coreboot/issues/329">apuled driver doesn't work in FreeBSD.</a> Check the <a target="_blank" href="https://github.com/pcengines/apu2-documentation/blob/master/docs/gpios.md">GPIOs</a> document for workaround.</li>

@@ -18,13 +18,6 @@ Mainline:
 
 ## coreboot community
 
-Patches sent for review:
-
-* [nb/amd/agesa/family14/northbridge.c: Use generic allocation functions](https://review.coreboot.org/c/coreboot/+/52934)
-* [nb/amd/agesa/family14/northbridge.c:  Report missing resources](https://review.coreboot.org/c/coreboot/+/52935)
-* [northbridge/amd/agesa/family14: enable RESOURCE_ALLOCATOR_V4](https://review.coreboot.org/c/coreboot/+/52780)
-* [cpu/amd/agesa/family14/model_14_init.c: create correct MTRR solution](https://review.coreboot.org/c/coreboot/+/52781)
-
 Patches merged by community:
 
 * [nb/amd/{agesa,pi}: Avoid overflows during DRAM calculation](https://review.coreboot.org/c/coreboot/+/52922)
@@ -66,16 +59,19 @@ coreboot fork against the rebase point for a given release.
 
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/qBaSnEptzSWTeHE/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/2mnDTRgkKwsY5Tp/preview)
 
 * Mainline:
-  * PASSED: **TBD**
-  * FAILED: **TBD**
-  * PASSED [%]: **TBD**
+  * PASSED: **679** (-6)
+  * FAILED: **18** (+13)
+  * PASSED [%]: **97.42** (-1,86%)
+
+Some OSes had problems to be installed on apu4 and apu6. Board status tests
+which depend on them failed as well which resulted in the increased failures.
 
 ### Key Changes in testing
 
-No changes.
+* Enabled 7 more tests for apu6
 
 ## Binaries
 

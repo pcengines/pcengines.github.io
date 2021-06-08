@@ -3,11 +3,15 @@
 #### To create a new post
 
 - Create a .markdown file inside _posts folder.
+
 - Name the file according to the standard jekyll format.
+
 ```
    2016-03-30-i-love-design.markdown
 ```
+
 - Write the Front Matter and content in the file.
+
     ```
           ---
           layout: post | default | page
@@ -16,7 +20,7 @@
           categories: String | Array of Strings Category / Categories 
           ---
     ```
-    
+
     ```
         ---
         layout: post
@@ -28,15 +32,21 @@
 
 
 #### Create new pages, such a breeze!
+
 - Create a .md file in the root directory.
+- 
 - Name the file with the desired page link name.
+
 ```
    about.md
 ```
+
 ```
    design.md
 ```
+
 - Write the Front Matter and content in the file.
+
 ```
           ---
           layout: page
@@ -52,4 +62,25 @@
         permalink:   /science/
         tagline : "Humanity is overrated."
         ---
-```      
+```
+
+#### Local preview
+
+Instructions for Ubuntu:
+
+1. Installation (do it only once):
+
+```shell
+sudo apt-get install ruby-full build-essential zlib1g-dev
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+gem install jekyll bundler
+```
+
+2. Rebuilding and launching preview server:
+
+```shell
+bundle install
+bundle exec jekyll serve
+```

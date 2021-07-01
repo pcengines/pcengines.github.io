@@ -15,7 +15,7 @@ Mainline:
 
 ## Statistics
 
-![Files Changed](TBD)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/xw8btMWNSg9cDwj/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml
@@ -27,35 +27,54 @@ git diff --stat 1c43d92 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(e
 
 `110 files changed, 4202 insertions(+), 340 deletions(-)`
 
-![Process of mainlining](TBD)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/DsseDcHxR9XqjNj/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release.
 
 ## Testing
 
-* [PC Engines hardware configuration matrix](TBD) - hardware configurations
-  available for testing in 3mdeb laboratory.
+* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/oWDDFxNDZBtJDQP/preview) -
+  hardware configurations available for testing in 3mdeb laboratory.
 
 * [PC Engines release validation results](https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0) -
   please note there are separate sheets for each board-release.
 
-![Mainline test results](TBD)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/KJE4bWzQBok47rP/preview)
 
 * Mainline:
-  * PASSED: **679** (-6)
-  * FAILED: **18** (+13)
-  * PASSED [%]: **97.42** (-1,86%)
+  * PASSED: **686** (+7)
+  * FAILED: **18** (+0)
+  * PASSED [%]: **97.44** (+0,02%)
 
-Some OSes had problems to be installed on apu4 and apu6. Board status tests
-which depend on them failed as well which resulted in the increased failures.
+Debian network installers have problems to install themselves on apu4 and apu6
+when a preseed file is passed for unattended installation. Manual installation
+doesn't show these problems. Issue is still under investigation.
 
 ### Key Changes in testing
 
-* Fixed the Debian installation tests by correcting the preseed files
-* Added test for iPXE HTTPS support
-* Corrected tests for UART C/D enabling after changes in the firmware
-* Corrected IOMMU test configuration on apu3 and apu4
+* Fixed the Debian installation tests by correcting the preseed files.
+* Added test for iPXE HTTPS support.
+* Corrected tests for UART C/D enabling after changes in the firmware.
+* Corrected IOMMU test configuration on apu3 and apu4.
+* Corrected command execution in iPXE which was generating many false negative
+  test results.
+* Increased timeouts when verifying checkpoints in OS installation. Some
+  storage drives are slower and need more time for certain installation phases.
+* Fixed the paths to control GPIOs under Linux system on other platforms than
+  apu2.
+* Fixed the description of SD cards behind USB bridge that cause incorrect
+  qualification for SD performance tests on apu1 and apu5.
+* Fixed IOMMU not being enabled during Xen IOMMU test.
+* Improved reliability sign of life checks using regexps.
+* Improved extraction of SeaBIOS boot menu entries.
+* Corrected power cycling routines.
+* Fixed sending keys containing escape sequences to iPXE which caused the
+  sequences to break and send unwanted characters to serial console.
+* Added additional checks for command failures in MBR deletion and wakeonlan.
+* Fixed the SPI write protection being accidentally set without block
+  protection.
+* Improved the reliability of the serial enable/disable with S1 button.
 
 ## Binaries
 

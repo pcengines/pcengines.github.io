@@ -140,4 +140,5 @@ flashrom -p internal -w apuX_v4.14.0.2.rom --fmap -i COREBOOT
 ```
 
 The persistent runtime configuration works only when migrating from versions
-v4.14.0.1 and later.
+v4.14.0.1 and later. The feature is not yet supported on apu1. Flashrom version
+needs to v1.1 or newer.

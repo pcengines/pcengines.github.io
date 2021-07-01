@@ -129,3 +129,15 @@ doesn't show these problems. Issue is still under investigation.
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.14.0.2.SHA256.sig)
 
 See how to verify the signatures on [asciinema](https://asciinema.org/a/417462)
+
+**IMPORTANT**
+
+To update the firmware and remain the runtime configuration unchanged please
+use the following command:
+
+```
+flashrom -p internal -w apuX_v4.14.0.2.rom --fmap -i COREBOOT
+```
+
+The persistent runtime configuration works only when migrating from versions
+v4.14.0.1 and later.

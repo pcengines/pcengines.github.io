@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.14.0.3"
-date:   2021-08-06
+date:   2021-08-13
 categories: Firmware
 ---
 
@@ -25,8 +25,7 @@ and regression.sh excluded from statistics). Check the statistics with:
 git diff --stat c049c80 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
 ```
 
-`110 files changed, 4249 insertions(+), 340 deletions(-)`
-
+`110 files changed, 4256 insertions(+), 340 deletions(-)`
 
 ![Process of mainlining](https://cloud.3mdeb.com/index.php/s/GeRboni6D9jNnqP/preview)
 
@@ -44,13 +43,14 @@ coreboot fork against the rebase point for a given release.
 ![Mainline test results](https://cloud.3mdeb.com/index.php/s/zYHKdEKjdgAgx9o/preview)
 
 * Mainline:
-  * PASSED: **632** (-64)
-  * FAILED: **57** (-39)
-  * PASSED [%]: **91.73** (−5.71%)
+  * PASSED: **664** (-22)
+  * FAILED: **21** (+3)
+  * PASSED [%]: **96.93** (−0.51%)
 
-Debian network installers have problems to install themselves on apu4 and apu6
-when a preseed file is passed for unattended installation. Manual installation
-doesn't show these problems. Issue is still under investigation.
+Debian network installers have problems to install themselves on apu4 and apu6.
+Tests that depend on the successful installation of Debian have not been
+conducted, which is why the PASS number is lower. Failures also occur around
+the USB sticks.
 
 ### Key Changes in testing
 

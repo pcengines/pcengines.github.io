@@ -43,19 +43,19 @@ coreboot fork against the rebase point for a given release.
 * [PC Engines release validation results](https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0) -
   please note there are separate sheets for each board-release.
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/zYHKdEKjdgAgx9o/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/6fwW8oPdDGKwW7A/preview)
 
 * Mainline:
-  * PASSED: **678** (+14)
-  * FAILED: **28** (+7)
-  * PASSED [%]: **96.03** (−0.9%)
+  * PASSED: **686** (+22)
+  * FAILED: **20** (-1)
+  * PASSED [%]: **97.17** (+0.23%)
 
-Debian network installers have problems to install themselves on apu4 and apu6.
-Tests that depend on the successful installation of Debian have not been
-conducted, which is why the PASS number is lower. Failures also occur around
-the USB sticks.
+Detected regression in wakeonlan. Other fails re related to USB and Xen.
 
 ### Key Changes in testing
+
+* bumped Debian stable version to Debian 11 which fixes installation of Debian
+  on previously failing platforms
 
 ## Binaries
 

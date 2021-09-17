@@ -50,7 +50,7 @@ coreboot fork against the rebase point for a given release.
   * FAILED: **20** (-1)
   * PASSED [%]: **97.17** (+0.23%)
 
-Detected regression in wakeonlan. Other fails re related to USB and Xen.
+Detected regression in wakeonlan. Other fails are related to USB and Xen.
 
 ### Key Changes in testing
 

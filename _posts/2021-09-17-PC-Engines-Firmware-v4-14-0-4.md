@@ -14,7 +14,7 @@ Mainline:
 1. **Rebased** with official coreboot repository **commit** d9f5d90.
 1. Enabled EHCI controller by default on apu3-apu6 platforms
 1. Updated sortbootorder to v4.6.22
-1. Added safeguard against setting watchdog timeout too low
+1. Added safeguard against setting too low watchdog timeout
 
 ## Statistics
 

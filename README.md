@@ -84,3 +84,8 @@ gem install jekyll bundler
 bundle install
 bundle exec jekyll serve
 ```
+
+#### Issues
+
+If you want to create an issue, [here](https://github.com/pcengines/apu2-documentation/issues)
+is the right place for that.

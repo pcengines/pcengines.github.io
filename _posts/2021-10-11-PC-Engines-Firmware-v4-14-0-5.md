@@ -17,7 +17,7 @@ Mainline:
 
 ## Statistics
 
-![Files Changed](FIXME insert updated chart)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/2PMiCT2KaHP8mpq/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml
@@ -29,7 +29,7 @@ git diff --stat d4c55353 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(
 
 `107 files changed, 3941 insertions(+), 212 deletions(-)`
 
-![Process of mainlining](FIXME insert updated chart)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/giWYD8x9bApoXzE/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release.
@@ -42,12 +42,12 @@ coreboot fork against the rebase point for a given release.
 * [PC Engines release validation results](https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0) -
   please note there are separate sheets for each board-release.
 
-![Mainline test results](FIXME instert updated chart)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/5t6bZCmX8tAkWAG/preview)
 
 * Mainline:
-  * PASSED: **TBD** (+22)
-  * FAILED: **TBD** (-1)
-  * PASSED [%]: **TBD** (+0.23%)
+  * PASSED: **686** (+0)
+  * FAILED: **17** (-3)
+  * PASSED [%]: **97.58** (+0.41%)
 
 Detected regression in wakeonlan. Other fails are related to USB and Xen.
 

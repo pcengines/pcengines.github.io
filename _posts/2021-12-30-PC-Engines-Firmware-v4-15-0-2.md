@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.15.0.2"
-date:   2021-12-17
+date:   2021-12-30
 categories: Firmware
 ---
 
@@ -12,12 +12,15 @@ categories: Firmware
 Mainline:
 
 1. **Rebased** with official coreboot repository **commit** 3990da0b.
-1. Disabled SMM
-1. Enabled parallel AP initialization for apu2-6 for **faster boot time**
+2. Disabled SMM
+3. Enabled parallel AP initialization for apu2-6 for **faster boot time**
+4. Added **documentation** about **[runtime configuration](https://github.com/pcengines/apu2-documentation/blob/master/docs/runtime-configuration.md)**.
+   It is now possible to **change the coreboot options from operating system**
+   using flashrom and [cb-order](https://github.com/pcengines/cb-order).
 
 ## Statistics
 
-![Files Changed](FIXME)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/eYnrfg3wKrJHbkg/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml
@@ -29,7 +32,7 @@ git diff --stat 3990da0b ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(
 
 `110 files changed, 4051 insertions(+), 213 deletions(-)`
 
-![Process of mainlining](FIXME)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/pnK29P7G4d6AG3d/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release.

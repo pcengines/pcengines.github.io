@@ -45,7 +45,7 @@ coreboot fork against the rebase point for a given release.
 * [PC Engines release validation results](https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0) -
   please note there are separate sheets for each board-release.
 
-![Mainline test results](FIXME)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/4TM24EyBWPJxHjK/preview)
 
 * Mainline:
   * PASSED: **687** (-5)

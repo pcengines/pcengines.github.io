@@ -48,11 +48,13 @@ coreboot fork against the rebase point for a given release.
 ![Mainline test results](FIXME)
 
 * Mainline:
-  * PASSED: **FIXME** (+2)
-  * FAILED: **FIXME** (-2)
-  * PASSED [%]: **FIXME** (+0.29%)
+  * PASSED: **687** (-5)
+  * FAILED: **16** (+5)
+  * PASSED [%]: **97.72** (-0.72%)
 
 Fails are related to wakeonlan, USB and Xen.
+A regression related to SATA detection on coldboot has been detected. If you
+encounter this issue, it's recommended to roll back to version v4.14.0.6.
 
 ## Binaries
 

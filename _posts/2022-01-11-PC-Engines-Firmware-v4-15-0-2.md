@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.15.0.2"
-date:   2021-12-30
+date:   2022-01-11
 categories: Firmware
 ---
 
@@ -53,8 +53,8 @@ coreboot fork against the rebase point for a given release.
   * PASSED [%]: **97.72** (-0.72%)
 
 Fails are related to wakeonlan, USB and Xen.
-A regression related to SATA detection on coldboot has been detected. If you
-encounter this issue, it's recommended to roll back to version v4.14.0.6.
+A regression related to SATA detection on coldboot on APU1 has been detected.
+If you encounter this issue, it's recommended to roll back to version v4.14.0.6.
 
 ## Binaries
 

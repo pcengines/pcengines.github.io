@@ -52,9 +52,11 @@ coreboot fork against the rebase point for a given release.
   * FAILED: **16** (+5)
   * PASSED [%]: **97.72** (-0.72%)
 
-Fails are related to wakeonlan, USB and Xen.
-A regression related to SATA detection on coldboot on APU1 has been detected.
-If you encounter this issue, it's recommended to roll back to version v4.14.0.6.
+Fails are related to wakeonlan, USB and Xen. A regression related to [SATA
+detection on coldboot on
+APU1](https://github.com/pcengines/apu2-documentation/issues/287) has been
+detected. If you encounter this issue, it's recommended to roll back to version
+v4.14.0.6.
 
 ## Binaries
 

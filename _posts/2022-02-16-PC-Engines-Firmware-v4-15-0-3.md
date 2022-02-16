@@ -42,14 +42,14 @@ coreboot fork against the rebase point for a given release.
 
 * [PC Engines release validation results](https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0) -
   please note there are separate sheets for each board-release.
-##### FIXME!!!!!!!!!!
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/4TM24EyBWPJxHjK/preview)
-##### FIXME!!!!!!!!!!
+
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/yR4Bc3cNjiKQjFE/preview)
+
 * Mainline:
-  * PASSED: **687** (-5)
-  * FAILED: **16** (+5)
-  * PASSED [%]: **97.72** (-0.72%)
-##### FIXME!!!!!!!!!!
+  * PASSED: **693** (+6)
+  * FAILED: **13** (-3)
+  * PASSED [%]: **98.15** (+0.56%)
+
 Fails are related to wakeonlan, USB and Xen.
 
 ## Binaries

@@ -13,7 +13,6 @@ Mainline:
 
 ### Changed
 - **Rebased** with official coreboot repository **commit** 36425312ee
-- **Added checking** hardware matrix before regression tests
 - Fixed the **hard disk** not **visible** in the Seabios Boot Menu
 
 ## Statistics
@@ -51,6 +50,10 @@ coreboot fork against the rebase point for a given release.
   * PASSED [%]: **98.15** (+0.56%)
 
 Fails are related to wakeonlan, USB and Xen.
+
+### Key Changes in testing
+
+1. **Added checking** hardware matrix before regression tests.
 
 ## Binaries
 

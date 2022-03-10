@@ -12,8 +12,9 @@ categories: Firmware
 Mainline:
 
 ### Changed
-- **Rebased** with official coreboot repository **commit** 36425312ee
-- Fixed the **hard disk** not **visible** in the Seabios Boot Menu
+- **Rebased** with official coreboot repository **commit** b4ba289fa5
+- Disabled **loglevel prefixes** introduced in coreboot 4.16
+- Disabled **ANSI escape** sequences introduced in coreboot 4.16
 
 ## Statistics
 

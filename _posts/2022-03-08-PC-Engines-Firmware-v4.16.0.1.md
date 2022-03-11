@@ -15,6 +15,7 @@ Mainline:
 - **Rebased** with official coreboot repository **commit** b4ba289fa5
 - Disabled **loglevel prefixes** introduced in coreboot 4.16
 - Disabled **ANSI escape** sequences introduced in coreboot 4.16
+- Fixed AMD PSP CCP as **entropy source**
 
 ## Statistics
 

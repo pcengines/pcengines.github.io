@@ -105,7 +105,7 @@ Fails are related to *wakeonlan, *USB and *Xen.
 
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu6/apu6_v4.16.0.1.SHA256.sig)
 
-See how to verify the signatures on [asciinema](https://asciinema.org/a/452881)
+See how to verify the signatures on [asciinema](https://asciinema.org/a/475909)
 
 **IMPORTANT**
 

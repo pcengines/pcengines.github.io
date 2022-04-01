@@ -44,7 +44,7 @@ coreboot fork against the rebase point for a given release.
 
 ![Mainline test results](https://cloud.3mdeb.com/index.php/s/yTPqNXxBEEDdQ8R/preview)
 
-* Mainline: FIXME!
+* Mainline:
   * PASSED: **692** (+0)
   * FAILED: **12** (+0)
   * PASSED [%]: **98.30** (+0.00%)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.16.0.4"
-date:   2022-05-26
+date:   2022-05-27
 categories: Firmware
 ---
 
@@ -17,7 +17,7 @@ Mainline:
 
 ## Statistics
 
-![Files Changed](https://cloud.3mdeb.com/index.php/s/FIXME/preview)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/zqRSB8Tj6Dcan2r/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml
@@ -29,7 +29,7 @@ git diff --stat 9686ac2261 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' '
 
 `117 files changed, 4097 insertions(+), 217 deletions(-)`
 
-![Process of mainlining](https://cloud.3mdeb.com/index.php/s/FIXME/preview)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/nynFwrwrqLqeSrN/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release.
@@ -42,14 +42,17 @@ coreboot fork against the rebase point for a given release.
 * [PC Engines release validation results](https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0) -
   please note there are separate sheets for each board-release.
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/FIXME/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/4bnRHPXn8GH7gZA/preview)
 
 * Mainline:
   * PASSED: **692** (+0)
   * FAILED: **12** (+0)
   * PASSED [%]: **98.30** (+0.00%)
 
-Fails are related to wakeonlan, USB and Xen.
+Fails are related to
+[wakeonlan](https://github.com/pcengines/apu2-documentation/issues/282),
+[USB](https://github.com/pcengines/apu2-documentation/issues/277) and
+[Xen](https://github.com/pcengines/apu2-documentation/issues/109).
 
 ## Binaries
 

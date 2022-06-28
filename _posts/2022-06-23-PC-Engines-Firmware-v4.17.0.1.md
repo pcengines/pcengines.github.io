@@ -22,7 +22,7 @@ Mainline:
 
 ## Statistics
 
-![Files Changed](https://cloud.3mdeb.com/index.php/s/FIXME/preview)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/NFcsWDEGYde6anA/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml
@@ -34,20 +34,20 @@ git diff --stat 5eda52a ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(e
 
 `116 files changed, 4237 insertions(+), 217 deletions(-)`
 
-![Process of mainlining](https://cloud.3mdeb.com/index.php/s/nynFwrwrqLqeSrN/preview)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/6yR5a3sTC8Xot5W/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release.
 
 ## Testing
 
-* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/4n9rT4yMsKezHsR/preview) -
+* [PC Engines hardware configuration matrix](https://cloud.3mdeb.com/index.php/s/GYecq2SHidoFZ8A/preview) -
   hardware configurations available for testing in 3mdeb laboratory.
 
 * [PC Engines release validation results](https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=0) -
   please note there are separate sheets for each board-release.
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/FIXME/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/qSxoPobkE46JFib/preview)
 
 * Mainline:
   * PASSED: **754** (+62)

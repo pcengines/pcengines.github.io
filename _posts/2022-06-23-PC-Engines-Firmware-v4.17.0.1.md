@@ -50,9 +50,9 @@ coreboot fork against the rebase point for a given release.
 ![Mainline test results](https://cloud.3mdeb.com/index.php/s/FIXME/preview)
 
 * Mainline:
-  * PASSED: **TBD** (+0)
-  * FAILED: **TBD** (+0)
-  * PASSED [%]: **TBD** (+0.00%)
+  * PASSED: **754** (+62)
+  * FAILED: **12** (+0)
+  * PASSED [%]: **98,43** (+0.13%)
 
 Fails are related to
 [wakeonlan](https://github.com/pcengines/apu2-documentation/issues/282),

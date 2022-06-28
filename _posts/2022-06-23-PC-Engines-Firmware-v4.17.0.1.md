@@ -52,7 +52,7 @@ coreboot fork against the rebase point for a given release.
 * Mainline:
   * PASSED: **754** (+62)
   * FAILED: **12** (+0)
-  * PASSED [%]: **98,43** (+0.13%)
+  * PASSED [%]: **98.43** (+0.13%)
 
 Fails are related to
 [wakeonlan](https://github.com/pcengines/apu2-documentation/issues/282),

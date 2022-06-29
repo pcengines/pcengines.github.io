@@ -125,7 +125,7 @@ input = "            <p>Release date: " + str(date) +"</p>\n"
 replace_line("<p>Release date:", input)
 
 # platforms names
-platforms = ['apu1', 'apu2', 'apu3', 'apu4', 'apu5', 'apu6']
+platforms = ['apu1', 'apu2', 'apu3', 'apu4', 'apu5', 'apu6', 'apu7']
 # update binaries and zip links
 for name in platforms:
     input = "                    <li><a class=\"sha-button\" href=\""+ftp_url+name+"/"+name+"_"+version+".rom\">"+name+" "+version+"</a><a href=\""+ftp_url+name+"/"+name+"_"+version+".SHA256\" class=\"sha-button\">SHA256</a><a href=\""+ftp_url+name+"/"+name+"_"+version+".SHA256.sig\" class=\"sha-button\">SHA256.sig</a></li>\n"

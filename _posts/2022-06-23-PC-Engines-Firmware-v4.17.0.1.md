@@ -119,7 +119,7 @@ Fails are related to
 
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu7/apu7_v4.17.0.1.SHA256.sig)
 
-See how to verify the signatures on [asciinema](https://asciinema.org/a/475909)
+See how to verify the signatures on [asciinema](https://asciinema.org/a/504899)
 
 **IMPORTANT**
 

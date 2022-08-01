@@ -53,6 +53,21 @@ Fails are related to
 [USB](https://github.com/pcengines/apu2-documentation/issues/277) and
 [Xen](https://github.com/pcengines/apu2-documentation/issues/109).
 
+### Added
+
+- test suite for checking availability of booting from DTS on boot.3mdeb.com.
+
+### Changed
+
+- WOL1.0 - calling wakeonlan on the highest MAC address.
+
+## Testing environment expansion
+
+From upcoming releases, it is planned to introduce the tests related to the
+Power Consumption Measurement. Preliminary assumptions of the process are
+presented in the
+[documentation](https://pcengines.github.io/apu2-documentation/power_consumption_testing/).
+
 ## Binaries
 
 ### Mainline

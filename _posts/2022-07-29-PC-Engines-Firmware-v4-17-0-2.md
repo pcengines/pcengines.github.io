@@ -67,6 +67,9 @@ From upcoming releases, it is planned to introduce the tests related to the
 Power Consumption Measurement. Preliminary assumptions of the process are
 presented in the
 [documentation](https://pcengines.github.io/apu2-documentation/power_consumption_testing/).
+If you have any questions or ideas for improving the procedure, please
+contact us by using [forum](https://forum.pcengines.dev/) or rising an issue
+in [repository](https://github.com/pcengines/apu2-documentation/issues).
 
 ## Binaries
 

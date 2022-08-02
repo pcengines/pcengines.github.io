@@ -55,7 +55,7 @@ Fails are related to
 
 ### Added
 
-- test suite for checking availability of flashing firmware by
+- FDT1.1 - test case for checking availability of flashing firmware by
   Dasharo Tools Suite booted from boot.3mdeb.com.
 
 ### Changed

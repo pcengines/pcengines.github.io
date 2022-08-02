@@ -55,7 +55,8 @@ Fails are related to
 
 ### Added
 
-- test suite for checking availability of booting from DTS on boot.3mdeb.com.
+- test suite for checking availability of flashing firmware by
+  Dasharo Tools Suite booted from boot.3mdeb.com.
 
 ### Changed
 

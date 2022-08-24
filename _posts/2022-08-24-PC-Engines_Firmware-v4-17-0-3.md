@@ -17,7 +17,7 @@ Mainline:
 ## Statistics
 
 
-![Files Changed](TBD)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/SmZGQBnfR94xQif)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml
@@ -29,7 +29,7 @@ git diff --stat e173f2b ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(e
 
 `116 files changed, 4402 insertions(+), 215 deletions(-)`
 
-![Process of mainlining](TBD)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/zTozsLdMR5YaTpT)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release.

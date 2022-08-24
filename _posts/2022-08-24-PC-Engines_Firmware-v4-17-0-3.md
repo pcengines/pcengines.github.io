@@ -29,7 +29,7 @@ git diff --stat e173f2b ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(e
 
 `116 files changed, 4402 insertions(+), 215 deletions(-)`
 
-![Process of mainlining](https://cloud.3mdeb.com/index.php/s/zTozsLdMR5YaTpT)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/zTozsLdMR5YaTpT/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release.

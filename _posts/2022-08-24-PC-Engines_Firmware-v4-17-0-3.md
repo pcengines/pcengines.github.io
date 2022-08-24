@@ -42,7 +42,7 @@ coreboot fork against the rebase point for a given release.
 * [PC Engines release validation results](https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=2507399) -
   please note there are separate sheets for each board-release.
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/6sE8cFpCZ86RGAH)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/6sE8cFpCZ86RGAH/preview)
 
 * Mainline:
   * PASSED: TBD (**TBD**)

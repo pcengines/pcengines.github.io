@@ -13,6 +13,7 @@ Mainline:
 ### Changed
 
 - **Rebased** with official coreboot repository **commit** e173f2b
+- Changed sign of life date format from YYYY-DD-MM to YYYY-MM-DD
 
 ## Statistics
 
@@ -52,7 +53,7 @@ coreboot fork against the rebase point for a given release.
 Fails are related to
 [USB](https://github.com/pcengines/apu2-documentation/issues/277),
 [Xen](https://github.com/pcengines/apu2-documentation/issues/109) and
-[checking CPU temperature in pfSense](https://github.com/pcengines/apu2-documentation/issues/281).
+[Checking CPU temperature in pfSense](https://github.com/pcengines/apu2-documentation/issues/281).
 
 ## Binaries
 

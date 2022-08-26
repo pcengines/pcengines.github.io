@@ -17,7 +17,7 @@ Mainline:
 ## Statistics
 
 
-![Files Changed](https://cloud.3mdeb.com/index.php/s/SmZGQBnfR94xQif)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/SmZGQBnfR94xQif/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml
@@ -42,16 +42,17 @@ coreboot fork against the rebase point for a given release.
 * [PC Engines release validation results](https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=2507399) -
   please note there are separate sheets for each board-release.
 
-![Mainline test results](https://cloud.3mdeb.com/index.php/s/6sE8cFpCZ86RGAH/preview)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/HWRgLeSj4A9jEX2/preview)
 
 * Mainline:
-  * PASSED: TBD (**TBD**)
-  * FAILED: TBD (**TBD**)
-  * PASSED [%]: 98,58 (**TBD**)
+  * PASSED: 768 (**+4**)
+  * FAILED: 7 (**-2**)
+  * PASSED [%]: 98,97 (**+0,26%**)
 
 Fails are related to
-[USB](https://github.com/pcengines/apu2-documentation/issues/277) and
-[Xen](https://github.com/pcengines/apu2-documentation/issues/109).
+[USB](https://github.com/pcengines/apu2-documentation/issues/277),
+[Xen](https://github.com/pcengines/apu2-documentation/issues/109) and
+[checking CPU temperature in pfSense](https://github.com/pcengines/apu2-documentation/issues/281).
 
 ## Binaries
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PC Engines apu coreboot Open Source Firmware v4.19.0.1"
-date:   2023-01-27
+date:   2023-02-02
 categories: Firmware
 ---
 # PC Engines apu coreboot Open Source Firmware v4.19.0.1
@@ -12,7 +12,7 @@ Mainline:
 
 ### Changed
 
-- **Rebased** with official coreboot repository **commit** 2ccbcc5
+- **Rebased** with official coreboot repository **commit** 8d3e714
 - Removed configuration and mainboard files for apu1
 
 ## Statistics
@@ -25,7 +25,7 @@ point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml
 and regression.sh excluded from statistics). Check the statistics with:
 
 ```
-git diff --stat 2ccbcc5 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
+git diff --stat 8d3e714 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
 ```
 
 `ToDo files changed, ToDo insertions(+), ToDo deletions(-)`

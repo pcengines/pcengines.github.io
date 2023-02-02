@@ -19,7 +19,7 @@ Mainline:
 ## Statistics
 
 
-![Files Changed](ToDo)
+![Files Changed](https://cloud.3mdeb.com/index.php/s/Djd8gQ3P6Hb3r3L/preview)
 
 The chart shows the total files changed from release tag against the rebase
 point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml
@@ -29,9 +29,9 @@ and regression.sh excluded from statistics). Check the statistics with:
 git diff --stat 2ccbcc5 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
 ```
 
-`ToDo files changed, ToDo insertions(+), ToDo deletions(-)`
+`97 files changed, 3960 insertions(+), 174 deletions(-)`
 
-![Process of mainlining](ToDo)
+![Process of mainlining](https://cloud.3mdeb.com/index.php/s/iqAHtaRiGBCyyw7/preview)
 
 The chart represents the total line added and deleted on the PC Engines
 coreboot fork against the rebase point for a given release.
@@ -44,12 +44,15 @@ coreboot fork against the rebase point for a given release.
 * [PC Engines release validation results](https://docs.google.com/spreadsheets/d/1_uRhVo9eYeZONnelymonYp444zYHT_Q_qmJEJ8_XqJc/edit#gid=2507399) -
   please note there are separate sheets for each board-release.
 
-![Mainline test results](ToDo)
+![Mainline test results](https://cloud.3mdeb.com/index.php/s/A9fKnqmYmrsxoWB/preview)
 
 * Mainline:
-  * PASSED: ToDo (**ToDo**)
-  * FAILED: ToDo (**ToDo**)
-  * PASSED [%]: ToDo (**ToDo**)
+  * PASSED: 679 (**-87**)
+  * FAILED: 7 (**+/-0**)
+  * PASSED [%]: 98.84 (**-0.13%**)
+
+The overall number of tests as well as the number of successful tests has
+decreased due to the stopping release for apu1 mainboard.
 
 Fails are related to
 [USB](https://github.com/pcengines/apu2-documentation/issues/277),

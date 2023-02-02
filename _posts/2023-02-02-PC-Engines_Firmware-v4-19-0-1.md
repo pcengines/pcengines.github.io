@@ -63,14 +63,6 @@ Fails are related to
 
 ### Mainline
 
-* [apu1 v4.19.0.1.zip](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.19.0.1.zip)
-
-  [apu1 v4.19.0.1.rom](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.19.0.1.rom)
-
-  [SHA256 file](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.19.0.1.SHA256)
-
-  [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu1/apu1_v4.19.0.1.SHA256.sig)
-
 * [apu2 v4.19.0.1.zip](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.19.0.1.zip)
 
   [apu2 v4.19.0.1.rom](https://3mdeb.com/open-source-firmware/pcengines/apu2/apu2_v4.19.0.1.rom)

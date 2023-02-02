@@ -12,8 +12,9 @@ Mainline:
 
 ### Changed
 
-- **Rebased** with official coreboot repository **commit** 8d3e714
-- Removed configuration and mainboard files for apu1
+- **Rebased** with official coreboot repository **commit** 2ccbcc5
+- Removed configuration and mainboard files for apu1 due to the board being
+  dropped from upstream coreboot
 
 ## Statistics
 
@@ -25,7 +26,7 @@ point of given release specified in CHANGELOG (CHANGELOG.md, gitlab-ci.yml
 and regression.sh excluded from statistics). Check the statistics with:
 
 ```
-git diff --stat 8d3e714 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
+git diff --stat 2ccbcc5 ':(exclude).gitlab-ci.yml' ':(exclude)CHANGELOG.md' ':(exclude).gitlab-ci/regression.sh'
 ```
 
 `ToDo files changed, ToDo insertions(+), ToDo deletions(-)`

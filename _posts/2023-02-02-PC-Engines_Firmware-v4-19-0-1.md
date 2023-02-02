@@ -55,9 +55,11 @@ The overall number of tests as well as the number of successful tests has
 decreased due to the stopping release for apu1 mainboard.
 
 Fails are related to
-[USB](https://github.com/pcengines/apu2-documentation/issues/277),
-[Xen](https://github.com/pcengines/apu2-documentation/issues/109) and
-[Checking CPU temperature in pfSense](https://github.com/pcengines/apu2-documentation/issues/281).
+[APU7 iPXE](https://github.com/pcengines/apu2-documentation/issues/308),
+[PCIe cards detection in OS](https://github.com/pcengines/apu2-documentation/issues/115),
+[USB appearing in boot menu](https://github.com/pcengines/apu2-documentation/issues/277),
+[Xen booting](https://github.com/pcengines/apu2-documentation/issues/109),
+[Temperature checking in pfSense](https://github.com/pcengines/apu2-documentation/issues/281),
 
 ## Binaries
 

@@ -120,3 +120,21 @@ Fails are related to
   [SHA256 sig](https://3mdeb.com/open-source-firmware/pcengines/apu7/apu7_v4.19.0.1.SHA256.sig)
 
 See how to verify the signatures on [asciinema](ToDo)
+
+## Release announcements
+
+We regret to announce that PC Engines, a provider of small and low-power
+servers for network security, wireless networking, and embedded applications,
+has discontinued its sponsorship for open-source firmware. Although this is a
+significant change for the open-source firmware community, our commitment to
+supporting the hardware remains strong. At Dasharo, we aim to continue the
+legacy of PC Engines by distributing open-source firmware and putting the
+community's needs first. Our focus will be on releases and feature sets driven
+by community support. We are considering a subscription model to ensure stable
+and reliable firmware updates. Your input is important to us, and we would
+appreciate your feedback through our survey at
+[forms.gle](https://forms.gle/MHrT2f1du1Afvwvj9). Please help us understand how
+we can better serve the open-source firmware community and ensure its success
+in the future.
+
+Full details: https://docs.dasharo.com/variants/pc_engines/post-eol-fw-announcement

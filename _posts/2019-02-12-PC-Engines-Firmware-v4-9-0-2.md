@@ -69,7 +69,7 @@ Patches merged:
 
 ## Testing
 
-* [PC Engines hardware configuration matrix](https://3mdeb.com/wp-content/uploads/2019/02/3mdeb-lab-hw-matrix.png) - hardware configurations available for testing in 3mdeb laboratory.
+* [PC Engines hardware configuration matrix](https://shop.3mdeb.com/wp-content/uploads/2023/11/3mdeb-lab-hw-matrix.png) - hardware configurations available for testing in 3mdeb laboratory.
 
 * [PC Engines release validation results](https://3mdeb.us16.list-manage.com/track/click?u=fce95b885fc13fbf1db611816&id=96d9b426c0&e=16ffa34a09) - please note there are separate sheets for each board-release.
 
